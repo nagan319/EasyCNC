@@ -1,0 +1,260 @@
+2024-06-01 21:19:51,902 - logger - ERROR - Encountered exception while adding item with id None: (sqlite3.OperationalError) no such table: parts
+[SQL: INSERT INTO parts (id, filename, thickness, material, contours, amount) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('bf22becd-591e-4432-84bb-ea0764d76f8d', 'part1.stl', 10.5, 'Steel', array([1, 2, 3]), 1)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-06-01 21:19:51,911 - logger - ERROR - Encountered exception while adding item with id None: (sqlite3.OperationalError) no such table: plates
+[SQL: INSERT INTO plates (id, x, y, z, material, contours) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('0f2b159e-11b3-41f6-a480-7b637ea336c3', 750.0, 1500.0, 500.0, 'Aluminum', array([4, 5, 6]))]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-06-01 21:19:51,918 - logger - ERROR - Encountered exception while adding item with id None: (sqlite3.OperationalError) no such table: routers
+[SQL: INSERT INTO routers (id, name, machineable_area_x, machineable_area_y, machineable_area_z, max_plate_size_x, max_plate_size_y, max_plate_size_z, min_safe_dist_from_edge, drill_bit_diameter, mill_bit_diameter) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('cdbe2c0b-7983-459d-a784-e7a7349a4809', 'Router 1', 1000.0, 2000.0, 500.0, 1000.0, 2000.0, 500.0, 50.0, 5.0, 10.0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-06-01 22:10:33,850 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-01 22:11:43,900 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-01 22:11:44,022 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 09:28:55,766 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 09:28:55,803 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 09:31:33,631 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 09:32:02,639 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 09:33:27,291 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 09:41:45,153 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 09:41:45,179 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 09:41:45,204 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 09:42:29,871 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 09:42:29,895 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 09:42:29,924 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 09:44:09,046 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 09:44:09,083 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 09:44:09,119 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 09:47:16,982 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 09:47:17,015 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 09:47:17,053 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 09:49:05,741 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 09:49:05,763 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 09:49:05,786 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 09:49:43,112 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 09:49:43,140 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 09:49:43,167 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 09:50:26,125 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 09:50:26,150 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 09:50:26,172 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 09:50:55,144 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 09:50:55,162 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 09:50:55,184 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 09:52:45,789 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 09:52:45,847 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 09:52:45,883 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 09:53:19,572 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 09:53:19,594 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 09:53:19,621 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 10:08:13,728 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 10:08:14,204 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 10:08:14,225 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 10:08:48,477 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 10:08:48,857 - logger - ERROR - Encountered exception while adding item with id None: (sqlite3.IntegrityError) NOT NULL constraint failed: parts.material
+[SQL: INSERT INTO parts (id, filename, thickness, material, contours, amount) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('c5653e83-6675-4b6f-8b66-1b7614b6804b', 'RollerConnectorPlate.STL', 6.349999904632568, None, 'k05VTVBZAQB2AHsnZGVzY3InOiAnPGY0JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDg5LCAyKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI ... (822 characters truncated) ... cKJtC1iYXQyaBkULzvgRD7P2MQgcu80L5OYpCj2LcQuBxiUKQhMZC3nmKQkqlsELYUI1Cb8SZQvojkkKQpIBC0O6YQnItSkL3G55CXYojQh5Jo0KRzvlBLdasQpJ0VkHvnL5CEFiOQAzT2UJAXjE/', 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-06-02 10:08:50,546 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 10:08:50,558 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 10:11:15,940 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 10:11:16,349 - logger - ERROR - Encountered exception while adding item with id None: (sqlite3.IntegrityError) NOT NULL constraint failed: parts.material
+[SQL: INSERT INTO parts (id, filename, thickness, material, contours, amount) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('69fdf2fb-eb90-4263-a31c-6d76f859d88c', 'RollerConnectorPlate.STL', 6.349999904632568, None, 'k05VTVBZAQB2AHsnZGVzY3InOiAnPGY0JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDg5LCAyKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI ... (822 characters truncated) ... cKJtC1iYXQyaBkULzvgRD7P2MQgcu80L5OYpCj2LcQuBxiUKQhMZC3nmKQkqlsELYUI1Cb8SZQvojkkKQpIBC0O6YQnItSkL3G55CXYojQh5Jo0KRzvlBLdasQpJ0VkHvnL5CEFiOQAzT2UJAXjE/', 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-06-02 10:11:17,616 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 10:11:18,083 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 10:13:09,714 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 10:13:10,000 - logger - ERROR - Encountered exception while adding item with id None: (sqlite3.IntegrityError) NOT NULL constraint failed: parts.material
+[SQL: INSERT INTO parts (id, filename, thickness, material, contours, amount) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('4bf88820-7642-4bf3-9f86-f8c3e3daf8d8', 'RollerConnectorPlate.STL', 6.349999904632568, None, 'k05VTVBZAQB2AHsnZGVzY3InOiAnPGY0JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDg5LCAyKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI ... (822 characters truncated) ... cKJtC1iYXQyaBkULzvgRD7P2MQgcu80L5OYpCj2LcQuBxiUKQhMZC3nmKQkqlsELYUI1Cb8SZQvojkkKQpIBC0O6YQnItSkL3G55CXYojQh5Jo0KRzvlBLdasQpJ0VkHvnL5CEFiOQAzT2UJAXjE/', 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-06-02 10:13:11,238 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 10:13:11,551 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 10:14:37,942 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 10:14:38,254 - logger - ERROR - Encountered exception while adding item with id None: (sqlite3.IntegrityError) NOT NULL constraint failed: parts.material
+[SQL: INSERT INTO parts (id, filename, thickness, material, contours, amount) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('4546c631-744b-4952-9842-16d4695c6b57', 'RollerConnectorPlate.STL', 6.349999904632568, None, 'k05VTVBZAQB2AHsnZGVzY3InOiAnPGY0JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDg5LCAyKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI ... (822 characters truncated) ... cKJtC1iYXQyaBkULzvgRD7P2MQgcu80L5OYpCj2LcQuBxiUKQhMZC3nmKQkqlsELYUI1Cb8SZQvojkkKQpIBC0O6YQnItSkL3G55CXYojQh5Jo0KRzvlBLdasQpJ0VkHvnL5CEFiOQAzT2UJAXjE/', 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-06-02 10:14:39,439 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 10:14:39,653 - logger - ERROR - Encountered exception while adding item with id None: (sqlite3.IntegrityError) NOT NULL constraint failed: parts.material
+[SQL: INSERT INTO parts (id, filename, thickness, material, contours, amount) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('3316b6b1-8c85-4dfc-a331-f0fe4d03942e', 'RollerConnectorPlate.STL', 6.349999904632568, None, 'k05VTVBZAQB2AHsnZGVzY3InOiAnPGY0JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDg5LCAyKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI ... (822 characters truncated) ... cKJtC1iYXQyaBkULzvgRD7P2MQgcu80L5OYpCj2LcQuBxiUKQhMZC3nmKQkqlsELYUI1Cb8SZQvojkkKQpIBC0O6YQnItSkL3G55CXYojQh5Jo0KRzvlBLdasQpJ0VkHvnL5CEFiOQAzT2UJAXjE/', 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-06-02 10:14:40,676 - logger - ERROR - Part with id None does not exist.
+2024-06-02 10:14:40,949 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 10:18:25,466 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 10:18:26,939 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 10:18:28,161 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 10:18:35,209 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 10:18:36,856 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 10:18:38,109 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 11:19:20,789 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 11:19:22,662 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 11:19:23,727 - logger - ERROR - Part with id 123 does not exist.
+2024-06-02 11:22:10,682 - logger - ERROR - Attempted to create PartController with invalid preview image directory: /invalid/directory
+2024-06-02 11:22:12,797 - logger - ERROR - STL file does not exist: random invalid path
+2024-06-02 11:22:14,265 - logger - ERROR - Part with id 123 does not exist.
+2024-06-03 20:47:36,545 - logger - ERROR - Encountered exception while adding item with id None: (sqlite3.OperationalError) no such table: sample_table
+[SQL: INSERT INTO sample_table (name, description) VALUES (?, ?)]
+[parameters: ('TestItem', 'This is a test item.')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-06-03 21:33:55,805 - logger - ERROR - STL file does not exist: C:\Users\Caco Cola\Desktop\EasyCNC\tests\data\test_part.stl
+2024-06-03 21:33:55,937 - logger - ERROR - STL file does not exist: C:\Users\Caco Cola\Desktop\EasyCNC\tests\data\test_part.stl
+2024-06-03 21:33:55,945 - logger - ERROR - STL file does not exist: C:\Users\Caco Cola\Desktop\EasyCNC\tests\data\test_part.stl
+2024-06-03 21:33:55,954 - logger - ERROR - STL file does not exist: C:\Users\Caco Cola\Desktop\EasyCNC\tests\data\test_part.stl
+2024-06-03 21:33:55,954 - logger - ERROR - STL file does not exist: C:\Users\Caco Cola\Desktop\EasyCNC\tests\data\test_part.stl
+2024-06-03 21:33:55,954 - logger - ERROR - STL file does not exist: C:\Users\Caco Cola\Desktop\EasyCNC\tests\data\test_part.stl
+2024-06-03 21:33:55,954 - logger - ERROR - STL file does not exist: C:\Users\Caco Cola\Desktop\EasyCNC\tests\data\test_part.stl
+2024-06-03 21:33:55,955 - logger - ERROR - STL file does not exist: C:\Users\Caco Cola\Desktop\EasyCNC\tests\data\test_part.stl
+2024-06-04 12:00:53,738 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-04 12:01:07,047 - logger - ERROR - Error updating item with id <src.app.models.part_model.Part object at 0x0000024AF8D02110>: SQL expression element or literal value expected, got <src.app.models.part_model.Part object at 0x0000024AF8D02110>.
+2024-06-04 12:03:33,431 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-04 12:03:48,435 - logger - ERROR - Error updating item with id <src.app.models.part_model.Part object at 0x00000240DAB51D80>: SQL expression element or literal value expected, got <src.app.models.part_model.Part object at 0x00000240DAB51D80>.
+2024-06-04 12:06:00,962 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-04 12:06:15,969 - logger - ERROR - Error updating item with id <src.app.models.part_model.Part object at 0x0000025E8193E0E0>: SQL expression element or literal value expected, got <src.app.models.part_model.Part object at 0x0000025E8193E0E0>.
+2024-06-04 12:09:04,016 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-04 12:09:16,522 - logger - ERROR - Error updating item with id <src.app.models.part_model.Part object at 0x0000020C67972860>: SQL expression element or literal value expected, got <src.app.models.part_model.Part object at 0x0000020C67972860>.
+2024-06-04 12:11:47,209 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-04 12:11:59,461 - logger - ERROR - Error updating item with id <src.app.models.part_model.Part object at 0x00000224B5A92CE0>: SQL expression element or literal value expected, got <src.app.models.part_model.Part object at 0x00000224B5A92CE0>.
+2024-06-04 12:14:04,639 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-04 12:19:27,426 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-04 12:22:12,727 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-04 16:34:09,816 - logger - ERROR - Encountered error while attempting to create new router: 'RouterController' object has no attribute 'save_preview'
+2024-06-04 16:34:10,115 - logger - ERROR - Encountered error while attempting to create new router: 'RouterController' object has no attribute 'save_preview'
+2024-06-04 16:34:10,116 - logger - ERROR - Encountered error while attempting to create new router: 'RouterController' object has no attribute 'save_preview'
+2024-06-04 16:34:10,118 - logger - ERROR - Encountered error while attempting to create new router: 'RouterController' object has no attribute 'save_preview'
+2024-06-04 16:34:10,119 - logger - ERROR - Encountered error while attempting to create new router: 'RouterController' object has no attribute 'save_preview'
+2024-06-04 16:34:10,121 - logger - ERROR - Encountered error while attempting to create new router: 'RouterController' object has no attribute 'save_preview'
+2024-06-04 16:34:10,123 - logger - ERROR - Encountered error while attempting to create new router: 'RouterController' object has no attribute 'save_preview'
+2024-06-04 16:34:10,125 - logger - ERROR - Encountered error while attempting to create new router: 'RouterController' object has no attribute 'save_preview'
+2024-06-04 16:34:10,127 - logger - ERROR - Encountered error while attempting to create new router: 'RouterController' object has no attribute 'save_preview'
+2024-06-04 16:34:10,129 - logger - ERROR - Encountered error while attempting to create new router: 'RouterController' object has no attribute 'save_preview'
+2024-06-04 16:34:10,130 - logger - ERROR - Encountered error while attempting to create new router: 'RouterController' object has no attribute 'save_preview'
+2024-06-04 16:36:34,687 - logger - ERROR - Item with id invalid_id does not exist.
+2024-06-04 16:41:30,667 - logger - ERROR - Item with id invalid_id does not exist.
+2024-06-04 16:45:36,411 - logger - ERROR - Item with id invalid_id does not exist.
+2024-06-04 16:52:44,734 - logger - ERROR - Item with id invalid_id does not exist.
+2024-06-04 16:52:44,909 - logger - ERROR - Attribute min_safe_dict_from_edge does not exist on item with id e0f36720-62a6-4d96-a58d-ad96630170d5
+2024-06-04 17:58:29,088 - logger - ERROR - Item with id invalid_id does not exist.
+2024-06-04 17:58:29,238 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001AC95998730>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001AC95998730>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-04 20:07:26,598 - logger - ERROR - Item with id invalid_id does not exist.
+2024-06-04 20:07:26,798 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000002C7C3248730>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000002C7C3248730>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-04 20:11:12,847 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001AFDF6C7A30>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001AFDF6C7A30>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-05 09:47:11,277 - logger - ERROR - Item with id invalid_id does not exist.
+2024-06-05 09:47:11,342 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x0000026A849A0670>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x0000026A849A0670>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-05 11:30:45,814 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-05 11:30:47,168 - logger - ERROR - Item with id c19faf05-ffca-4060-a22f-73dde09ba889 does not exist.
+2024-06-05 11:38:06,810 - logger - ERROR - Item with id invalid_id does not exist.
+2024-06-05 11:38:07,159 - logger - ERROR - Attribute min_safe_dict_from_edge does not exist on item with id 3d28903b-05cb-4964-a4df-aeaef288e1e1
+2024-06-05 15:32:25,859 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-05 15:54:55,388 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-05 15:54:55,407 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-05 15:54:55,432 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-05 15:54:55,443 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-05 15:54:55,482 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-05 15:54:55,488 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-05 15:54:55,520 - logger - ERROR - New value for item parameter description does not match intended type
+2024-06-05 15:54:55,526 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-05 15:54:55,532 - logger - ERROR - Item with id None does not exist.
+2024-06-05 15:54:55,540 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-05 15:55:20,863 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-05 15:55:20,878 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-05 15:55:20,900 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-05 15:55:20,911 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-05 15:55:21,059 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-05 15:55:21,063 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-05 15:55:21,086 - logger - ERROR - New value for item parameter description does not match intended type
+2024-06-05 15:55:21,091 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-05 15:55:21,096 - logger - ERROR - Item with id None does not exist.
+2024-06-05 15:55:21,103 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-05 15:55:46,708 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-05 15:55:46,725 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-05 15:55:46,748 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-05 15:55:46,759 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-05 15:55:46,798 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-05 15:55:46,805 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-05 15:55:46,840 - logger - ERROR - New value for item parameter description does not match intended type
+2024-06-05 15:55:46,845 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-05 15:55:46,852 - logger - ERROR - Item with id None does not exist.
+2024-06-05 15:55:46,861 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-05 16:28:22,328 - logger - ERROR - STL file does not exist: invalid path
+2024-06-05 16:28:22,355 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-05 16:28:22,366 - logger - ERROR - STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg is invalid
+2024-06-05 16:28:22,366 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg: STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg is invalid
+2024-06-05 16:28:31,026 - logger - ERROR - Attempted invalid input value for part amount: 0
+2024-06-05 16:28:31,026 - logger - ERROR - Attempted invalid input value for part amount: 5.13
+2024-06-05 16:28:31,026 - logger - ERROR - Attempted invalid input value for part amount: -2
+2024-06-05 17:17:15,307 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-05 17:17:15,583 - logger - ERROR - New value for item parameter contours does not match intended type
+2024-06-05 17:17:15,598 - logger - ERROR - New value for item parameter x does not match intended type
+2024-06-05 17:17:15,618 - logger - ERROR - New value for item parameter y does not match intended type
+2024-06-05 17:17:15,639 - logger - ERROR - New value for item parameter z does not match intended type
+2024-06-05 17:17:15,676 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001E423236980>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001E423236980>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-05 17:17:15,691 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001E422F265F0>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001E422F265F0>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-05 17:18:46,276 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-05 17:18:46,578 - logger - ERROR - New value for item parameter contours does not match intended type
+2024-06-05 17:18:46,595 - logger - ERROR - New value for item parameter x does not match intended type
+2024-06-05 17:18:46,619 - logger - ERROR - New value for item parameter y does not match intended type
+2024-06-05 17:18:46,644 - logger - ERROR - New value for item parameter z does not match intended type
+2024-06-05 17:18:46,688 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000002C779BB97E0>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000002C779BB97E0>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-05 17:18:46,705 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000002C77C68BCD0>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000002C77C68BCD0>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-05 17:19:42,169 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-05 17:21:50,536 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-05 18:01:04,622 - logger - ERROR - Attempted to initialize UserSettings controller with invalid filepath invalid path
+2024-06-05 18:03:00,433 - logger - ERROR - Attempted to initialize UserSettings controller with invalid filepath invalid path
+2024-06-05 18:16:46,175 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath invalid path
+2024-06-05 18:17:49,715 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath invalid path
+2024-06-05 20:42:48,918 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath invalid path
+2024-06-05 20:45:07,578 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath invalid path
+2024-06-05 20:48:29,363 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath invalid path
+2024-06-05 20:50:52,740 - logger - ERROR - User settings file not found: invalid path

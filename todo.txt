@@ -1,0 +1,33 @@
+- finish creating all controllers:
+    - write tests for existing controllers
+        platecontroller: figure out errors
+    - image mode controller (use files from image library)
+    - user settings controller (language etc. - check auto translation)
+
+- figure out ui
+    - plan all qfluentwidgets to use, create custom widgets if necessary
+    - use qfluentwidgets library for nice ui
+    - easy way to create image viewing carousel
+
+- integrate polygon library
+    - finish writing and import
+
+- db migration using alembic
+
+Notes:
+- ensure consistent 'amount' related methods
+- determine best approach to handle atexit logic
+
+6/5/24
+- finish list of required tests (DONE), implement (on PlateController)
+- plan image controller architecture
+- come up with image controller tests
+- plan (DONE) and implement user settings controller 
+
+6/6/2024
+- come up with app layout
+- figure out qfluentwidget ui or use default widgets with stylesheet system
+- create widget framework isolated from business logic
+
+6/2/2024
+- connect business logic and ui
