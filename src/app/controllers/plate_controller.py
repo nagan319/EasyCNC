@@ -1,6 +1,6 @@
 """
 Author: nagan319
-Date: 2024-06-01
+Date: 2024/06/01
 """
 
 from typing import Union, Tuple, List

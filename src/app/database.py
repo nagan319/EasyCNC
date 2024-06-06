@@ -1,3 +1,8 @@
+"""
+Author: nagan319
+Date: 2024/05/31
+"""
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 

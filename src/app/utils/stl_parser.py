@@ -1,3 +1,8 @@
+"""
+Author: nagan319
+Date: 2024/04/15
+"""
+
 import os
 import math
 from typing import Tuple, List

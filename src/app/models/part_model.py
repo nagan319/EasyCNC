@@ -1,3 +1,8 @@
+"""
+Author: nagan319
+Date: 2024/05/31
+"""
+
 import sys
 from typing import NamedTuple
 from sqlalchemy import Column, Integer, String, Float, Text

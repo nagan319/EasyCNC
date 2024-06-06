@@ -8,6 +8,10 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from src.app.models.plate_model import Plate
 
+'''
+Test CRUD logic for Plate class.
+'''
+
 engine = create_engine('sqlite:///:memory:')
 Session = sessionmaker(bind=engine)
 
@@ -29,10 +33,6 @@ def sample_plate_data():
         'material': 'Aluminum',
         'contours': 'some_contours_data'
     }
-
-'''
-Test CRUD logic for Plate class.
-'''
 
 def test_create_plate(session, sample_plate_data):
     plate = Plate(**sample_plate_data)

@@ -8,6 +8,10 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from src.app.models.router_model import Router
 
+'''
+Test CRUD logic for Router class.
+'''
+
 engine = create_engine('sqlite:///:memory:')
 Session = sessionmaker(bind=engine)
 
@@ -34,10 +38,6 @@ def sample_router_data():
         'drill_bit_diameter': 5,
         'mill_bit_diameter': 10
     }
-
-'''
-Test CRUD logic for Router class.
-'''
 
 def test_create_router(session, sample_router_data):
     router = Router(**sample_router_data)

@@ -1,3 +1,8 @@
+"""
+Author: nagan319
+Date: 2024/06/03
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from typing import Tuple, List, Dict, Any

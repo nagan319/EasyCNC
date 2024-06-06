@@ -1,6 +1,6 @@
 """
 Author: nagan319
-Date: 2024-06-03
+Date: 2024/06/03
 """
 
 import os

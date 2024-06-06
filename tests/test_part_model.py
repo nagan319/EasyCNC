@@ -1,7 +1,16 @@
+"""
+Author: nagan319
+Date: 2024/06/01
+"""
+
 import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from src.app.models.part_model import Part
+
+'''
+Test CRUD logic for part class.
+'''
 
 engine = create_engine('sqlite:///:memory:')
 Session = sessionmaker(bind=engine)
@@ -24,10 +33,6 @@ def sample_part_data():
         'contours': 'some_contours_data',
         'amount': 1
     }
-
-'''
-Test CRUD logic for part class.
-'''
 
 def test_create_part(session, sample_part_data):
     part = Part(**sample_part_data)

@@ -1,3 +1,8 @@
+"""
+Author: nagan319
+Date: 2024/05/31
+"""
+
 import numpy as np
 import base64
 import uuid
@@ -10,9 +15,7 @@ Util functions for dealing with models.
 """
 
 def get_uuid() -> str:
-    """
-    Generate new UUID.
-    """
+    """ Generate new UUID."""
     return (str(uuid.uuid4()))
 
 def serialize_array(arr: np.array) -> str:
