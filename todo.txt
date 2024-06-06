@@ -22,7 +22,7 @@ Notes:
 - finish list of required tests (DONE), implement (on PlateController)
 - plan image controller architecture
 - come up with image controller tests
-- plan (DONE) and implement user settings controller 
+- plan and implement user settings controller DONE
 
 6/6/2024
 - come up with app layout

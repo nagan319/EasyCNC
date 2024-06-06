@@ -258,3 +258,58 @@ WHERE plates.id = ?
 2024-06-05 20:45:07,578 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath invalid path
 2024-06-05 20:48:29,363 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath invalid path
 2024-06-05 20:50:52,740 - logger - ERROR - User settings file not found: invalid path
+2024-06-06 09:13:58,677 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-06 09:13:58,724 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-06 09:13:58,786 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 09:13:58,818 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 09:13:58,914 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 09:13:58,931 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-06 09:13:59,069 - logger - ERROR - New value for item parameter description does not match intended type
+2024-06-06 09:13:59,087 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 09:13:59,109 - logger - ERROR - Item with id None does not exist.
+2024-06-06 09:13:59,140 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 09:14:32,007 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-06 09:14:32,110 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-06 09:14:32,274 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 09:14:32,300 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 09:14:32,376 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 09:14:32,389 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-06 09:14:32,454 - logger - ERROR - New value for item parameter description does not match intended type
+2024-06-06 09:14:32,468 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 09:14:32,485 - logger - ERROR - Item with id None does not exist.
+2024-06-06 09:14:32,511 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 09:14:32,609 - logger - ERROR - Encountered error while attempting to import file invalid path: max() arg is an empty sequence
+2024-06-06 09:14:32,668 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-06 09:14:32,693 - logger - ERROR - STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg is invalid
+2024-06-06 09:14:32,693 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg: STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg is invalid
+2024-06-06 09:14:48,981 - logger - ERROR - Attempted invalid input value for part amount: 0
+2024-06-06 09:14:48,982 - logger - ERROR - Attempted invalid input value for part amount: 5.13
+2024-06-06 09:14:48,982 - logger - ERROR - Attempted invalid input value for part amount: -2
+2024-06-06 09:14:50,198 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 09:14:50,807 - logger - ERROR - New value for item parameter contours does not match intended type
+2024-06-06 09:14:50,831 - logger - ERROR - New value for item parameter x does not match intended type
+2024-06-06 09:14:50,865 - logger - ERROR - New value for item parameter y does not match intended type
+2024-06-06 09:14:50,900 - logger - ERROR - New value for item parameter z does not match intended type
+2024-06-06 09:14:50,962 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x0000024770990430>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x0000024770990430>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 09:14:50,984 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x00000247708F1840>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x00000247708F1840>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 09:14:51,281 - logger - ERROR - Item with id invalid_id does not exist.
+2024-06-06 09:14:51,728 - logger - ERROR - Attribute min_safe_dict_from_edge does not exist on item with id 5715f77a-053e-43b5-b107-55263932ee8d
+2024-06-06 11:41:18,004 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-23\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-06 11:41:18,016 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-23\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-06 11:46:26,555 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-24\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-06 11:46:26,563 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-24\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-06 11:47:16,072 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
+2024-06-06 11:47:16,082 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-25\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-06 11:47:16,090 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-25\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum

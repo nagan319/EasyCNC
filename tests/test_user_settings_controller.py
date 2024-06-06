@@ -37,13 +37,13 @@ def user_settings_path(tmp_path):
     temp_dir = tmp_path / "user_settings"
     temp_dir.mkdir()
 
-    fake_settings = {
+    fake_settings_values = {
         "language": LanguageEnum.JP.value,
         "units": UnitsEnum.IN.value
     }
     fake_settings_path = temp_dir / "user_settings.json"
     with open(fake_settings_path, 'w') as file:
-        json.dump(fake_settings, file)
+        json.dump(fake_settings_values, file)
     return str(fake_settings_path)
 
 @pytest.fixture
@@ -51,23 +51,23 @@ def invalid_user_settings_path(tmp_path):
     temp_dir = tmp_path / "user_settings"
     temp_dir.mkdir()
 
-    invalid_settings = {
+    invalid_settings_values = {
         "language": -1, 
         "units": -2      
     }
     invalid_settings_path = temp_dir / "invalid_user_settings.json"
     with open(invalid_settings_path, 'w') as file:
-        json.dump(invalid_settings, file)
+        json.dump(invalid_settings_values, file)
     return str(invalid_settings_path)
 
 def test_valid_init(user_settings_path):
     controller = UserSettingsController(user_settings_path)
-    assert controller.user_settings['language'] == LanguageEnum.JP.value
-    assert controller.user_settings['units'] == UnitsEnum.IN.value
+    assert controller.user_settings['language'] == LanguageEnum.JP
+    assert controller.user_settings['units'] == UnitsEnum.IN
 
 def test_invalid_init():
     with raises(FileNotFoundError):
-        controller = UserSettingsController("invalid path")
+        controller = UserSettingsController("random invalid path")
 
 def test_get_language(user_settings_path):
     controller = UserSettingsController(user_settings_path)
