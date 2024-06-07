@@ -7,6 +7,8 @@ import os
 from typing import Union, TypeVar, Type, List
 from sqlalchemy.orm import Session
 
+from ..models.utils import is_value_of_type, get_python_type
+
 from ..logging import logger
 
 T = TypeVar('T')
@@ -142,8 +144,10 @@ class GenericController:
                 logger.error(f"Attribute {attr} does not exist on item with id {id}")
                 return None  
 
-            if type(self._get_item_attr(id, attr)) != type(new_val):
-                logger.error(f"New value for item parameter {attr} does not match intended type")
+            attr_type = get_python_type(self.db_table.__table__.columns[attr].type)
+            new_val_type = type(new_val)
+            if attr_type != new_val_type:
+                logger.error(f"New value for item parameter {new_val_type} does not match intended type {attr_type}")
                 return None
 
             setattr(item, attr, new_val)

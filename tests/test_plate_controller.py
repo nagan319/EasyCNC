@@ -3,6 +3,7 @@ Author: nagan319
 Date: 2024/06/04
 '''
 
+import time
 import os
 import pytest
 import tempfile
@@ -102,9 +103,8 @@ def test_preview_initialization(session, temp_dir):
     for _ in range(amt_plates):
         plate = Plate()
         session.add(plate)
+        session.commit()
         plate_ids.append(plate.id)
-    
-    session.commit()
 
     controller = PlateController(session, preview_image_directory)
     
@@ -153,7 +153,7 @@ def test_get_contours(controller):
 
 def test_edit_x(controller):
     new_plate = controller.add_new()
-    modified_plate = controller.edit_x(new_plate.id, PlateConstants.MAX_X-1)
+    modified_plate = controller.edit_x(new_plate.id, float(PlateConstants.MAX_X-1))
     assert modified_plate is not None
     assert modified_plate.x == PlateConstants.MAX_X-1
 
@@ -164,12 +164,9 @@ def test_edit_x_invalid(controller):
 
 def test_edit_y(controller):
     new_plate = controller.add_new()
-    modified_plate = controller.edit_y(new_plate.id, PlateConstants.MAX_Y-1)
+    modified_plate = controller.edit_y(new_plate.id, float(PlateConstants.MAX_Y-1))
     assert modified_plate is not None
     assert modified_plate.y == PlateConstants.MAX_Y-1
-
-    modified_plate = controller.edit_y(new_plate.id, 0)
-    assert modified_plate is None
 
 def test_edit_y_invalid(controller):
     new_plate = controller.add_new()
@@ -178,7 +175,7 @@ def test_edit_y_invalid(controller):
 
 def test_edit_z(controller):
     new_plate = controller.add_new()
-    modified_plate = controller.edit_z(new_plate.id, PlateConstants.MAX_Z-1)
+    modified_plate = controller.edit_z(new_plate.id, float(PlateConstants.MAX_Z-1))
     assert modified_plate is not None
     assert modified_plate.z == PlateConstants.MAX_Z-1
 
@@ -212,8 +209,14 @@ def test_edit_contours_null_contour(controller):
     assert controller.edit_contours(new_plate.id, np.array([])) is not None
 
 def test_save_preview(controller, temp_dir):
+    os.makedirs(temp_dir, exist_ok=True)
+    controller.preview_image_directory = temp_dir
     new_plate = controller.add_new()
-    new_plate.preview_path = controller._get_preview_image_path(new_plate.id)
-    assert os.path.exists(new_plate.preview_path)
-    assert os.path.getsize(new_plate.preview_path) > 0
+    assert new_plate is not None, "Failed to create a new plate."
+    new_plate_id = new_plate.id
+    preview_path = controller._get_preview_image_path(new_plate_id)
+    assert os.path.exists(preview_path), f"Preview path does not exist: {preview_path}"
+    file_size = os.path.getsize(preview_path)
+    assert file_size > 0, f"Preview file is empty: {preview_path}"
+    print(f"Preview file size: {file_size}")
     

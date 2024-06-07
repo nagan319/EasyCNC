@@ -10,9 +10,40 @@ import io
 
 from ..logging import logger
 
+from typing import Union, Type, Any
+from sqlalchemy import Integer, Float, String, Text, Boolean
+
 """
 Util functions for dealing with models.
 """
+
+ORM_TYPE_MAP = {
+    Integer: int,
+    Float: float,
+    String: str,
+    Text: str,
+    Boolean: bool
+}
+
+def get_python_type(sqlalchemy_type) -> Union[Type, tuple]:
+    """ 
+    Get the corresponding Python type(s) for a given SQLAlchemy type. 
+    """
+    for sqlalchemy_base_type, python_type in ORM_TYPE_MAP.items():
+        if isinstance(sqlalchemy_type, sqlalchemy_base_type):
+            return python_type
+    return None
+
+def is_value_of_type(value: Any, sqlalchemy_type) -> bool:
+    """ 
+    Check if a value matches the expected SQLAlchemy type. 
+    """
+    python_type = get_python_type(sqlalchemy_type)
+    if python_type is None:
+        return False
+    if isinstance(python_type, tuple):
+        return isinstance(value, python_type)
+    return isinstance(value, python_type)
 
 def get_uuid() -> str:
     """ Generate new UUID."""
@@ -48,4 +79,3 @@ def deserialize_array(base64_str: str) -> np.array:
     except (IOError, OSError) as e:
         logger.error(f"Error deserializing array: {e}")
         return None
-    

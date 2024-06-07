@@ -19,8 +19,6 @@ from ..logging import logger
 
 from .generic_controller import GenericController
 
-# implement atexit logic to remove preview images
-
 class RouterController(GenericController):
     """
     Controller for handling router logic.
@@ -107,7 +105,9 @@ class RouterController(GenericController):
     Modify router attributes
     '''
     def edit_name(self, id: str, new_val: str) -> Union[Router, None]:
-        """ Edit router name. Returns modified router or None in the case of an error. """
+        """ Edit router name. Returns modified router or None in the case of an error or an empty string. """
+        if new_val == "" or new_val is None:
+            return None
         return self._edit_item_attr(id, 'name', new_val)
 
     def edit_x(self, id: str, new_val: float) -> Union[Router, None]:
@@ -177,8 +177,8 @@ class RouterController(GenericController):
         """
         try:
             image_path = self._get_preview_image_path(router.id)
-            router_xy = (router.machineable_area_x, router.machineable_area_y)
-            plate_xy = (router.max_plate_size_x, router.max_plate_size_y)
+            router_xy = (router.x, router.y)
+            plate_xy = (router.plate_x, router.plate_y)
             safe_distance = router.min_safe_dist_from_edge
         except AttributeError:
             return

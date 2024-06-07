@@ -233,11 +233,11 @@ Utils:
                 - Initialization
                     - ignores invalid threshold value
                     - checks invalid paths
-                    - handles invlalid filetypes
+                    - handles invalid filetypes
                 - Save image
                     - correctly saves modified image
 
-            FlatFilter
+            FlatFilter TODO
                 - Initialization
                     - checks invalid paths 
                     - handles invalid filetypes

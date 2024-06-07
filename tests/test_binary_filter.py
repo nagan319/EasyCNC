@@ -17,26 +17,13 @@ Test coverage:
 - image saves correctly
 """
 
-def test_binary_filter_invalid_threshold():
-
-    with pytest.raises(ValueError):
-        BinaryFilter("src_path.png", "dst_path.png", -1)
-
-    with pytest.raises(ValueError):
-        BinaryFilter("src_path.png", "dst_path.png", 256)
-
-    with pytest.raises(TypeError):
-        BinaryFilter("src_path.png", "dst_path.png", 128.5)
-
-    with pytest.raises(TypeError):
-        BinaryFilter("src_path.png", "dst_path.png", "invalid")
-
-    with pytest.raises(TypeError):
-        BinaryFilter("src_path.png", "dst_path.png", None)
-
 @pytest.fixture
 def src_path():
     return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test data', 'images', 'image4.jpeg')
+
+@pytest.fixture
+def invalid_filetype():
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test data', 'stl files', 'RollerConnectorPlate.STL')
 
 @pytest.fixture
 def setup_binary_filter(src_path):
@@ -50,6 +37,31 @@ def setup_binary_filter(src_path):
     yield src_path, dst_path, threshold
 
     os.remove(dst_path)
+
+def test_binary_filter_invalid_src_path():
+    with pytest.raises(FileNotFoundError):
+        BinaryFilter("random invalid path", "dst_path.png", 100)
+
+def test_binary_filter_invalid_src_filetype(invalid_filetype):
+    with pytest.raises(FileNotFoundError):
+        BinaryFilter(invalid_filetype, "dst_path.png", 100)
+
+def test_binary_filter_invalid_threshold(src_path):
+
+    with pytest.raises(ValueError):
+        BinaryFilter(src_path, "dst_path.png", -1)
+
+    with pytest.raises(ValueError):
+        BinaryFilter(src_path, "dst_path.png", 256)
+
+    with pytest.raises(TypeError):
+        BinaryFilter(src_path, "dst_path.png", 128.5)
+
+    with pytest.raises(TypeError):
+        BinaryFilter(src_path, "dst_path.png", "invalid")
+
+    with pytest.raises(TypeError):
+        BinaryFilter(src_path, "dst_path.png", None)
 
 def test_binary_filter_save_image(setup_binary_filter):
     src_path, dst_path, threshold = setup_binary_filter

@@ -4,6 +4,7 @@ Date: 2024/06/03
 """
 
 import pytest
+from pytest import raises
 from src.app.utils.image_processing.utils import Colors, Size
 
 """
@@ -33,6 +34,17 @@ def custom_colors():
         'plate_col': (150, 150, 150),
         'corner_col': (0, 255, 0)
     }
+
+def test_size_init():
+    size = Size(20, 15)
+    assert size.w == 20
+    assert size.h == 15
+
+def test_invalid_size():
+    with raises(ValueError):
+        size = Size(0, 5)
+    with raises(ValueError):
+        size = Size(5, 0)
 
 def test_size_get_scaled():
     size = Size(5.0, 10.0)

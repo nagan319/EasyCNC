@@ -100,20 +100,20 @@ class PlateController(GenericController):
             return None
         return self._edit_item_attr(id, 'z', new_val)
     
-    def edit_material(self, part_id: int, new_material: str) -> Union[Plate, None]:
+    def edit_material(self, id: str, new_material: str) -> Union[Plate, None]:
         """
         Edit plate amount. Returns modified plate or None if an error occurs.
         """
         if new_material == "" or new_material is None:
             return None
-        return self._edit_item_attr(part_id, 'material', new_material)
+        return self._edit_item_attr(id, 'material', new_material)
     
-    def edit_contours(self, part_id: int, new_contour: np.array) -> Union[Plate, None]:
+    def edit_contours(self, id: str, new_contour: np.array) -> Union[Plate, None]:
         """
         Edit plate contours. Returns modified plate or None if an error occurs.
         """
         contours_as_string = serialize_array(new_contour)
-        return self._edit_item_attr(self, part_id, contours_as_string)
+        return self._edit_item_attr(self, id, contours_as_string)
     '''
     Preview image logic
     '''
@@ -127,11 +127,12 @@ class PlateController(GenericController):
         - dpi: Pixels per inch (defaults to 80).
         """
         try:
-            image_path = self._get_preview_image_path(plate)
+            image_path = self._get_preview_image_path(plate.id)
             image_contours = plate.contours
-            plate_xy = (plate.width_x, plate.height_y)
+            plate_xy = (plate.x, plate.y)
             plate_rect_x, plate_rect_y = _generate_rectangle_coordinates(*plate_xy)
-        except AttributeError:
+        except AttributeError as e:
+            logger.debug(f"Encountered error while attempting to create preview image for plate with id {plate.id}: {e}")
             return
 
         plt.figure(figsize=figsize)
@@ -159,4 +160,5 @@ class PlateController(GenericController):
         plt.gca().spines['right'].set_color(PlottingConstants.PLOT_TEXT_COLOR)
 
         plt.savefig(image_path, bbox_inches='tight', facecolor=PlottingConstants.PLOT_BG_COLOR, dpi=dpi)
+        logger.debug(f"Preview image for plate with id {plate.id} saved successfully.")
         plt.close()

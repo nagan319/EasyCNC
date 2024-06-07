@@ -313,3 +313,240 @@ WHERE plates.id = ?
 2024-06-06 11:47:16,072 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
 2024-06-06 11:47:16,082 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-25\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
 2024-06-06 11:47:16,090 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-25\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-06 13:55:15,000 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 13:55:15,303 - logger - ERROR - New value for item parameter contours does not match intended type
+2024-06-06 13:55:15,320 - logger - ERROR - New value for item parameter x does not match intended type
+2024-06-06 13:55:15,343 - logger - ERROR - New value for item parameter y does not match intended type
+2024-06-06 13:55:15,369 - logger - ERROR - New value for item parameter z does not match intended type
+2024-06-06 13:55:15,414 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x00000294443DB3A0>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x00000294443DB3A0>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 13:55:15,430 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x0000029446E93DF0>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x0000029446E93DF0>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 14:02:22,327 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 14:02:22,608 - logger - ERROR - New value for item parameter contours does not match intended type
+2024-06-06 14:02:22,690 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001F3D5FA70D0>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001F3D5FA70D0>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 14:02:22,706 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001F3D347D960>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001F3D347D960>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 14:02:51,385 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 14:02:51,687 - logger - ERROR - New value for item parameter contours does not match intended type
+2024-06-06 14:02:51,764 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001D06A326650>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001D06A326650>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 14:02:51,778 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001D06A2FBB80>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001D06A2FBB80>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 14:07:15,275 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 14:07:15,556 - logger - ERROR - New value for item parameter contours does not match intended type
+2024-06-06 14:07:15,634 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001DA41CCDED0>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001DA41CCDED0>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 14:07:15,650 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001DA41CF7B20>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001DA41CF7B20>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 17:32:51,062 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 17:32:51,348 - logger - ERROR - New value for item parameter contours does not match intended type
+2024-06-06 17:32:51,423 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001E956912F80>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001E956912F80>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 17:32:51,436 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001E959438550>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001E959438550>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 17:35:50,483 - logger - ERROR - New value for item parameter contours does not match intended type
+2024-06-06 17:37:09,490 - logger - ERROR - New value for item parameter contours does not match intended type
+2024-06-06 17:38:12,877 - logger - ERROR - New value for item parameter contours does not match intended type
+2024-06-06 17:38:50,620 - logger - ERROR - New value for item parameter contours does not match intended type
+2024-06-06 17:40:57,648 - logger - ERROR - New value for item parameter <class 'str'> does not match intended type <class 'NoneType'>
+2024-06-06 17:42:48,580 - logger - ERROR - New value for item parameter <class 'str'> does not match intended type TEXT
+2024-06-06 17:46:09,222 - logger - ERROR - New value for item parameter <class 'str'> does not match intended type TEXT
+2024-06-06 17:55:29,547 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 17:55:29,972 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x0000017DBBEEC460>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x0000017DBBEEC460>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 17:55:29,988 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x0000017DB93CDBA0>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x0000017DB93CDBA0>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 18:01:14,230 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 18:01:14,644 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001DF1F51BDF0>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001DF1F51BDF0>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 18:01:14,660 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001DF21F9A830>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001DF21F9A830>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 18:06:33,359 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 18:06:46,625 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x0000018EF78D6080>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x0000018EF78D6080>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 18:06:46,920 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x0000018EF788F640>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x0000018EF788F640>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 18:10:33,083 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 18:11:06,403 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 18:13:59,775 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x0000017E7FDBB0A0>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x0000017E7FDBB0A0>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 18:14:00,150 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x0000017E7DAAD840>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x0000017E7DAAD840>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 18:55:37,646 - logger - ERROR - Attribute min_safe_dict_from_edge does not exist on item with id ee30c542-120d-44c8-818f-6dfd5a83f670
+2024-06-06 18:57:36,979 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-06 18:57:36,995 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-06 18:57:37,017 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 18:57:37,028 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 18:57:37,064 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 18:57:37,069 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-06 18:57:37,098 - logger - ERROR - New value for item parameter <class 'int'> does not match intended type <class 'str'>
+2024-06-06 18:57:37,103 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 18:57:37,109 - logger - ERROR - Item with id None does not exist.
+2024-06-06 18:57:37,117 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 18:57:37,144 - logger - ERROR - STL file does not exist: invalid path
+2024-06-06 18:57:37,174 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-06 18:57:37,182 - logger - ERROR - STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg is invalid
+2024-06-06 18:57:37,182 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg: STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg is invalid
+2024-06-06 18:57:44,965 - logger - ERROR - Attempted invalid input value for part amount: 0
+2024-06-06 18:57:44,965 - logger - ERROR - Attempted invalid input value for part amount: 5.13
+2024-06-06 18:57:44,965 - logger - ERROR - Attempted invalid input value for part amount: -2
+2024-06-06 18:58:07,309 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001DA5DA337F0>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001DA5DA337F0>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 18:58:07,621 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001DA5C8C0370>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001DA5C8C0370>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 18:58:16,994 - logger - ERROR - Attribute min_safe_dict_from_edge does not exist on item with id 6d077ecd-3563-48aa-8a6a-1a6b2791fadc
+2024-06-06 18:58:19,918 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
+2024-06-06 18:58:19,934 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-26\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-06 18:58:19,945 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-26\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-06 19:33:05,805 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-06 19:33:05,812 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-06 19:33:05,818 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-06 19:33:05,819 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-06 19:33:05,820 - logger - ERROR - Threshold must be integer value
+2024-06-06 19:39:59,702 - logger - ERROR - Attempted to initialize Size class with invalid dimensoins: 0, 5
+2024-06-06 19:40:47,471 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 5
+2024-06-06 19:40:47,472 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 5, 0
+2024-06-06 19:40:58,856 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-06 19:40:58,863 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-06 19:40:58,870 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-06 19:40:58,872 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-06 19:40:58,872 - logger - ERROR - Threshold must be integer value
+2024-06-06 19:40:59,029 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-06 19:40:59,087 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-06 19:40:59,155 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 19:40:59,188 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 19:40:59,342 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 19:40:59,364 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-06 19:40:59,458 - logger - ERROR - New value for item parameter <class 'int'> does not match intended type <class 'str'>
+2024-06-06 19:40:59,473 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 19:40:59,494 - logger - ERROR - Item with id None does not exist.
+2024-06-06 19:40:59,517 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 19:40:59,537 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 5
+2024-06-06 19:40:59,538 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 5, 0
+2024-06-06 19:40:59,618 - logger - ERROR - STL file does not exist: invalid path
+2024-06-06 19:40:59,699 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-06 19:40:59,723 - logger - ERROR - STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg is invalid
+2024-06-06 19:40:59,724 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg: STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg is invalid
+2024-06-06 19:41:15,717 - logger - ERROR - Attempted invalid input value for part amount: 0
+2024-06-06 19:41:15,718 - logger - ERROR - Attempted invalid input value for part amount: 5.13
+2024-06-06 19:41:15,718 - logger - ERROR - Attempted invalid input value for part amount: -2
+2024-06-06 19:41:58,059 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001D34C766080>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001D34C766080>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 19:41:58,638 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001D34C6F9E40>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001D34C6F9E40>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 19:42:21,837 - logger - ERROR - Attribute min_safe_dict_from_edge does not exist on item with id e095bcff-4816-4fe6-9b38-ecb428e7d48f
+2024-06-06 19:42:27,317 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
+2024-06-06 19:42:27,335 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-27\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-06 19:42:27,359 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-27\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum

@@ -3,6 +3,8 @@ Author: nagan319
 Date: 2024/04/13
 """
 
+from ...logging import logger
+
 class Size:
     """
     Class to represent dimensions with width and height.
@@ -13,18 +15,14 @@ class Size:
     """
 
     def __init__(self, width: float, height: float):
+        if width <= 0 or height <= 0:
+            logger.error(f"Attempted to initialize Size class with invalid dimensions: {width}, {height}")
+            raise ValueError()
         self.w = width
         self.h = height
 
     def get_scaled(self, factor: float):
-        """
-        Gets a new Size object scaled by a given factor.
-
-        - factor: The factor by which to scale the size.
-
-        Returns:
-        - A new Size object with scaled dimensions.
-        """
+        """ Gets a new Size object scaled by a given factor. """
         return Size(self.w * factor, self.h * factor)
 
 class Colors:

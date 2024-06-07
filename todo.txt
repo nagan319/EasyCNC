@@ -19,7 +19,11 @@ Notes:
 - determine best approach to handle atexit logic
 
 6/5/24
-- finish list of required tests (DONE), implement (on PlateController)
+- finish list of required tests (DONE), implement 
+    Left:
+        PlateController contours
+        RouterControler some dimensions
+        FlatFilter
 - plan image controller architecture
 - come up with image controller tests
 - plan and implement user settings controller DONE
