@@ -66,6 +66,8 @@ class RouterController(GenericController):
         """ Get amount of routers in db. Returns -1 if an error is encountered. """ 
         return self._get_item_amount()
 
+
+
     def get_x(self, id: str) -> Union[float, None]:
         """ Get router x dimension. Returns None if an error occurs."""
         return self._get_item_attr(id, 'x')
@@ -78,6 +80,8 @@ class RouterController(GenericController):
         """ Get router z dimension. Returns None if an error occurs."""
         return self._get_item_attr(id, 'z')
     
+
+
     def get_plate_x(self, id: str) -> Union[float, None]:
         """ Get router max plate x dimension. Returns None if an error occurs."""
         return self._get_item_attr(id, 'plate_x')
@@ -90,9 +94,13 @@ class RouterController(GenericController):
         """ Get router max plate z dimension. Returns None if an error occurs."""
         return self._get_item_attr(id, 'plate_z')  
     
+
+
     def get_min_safe_dist_from_edge(self, id: str) -> Union[float, None]:
         """ Get router min distance from edge. Returns None if an error occurs."""
         return self._get_item_attr(id, 'min_safe_dist_from_edge')
+
+
 
     def get_drill_bit_diameter(self, id: str) -> Union[float, None]:
         """ Get router drill bit diameter. Returns None if an error occurs.""" 
@@ -110,47 +118,50 @@ class RouterController(GenericController):
             return None
         return self._edit_item_attr(id, 'name', new_val)
 
+
+
     def edit_x(self, id: str, new_val: float) -> Union[Router, None]:
         """ Edit router x dimension. Returns modified router or None in the case of an error."""
-        if new_val <= 0 or new_val > RouterConstants.MAX_ROUTER_DIMENSION:
-            return None
-        return self._edit_item_attr(id, 'x', new_val)
+        return self._edit_item_attr(id, 'x', new_val) if RouterController._valid_router_dim(new_val) else None
 
     def edit_y(self, id: str, new_val: float) -> Union[Router, None]:
         """ Edit router y dimension. Returns modified router or None in the case of an error."""
-        if new_val <= 0 or new_val > RouterConstants.MAX_ROUTER_DIMENSION:
-            return None
-        return self._edit_item_attr(id, 'y', new_val)
+        return self._edit_item_attr(id, 'y', new_val) if RouterController._valid_router_dim(new_val) else None
     
     def edit_z(self, id: str, new_val: float) -> Union[Router, None]:
         """ Edit router z dimension. Returns modified router or None in the case of an error."""
-        if new_val <= 0 or new_val > RouterConstants.MAX_ROUTER_DIMENSION:
-            return None
-        return self._edit_item_attr(id, 'z', new_val)
+        return self._edit_item_attr(id, 'z', new_val) if RouterController._valid_router_dim(new_val) else None
+
+    @staticmethod
+    def _valid_router_dim(new_val: float) -> bool:
+        return new_val > 0 and new_val <= RouterConstants.MAX_ROUTER_DIMENSION
+
+
 
     def edit_plate_x(self, id: str, new_val: float) -> Union[Router, None]:
         """ Edit router max plate x dimension. Returns modified router or None in the case of an error."""
-        if new_val <= 0 or new_val > RouterConstants.MAX_PLATE_DIMENSION:
-            return None
-        return self._edit_item_attr(id, 'plate_x', new_val)
+        return self._edit_item_attr(id, 'plate_x', new_val) if RouterController._valid_plate_dim(new_val) else None
     
     def edit_plate_y(self, id: str, new_val: float) -> Union[Router, None]:
         """ Edit router max plate y dimension. Returns modified router or None in the case of an error."""
-        if new_val <= 0 or new_val > RouterConstants.MAX_PLATE_DIMENSION:
-            return None
-        return self._edit_item_attr(id, 'plate_y', new_val)
+        return self._edit_item_attr(id, 'plate_y', new_val) if RouterController._valid_plate_dim(new_val) else None
 
     def edit_plate_z(self, id: str, new_val: float) -> Union[Router, None]:
         """ Edit router max plate z dimension. Returns modified router or None in the case of an error."""
-        if new_val <= 0 or new_val > RouterConstants.MAX_PLATE_DIMENSION:
-            return None
-        return self._edit_item_attr(id, 'plate_z', new_val)
+        return self._edit_item_attr(id, 'plate_z', new_val) if RouterController._valid_plate_dim(new_val) else None
     
+    @staticmethod
+    def _valid_plate_dim(new_val: float) -> bool:
+        return new_val > 0 and new_val <= RouterConstants.MAX_PLATE_DIMENSION
+
+
+
     def edit_min_safe_dist_from_edge(self, id: str, new_val: float) -> Union[Router, None]:
         """ Edit router min safe distance from edge. Returns modified router or None in the case of an error."""
-        if new_val <= 0 or new_val > min(self.get_x(id), self.get_y(id)) // 2:
+        x_dim, y_dim = self.get_x(id), self.get_y(id)
+        if new_val <= 0 or new_val > (min(x_dim, y_dim) // 2):
             return None
-        return self._edit_item_attr(id, 'min_safe_dict_from_edge', new_val)
+        return self._edit_item_attr(id, 'min_safe_dist_from_edge', new_val)
 
     def edit_mill_bit_diameter(self, id: str, new_val: float) -> Union[Router, None]:
         """ Edit router mill bit diameter. Returns modified router or None in the case of an error."""

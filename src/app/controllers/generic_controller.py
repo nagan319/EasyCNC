@@ -146,7 +146,7 @@ class GenericController:
 
             attr_type = get_python_type(self.db_table.__table__.columns[attr].type)
             new_val_type = type(new_val)
-            if attr_type != new_val_type:
+            if new_val_type != attr_type and new_val_type != type(None):
                 logger.error(f"New value for item parameter {new_val_type} does not match intended type {attr_type}")
                 return None
 

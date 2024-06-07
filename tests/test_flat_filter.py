@@ -3,6 +3,7 @@ Author: nagan319
 Date: 2024/06/03
 """
 
+import os
 import pytest
 from src.app.utils.image_processing.utils import Size, Colors
 from src.app.utils.image_processing.filters import FlatFilter
@@ -10,32 +11,46 @@ from src.app.utils.image_processing.filters import FlatFilter
 """
 Tests for flat filter.
 
-Test coverage:
-- type errors raised by invalid values
+Test Coverage:
+    - Initialization
+        - checks invalid paths 
+        - handles invalid filetypes
+        - handles wrong amount of corners
+    - Save image
+        - correctly saves modified image
 """
 
 @pytest.fixture
-def valid_input():
-    src_path = "valid_src_path.png"
-    dst_path = "valid_dst_path.png"
-    size = Size(100, 100)  
-    corners = [(0, 0), (100, 0), (100, 100), (0, 100)]  #
-    return src_path, dst_path, size, corners
+def src_path():
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test data', 'images', 'image4.jpeg')
 
-@pytest.mark.parametrize("invalid_size", [None, "invalid", True, [(100, 100)]])
-def test_invalid_size(valid_input, invalid_size):
-    src_path, dst_path, _, corners = valid_input
-    with pytest.raises(TypeError):
-        FlatFilter(src_path, dst_path, invalid_size, corners)
+@pytest.fixture
+def invalid_filetype():
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test data', 'stl files', 'RollerConnectorPlate.STL')
 
-@pytest.mark.parametrize("invalid_size", [1.5, 3.14, -42.0])
-def test_invalid_size_float(valid_input, invalid_size):
-    src_path, dst_path, _, corners = valid_input
-    with pytest.raises(TypeError):
-        FlatFilter(src_path, dst_path, invalid_size, corners)
+@pytest.fixture
+def temp_dir(tmpdir):
+    return tmpdir
 
-@pytest.mark.parametrize("invalid_corners", [None, "invalid", True, Size(100, 100)])
-def test_invalid_corners(valid_input, invalid_corners):
-    src_path, dst_path, size, _ = valid_input
-    with pytest.raises(TypeError):
-        FlatFilter(src_path, dst_path, size, invalid_corners)
+def test_flat_filter_initialization_invalid_paths(src_path, invalid_filetype):
+    with pytest.raises(FileNotFoundError):
+        FlatFilter("nonexistent/path/image.jpg", "output/path/image.jpg", Size(100, 100), [(0, 0), (100, 0), (100, 100), (0, 100)])
+
+    with pytest.raises(FileNotFoundError):
+        FlatFilter(invalid_filetype, "output/path/image.jpg", Size(100, 100), [(0, 0), (100, 0), (100, 100), (0, 100)])
+
+def test_flat_filter_initialization_invalid_corners(src_path):
+    with pytest.raises(ValueError):
+        # Invalid number of corners
+        FlatFilter(src_path, "output/path/image.jpg", Size(100, 100), [(0, 0), (100, 0), (100, 100)])
+
+    with pytest.raises(ValueError):
+        # Non-tuple corner
+        FlatFilter(src_path, "output/path/image.jpg", Size(100, 100), [(0, 0), (100, 0), (100, 100), 0])
+
+def test_flat_filter_save_image(src_path, temp_dir):
+    output_path = os.path.join(temp_dir, "output_image.jpg")
+    flat_filter = FlatFilter(src_path, output_path, Size(100, 100), [(0, 0), (100, 0), (100, 100), (0, 100)])
+    flat_filter.save_image()
+    assert os.path.exists(output_path)
+    assert os.path.getsize(output_path) > 0

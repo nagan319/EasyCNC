@@ -12,6 +12,70 @@ from sqlalchemy.orm import sessionmaker
 from src.app.controllers.router_controller import RouterController
 from src.app.models.router_model import Router, RouterConstants
 
+"""
+Tests for RouterController class.
+
+Test Coverage:
+    - Initialization
+        - Test all preview images from existing routers saved    
+    - Add new router
+        - Test attempted add when max amount met
+        - Test correct addition of default router
+        - Test preview correctly saving
+    - Remove router
+        // Directly inherits from superclass, no tests necessary
+    - Get amount
+        // Directly inherits from superclass, no tests necessary
+    - Get x
+        - Valid and correct value
+    - Get y
+        - Valid and correct value
+    - Get z
+        - Valid and correct value
+    - Get plate x
+        - Valid and correct value
+    - Get plate y
+        - Valid and correct value
+    - Get plate z
+        - Valid and correct value      
+    - Get min safe distance
+        - Valid and correct value  
+    - Get drill bit diameter
+        - Valid and correct value  
+    - Get mill bit diameter
+        - Valid and correct value  
+    - Edit name
+        - Does not update if input is null
+        - Correctly modifies otherwise
+    - Edit x
+        - Valid and correct value
+        - Out of bounds value does not affect data
+    - Edit y
+        - Valid and correct value
+        - Out of bounds value does not affect data
+    - Edit z
+        - Valid and correct value
+        - Out of bounds value does not affect data
+    - Edit plate x
+        - Valid and correct value
+        - Out of bounds value does not affect data
+    - Edit plate y
+        - Valid and correct value
+        - Out of bounds value does not affect data
+    - Edit plate z
+        - Valid and correct value
+        - Out of bounds value does not affect data
+    - Edit drill bit diameter
+        - Valid and correct value
+        - Out of bounds value does not affect data
+    - Edit mill bit diameter
+        - Valid and correct value
+        - Out of bounds value does not affect data
+    - Save preview
+        - Test preview image saving correctly
+        - Test output image size if possible (related to dpi)
+"""
+
 @pytest.fixture
 def temp_dir():
     with tempfile.TemporaryDirectory() as temp_dir:
@@ -170,7 +234,7 @@ def test_edit_plate_x(controller):
     new_router = controller.add_new()
     modified_router = controller.edit_plate_x(new_router.id, float(RouterConstants.MAX_PLATE_DIMENSION-1))
     assert modified_router is not None
-    assert modified_router.x == RouterConstants.MAX_PLATE_DIMENSION-1
+    assert modified_router.plate_x == RouterConstants.MAX_PLATE_DIMENSION-1
 
 def test_edit_plate_x_invalid(controller):
     new_router = controller.add_new()
@@ -181,7 +245,7 @@ def test_edit_plate_y(controller):
     new_router = controller.add_new()
     modified_router = controller.edit_plate_y(new_router.id, float(RouterConstants.MAX_PLATE_DIMENSION-1))
     assert modified_router is not None
-    assert modified_router.y == RouterConstants.MAX_PLATE_DIMENSION-1
+    assert modified_router.plate_y == RouterConstants.MAX_PLATE_DIMENSION-1
 
 def test_edit_plate_y_invalid(controller):
     new_router = controller.add_new()
@@ -192,14 +256,13 @@ def test_edit_plate_z(controller):
     new_router = controller.add_new()
     modified_router = controller.edit_plate_z(new_router.id, float(RouterConstants.MAX_PLATE_DIMENSION-1))
     assert modified_router is not None
-    assert modified_router.z == RouterConstants.MAX_PLATE_DIMENSION-1
+    assert modified_router.plate_z == RouterConstants.MAX_PLATE_DIMENSION-1
 
 def test_edit_plate_z_invalid(controller):
     new_router = controller.add_new()
     modified_router = controller.edit_plate_z(new_router.id, 0)
     assert modified_router is None
 
-# this doesn't work, fix
 def test_edit_min_safe_dist_from_edge(controller):
     new_router = controller.add_new()
     modified_router = controller.edit_min_safe_dist_from_edge(new_router.id, 5.0)

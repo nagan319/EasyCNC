@@ -550,3 +550,85 @@ WHERE plates.id = ?
 2024-06-06 19:42:27,317 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
 2024-06-06 19:42:27,335 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-27\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
 2024-06-06 19:42:27,359 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-27\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-06 20:13:18,706 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: nonexistent/path/image.jpg
+2024-06-06 20:13:18,708 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-06 20:14:09,245 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: nonexistent/path/image.jpg
+2024-06-06 20:14:09,246 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-06 20:29:04,715 - logger - ERROR - Attribute min_safe_dict_from_edge does not exist on item with id 63522ca3-8f1c-41fe-b02d-73871b629041
+2024-06-06 20:38:02,979 - logger - ERROR - Attribute min_safe_dict_from_edge does not exist on item with id 05942d47-4287-4306-84e7-22ba88e4cf3b
+2024-06-06 20:40:14,574 - logger - ERROR - Attribute min_safe_dict_from_edge does not exist on item with id 596e3e74-dd24-4b86-b65e-6ac9d00e4fb5
+2024-06-06 20:47:07,260 - logger - ERROR - Attribute min_safe_dict_from_edge does not exist on item with id d0875c7b-a5f2-4e2f-bc59-1ba0af06ac69
+2024-06-06 20:48:14,731 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-06 20:48:14,735 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-06 20:48:14,738 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-06 20:48:14,738 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-06 20:48:14,739 - logger - ERROR - Threshold must be integer value
+2024-06-06 20:48:14,783 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: nonexistent/path/image.jpg
+2024-06-06 20:48:14,783 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-06 20:48:14,813 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-06 20:48:14,839 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-06 20:48:14,878 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 20:48:14,899 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 20:48:14,950 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 20:48:14,957 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-06 20:48:14,987 - logger - ERROR - New value for item parameter <class 'int'> does not match intended type <class 'str'>
+2024-06-06 20:48:14,993 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 20:48:14,999 - logger - ERROR - Item with id None does not exist.
+2024-06-06 20:48:15,007 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 20:48:15,012 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 5
+2024-06-06 20:48:15,012 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 5, 0
+2024-06-06 20:48:15,034 - logger - ERROR - STL file does not exist: invalid path
+2024-06-06 20:48:15,050 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-06 20:48:15,058 - logger - ERROR - STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg is invalid
+2024-06-06 20:48:15,058 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg: STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg is invalid
+2024-06-06 20:48:22,852 - logger - ERROR - Attempted invalid input value for part amount: 0
+2024-06-06 20:48:22,852 - logger - ERROR - Attempted invalid input value for part amount: 5.13
+2024-06-06 20:48:22,852 - logger - ERROR - Attempted invalid input value for part amount: -2
+2024-06-06 20:48:45,217 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001E10A72E2F0>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001E10A72E2F0>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 20:48:45,548 - logger - ERROR - Error updating item with id <src.app.controllers.plate_controller.PlateController object at 0x000001E10938F580>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: SELECT plates.id AS plates_id, plates.x AS plates_x, plates.y AS plates_y, plates.z AS plates_z, plates.material AS plates_material, plates.contours AS plates_contours 
+FROM plates 
+WHERE plates.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<src.app.controllers.plate_controller.PlateController object at 0x000001E10938F580>, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-06-06 20:48:57,825 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
+2024-06-06 20:48:57,837 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-29\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-06 20:48:57,849 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-29\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-06 20:56:32,906 - logger - ERROR - New value for item parameter <class 'NoneType'> does not match intended type <class 'str'>
+2024-06-06 20:57:37,024 - logger - ERROR - New value for item parameter <class 'NoneType'> does not match intended type <class 'str'>
+2024-06-06 21:09:04,754 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-06 21:09:04,759 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-06 21:09:04,764 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-06 21:09:04,764 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-06 21:09:04,765 - logger - ERROR - Threshold must be integer value
+2024-06-06 21:09:04,813 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: nonexistent/path/image.jpg
+2024-06-06 21:09:04,813 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-06 21:09:04,894 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-06 21:09:04,930 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-06 21:09:04,992 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 21:09:05,024 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 21:09:05,094 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 21:09:05,106 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-06 21:09:05,175 - logger - ERROR - New value for item parameter <class 'int'> does not match intended type <class 'str'>
+2024-06-06 21:09:05,187 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-06 21:09:05,200 - logger - ERROR - Item with id None does not exist.
+2024-06-06 21:09:05,220 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-06 21:09:05,233 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 5
+2024-06-06 21:09:05,234 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 5, 0
+2024-06-06 21:09:05,290 - logger - ERROR - STL file does not exist: invalid path
+2024-06-06 21:09:05,324 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-06 21:09:05,344 - logger - ERROR - STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg is invalid
+2024-06-06 21:09:05,344 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg: STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg is invalid
+2024-06-06 21:09:19,249 - logger - ERROR - Attempted invalid input value for part amount: 0
+2024-06-06 21:09:19,249 - logger - ERROR - Attempted invalid input value for part amount: 5.13
+2024-06-06 21:09:19,250 - logger - ERROR - Attempted invalid input value for part amount: -2
+2024-06-06 21:10:30,274 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
+2024-06-06 21:10:30,300 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-30\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-06 21:10:30,333 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-30\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum

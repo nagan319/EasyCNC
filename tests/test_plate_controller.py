@@ -3,7 +3,6 @@ Author: nagan319
 Date: 2024/06/04
 '''
 
-import time
 import os
 import pytest
 import tempfile
@@ -201,7 +200,7 @@ def test_edit_contours(controller):
     new_contour = np.array([1, 2, 3])
     modified_plate = controller.edit_contours(new_plate.id, new_contour)
     assert modified_plate is not None
-    assert modified_plate.contour == serialize_array(new_contour)
+    assert modified_plate.contours == serialize_array(new_contour)
 
 def test_edit_contours_null_contour(controller):
     new_plate = controller.add_new()

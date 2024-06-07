@@ -87,10 +87,14 @@ class FlatFilter:
 
     def __init__(self, src_path: str, dst_path: str, size: Size, corners: List[Tuple[float, float]]):
 
-        if not isinstance(size, Size):
-            raise TypeError("size must be a Size object")
-        if not isinstance(corners, list):
-            raise TypeError("corners must be a list")
+        if not os.path.exists(src_path):
+            logger.error(f"Attempted to initialize BinaryFilter with invalid src path: {src_path}")
+            raise FileNotFoundError()
+
+        if os.path.splitext(src_path)[1] not in SUPPORTED_IMAGE_FORMATS:
+            logger.error(f"Attempted to initialize BinaryFilter with invalid src filetype: {src_path}")
+            raise FileNotFoundError()    
+
         if len(corners) != 4 or not all(isinstance(point, tuple) and len(point) == 2 for point in corners):
             raise ValueError("corners must be a list of four (x, y) tuples")
 

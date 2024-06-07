@@ -99,7 +99,7 @@ class PlateController(GenericController):
         if new_val <= 0 or new_val > PlateConstants.MAX_Z:
             return None
         return self._edit_item_attr(id, 'z', new_val)
-    
+
     def edit_material(self, id: str, new_material: str) -> Union[Plate, None]:
         """
         Edit plate amount. Returns modified plate or None if an error occurs.
@@ -113,7 +113,7 @@ class PlateController(GenericController):
         Edit plate contours. Returns modified plate or None if an error occurs.
         """
         contours_as_string = serialize_array(new_contour)
-        return self._edit_item_attr(self, id, contours_as_string)
+        return self._edit_item_attr(id, 'contours', contours_as_string)
     '''
     Preview image logic
     '''
