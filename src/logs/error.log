@@ -632,3 +632,42 @@ WHERE plates.id = ?
 2024-06-06 21:10:30,274 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
 2024-06-06 21:10:30,300 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-30\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
 2024-06-06 21:10:30,333 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-30\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-07 12:31:00,195 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-07 13:08:03,494 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-07 13:08:56,077 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-07 13:11:01,403 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-07 13:11:47,652 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-07 13:12:21,522 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-07 13:12:47,530 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-07 13:13:31,508 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-07 13:14:00,162 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-07 13:15:00,770 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-07 13:15:00,773 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-07 13:15:00,775 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-07 13:15:00,775 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-07 13:15:00,776 - logger - ERROR - Threshold must be integer value
+2024-06-07 13:15:00,838 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-07 13:15:01,095 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: nonexistent/path/image.jpg
+2024-06-07 13:15:01,095 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-07 13:15:01,125 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-07 13:15:01,144 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-07 13:15:01,177 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-07 13:15:01,192 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-07 13:15:01,231 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-07 13:15:01,239 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-07 13:15:01,273 - logger - ERROR - New value for item parameter <class 'int'> does not match intended type <class 'str'>
+2024-06-07 13:15:01,278 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-07 13:15:01,285 - logger - ERROR - Item with id None does not exist.
+2024-06-07 13:15:01,293 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-07 13:15:01,300 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 5
+2024-06-07 13:15:01,300 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 5, 0
+2024-06-07 13:15:01,327 - logger - ERROR - STL file does not exist: invalid path
+2024-06-07 13:15:01,353 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-07 13:15:01,362 - logger - ERROR - STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg is invalid
+2024-06-07 13:15:01,362 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg: STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image4.jpeg is invalid
+2024-06-07 13:15:08,859 - logger - ERROR - Attempted invalid input value for part amount: 0
+2024-06-07 13:15:08,860 - logger - ERROR - Attempted invalid input value for part amount: 5.13
+2024-06-07 13:15:08,860 - logger - ERROR - Attempted invalid input value for part amount: -2
+2024-06-07 13:15:30,582 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
+2024-06-07 13:15:30,598 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-36\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-07 13:15:30,610 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-36\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum

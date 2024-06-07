@@ -11,8 +11,12 @@ Notes:
 - plan and implement user settings controller DONE
 
 6/7/2024 (fri)
-- plan image controller architecture
+- plan image controller architecture -> Implement image size etc. and manual feature editing
+    figure out binding with image controller
+    necessary to pass in plate id for ui???
 - come up with image controller tests
+Required files for testing:
+    - image editing controller
 - create basic app using qfluentwidgets to figure out framework
 
 6/8/2024 (sat)
@@ -23,4 +27,3 @@ Notes:
 - work on polygon processing library (evaluate amount of work left)
 
 6/10/2024 (mon)
-- 
