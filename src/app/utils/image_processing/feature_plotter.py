@@ -16,7 +16,7 @@ class FeaturePlotter:
     - features: Features to be mapped.
     - colors: Color palette to be used when saving.
     """
-    def __init__(self, dst_path: str, size: Size, features: Features, colors: Colors):
+    def __init__(self, dst_path: str, size: Size, features: Features, colors: Colors = Colors()):
         self.dst_path = dst_path
         self.size = size
         self.features = features
@@ -35,7 +35,7 @@ class FeaturePlotter:
             if self.features.plate_contour is not None:
                 contours = [self.features.plate_contour.reshape((-1, 1, 2))]
                 thickness = 8 if self.features.selected_contour_idx == 0 else 2
-                color = self.colors.plate_color if self.features.selected_contour_idx == 0 else (0, 255, 0)
+                color = self.colors.plate_color 
                 cv2.drawContours(canvas, contours, -1, color, thickness)
 
             if self.features.other_contours is not None:
@@ -46,9 +46,9 @@ class FeaturePlotter:
                     cv2.drawContours(canvas, [contour], -1, color, thickness)
 
             for idx, corner in enumerate(self.features.corners):
-                radius = 10 if idx == self.features.selected_corner_idx else 5
+                radius = 50 if idx == self.features.selected_corner_idx else 25
                 color = (255, 0, 0) if idx == self.features.selected_corner_idx else self.colors.corner_color
-                cv2.circle(canvas, corner, radius=radius, color=color, thickness=-1)
+                cv2.circle(canvas, corner, radius=radius, color=color, thickness=5)
 
             cv2.imwrite(self.dst_path, canvas)
             return True

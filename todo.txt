@@ -11,19 +11,22 @@ Notes:
 - plan and implement user settings controller DONE
 
 6/7/2024 (fri)
-- plan image controller architecture -> Implement image size etc. and manual feature editing
-    figure out binding with image controller
-    necessary to pass in plate id for ui???
-- come up with image controller tests
-Required files for testing:
-    - image editing controller
+- plan image controller architecture -> Implement image size etc. DONE and manual (TODO)
+- come up with image controller tests DONE
+- implement transformation function for detected contours (to avoid re-detecting)
 - create basic app using qfluentwidgets to figure out framework
 
+Something is causing side effects when saving features (wrong directory??)
+
 6/8/2024 (sat)
+- figure out image controller bug DONE - why is src image being removed?
+- figure out structure for imagecontroller interface class
+- implement manual feature editing DONE
 - improve STLParser tests
 - implement ui using qfluentwidgets
 
 6/9/2024 (sun)
+- create mock optimization controller/ui 
 - work on polygon processing library (evaluate amount of work left)
 
 6/10/2024 (mon)

@@ -83,7 +83,7 @@ def session(session_factory):
     session.close()
 
 @pytest.fixture(scope="function", autouse=True)
-def create_router_table(engine, Base):
+def create_plate_table(engine, Base):
     Base.create_all(engine)
     yield
     Base.drop_all(engine)
