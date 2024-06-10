@@ -15,3 +15,10 @@ DATA_DIR = os.path.join(ROOT_DIR, 'data')
 DATABASE_URI = f'sqlite:///{os.path.join(DATA_DIR, "app_data.db")}'
 
 LOGS_DIR = os.path.join(ROOT_DIR, 'logs')
+
+
+"""
+Resource paths.
+"""
+
+LOGO_PATH = os.path.join(ROOT_DIR, 'app', 'resources', 'images', 'kinney.PNG')
