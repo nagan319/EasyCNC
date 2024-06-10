@@ -22,7 +22,7 @@ Test Coverage:
 
 @pytest.fixture
 def src_path():
-    return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test data', 'images', 'image4.jpeg')
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test data', 'images', 'image5.jpeg')
 
 @pytest.fixture
 def invalid_filetype():

@@ -74,7 +74,7 @@ def stl_file_path_invalid():
 @pytest.fixture
 def non_stl_filepath():
     parent_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test data', 'images')
-    non_stl_file = os.path.abspath(os.path.join(parent_dir, 'image4.jpeg'))
+    non_stl_file = os.path.abspath(os.path.join(parent_dir, 'image5.jpeg'))
     assert os.path.exists(non_stl_file), f"Non-STL file {non_stl_file} does not exist"
     return non_stl_file
 
