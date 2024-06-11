@@ -12904,3 +12904,1765 @@ WHERE plates.id = ?
 2024-06-11 15:29:22,266 - logger - DEBUG - Binary image saved successfully.
 2024-06-11 15:29:22,350 - logger - DEBUG - Image features extracted successfully.
 2024-06-11 15:29:22,407 - logger - DEBUG - Image features saved successfully.
+2024-06-11 15:31:15,684 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-11 15:31:15,687 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:15,689 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:31:15,689 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:31:15,689 - logger - ERROR - Threshold must be integer value
+2024-06-11 15:31:15,798 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:31:16,073 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: nonexistent/path/image.jpg
+2024-06-11 15:31:16,074 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:16,092 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-11 15:31:16,103 - logger - DEBUG - Item with id 1 added successfully.
+2024-06-11 15:31:16,110 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-11 15:31:16,120 - logger - DEBUG - Item with id 1 removed successfully.
+2024-06-11 15:31:16,128 - logger - DEBUG - Item with id 1 removed successfully.
+2024-06-11 15:31:16,136 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:31:16,142 - logger - DEBUG - Item with id 1 removed successfully.
+2024-06-11 15:31:16,148 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:31:16,154 - logger - DEBUG - Successfully cleared out data table.
+2024-06-11 15:31:16,161 - logger - DEBUG - Successfully cleared out data table.
+2024-06-11 15:31:16,183 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:31:16,190 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-11 15:31:16,212 - logger - DEBUG - Updated item id 1: set description to Updated description
+2024-06-11 15:31:16,220 - logger - ERROR - New value for item parameter <class 'int'> does not match intended type <class 'str'>
+2024-06-11 15:31:16,224 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:31:16,230 - logger - ERROR - Item with id None does not exist.
+2024-06-11 15:31:16,238 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-11 15:31:16,251 - logger - ERROR - Indicated image editing directory path does not exist: invalid directory
+2024-06-11 15:31:16,258 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:31:16,259 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:31:16,259 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:31:16,276 - logger - ERROR - Attempted to import raw image in wrong ImageEditingController state.
+2024-06-11 15:31:16,284 - logger - ERROR - Indicated raw image filepath does not exist: random invalid path
+2024-06-11 15:31:16,295 - logger - ERROR - Image file is of invalid format: .STL
+2024-06-11 15:31:16,401 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpf4qtkq3l\raw.png
+2024-06-11 15:31:16,403 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:31:16,466 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: -100, -100
+2024-06-11 15:31:16,466 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:31:16,527 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmp8yoypmmm\raw.png
+2024-06-11 15:31:16,528 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:31:16,528 - logger - ERROR - Attempted to get binary image in wrong state.
+2024-06-11 15:31:16,582 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpjlixk_jo\raw.png
+2024-06-11 15:31:16,583 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:31:16,583 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:31:16,584 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:31:16,584 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:31:16,639 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpiprrdf3h\raw.png
+2024-06-11 15:31:16,639 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:31:16,700 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:31:16,753 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmplws5scaa\raw.png
+2024-06-11 15:31:16,754 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:31:16,812 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:31:16,813 - logger - ERROR - Attempted to extract features in wrong state.
+2024-06-11 15:31:16,875 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmphyxne3rd\raw.png
+2024-06-11 15:31:16,876 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:31:16,943 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:31:16,975 - logger - DEBUG - Image features extracted successfully.
+2024-06-11 15:31:17,286 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpldrdrx12\raw.png
+2024-06-11 15:31:17,287 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:31:17,366 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:31:17,390 - logger - DEBUG - Image features extracted successfully.
+2024-06-11 15:31:17,390 - logger - ERROR - Attempted to save image features in wrong state.
+2024-06-11 15:31:17,469 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmp4604k1_0\raw.png
+2024-06-11 15:31:17,471 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:31:17,542 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:31:17,563 - logger - DEBUG - Image features extracted successfully.
+2024-06-11 15:31:17,592 - logger - DEBUG - Image features saved successfully.
+2024-06-11 15:31:17,610 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 5
+2024-06-11 15:31:17,611 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 5, 0
+2024-06-11 15:31:17,629 - logger - ERROR - STL file does not exist: invalid path
+2024-06-11 15:31:17,638 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL
+2024-06-11 15:31:17,660 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:31:17,660 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:31:17,660 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:31:17,661 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:31:17,661 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:31:17,661 - logger - DEBUG - Finding contours...
+2024-06-11 15:31:17,661 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:31:17,661 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:31:17,661 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-11 15:31:17,671 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:31:17,671 - logger - ERROR - STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-11 15:31:17,671 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg: STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-11 15:31:17,678 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:17,792 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:31:17,792 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:31:17,793 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:31:17,793 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:31:17,794 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:31:17,809 - logger - DEBUG - Finding contours...
+2024-06-11 15:31:17,810 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:31:17,811 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:31:17,813 - logger - DEBUG - Parsing complete.
+2024-06-11 15:31:17,816 - logger - DEBUG - Item with id 65820594-aff0-439d-8c0c-d50c527715c6 added successfully.
+2024-06-11 15:31:17,817 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:31:19,027 - logger - DEBUG - Saving preview image...
+2024-06-11 15:31:19,402 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpvwnxi4cm\65820594-aff0-439d-8c0c-d50c527715c6.png.
+2024-06-11 15:31:19,402 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:31:19,412 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:19,516 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:31:19,516 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:31:19,517 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:31:19,517 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:31:19,518 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:31:19,529 - logger - DEBUG - Finding contours...
+2024-06-11 15:31:19,531 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:31:19,531 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:31:19,533 - logger - DEBUG - Parsing complete.
+2024-06-11 15:31:19,535 - logger - DEBUG - Item with id 88ae8698-8948-4e03-b38d-a27a1aa38797 added successfully.
+2024-06-11 15:31:19,535 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:31:19,765 - logger - DEBUG - Saving preview image...
+2024-06-11 15:31:19,964 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpa2fs_bry\88ae8698-8948-4e03-b38d-a27a1aa38797.png.
+2024-06-11 15:31:19,964 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:31:19,966 - logger - DEBUG - Attempted to add already existing STL file: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:19,981 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:20,066 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:31:20,066 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:31:20,067 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:31:20,067 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:31:20,068 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:31:20,077 - logger - DEBUG - Finding contours...
+2024-06-11 15:31:20,079 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:31:20,080 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:31:20,083 - logger - DEBUG - Parsing complete.
+2024-06-11 15:31:20,083 - logger - DEBUG - Item with id c77f6216-b7f2-453a-8bf1-c64208ccc680 added successfully.
+2024-06-11 15:31:20,084 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:31:20,440 - logger - DEBUG - Saving preview image...
+2024-06-11 15:31:20,717 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmplw3_185w\c77f6216-b7f2-453a-8bf1-c64208ccc680.png.
+2024-06-11 15:31:20,717 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:31:20,719 - logger - DEBUG - Attempted to add already existing STL file: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:20,728 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:20,829 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:31:20,830 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:31:20,830 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:31:20,830 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:31:20,831 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:31:20,840 - logger - DEBUG - Finding contours...
+2024-06-11 15:31:20,842 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:31:20,842 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:31:20,844 - logger - DEBUG - Parsing complete.
+2024-06-11 15:31:20,846 - logger - DEBUG - Item with id cf9dd251-1155-41ea-8fca-7deff01131d7 added successfully.
+2024-06-11 15:31:20,846 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:31:21,117 - logger - DEBUG - Saving preview image...
+2024-06-11 15:31:21,291 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpqjo7yulp\cf9dd251-1155-41ea-8fca-7deff01131d7.png.
+2024-06-11 15:31:21,291 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:31:21,300 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:21,389 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:31:21,390 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:31:21,390 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:31:21,390 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:31:21,391 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:31:21,400 - logger - DEBUG - Finding contours...
+2024-06-11 15:31:21,402 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:31:21,402 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:31:21,404 - logger - DEBUG - Parsing complete.
+2024-06-11 15:31:21,406 - logger - DEBUG - Item with id 4cbd01cf-0a1b-41f5-956c-44976a3d2fdc added successfully.
+2024-06-11 15:31:21,406 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:31:21,784 - logger - DEBUG - Saving preview image...
+2024-06-11 15:31:21,980 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmp0rshh5yr\4cbd01cf-0a1b-41f5-956c-44976a3d2fdc.png.
+2024-06-11 15:31:21,980 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:31:21,990 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:22,096 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:31:22,096 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:31:22,097 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:31:22,098 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:31:22,098 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:31:22,108 - logger - DEBUG - Finding contours...
+2024-06-11 15:31:22,109 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:31:22,110 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:31:22,112 - logger - DEBUG - Parsing complete.
+2024-06-11 15:31:22,113 - logger - DEBUG - Item with id 46b5f03e-e725-4d07-b45a-612a38b41cc5 added successfully.
+2024-06-11 15:31:22,114 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:31:22,385 - logger - DEBUG - Saving preview image...
+2024-06-11 15:31:22,599 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmp_jg6h3ge\46b5f03e-e725-4d07-b45a-612a38b41cc5.png.
+2024-06-11 15:31:22,600 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:31:22,609 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:22,732 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:31:22,732 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:31:22,733 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:31:22,733 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:31:22,733 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:31:22,744 - logger - DEBUG - Finding contours...
+2024-06-11 15:31:22,746 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:31:22,746 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:31:22,748 - logger - DEBUG - Parsing complete.
+2024-06-11 15:31:22,749 - logger - DEBUG - Item with id ff17c1b9-f530-48f3-b8f5-558cab3a0a98 added successfully.
+2024-06-11 15:31:22,750 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:31:23,150 - logger - DEBUG - Saving preview image...
+2024-06-11 15:31:23,341 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpxm6rm8yj\ff17c1b9-f530-48f3-b8f5-558cab3a0a98.png.
+2024-06-11 15:31:23,342 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:31:23,359 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:23,487 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:31:23,487 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:31:23,488 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:31:23,488 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:31:23,489 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:31:23,500 - logger - DEBUG - Finding contours...
+2024-06-11 15:31:23,502 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:31:23,502 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:31:23,505 - logger - DEBUG - Parsing complete.
+2024-06-11 15:31:23,506 - logger - DEBUG - Item with id 276143bb-53b2-4a08-b3cf-18bbe5a84260 added successfully.
+2024-06-11 15:31:23,506 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:31:23,718 - logger - DEBUG - Saving preview image...
+2024-06-11 15:31:23,896 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmp9mr9gx53\276143bb-53b2-4a08-b3cf-18bbe5a84260.png.
+2024-06-11 15:31:23,896 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:31:23,905 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:24,005 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:31:24,005 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:31:24,006 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:31:24,006 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:31:24,006 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:31:24,015 - logger - DEBUG - Finding contours...
+2024-06-11 15:31:24,017 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:31:24,017 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:31:24,019 - logger - DEBUG - Parsing complete.
+2024-06-11 15:31:24,020 - logger - DEBUG - Item with id b18a62c5-4528-4273-8fe2-d43ca68641ee added successfully.
+2024-06-11 15:31:24,020 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:31:24,233 - logger - DEBUG - Saving preview image...
+2024-06-11 15:31:24,405 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmplpwjxa9v\b18a62c5-4528-4273-8fe2-d43ca68641ee.png.
+2024-06-11 15:31:24,406 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:31:24,408 - logger - DEBUG - Updated item id b18a62c5-4528-4273-8fe2-d43ca68641ee: set material to new_material
+2024-06-11 15:31:24,416 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:24,528 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:31:24,528 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:31:24,529 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:31:24,529 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:31:24,529 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:31:24,539 - logger - DEBUG - Finding contours...
+2024-06-11 15:31:24,540 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:31:24,541 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:31:24,543 - logger - DEBUG - Parsing complete.
+2024-06-11 15:31:24,544 - logger - DEBUG - Item with id 53cbc4d2-5ff4-4553-8c39-7fc03ea95f16 added successfully.
+2024-06-11 15:31:24,544 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:31:24,964 - logger - DEBUG - Saving preview image...
+2024-06-11 15:31:25,148 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpfc287y3o\53cbc4d2-5ff4-4553-8c39-7fc03ea95f16.png.
+2024-06-11 15:31:25,149 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:31:25,167 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:25,305 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:31:25,305 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:31:25,306 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:31:25,306 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:31:25,306 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:31:25,315 - logger - DEBUG - Finding contours...
+2024-06-11 15:31:25,316 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:31:25,317 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:31:25,319 - logger - DEBUG - Parsing complete.
+2024-06-11 15:31:25,320 - logger - DEBUG - Item with id c9c7184a-1642-42e4-8316-f9b755aacc7a added successfully.
+2024-06-11 15:31:25,320 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:31:25,533 - logger - DEBUG - Saving preview image...
+2024-06-11 15:31:25,722 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmph2u_p8u6\c9c7184a-1642-42e4-8316-f9b755aacc7a.png.
+2024-06-11 15:31:25,722 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:31:25,725 - logger - DEBUG - Updated item id c9c7184a-1642-42e4-8316-f9b755aacc7a: set amount to 2
+2024-06-11 15:31:25,733 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:25,829 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:31:25,829 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:31:25,830 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:31:25,830 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:31:25,830 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:31:25,841 - logger - DEBUG - Finding contours...
+2024-06-11 15:31:25,842 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:31:25,843 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:31:25,845 - logger - DEBUG - Parsing complete.
+2024-06-11 15:31:25,846 - logger - DEBUG - Item with id 081e928b-28ac-46e2-b852-6ba84be4dea9 added successfully.
+2024-06-11 15:31:25,847 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:31:26,053 - logger - DEBUG - Saving preview image...
+2024-06-11 15:31:26,214 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpto9piguc\081e928b-28ac-46e2-b852-6ba84be4dea9.png.
+2024-06-11 15:31:26,214 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:31:26,215 - logger - ERROR - Attempted invalid input value for part amount: 0
+2024-06-11 15:31:26,215 - logger - ERROR - Attempted invalid input value for part amount: 5.13
+2024-06-11 15:31:26,215 - logger - ERROR - Attempted invalid input value for part amount: -2
+2024-06-11 15:31:26,222 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:26,307 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:31:26,307 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:31:26,309 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:31:26,309 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:31:26,309 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:31:26,317 - logger - DEBUG - Finding contours...
+2024-06-11 15:31:26,319 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:31:26,319 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:31:26,321 - logger - DEBUG - Parsing complete.
+2024-06-11 15:31:26,323 - logger - DEBUG - Item with id 916286d5-d8d3-4a9f-bd66-c78980c9e1f3 added successfully.
+2024-06-11 15:31:26,323 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:31:26,813 - logger - DEBUG - Saving preview image...
+2024-06-11 15:31:27,002 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpq6s0bqzy\916286d5-d8d3-4a9f-bd66-c78980c9e1f3.png.
+2024-06-11 15:31:27,002 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:31:27,188 - logger - DEBUG - Preview image for plate with id 852cfd80-1ebd-487a-af2f-785a5d7ea2f0 saved successfully.
+2024-06-11 15:31:27,276 - logger - DEBUG - Preview image for plate with id 1bf2683e-08df-4306-8280-eb94e1dcb2ee saved successfully.
+2024-06-11 15:31:27,363 - logger - DEBUG - Preview image for plate with id 7c8ae76f-87d6-40c7-99a3-ccb1b8402220 saved successfully.
+2024-06-11 15:31:27,451 - logger - DEBUG - Preview image for plate with id 66a05cb1-e8a5-4462-ae39-5e112bc561f7 saved successfully.
+2024-06-11 15:31:27,540 - logger - DEBUG - Preview image for plate with id a33dcf2c-be2c-4cc8-9ebf-2f513f45c753 saved successfully.
+2024-06-11 15:31:27,624 - logger - DEBUG - Preview image for plate with id 7724ccc6-c6bb-4e40-a768-92664de363e4 saved successfully.
+2024-06-11 15:31:27,706 - logger - DEBUG - Preview image for plate with id 0931bd6f-855b-4ddb-9f86-41da1f48ebce saved successfully.
+2024-06-11 15:31:27,790 - logger - DEBUG - Preview image for plate with id 70d672fa-2fd1-4e72-b802-52df1d467c0f saved successfully.
+2024-06-11 15:31:27,873 - logger - DEBUG - Preview image for plate with id f0f3a770-c216-4f80-89f9-361815514d9a saved successfully.
+2024-06-11 15:31:27,950 - logger - DEBUG - Preview image for plate with id ed0dd70d-619f-4dfe-8dbc-7c50bfff263f saved successfully.
+2024-06-11 15:31:28,032 - logger - DEBUG - Preview image for plate with id bc669fe3-70e5-43d4-8e94-b1bb02c05e1f saved successfully.
+2024-06-11 15:31:28,125 - logger - DEBUG - Preview image for plate with id 85758c0d-290a-4ff1-a1d3-08eba3adf135 saved successfully.
+2024-06-11 15:31:28,217 - logger - DEBUG - Preview image for plate with id 4411195c-3c02-486a-a2f1-07a79dfabf50 saved successfully.
+2024-06-11 15:31:28,307 - logger - DEBUG - Preview image for plate with id 86bc0843-9b04-4e54-98b6-eb9c5662a007 saved successfully.
+2024-06-11 15:31:28,403 - logger - DEBUG - Preview image for plate with id 0e0335be-7129-4810-a72b-3a7e21f5103d saved successfully.
+2024-06-11 15:31:28,510 - logger - DEBUG - Preview image for plate with id 586255d5-eea4-4e49-afc5-1dacf0ba5e8d saved successfully.
+2024-06-11 15:31:28,608 - logger - DEBUG - Preview image for plate with id 01c21430-4444-479f-b665-fe6803e0179f saved successfully.
+2024-06-11 15:31:28,696 - logger - DEBUG - Preview image for plate with id dfd9342f-3431-4204-84b6-23146d59169b saved successfully.
+2024-06-11 15:31:28,778 - logger - DEBUG - Preview image for plate with id a84edc7f-dacf-443d-88de-010d4e1c1cf1 saved successfully.
+2024-06-11 15:31:28,874 - logger - DEBUG - Preview image for plate with id f33448d4-ea3a-48b5-9b4e-63b643510221 saved successfully.
+2024-06-11 15:31:28,977 - logger - DEBUG - Preview image for plate with id 226ecb5c-c1ef-4faf-a28c-507e69551872 saved successfully.
+2024-06-11 15:31:29,064 - logger - DEBUG - Preview image for plate with id 12262d1a-ba4e-4d9d-b1a7-b8ff35f41343 saved successfully.
+2024-06-11 15:31:29,164 - logger - DEBUG - Preview image for plate with id 0ca13e9c-d022-4251-9496-4881ef3f1fe7 saved successfully.
+2024-06-11 15:31:29,253 - logger - DEBUG - Preview image for plate with id 7629666d-7235-4a63-8853-c141b0dc0ea3 saved successfully.
+2024-06-11 15:31:29,337 - logger - DEBUG - Preview image for plate with id 23af586c-a301-4073-8288-e330ba162d14 saved successfully.
+2024-06-11 15:31:29,425 - logger - DEBUG - Preview image for plate with id f5dcf809-3d25-42eb-ac4a-0f438c52e825 saved successfully.
+2024-06-11 15:31:29,507 - logger - DEBUG - Preview image for plate with id cf0c968d-f315-462d-a40c-4482611bd2bc saved successfully.
+2024-06-11 15:31:29,589 - logger - DEBUG - Preview image for plate with id c8390aec-b24b-4022-acde-4e631bb4941c saved successfully.
+2024-06-11 15:31:29,677 - logger - DEBUG - Preview image for plate with id 16c176ca-c8f6-4a04-b9db-119af0117654 saved successfully.
+2024-06-11 15:31:29,766 - logger - DEBUG - Preview image for plate with id a2326758-1570-4f93-9f1e-6db15dd074c6 saved successfully.
+2024-06-11 15:31:29,860 - logger - DEBUG - Preview image for plate with id ca8ff475-b8c6-4eb9-a9a4-a497d54e0fae saved successfully.
+2024-06-11 15:31:29,948 - logger - DEBUG - Preview image for plate with id 4b0a56c7-25a0-4835-9b90-497a6961a8ec saved successfully.
+2024-06-11 15:31:30,049 - logger - DEBUG - Preview image for plate with id 3cf53588-fabd-4828-95c5-96269bb0f314 saved successfully.
+2024-06-11 15:31:30,150 - logger - DEBUG - Preview image for plate with id 56345054-8375-4485-a6fe-14aae4c4541b saved successfully.
+2024-06-11 15:31:30,253 - logger - DEBUG - Preview image for plate with id 883df392-5629-41e9-afc6-99cbca74f6ef saved successfully.
+2024-06-11 15:31:30,341 - logger - DEBUG - Preview image for plate with id 2f1d77fc-03f5-4a8c-8af0-dcd262afb277 saved successfully.
+2024-06-11 15:31:30,430 - logger - DEBUG - Preview image for plate with id e5749c44-4024-4dbf-b3f2-cbc29c3ec0f0 saved successfully.
+2024-06-11 15:31:30,514 - logger - DEBUG - Preview image for plate with id 27ae0e4e-0a7c-498c-95e9-234dd2acc1a3 saved successfully.
+2024-06-11 15:31:30,599 - logger - DEBUG - Preview image for plate with id bab8ff5f-51b9-4a21-b832-044d8adf537a saved successfully.
+2024-06-11 15:31:30,709 - logger - DEBUG - Preview image for plate with id 4f1dbb51-ce5b-47f3-99af-edc3e4a4ce21 saved successfully.
+2024-06-11 15:31:30,797 - logger - DEBUG - Preview image for plate with id cacaa27a-e2d8-4ef0-a192-9c2f4081ecb1 saved successfully.
+2024-06-11 15:31:30,877 - logger - DEBUG - Preview image for plate with id 13e20866-1511-4c7e-a3ec-8c2be12b016b saved successfully.
+2024-06-11 15:31:30,964 - logger - DEBUG - Preview image for plate with id 966019ac-5563-4ea9-82e7-583684445420 saved successfully.
+2024-06-11 15:31:31,076 - logger - DEBUG - Preview image for plate with id 7b12272e-b6f3-411f-b43f-d76335a035f8 saved successfully.
+2024-06-11 15:31:31,161 - logger - DEBUG - Preview image for plate with id 7509cf94-4797-4953-8ab3-9586a34e938d saved successfully.
+2024-06-11 15:31:31,244 - logger - DEBUG - Preview image for plate with id 081c2768-8126-49cf-8a4a-38c1f25498a8 saved successfully.
+2024-06-11 15:31:31,347 - logger - DEBUG - Preview image for plate with id 560145fe-3a04-4437-bf34-c94d52fd63d4 saved successfully.
+2024-06-11 15:31:31,427 - logger - DEBUG - Preview image for plate with id a5970d6d-fcbc-4ca2-b149-79ccf105d94a saved successfully.
+2024-06-11 15:31:31,509 - logger - DEBUG - Preview image for plate with id 8c3dde32-b6cb-4a14-989f-daa66d1cd6c0 saved successfully.
+2024-06-11 15:31:31,540 - logger - DEBUG - Item with id 56aaea4a-eed9-4777-98e7-262e6fc8b61c added successfully.
+2024-06-11 15:31:31,642 - logger - DEBUG - Preview image for plate with id 56aaea4a-eed9-4777-98e7-262e6fc8b61c saved successfully.
+2024-06-11 15:31:31,644 - logger - DEBUG - Item with id 0051decb-fe1a-4e64-95fe-ab55f8f47c4b added successfully.
+2024-06-11 15:31:31,733 - logger - DEBUG - Preview image for plate with id 0051decb-fe1a-4e64-95fe-ab55f8f47c4b saved successfully.
+2024-06-11 15:31:31,735 - logger - DEBUG - Item with id afd498b7-2c46-4846-8dca-7edc5beaf1f5 added successfully.
+2024-06-11 15:31:31,837 - logger - DEBUG - Preview image for plate with id afd498b7-2c46-4846-8dca-7edc5beaf1f5 saved successfully.
+2024-06-11 15:31:31,839 - logger - DEBUG - Item with id 4b0947f0-4b33-401f-9c81-0134518198b4 added successfully.
+2024-06-11 15:31:31,939 - logger - DEBUG - Preview image for plate with id 4b0947f0-4b33-401f-9c81-0134518198b4 saved successfully.
+2024-06-11 15:31:31,941 - logger - DEBUG - Item with id 7adad498-25f7-454f-abf1-2ce97e6f79ae added successfully.
+2024-06-11 15:31:32,019 - logger - DEBUG - Preview image for plate with id 7adad498-25f7-454f-abf1-2ce97e6f79ae saved successfully.
+2024-06-11 15:31:32,021 - logger - DEBUG - Item with id a10a34fd-5c7b-49ee-8fb0-95941a66f1f3 added successfully.
+2024-06-11 15:31:32,102 - logger - DEBUG - Preview image for plate with id a10a34fd-5c7b-49ee-8fb0-95941a66f1f3 saved successfully.
+2024-06-11 15:31:32,103 - logger - DEBUG - Item with id cbc120e0-491f-4a03-8633-e95342185643 added successfully.
+2024-06-11 15:31:32,190 - logger - DEBUG - Preview image for plate with id cbc120e0-491f-4a03-8633-e95342185643 saved successfully.
+2024-06-11 15:31:32,193 - logger - DEBUG - Item with id c690a2d7-de0d-45ab-8f88-bcebe8ffa428 added successfully.
+2024-06-11 15:31:32,276 - logger - DEBUG - Preview image for plate with id c690a2d7-de0d-45ab-8f88-bcebe8ffa428 saved successfully.
+2024-06-11 15:31:32,278 - logger - DEBUG - Item with id 9aefceef-2bf5-4404-8274-0ee5c926c009 added successfully.
+2024-06-11 15:31:32,366 - logger - DEBUG - Preview image for plate with id 9aefceef-2bf5-4404-8274-0ee5c926c009 saved successfully.
+2024-06-11 15:31:32,368 - logger - DEBUG - Item with id 7adc3564-e70a-4ebc-a9ad-5314d4b5bb31 added successfully.
+2024-06-11 15:31:32,450 - logger - DEBUG - Preview image for plate with id 7adc3564-e70a-4ebc-a9ad-5314d4b5bb31 saved successfully.
+2024-06-11 15:31:32,452 - logger - DEBUG - Item with id fb01103b-bc7b-47c9-ab2d-e8fefd1ff38d added successfully.
+2024-06-11 15:31:32,539 - logger - DEBUG - Preview image for plate with id fb01103b-bc7b-47c9-ab2d-e8fefd1ff38d saved successfully.
+2024-06-11 15:31:32,541 - logger - DEBUG - Item with id 8dc5ab56-f866-4b68-a312-11792db7df1e added successfully.
+2024-06-11 15:31:32,632 - logger - DEBUG - Preview image for plate with id 8dc5ab56-f866-4b68-a312-11792db7df1e saved successfully.
+2024-06-11 15:31:32,635 - logger - DEBUG - Item with id a3b5458d-34a5-4c3b-843d-7637b1588058 added successfully.
+2024-06-11 15:31:32,728 - logger - DEBUG - Preview image for plate with id a3b5458d-34a5-4c3b-843d-7637b1588058 saved successfully.
+2024-06-11 15:31:32,730 - logger - DEBUG - Item with id 0c6860a9-e2cc-4946-a981-dd9010cc02dc added successfully.
+2024-06-11 15:31:32,822 - logger - DEBUG - Preview image for plate with id 0c6860a9-e2cc-4946-a981-dd9010cc02dc saved successfully.
+2024-06-11 15:31:32,824 - logger - DEBUG - Item with id d82eb8c1-a1c5-4d09-9d77-a8565d5fdc2c added successfully.
+2024-06-11 15:31:32,920 - logger - DEBUG - Preview image for plate with id d82eb8c1-a1c5-4d09-9d77-a8565d5fdc2c saved successfully.
+2024-06-11 15:31:32,922 - logger - DEBUG - Item with id a9de2535-dadf-4d42-b994-4a7381795196 added successfully.
+2024-06-11 15:31:33,008 - logger - DEBUG - Preview image for plate with id a9de2535-dadf-4d42-b994-4a7381795196 saved successfully.
+2024-06-11 15:31:33,010 - logger - DEBUG - Item with id 39738fc1-7ec0-4357-bb24-67a8b9bb6b0d added successfully.
+2024-06-11 15:31:33,093 - logger - DEBUG - Preview image for plate with id 39738fc1-7ec0-4357-bb24-67a8b9bb6b0d saved successfully.
+2024-06-11 15:31:33,095 - logger - DEBUG - Item with id 4dd5526b-bdcc-4d6a-8ea0-fba2cf2ba620 added successfully.
+2024-06-11 15:31:33,177 - logger - DEBUG - Preview image for plate with id 4dd5526b-bdcc-4d6a-8ea0-fba2cf2ba620 saved successfully.
+2024-06-11 15:31:33,179 - logger - DEBUG - Item with id c19e67ad-a8fb-4b71-9c53-bc50e34ec2be added successfully.
+2024-06-11 15:31:33,263 - logger - DEBUG - Preview image for plate with id c19e67ad-a8fb-4b71-9c53-bc50e34ec2be saved successfully.
+2024-06-11 15:31:33,265 - logger - DEBUG - Item with id 39bc67be-cad5-4e9f-82ac-9259039dc452 added successfully.
+2024-06-11 15:31:33,351 - logger - DEBUG - Preview image for plate with id 39bc67be-cad5-4e9f-82ac-9259039dc452 saved successfully.
+2024-06-11 15:31:33,353 - logger - DEBUG - Item with id 7e3bb621-7653-45df-acaa-e1ef788764ad added successfully.
+2024-06-11 15:31:33,438 - logger - DEBUG - Preview image for plate with id 7e3bb621-7653-45df-acaa-e1ef788764ad saved successfully.
+2024-06-11 15:31:33,440 - logger - DEBUG - Item with id 9b563ecf-7fcf-4110-89a6-e3849f667f4c added successfully.
+2024-06-11 15:31:33,525 - logger - DEBUG - Preview image for plate with id 9b563ecf-7fcf-4110-89a6-e3849f667f4c saved successfully.
+2024-06-11 15:31:33,526 - logger - DEBUG - Item with id be426ddf-4c0c-499e-9b5a-17b87af4bc12 added successfully.
+2024-06-11 15:31:33,612 - logger - DEBUG - Preview image for plate with id be426ddf-4c0c-499e-9b5a-17b87af4bc12 saved successfully.
+2024-06-11 15:31:33,614 - logger - DEBUG - Item with id a6748122-8de2-4ce4-b5a3-cedcdac9bd87 added successfully.
+2024-06-11 15:31:33,703 - logger - DEBUG - Preview image for plate with id a6748122-8de2-4ce4-b5a3-cedcdac9bd87 saved successfully.
+2024-06-11 15:31:33,705 - logger - DEBUG - Item with id 5765ff7f-01db-4878-b81a-40303d12c9bc added successfully.
+2024-06-11 15:31:34,141 - logger - DEBUG - Preview image for plate with id 5765ff7f-01db-4878-b81a-40303d12c9bc saved successfully.
+2024-06-11 15:31:34,143 - logger - DEBUG - Item with id 8fe1e06b-ce6d-4d2c-9fd7-85e4ef899783 added successfully.
+2024-06-11 15:31:34,232 - logger - DEBUG - Preview image for plate with id 8fe1e06b-ce6d-4d2c-9fd7-85e4ef899783 saved successfully.
+2024-06-11 15:31:34,235 - logger - DEBUG - Item with id f3b61efd-21fc-478a-9cd8-c12703a30ab4 added successfully.
+2024-06-11 15:31:34,323 - logger - DEBUG - Preview image for plate with id f3b61efd-21fc-478a-9cd8-c12703a30ab4 saved successfully.
+2024-06-11 15:31:34,325 - logger - DEBUG - Item with id 9f345761-c34d-47cc-bcb3-fd5b5b29af87 added successfully.
+2024-06-11 15:31:34,424 - logger - DEBUG - Preview image for plate with id 9f345761-c34d-47cc-bcb3-fd5b5b29af87 saved successfully.
+2024-06-11 15:31:34,428 - logger - DEBUG - Item with id 477cf9ca-4d25-4993-a5d3-badabfd66597 added successfully.
+2024-06-11 15:31:34,524 - logger - DEBUG - Preview image for plate with id 477cf9ca-4d25-4993-a5d3-badabfd66597 saved successfully.
+2024-06-11 15:31:34,526 - logger - DEBUG - Item with id 687f581e-4041-4813-8f3e-b1d3d68234e2 added successfully.
+2024-06-11 15:31:34,608 - logger - DEBUG - Preview image for plate with id 687f581e-4041-4813-8f3e-b1d3d68234e2 saved successfully.
+2024-06-11 15:31:34,610 - logger - DEBUG - Item with id b21b217d-e4d5-44e7-9a45-05cc237c3c92 added successfully.
+2024-06-11 15:31:34,708 - logger - DEBUG - Preview image for plate with id b21b217d-e4d5-44e7-9a45-05cc237c3c92 saved successfully.
+2024-06-11 15:31:34,710 - logger - DEBUG - Item with id 4ed58483-be82-45f5-8d5b-c25c46310e39 added successfully.
+2024-06-11 15:31:34,798 - logger - DEBUG - Preview image for plate with id 4ed58483-be82-45f5-8d5b-c25c46310e39 saved successfully.
+2024-06-11 15:31:34,800 - logger - DEBUG - Item with id 2d604b36-e690-41f7-a51f-39079bdc3577 added successfully.
+2024-06-11 15:31:34,891 - logger - DEBUG - Preview image for plate with id 2d604b36-e690-41f7-a51f-39079bdc3577 saved successfully.
+2024-06-11 15:31:34,893 - logger - DEBUG - Item with id 38476971-680b-477f-92dc-fa149717fa0d added successfully.
+2024-06-11 15:31:34,979 - logger - DEBUG - Preview image for plate with id 38476971-680b-477f-92dc-fa149717fa0d saved successfully.
+2024-06-11 15:31:34,981 - logger - DEBUG - Item with id 6f35989a-dcb8-44fc-8a4d-6fe52741a47b added successfully.
+2024-06-11 15:31:35,065 - logger - DEBUG - Preview image for plate with id 6f35989a-dcb8-44fc-8a4d-6fe52741a47b saved successfully.
+2024-06-11 15:31:35,067 - logger - DEBUG - Item with id 696868ee-981b-4e7d-85cf-ab68763c31df added successfully.
+2024-06-11 15:31:35,174 - logger - DEBUG - Preview image for plate with id 696868ee-981b-4e7d-85cf-ab68763c31df saved successfully.
+2024-06-11 15:31:35,176 - logger - DEBUG - Item with id 33b1efee-ea5d-476f-9efc-62b482105ef4 added successfully.
+2024-06-11 15:31:35,276 - logger - DEBUG - Preview image for plate with id 33b1efee-ea5d-476f-9efc-62b482105ef4 saved successfully.
+2024-06-11 15:31:35,278 - logger - DEBUG - Item with id 12b24296-6249-4c4b-b7df-5674936eb379 added successfully.
+2024-06-11 15:31:35,362 - logger - DEBUG - Preview image for plate with id 12b24296-6249-4c4b-b7df-5674936eb379 saved successfully.
+2024-06-11 15:31:35,364 - logger - DEBUG - Item with id 0241a15c-15b2-4c8a-b564-08ce849f4878 added successfully.
+2024-06-11 15:31:35,457 - logger - DEBUG - Preview image for plate with id 0241a15c-15b2-4c8a-b564-08ce849f4878 saved successfully.
+2024-06-11 15:31:35,459 - logger - DEBUG - Item with id 2116bfff-ec80-4c5a-92f8-39c95434d078 added successfully.
+2024-06-11 15:31:35,541 - logger - DEBUG - Preview image for plate with id 2116bfff-ec80-4c5a-92f8-39c95434d078 saved successfully.
+2024-06-11 15:31:35,543 - logger - DEBUG - Item with id 078b1155-d4a5-469d-9a1c-4a6d34f2519a added successfully.
+2024-06-11 15:31:35,634 - logger - DEBUG - Preview image for plate with id 078b1155-d4a5-469d-9a1c-4a6d34f2519a saved successfully.
+2024-06-11 15:31:35,636 - logger - DEBUG - Item with id baa6b3b6-2382-43fe-b5ae-8cbbf2295b20 added successfully.
+2024-06-11 15:31:35,731 - logger - DEBUG - Preview image for plate with id baa6b3b6-2382-43fe-b5ae-8cbbf2295b20 saved successfully.
+2024-06-11 15:31:35,733 - logger - DEBUG - Item with id 2fd0b5b8-fe65-4adc-9670-a33711909616 added successfully.
+2024-06-11 15:31:35,817 - logger - DEBUG - Preview image for plate with id 2fd0b5b8-fe65-4adc-9670-a33711909616 saved successfully.
+2024-06-11 15:31:35,819 - logger - DEBUG - Item with id 650432e2-e93d-4991-af49-c4ead942fc47 added successfully.
+2024-06-11 15:31:35,902 - logger - DEBUG - Preview image for plate with id 650432e2-e93d-4991-af49-c4ead942fc47 saved successfully.
+2024-06-11 15:31:35,904 - logger - DEBUG - Item with id 1f1dc487-b038-4763-8988-94f686f2c25b added successfully.
+2024-06-11 15:31:35,986 - logger - DEBUG - Preview image for plate with id 1f1dc487-b038-4763-8988-94f686f2c25b saved successfully.
+2024-06-11 15:31:35,988 - logger - DEBUG - Item with id d699e45d-7f6f-452f-9135-5a53dc34b71e added successfully.
+2024-06-11 15:31:36,069 - logger - DEBUG - Preview image for plate with id d699e45d-7f6f-452f-9135-5a53dc34b71e saved successfully.
+2024-06-11 15:31:36,070 - logger - DEBUG - Item with id dc99b925-92ce-456c-9c12-f6ac8cb4987b added successfully.
+2024-06-11 15:31:36,151 - logger - DEBUG - Preview image for plate with id dc99b925-92ce-456c-9c12-f6ac8cb4987b saved successfully.
+2024-06-11 15:31:36,153 - logger - DEBUG - Item with id c44d675e-b5dd-4f7f-a49e-1ce80013fe83 added successfully.
+2024-06-11 15:31:36,240 - logger - DEBUG - Preview image for plate with id c44d675e-b5dd-4f7f-a49e-1ce80013fe83 saved successfully.
+2024-06-11 15:31:36,242 - logger - DEBUG - Item with id e87ae6ca-2892-4a21-bd34-a1a166878023 added successfully.
+2024-06-11 15:31:36,335 - logger - DEBUG - Preview image for plate with id e87ae6ca-2892-4a21-bd34-a1a166878023 saved successfully.
+2024-06-11 15:31:36,337 - logger - DEBUG - Item with id ec80191e-4cc1-406b-ad69-012548963ad3 added successfully.
+2024-06-11 15:31:36,433 - logger - DEBUG - Preview image for plate with id ec80191e-4cc1-406b-ad69-012548963ad3 saved successfully.
+2024-06-11 15:31:36,434 - logger - DEBUG - Attempted to add new plate at max amount reached.
+2024-06-11 15:31:36,451 - logger - DEBUG - Item with id 8cd758e3-0ba7-400a-b837-197ff6968612 added successfully.
+2024-06-11 15:31:36,536 - logger - DEBUG - Preview image for plate with id 8cd758e3-0ba7-400a-b837-197ff6968612 saved successfully.
+2024-06-11 15:31:36,544 - logger - DEBUG - Item with id 33b66761-2351-4248-8e66-c1e21974fda3 added successfully.
+2024-06-11 15:31:36,629 - logger - DEBUG - Preview image for plate with id 33b66761-2351-4248-8e66-c1e21974fda3 saved successfully.
+2024-06-11 15:31:36,637 - logger - DEBUG - Item with id d24ab0ff-45b9-4bab-b83e-92c6a2876947 added successfully.
+2024-06-11 15:31:36,727 - logger - DEBUG - Preview image for plate with id d24ab0ff-45b9-4bab-b83e-92c6a2876947 saved successfully.
+2024-06-11 15:31:36,736 - logger - DEBUG - Item with id d6a46639-35e9-47b4-8021-a5a08965f875 added successfully.
+2024-06-11 15:31:36,831 - logger - DEBUG - Preview image for plate with id d6a46639-35e9-47b4-8021-a5a08965f875 saved successfully.
+2024-06-11 15:31:36,842 - logger - DEBUG - Item with id 599dc789-1b83-46ae-a9ca-55e05852828d added successfully.
+2024-06-11 15:31:36,926 - logger - DEBUG - Preview image for plate with id 599dc789-1b83-46ae-a9ca-55e05852828d saved successfully.
+2024-06-11 15:31:36,934 - logger - DEBUG - Item with id bc9d7535-8c8d-4501-892e-314eeae5c3a9 added successfully.
+2024-06-11 15:31:37,018 - logger - DEBUG - Preview image for plate with id bc9d7535-8c8d-4501-892e-314eeae5c3a9 saved successfully.
+2024-06-11 15:31:37,020 - logger - DEBUG - Updated item id bc9d7535-8c8d-4501-892e-314eeae5c3a9: set contours to k05VTVBZAQB2AHsnZGVzY3InOiAnPGk0JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDMsKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAoBAAAAAgAAAAMAAAA=
+2024-06-11 15:31:37,029 - logger - DEBUG - Item with id 01fba8f4-1abd-4f48-9246-f7f0936bd292 added successfully.
+2024-06-11 15:31:37,122 - logger - DEBUG - Preview image for plate with id 01fba8f4-1abd-4f48-9246-f7f0936bd292 saved successfully.
+2024-06-11 15:31:37,124 - logger - DEBUG - Updated item id 01fba8f4-1abd-4f48-9246-f7f0936bd292: set x to 4999.0
+2024-06-11 15:31:37,133 - logger - DEBUG - Item with id dd623bb7-4dd5-4c67-a500-f929e879b6c1 added successfully.
+2024-06-11 15:31:37,237 - logger - DEBUG - Preview image for plate with id dd623bb7-4dd5-4c67-a500-f929e879b6c1 saved successfully.
+2024-06-11 15:31:37,246 - logger - DEBUG - Item with id b0ad5014-24c9-42dd-88b5-a811fd6e71c9 added successfully.
+2024-06-11 15:31:37,337 - logger - DEBUG - Preview image for plate with id b0ad5014-24c9-42dd-88b5-a811fd6e71c9 saved successfully.
+2024-06-11 15:31:37,339 - logger - DEBUG - Updated item id b0ad5014-24c9-42dd-88b5-a811fd6e71c9: set y to 4999.0
+2024-06-11 15:31:37,347 - logger - DEBUG - Item with id 8e1c2dda-079d-443f-87ee-e5896c78685e added successfully.
+2024-06-11 15:31:37,445 - logger - DEBUG - Preview image for plate with id 8e1c2dda-079d-443f-87ee-e5896c78685e saved successfully.
+2024-06-11 15:31:37,452 - logger - DEBUG - Item with id 1d2e7ecc-a65d-4422-901e-ccacdbc0e00d added successfully.
+2024-06-11 15:31:37,528 - logger - DEBUG - Preview image for plate with id 1d2e7ecc-a65d-4422-901e-ccacdbc0e00d saved successfully.
+2024-06-11 15:31:37,530 - logger - DEBUG - Updated item id 1d2e7ecc-a65d-4422-901e-ccacdbc0e00d: set z to 4999.0
+2024-06-11 15:31:37,538 - logger - DEBUG - Item with id 1ca58506-e390-4792-bb63-8c7b86f83243 added successfully.
+2024-06-11 15:31:37,624 - logger - DEBUG - Preview image for plate with id 1ca58506-e390-4792-bb63-8c7b86f83243 saved successfully.
+2024-06-11 15:31:37,632 - logger - DEBUG - Item with id 2ffedff9-be86-4439-981d-ff9c4739964d added successfully.
+2024-06-11 15:31:37,730 - logger - DEBUG - Preview image for plate with id 2ffedff9-be86-4439-981d-ff9c4739964d saved successfully.
+2024-06-11 15:31:37,732 - logger - DEBUG - Updated item id 2ffedff9-be86-4439-981d-ff9c4739964d: set material to Abazaz
+2024-06-11 15:31:37,740 - logger - DEBUG - Item with id 9090e2a6-3dcc-48fc-85a3-88909f2924ba added successfully.
+2024-06-11 15:31:37,833 - logger - DEBUG - Preview image for plate with id 9090e2a6-3dcc-48fc-85a3-88909f2924ba saved successfully.
+2024-06-11 15:31:37,841 - logger - DEBUG - Item with id 630754fd-a2b4-4f7b-bf3e-e6a6219b25dd added successfully.
+2024-06-11 15:31:37,939 - logger - DEBUG - Preview image for plate with id 630754fd-a2b4-4f7b-bf3e-e6a6219b25dd saved successfully.
+2024-06-11 15:31:37,940 - logger - DEBUG - Updated item id 630754fd-a2b4-4f7b-bf3e-e6a6219b25dd: set contours to k05VTVBZAQB2AHsnZGVzY3InOiAnPGk0JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDMsKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAoBAAAAAgAAAAMAAAA=
+2024-06-11 15:31:37,950 - logger - DEBUG - Item with id 39760e3b-7371-4694-9272-f89b0f2a5440 added successfully.
+2024-06-11 15:31:38,047 - logger - DEBUG - Preview image for plate with id 39760e3b-7371-4694-9272-f89b0f2a5440 saved successfully.
+2024-06-11 15:31:38,049 - logger - DEBUG - Updated item id 39760e3b-7371-4694-9272-f89b0f2a5440: set contours to None
+2024-06-11 15:31:38,050 - logger - DEBUG - Updated item id 39760e3b-7371-4694-9272-f89b0f2a5440: set contours to k05VTVBZAQB2AHsnZGVzY3InOiAnPGY4JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDAsKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAo=
+2024-06-11 15:31:38,058 - logger - DEBUG - Item with id 58f7aa44-6234-4fa9-9082-2c8764c6164a added successfully.
+2024-06-11 15:31:38,140 - logger - DEBUG - Preview image for plate with id 58f7aa44-6234-4fa9-9082-2c8764c6164a saved successfully.
+2024-06-11 15:31:39,130 - logger - DEBUG - Item with id ebf158d1-3e28-4f5b-b2c7-bbae3d5c9ff4 added successfully.
+2024-06-11 15:31:39,255 - logger - DEBUG - Item with id 0ace8af5-9c4a-4496-a895-d1c52f198a61 added successfully.
+2024-06-11 15:31:39,363 - logger - DEBUG - Item with id f595cc76-c408-4b1a-97ff-28efb7d7f1ed added successfully.
+2024-06-11 15:31:39,466 - logger - DEBUG - Item with id 8171fa94-33d6-4507-afe0-6a84735a1971 added successfully.
+2024-06-11 15:31:39,562 - logger - DEBUG - Item with id a5fd3a9c-1740-4a5b-82da-134066fc32e7 added successfully.
+2024-06-11 15:31:39,663 - logger - DEBUG - Item with id e1d7e64a-5a27-40df-9563-b91e3efff954 added successfully.
+2024-06-11 15:31:39,772 - logger - DEBUG - Item with id d6d9973d-b129-4c34-bc06-5c8e568ffaab added successfully.
+2024-06-11 15:31:39,876 - logger - DEBUG - Item with id df82f90a-0a17-4770-a577-dc34e089171b added successfully.
+2024-06-11 15:31:39,975 - logger - DEBUG - Item with id 7192fef7-ce64-494d-91a6-fb1e8240ca6a added successfully.
+2024-06-11 15:31:40,073 - logger - DEBUG - Item with id 1d3353b6-ec2d-4a49-9b36-aa4c8487868a added successfully.
+2024-06-11 15:31:40,194 - logger - DEBUG - Item with id 234f8e67-60b4-4d61-9d3b-112b304e0e72 added successfully.
+2024-06-11 15:31:40,296 - logger - DEBUG - Attempted to add new router at max amount reached.
+2024-06-11 15:31:40,305 - logger - DEBUG - Item with id 2da5b3fb-3a21-4a0c-b8d2-dad5e20e8f1d added successfully.
+2024-06-11 15:31:40,434 - logger - DEBUG - Item with id ca53ba42-5802-4541-b8f0-6aea81ca2e7c added successfully.
+2024-06-11 15:31:40,554 - logger - DEBUG - Item with id 230a4a31-94eb-46ad-88fb-1a159dcf1776 added successfully.
+2024-06-11 15:31:40,664 - logger - DEBUG - Item with id 2eba81ba-a10c-4fdd-a62e-ab6b84c10390 added successfully.
+2024-06-11 15:31:40,784 - logger - DEBUG - Item with id 579083d0-f671-4242-bea3-d93122df8871 added successfully.
+2024-06-11 15:31:40,898 - logger - DEBUG - Item with id edc1388c-fae9-470f-a1d3-b48d3e3c7f00 added successfully.
+2024-06-11 15:31:41,014 - logger - DEBUG - Item with id d029588a-32b8-46f7-b8a5-ef00a7b2f06d added successfully.
+2024-06-11 15:31:41,123 - logger - DEBUG - Item with id 365c0075-bdda-41ba-807d-e1eed69edfe4 added successfully.
+2024-06-11 15:31:41,234 - logger - DEBUG - Item with id ed85aa6c-d967-45bf-afc0-316f7300870c added successfully.
+2024-06-11 15:31:41,347 - logger - DEBUG - Item with id 655cf939-1c70-450c-b1ea-fd6cd8114f62 added successfully.
+2024-06-11 15:31:41,453 - logger - DEBUG - Updated item id 655cf939-1c70-450c-b1ea-fd6cd8114f62: set name to New Name
+2024-06-11 15:31:41,461 - logger - DEBUG - Item with id dd0a9042-3264-4cbe-8a1b-aa66ae58fa97 added successfully.
+2024-06-11 15:31:41,586 - logger - DEBUG - Item with id 5671965e-536b-473b-865e-4e5bed25cd8b added successfully.
+2024-06-11 15:31:41,712 - logger - DEBUG - Updated item id 5671965e-536b-473b-865e-4e5bed25cd8b: set x to 4999.0
+2024-06-11 15:31:41,720 - logger - DEBUG - Item with id 239cf29e-14a4-491c-b8e7-8ce124732cee added successfully.
+2024-06-11 15:31:41,852 - logger - DEBUG - Item with id cb519a9e-4cc1-4d31-a4a3-70bc5ee7a9dd added successfully.
+2024-06-11 15:31:41,955 - logger - DEBUG - Updated item id cb519a9e-4cc1-4d31-a4a3-70bc5ee7a9dd: set y to 4999.0
+2024-06-11 15:31:41,962 - logger - DEBUG - Item with id cf164c40-79cf-4a36-8e8e-87b7f2f80719 added successfully.
+2024-06-11 15:31:42,075 - logger - DEBUG - Item with id 5136cab2-7342-4614-bd43-2253f2ae122d added successfully.
+2024-06-11 15:31:42,581 - logger - DEBUG - Updated item id 5136cab2-7342-4614-bd43-2253f2ae122d: set z to 4999.0
+2024-06-11 15:31:42,591 - logger - DEBUG - Item with id fe1c2505-1158-49d6-9610-8a6e934b78c7 added successfully.
+2024-06-11 15:31:42,724 - logger - DEBUG - Item with id 92b977d5-66aa-43e8-a6d0-5ecebc0d96ce added successfully.
+2024-06-11 15:31:42,837 - logger - DEBUG - Updated item id 92b977d5-66aa-43e8-a6d0-5ecebc0d96ce: set plate_x to 4999.0
+2024-06-11 15:31:42,845 - logger - DEBUG - Item with id d72b282f-fc53-4287-b082-f5172b2da95f added successfully.
+2024-06-11 15:31:42,963 - logger - DEBUG - Item with id de0ec31a-22ba-48f1-8592-09d49026861e added successfully.
+2024-06-11 15:31:43,069 - logger - DEBUG - Updated item id de0ec31a-22ba-48f1-8592-09d49026861e: set plate_y to 4999.0
+2024-06-11 15:31:43,076 - logger - DEBUG - Item with id ab69bb9f-9eb7-4ad5-a0b2-ede1e6422678 added successfully.
+2024-06-11 15:31:43,187 - logger - DEBUG - Item with id d6e1813c-05c8-42c4-ba72-3cace04e6c43 added successfully.
+2024-06-11 15:31:43,322 - logger - DEBUG - Updated item id d6e1813c-05c8-42c4-ba72-3cace04e6c43: set plate_z to 4999.0
+2024-06-11 15:31:43,332 - logger - DEBUG - Item with id 80d3c5ee-e112-46d9-947a-6c4de6ee2100 added successfully.
+2024-06-11 15:31:43,450 - logger - DEBUG - Item with id f611996a-af1a-4173-8185-03de0f06c65e added successfully.
+2024-06-11 15:31:43,558 - logger - DEBUG - Updated item id f611996a-af1a-4173-8185-03de0f06c65e: set min_safe_dist_from_edge to 5.0
+2024-06-11 15:31:43,566 - logger - DEBUG - Item with id fab73156-977a-4b67-a94a-ca9fae79eb7c added successfully.
+2024-06-11 15:31:43,691 - logger - DEBUG - Updated item id fab73156-977a-4b67-a94a-ca9fae79eb7c: set mill_bit_diameter to 99.0
+2024-06-11 15:31:43,699 - logger - DEBUG - Item with id 4993840b-08ae-4ea5-9ff0-2c7e394ccd2b added successfully.
+2024-06-11 15:31:43,829 - logger - DEBUG - Item with id bb120356-7191-4ad5-bfa9-de64bef549bd added successfully.
+2024-06-11 15:31:43,944 - logger - DEBUG - Updated item id bb120356-7191-4ad5-bfa9-de64bef549bd: set drill_bit_diameter to 99.0
+2024-06-11 15:31:43,953 - logger - DEBUG - Item with id aa532c3a-270d-42eb-a899-6fd4bbcec1be added successfully.
+2024-06-11 15:31:44,077 - logger - DEBUG - Item with id bcb553a8-0fa5-4286-b2f4-547930502b92 added successfully.
+2024-06-11 15:31:44,267 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:44,372 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:44,458 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:44,542 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:44,624 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:44,722 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:44,823 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:44,920 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:45,018 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:45,096 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:31:45,097 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:31:45,097 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:31:45,097 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:31:45,098 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:31:45,106 - logger - DEBUG - Finding contours...
+2024-06-11 15:31:45,108 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:31:45,108 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:31:45,110 - logger - DEBUG - Parsing complete.
+2024-06-11 15:31:45,110 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:31:45,347 - logger - DEBUG - Saving preview image...
+2024-06-11 15:31:45,534 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmp08cpg_0g\preview_image.png.
+2024-06-11 15:31:45,546 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
+2024-06-11 15:31:45,562 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-45\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-11 15:31:45,574 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-45\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-11 15:36:31,493 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmp9d_alrzo\raw.png
+2024-06-11 15:36:31,494 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:36:31,576 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:36:31,654 - logger - DEBUG - Image features extracted successfully.
+2024-06-11 15:36:31,711 - logger - DEBUG - Image features saved successfully to C:\Users\CACOCO~1\AppData\Local\Temp\tmp9d_alrzo\features.png
+2024-06-11 15:36:41,876 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-11 15:36:41,877 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:41,878 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:36:41,880 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:36:41,880 - logger - ERROR - Threshold must be integer value
+2024-06-11 15:36:41,895 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:36:42,105 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: nonexistent/path/image.jpg
+2024-06-11 15:36:42,105 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:42,117 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-11 15:36:42,127 - logger - DEBUG - Item with id 1 added successfully.
+2024-06-11 15:36:42,132 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-11 15:36:42,141 - logger - DEBUG - Item with id 1 removed successfully.
+2024-06-11 15:36:42,149 - logger - DEBUG - Item with id 1 removed successfully.
+2024-06-11 15:36:42,156 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:36:42,164 - logger - DEBUG - Item with id 1 removed successfully.
+2024-06-11 15:36:42,170 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:36:42,175 - logger - DEBUG - Successfully cleared out data table.
+2024-06-11 15:36:42,182 - logger - DEBUG - Successfully cleared out data table.
+2024-06-11 15:36:42,203 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:36:42,209 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-11 15:36:42,227 - logger - DEBUG - Updated item id 1: set description to Updated description
+2024-06-11 15:36:42,233 - logger - ERROR - New value for item parameter <class 'int'> does not match intended type <class 'str'>
+2024-06-11 15:36:42,237 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:36:42,242 - logger - ERROR - Item with id None does not exist.
+2024-06-11 15:36:42,249 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-11 15:36:42,259 - logger - ERROR - Indicated image editing directory path does not exist: invalid directory
+2024-06-11 15:36:42,265 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:36:42,266 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:36:42,266 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:36:42,278 - logger - ERROR - Attempted to import raw image in wrong ImageEditingController state.
+2024-06-11 15:36:42,284 - logger - ERROR - Indicated raw image filepath does not exist: random invalid path
+2024-06-11 15:36:42,291 - logger - ERROR - Image file is of invalid format: .STL
+2024-06-11 15:36:42,357 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmp7poxolv1\raw.png
+2024-06-11 15:36:42,358 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:36:42,415 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: -100, -100
+2024-06-11 15:36:42,415 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:36:42,478 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpwt25kivj\raw.png
+2024-06-11 15:36:42,480 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:36:42,480 - logger - ERROR - Attempted to get binary image in wrong state.
+2024-06-11 15:36:42,549 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmp0_q3l5mg\raw.png
+2024-06-11 15:36:42,550 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:36:42,550 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:36:42,551 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:36:42,551 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:36:42,606 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpyiem4wkp\raw.png
+2024-06-11 15:36:42,608 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:36:42,672 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:36:42,730 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpof3br_j8\raw.png
+2024-06-11 15:36:42,731 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:36:42,803 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:36:42,803 - logger - ERROR - Attempted to extract features in wrong state.
+2024-06-11 15:36:42,858 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmp063fekam\raw.png
+2024-06-11 15:36:42,859 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:36:42,931 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:36:42,953 - logger - DEBUG - Image features extracted successfully.
+2024-06-11 15:36:43,256 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmp9p7xrag9\raw.png
+2024-06-11 15:36:43,256 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:36:43,320 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:36:43,345 - logger - DEBUG - Image features extracted successfully.
+2024-06-11 15:36:43,345 - logger - ERROR - Attempted to save image features in wrong state.
+2024-06-11 15:36:43,415 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmppjlcq1bo\raw.png
+2024-06-11 15:36:43,417 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:36:43,481 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:36:43,504 - logger - DEBUG - Image features extracted successfully.
+2024-06-11 15:36:43,531 - logger - DEBUG - Image features saved successfully to C:\Users\CACOCO~1\AppData\Local\Temp\tmppjlcq1bo\features.png
+2024-06-11 15:36:43,550 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 5
+2024-06-11 15:36:43,551 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 5, 0
+2024-06-11 15:36:43,569 - logger - ERROR - STL file does not exist: invalid path
+2024-06-11 15:36:43,578 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL
+2024-06-11 15:36:43,579 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:36:43,579 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:36:43,579 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:36:43,579 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:36:43,580 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:36:43,580 - logger - DEBUG - Finding contours...
+2024-06-11 15:36:43,580 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:36:43,580 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:36:43,580 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-11 15:36:43,586 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:36:43,587 - logger - ERROR - STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-11 15:36:43,587 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg: STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-11 15:36:43,594 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:43,682 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:36:43,682 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:36:43,683 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:36:43,683 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:36:43,684 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:36:43,692 - logger - DEBUG - Finding contours...
+2024-06-11 15:36:43,694 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:36:43,694 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:36:43,696 - logger - DEBUG - Parsing complete.
+2024-06-11 15:36:43,698 - logger - DEBUG - Item with id 924f827a-14d5-4b0a-b149-44bcaf5553a9 added successfully.
+2024-06-11 15:36:43,699 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:36:44,113 - logger - DEBUG - Saving preview image...
+2024-06-11 15:36:44,306 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpj3tfpmzs\924f827a-14d5-4b0a-b149-44bcaf5553a9.png.
+2024-06-11 15:36:44,306 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:36:44,314 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:44,423 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:36:44,424 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:36:44,425 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:36:44,425 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:36:44,425 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:36:44,456 - logger - DEBUG - Finding contours...
+2024-06-11 15:36:44,458 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:36:44,458 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:36:44,460 - logger - DEBUG - Parsing complete.
+2024-06-11 15:36:44,462 - logger - DEBUG - Item with id 5ea90c07-1228-46b0-9fcf-d86bad6b2641 added successfully.
+2024-06-11 15:36:44,462 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:36:44,675 - logger - DEBUG - Saving preview image...
+2024-06-11 15:36:44,849 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpfosx689r\5ea90c07-1228-46b0-9fcf-d86bad6b2641.png.
+2024-06-11 15:36:44,849 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:36:44,850 - logger - DEBUG - Attempted to add already existing STL file: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:44,865 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:44,983 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:36:44,983 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:36:44,984 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:36:44,984 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:36:44,984 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:36:44,995 - logger - DEBUG - Finding contours...
+2024-06-11 15:36:44,997 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:36:44,997 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:36:45,000 - logger - DEBUG - Parsing complete.
+2024-06-11 15:36:45,001 - logger - DEBUG - Item with id 56c15457-2b8b-4756-9c34-11900c97c7bd added successfully.
+2024-06-11 15:36:45,001 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:36:45,305 - logger - DEBUG - Saving preview image...
+2024-06-11 15:36:45,481 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpdf5q1jtn\56c15457-2b8b-4756-9c34-11900c97c7bd.png.
+2024-06-11 15:36:45,482 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:36:45,483 - logger - DEBUG - Attempted to add already existing STL file: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:45,490 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:45,582 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:36:45,582 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:36:45,583 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:36:45,583 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:36:45,583 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:36:45,592 - logger - DEBUG - Finding contours...
+2024-06-11 15:36:45,593 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:36:45,594 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:36:45,596 - logger - DEBUG - Parsing complete.
+2024-06-11 15:36:45,597 - logger - DEBUG - Item with id eb798f7c-4e9b-40c0-9db9-b4775f1aa12f added successfully.
+2024-06-11 15:36:45,597 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:36:45,809 - logger - DEBUG - Saving preview image...
+2024-06-11 15:36:45,985 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpg8ulb09h\eb798f7c-4e9b-40c0-9db9-b4775f1aa12f.png.
+2024-06-11 15:36:45,985 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:36:45,994 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:46,081 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:36:46,081 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:36:46,082 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:36:46,082 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:36:46,082 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:36:46,092 - logger - DEBUG - Finding contours...
+2024-06-11 15:36:46,093 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:36:46,094 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:36:46,096 - logger - DEBUG - Parsing complete.
+2024-06-11 15:36:46,097 - logger - DEBUG - Item with id 10ad8c4f-507c-481a-b193-f2be46173da1 added successfully.
+2024-06-11 15:36:46,097 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:36:46,474 - logger - DEBUG - Saving preview image...
+2024-06-11 15:36:46,673 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmp6zp9sqj0\10ad8c4f-507c-481a-b193-f2be46173da1.png.
+2024-06-11 15:36:46,673 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:36:46,681 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:46,787 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:36:46,787 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:36:46,788 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:36:46,788 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:36:46,788 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:36:46,798 - logger - DEBUG - Finding contours...
+2024-06-11 15:36:46,799 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:36:46,800 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:36:46,802 - logger - DEBUG - Parsing complete.
+2024-06-11 15:36:46,804 - logger - DEBUG - Item with id 89a6ed31-642c-4067-87fd-077ccef119e5 added successfully.
+2024-06-11 15:36:46,804 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:36:47,001 - logger - DEBUG - Saving preview image...
+2024-06-11 15:36:47,173 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpkw2rg05m\89a6ed31-642c-4067-87fd-077ccef119e5.png.
+2024-06-11 15:36:47,173 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:36:47,182 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:47,265 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:36:47,265 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:36:47,265 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:36:47,266 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:36:47,266 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:36:47,275 - logger - DEBUG - Finding contours...
+2024-06-11 15:36:47,277 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:36:47,277 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:36:47,279 - logger - DEBUG - Parsing complete.
+2024-06-11 15:36:47,281 - logger - DEBUG - Item with id bbd00141-73b1-4247-a7c0-8413d86efd3e added successfully.
+2024-06-11 15:36:47,281 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:36:47,650 - logger - DEBUG - Saving preview image...
+2024-06-11 15:36:47,831 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpz6hcbsp0\bbd00141-73b1-4247-a7c0-8413d86efd3e.png.
+2024-06-11 15:36:47,831 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:36:47,840 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:47,930 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:36:47,930 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:36:47,931 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:36:47,931 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:36:47,931 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:36:47,940 - logger - DEBUG - Finding contours...
+2024-06-11 15:36:47,941 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:36:47,942 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:36:47,944 - logger - DEBUG - Parsing complete.
+2024-06-11 15:36:47,945 - logger - DEBUG - Item with id 5533dc90-4857-4a38-ae8d-26dad34ec339 added successfully.
+2024-06-11 15:36:47,945 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:36:48,152 - logger - DEBUG - Saving preview image...
+2024-06-11 15:36:48,352 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpz0ryisj6\5533dc90-4857-4a38-ae8d-26dad34ec339.png.
+2024-06-11 15:36:48,352 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:36:48,360 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:48,450 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:36:48,451 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:36:48,451 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:36:48,451 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:36:48,452 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:36:48,461 - logger - DEBUG - Finding contours...
+2024-06-11 15:36:48,464 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:36:48,465 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:36:48,468 - logger - DEBUG - Parsing complete.
+2024-06-11 15:36:48,470 - logger - DEBUG - Item with id 095f98b9-c43f-4bc2-a1bf-473aceb055c8 added successfully.
+2024-06-11 15:36:48,470 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:36:48,706 - logger - DEBUG - Saving preview image...
+2024-06-11 15:36:49,060 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpdpaww0bi\095f98b9-c43f-4bc2-a1bf-473aceb055c8.png.
+2024-06-11 15:36:49,060 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:36:49,062 - logger - DEBUG - Updated item id 095f98b9-c43f-4bc2-a1bf-473aceb055c8: set material to new_material
+2024-06-11 15:36:49,070 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:49,170 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:36:49,170 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:36:49,171 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:36:49,172 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:36:49,172 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:36:49,184 - logger - DEBUG - Finding contours...
+2024-06-11 15:36:49,187 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:36:49,187 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:36:49,190 - logger - DEBUG - Parsing complete.
+2024-06-11 15:36:49,192 - logger - DEBUG - Item with id bcc2089b-55d4-4b5d-b9c6-0d9221d42726 added successfully.
+2024-06-11 15:36:49,192 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:36:49,404 - logger - DEBUG - Saving preview image...
+2024-06-11 15:36:49,576 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpgw0pl5to\bcc2089b-55d4-4b5d-b9c6-0d9221d42726.png.
+2024-06-11 15:36:49,576 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:36:49,585 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:49,681 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:36:49,681 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:36:49,682 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:36:49,682 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:36:49,682 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:36:49,692 - logger - DEBUG - Finding contours...
+2024-06-11 15:36:49,694 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:36:49,694 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:36:49,696 - logger - DEBUG - Parsing complete.
+2024-06-11 15:36:49,698 - logger - DEBUG - Item with id b5ebfaea-96ce-49a3-b796-8e537a909120 added successfully.
+2024-06-11 15:36:49,698 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:36:49,894 - logger - DEBUG - Saving preview image...
+2024-06-11 15:36:50,052 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmposyip2yk\b5ebfaea-96ce-49a3-b796-8e537a909120.png.
+2024-06-11 15:36:50,053 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:36:50,055 - logger - DEBUG - Updated item id b5ebfaea-96ce-49a3-b796-8e537a909120: set amount to 2
+2024-06-11 15:36:50,062 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:50,145 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:36:50,145 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:36:50,146 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:36:50,146 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:36:50,146 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:36:50,156 - logger - DEBUG - Finding contours...
+2024-06-11 15:36:50,157 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:36:50,158 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:36:50,160 - logger - DEBUG - Parsing complete.
+2024-06-11 15:36:50,161 - logger - DEBUG - Item with id 4d807c6b-cb09-482e-b4ce-3315c09f47c4 added successfully.
+2024-06-11 15:36:50,161 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:36:50,352 - logger - DEBUG - Saving preview image...
+2024-06-11 15:36:50,533 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpvvfv8vsg\4d807c6b-cb09-482e-b4ce-3315c09f47c4.png.
+2024-06-11 15:36:50,533 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:36:50,533 - logger - ERROR - Attempted invalid input value for part amount: 0
+2024-06-11 15:36:50,534 - logger - ERROR - Attempted invalid input value for part amount: 5.13
+2024-06-11 15:36:50,534 - logger - ERROR - Attempted invalid input value for part amount: -2
+2024-06-11 15:36:50,541 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:50,628 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:36:50,628 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:36:50,628 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:36:50,629 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:36:50,629 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:36:50,640 - logger - DEBUG - Finding contours...
+2024-06-11 15:36:50,642 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:36:50,642 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:36:50,645 - logger - DEBUG - Parsing complete.
+2024-06-11 15:36:50,647 - logger - DEBUG - Item with id d8b2c2d7-4c14-4b68-8751-18f7fb44ff62 added successfully.
+2024-06-11 15:36:50,648 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:36:51,134 - logger - DEBUG - Saving preview image...
+2024-06-11 15:36:51,301 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpuap4_ix7\d8b2c2d7-4c14-4b68-8751-18f7fb44ff62.png.
+2024-06-11 15:36:51,301 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:36:51,479 - logger - DEBUG - Preview image for plate with id 3fd28980-035b-407e-9777-c5fcd8e150fd saved successfully.
+2024-06-11 15:36:51,567 - logger - DEBUG - Preview image for plate with id 8e26d137-bb93-483b-a204-84c086bdba41 saved successfully.
+2024-06-11 15:36:51,666 - logger - DEBUG - Preview image for plate with id fed93310-138c-446f-a555-e228a9144da4 saved successfully.
+2024-06-11 15:36:51,774 - logger - DEBUG - Preview image for plate with id a5ab7b26-ef08-46a2-943a-05dc4ab1a737 saved successfully.
+2024-06-11 15:36:51,857 - logger - DEBUG - Preview image for plate with id be46cd2d-7b1a-4201-8507-3296fa12902a saved successfully.
+2024-06-11 15:36:51,940 - logger - DEBUG - Preview image for plate with id 1f1ebe5f-2e44-4e7a-bb7f-783482e5d396 saved successfully.
+2024-06-11 15:36:52,022 - logger - DEBUG - Preview image for plate with id 71d83e08-4dd9-4bbd-82ed-4e7718ceb969 saved successfully.
+2024-06-11 15:36:52,107 - logger - DEBUG - Preview image for plate with id f4659937-616b-4199-90ac-9c86aa356831 saved successfully.
+2024-06-11 15:36:52,187 - logger - DEBUG - Preview image for plate with id 5bd12e55-f2e3-4191-99cc-9de4daa8d069 saved successfully.
+2024-06-11 15:36:52,271 - logger - DEBUG - Preview image for plate with id 47a67331-c9fb-46e9-9488-be68542fa214 saved successfully.
+2024-06-11 15:36:52,352 - logger - DEBUG - Preview image for plate with id 00ee1207-1cf3-49e9-b556-26e966729373 saved successfully.
+2024-06-11 15:36:52,440 - logger - DEBUG - Preview image for plate with id 0076b655-3e7e-4423-8ce5-f89ee3f29701 saved successfully.
+2024-06-11 15:36:52,524 - logger - DEBUG - Preview image for plate with id 102ea2fb-ce1f-46e3-8aea-bc85eb208e3f saved successfully.
+2024-06-11 15:36:52,623 - logger - DEBUG - Preview image for plate with id 871b7695-d54b-4060-b2ea-d81ef6c6b2c9 saved successfully.
+2024-06-11 15:36:52,718 - logger - DEBUG - Preview image for plate with id 1d6f754d-a587-4944-9fb9-be9d78742786 saved successfully.
+2024-06-11 15:36:52,810 - logger - DEBUG - Preview image for plate with id 48f68517-07aa-4647-825d-1db5625c3cda saved successfully.
+2024-06-11 15:36:52,890 - logger - DEBUG - Preview image for plate with id aae2d976-d8a3-4a11-a639-77a54c4c1ca2 saved successfully.
+2024-06-11 15:36:52,972 - logger - DEBUG - Preview image for plate with id 3046bc70-0102-4166-852e-a3b910035c28 saved successfully.
+2024-06-11 15:36:53,049 - logger - DEBUG - Preview image for plate with id 48456210-9531-486a-bdd5-e4f6a5e42225 saved successfully.
+2024-06-11 15:36:53,131 - logger - DEBUG - Preview image for plate with id dadfd01f-51b4-47ae-b05d-52ad3c1073b9 saved successfully.
+2024-06-11 15:36:53,210 - logger - DEBUG - Preview image for plate with id 62dd933c-16c8-4845-a845-503637be229a saved successfully.
+2024-06-11 15:36:53,299 - logger - DEBUG - Preview image for plate with id 3bcc3a8a-4945-4c52-9bd3-d97fc9d9f9f2 saved successfully.
+2024-06-11 15:36:53,378 - logger - DEBUG - Preview image for plate with id eaf3c531-702a-4c08-88b1-604c2cd5ee4c saved successfully.
+2024-06-11 15:36:53,461 - logger - DEBUG - Preview image for plate with id b37bcf1c-414b-486e-8a1d-8384bf6fbe0b saved successfully.
+2024-06-11 15:36:53,539 - logger - DEBUG - Preview image for plate with id 7a60cc53-7937-4a40-bc62-c3241faa67bd saved successfully.
+2024-06-11 15:36:53,621 - logger - DEBUG - Preview image for plate with id 3b81495f-03f7-4abe-a68d-b2dafba43e97 saved successfully.
+2024-06-11 15:36:53,717 - logger - DEBUG - Preview image for plate with id 13cd3323-1321-4006-9036-20f508c907ab saved successfully.
+2024-06-11 15:36:53,815 - logger - DEBUG - Preview image for plate with id 4cb0748b-be6c-4868-9afd-b1e4b0883633 saved successfully.
+2024-06-11 15:36:53,895 - logger - DEBUG - Preview image for plate with id 1c9bc906-5b1b-43a3-aeeb-54c4cbeae31d saved successfully.
+2024-06-11 15:36:53,979 - logger - DEBUG - Preview image for plate with id 496d6632-7235-4727-906f-4e4214f51f61 saved successfully.
+2024-06-11 15:36:54,060 - logger - DEBUG - Preview image for plate with id f70e0c5f-f95b-4d08-8a8a-d68793c40c4d saved successfully.
+2024-06-11 15:36:54,140 - logger - DEBUG - Preview image for plate with id 4f577ca0-2e9e-4fc2-b7bc-94391fceb4dc saved successfully.
+2024-06-11 15:36:54,223 - logger - DEBUG - Preview image for plate with id a7ea3eb2-5c3b-4368-95a4-ecb10b0697f6 saved successfully.
+2024-06-11 15:36:54,321 - logger - DEBUG - Preview image for plate with id 926460b3-89fc-4c68-8a38-8364df7e12d4 saved successfully.
+2024-06-11 15:36:54,411 - logger - DEBUG - Preview image for plate with id 7a1ce4df-cb41-425a-8e3e-152c787edad5 saved successfully.
+2024-06-11 15:36:54,494 - logger - DEBUG - Preview image for plate with id fb501d28-6787-48cc-8196-2c6e76183873 saved successfully.
+2024-06-11 15:36:54,575 - logger - DEBUG - Preview image for plate with id 6fd5978c-adbb-4b24-9e37-a3a65a8f05ab saved successfully.
+2024-06-11 15:36:54,657 - logger - DEBUG - Preview image for plate with id b09d5647-733f-4eed-a6cc-59eb14e08dc8 saved successfully.
+2024-06-11 15:36:54,746 - logger - DEBUG - Preview image for plate with id 77445a3d-c898-4218-bcac-2d6c681fa512 saved successfully.
+2024-06-11 15:36:54,842 - logger - DEBUG - Preview image for plate with id 95a49cf7-afc3-40bd-bef1-3148ca3224cb saved successfully.
+2024-06-11 15:36:54,942 - logger - DEBUG - Preview image for plate with id 534c11c3-a2bd-4cf9-a276-75c1ec74819b saved successfully.
+2024-06-11 15:36:55,033 - logger - DEBUG - Preview image for plate with id fd5e2f0e-6e13-428d-a144-06b0ebe2ba8c saved successfully.
+2024-06-11 15:36:55,136 - logger - DEBUG - Preview image for plate with id 1d522f6d-d41a-454f-8bca-e66d8b15be26 saved successfully.
+2024-06-11 15:36:55,234 - logger - DEBUG - Preview image for plate with id 12b4c851-84a8-4f79-93eb-640c7d28e86e saved successfully.
+2024-06-11 15:36:55,389 - logger - DEBUG - Preview image for plate with id c4deb1b7-2bb5-4360-a6d3-bbed079774d9 saved successfully.
+2024-06-11 15:36:55,497 - logger - DEBUG - Preview image for plate with id b09cfdf0-4801-4fdf-b2bb-e195e09e3318 saved successfully.
+2024-06-11 15:36:55,575 - logger - DEBUG - Preview image for plate with id 3bb83e84-312b-49f0-9509-0b3565ff21f4 saved successfully.
+2024-06-11 15:36:55,671 - logger - DEBUG - Preview image for plate with id 0a26924c-1522-43e7-9c5d-1f3487cd5eef saved successfully.
+2024-06-11 15:36:55,768 - logger - DEBUG - Preview image for plate with id 89883c8a-f544-4453-b81e-d2fede57526d saved successfully.
+2024-06-11 15:36:55,790 - logger - DEBUG - Item with id b43d6ec6-b8ae-4d81-8a48-e09d0fb27d0a added successfully.
+2024-06-11 15:36:55,883 - logger - DEBUG - Preview image for plate with id b43d6ec6-b8ae-4d81-8a48-e09d0fb27d0a saved successfully.
+2024-06-11 15:36:55,885 - logger - DEBUG - Item with id 2ae18ac3-8968-4cff-ae6f-a9570a42f49b added successfully.
+2024-06-11 15:36:55,972 - logger - DEBUG - Preview image for plate with id 2ae18ac3-8968-4cff-ae6f-a9570a42f49b saved successfully.
+2024-06-11 15:36:55,974 - logger - DEBUG - Item with id 06d9df5b-8fc9-46b3-affd-2ef882391295 added successfully.
+2024-06-11 15:36:56,070 - logger - DEBUG - Preview image for plate with id 06d9df5b-8fc9-46b3-affd-2ef882391295 saved successfully.
+2024-06-11 15:36:56,072 - logger - DEBUG - Item with id 5cb55def-e9c5-42d7-9cb3-ec92408d93a8 added successfully.
+2024-06-11 15:36:56,167 - logger - DEBUG - Preview image for plate with id 5cb55def-e9c5-42d7-9cb3-ec92408d93a8 saved successfully.
+2024-06-11 15:36:56,169 - logger - DEBUG - Item with id 748f8a80-0844-436a-964c-fee453c659b4 added successfully.
+2024-06-11 15:36:56,255 - logger - DEBUG - Preview image for plate with id 748f8a80-0844-436a-964c-fee453c659b4 saved successfully.
+2024-06-11 15:36:56,257 - logger - DEBUG - Item with id fa4e685e-d059-43db-9b10-6bcdc2a4cf99 added successfully.
+2024-06-11 15:36:56,347 - logger - DEBUG - Preview image for plate with id fa4e685e-d059-43db-9b10-6bcdc2a4cf99 saved successfully.
+2024-06-11 15:36:56,349 - logger - DEBUG - Item with id 203212cf-2f5c-44b1-8706-74b8858b5ad0 added successfully.
+2024-06-11 15:36:56,431 - logger - DEBUG - Preview image for plate with id 203212cf-2f5c-44b1-8706-74b8858b5ad0 saved successfully.
+2024-06-11 15:36:56,433 - logger - DEBUG - Item with id 9695a779-d668-4c03-9495-d45dce7dc605 added successfully.
+2024-06-11 15:36:56,529 - logger - DEBUG - Preview image for plate with id 9695a779-d668-4c03-9495-d45dce7dc605 saved successfully.
+2024-06-11 15:36:56,531 - logger - DEBUG - Item with id f2afad19-6778-4863-b302-6f6a0d9a97ed added successfully.
+2024-06-11 15:36:56,631 - logger - DEBUG - Preview image for plate with id f2afad19-6778-4863-b302-6f6a0d9a97ed saved successfully.
+2024-06-11 15:36:56,634 - logger - DEBUG - Item with id 064edeea-aa13-41fd-bae3-77f3b73fa8d7 added successfully.
+2024-06-11 15:36:56,725 - logger - DEBUG - Preview image for plate with id 064edeea-aa13-41fd-bae3-77f3b73fa8d7 saved successfully.
+2024-06-11 15:36:56,728 - logger - DEBUG - Item with id cdeace0c-95eb-4d9c-be26-b784c8f7a483 added successfully.
+2024-06-11 15:36:56,822 - logger - DEBUG - Preview image for plate with id cdeace0c-95eb-4d9c-be26-b784c8f7a483 saved successfully.
+2024-06-11 15:36:56,824 - logger - DEBUG - Item with id fd9f0a78-61fe-4bb7-ad68-8875f07ba061 added successfully.
+2024-06-11 15:36:56,910 - logger - DEBUG - Preview image for plate with id fd9f0a78-61fe-4bb7-ad68-8875f07ba061 saved successfully.
+2024-06-11 15:36:56,911 - logger - DEBUG - Item with id 342f77ef-bde4-40f9-9f4d-aaaa31046815 added successfully.
+2024-06-11 15:36:57,322 - logger - DEBUG - Preview image for plate with id 342f77ef-bde4-40f9-9f4d-aaaa31046815 saved successfully.
+2024-06-11 15:36:57,324 - logger - DEBUG - Item with id a291751b-0e5d-4e8a-9e90-9b4bff03f545 added successfully.
+2024-06-11 15:36:57,407 - logger - DEBUG - Preview image for plate with id a291751b-0e5d-4e8a-9e90-9b4bff03f545 saved successfully.
+2024-06-11 15:36:57,409 - logger - DEBUG - Item with id 2b2b645b-53fb-4322-ad64-9093149a12fa added successfully.
+2024-06-11 15:36:57,500 - logger - DEBUG - Preview image for plate with id 2b2b645b-53fb-4322-ad64-9093149a12fa saved successfully.
+2024-06-11 15:36:57,503 - logger - DEBUG - Item with id 80f23abd-92bc-45cf-b7e6-23d5a57769bf added successfully.
+2024-06-11 15:36:57,595 - logger - DEBUG - Preview image for plate with id 80f23abd-92bc-45cf-b7e6-23d5a57769bf saved successfully.
+2024-06-11 15:36:57,596 - logger - DEBUG - Item with id fd0be038-0ef8-4351-9e48-55ccc733d05a added successfully.
+2024-06-11 15:36:57,703 - logger - DEBUG - Preview image for plate with id fd0be038-0ef8-4351-9e48-55ccc733d05a saved successfully.
+2024-06-11 15:36:57,705 - logger - DEBUG - Item with id b86af59b-3b6c-421f-9f96-7413ee0f8aa7 added successfully.
+2024-06-11 15:36:57,809 - logger - DEBUG - Preview image for plate with id b86af59b-3b6c-421f-9f96-7413ee0f8aa7 saved successfully.
+2024-06-11 15:36:57,811 - logger - DEBUG - Item with id d91256d5-b0a1-40c7-b1ee-bc06a1af5294 added successfully.
+2024-06-11 15:36:57,901 - logger - DEBUG - Preview image for plate with id d91256d5-b0a1-40c7-b1ee-bc06a1af5294 saved successfully.
+2024-06-11 15:36:57,903 - logger - DEBUG - Item with id ac9a186e-886c-49dd-b742-f8545e1564c3 added successfully.
+2024-06-11 15:36:57,981 - logger - DEBUG - Preview image for plate with id ac9a186e-886c-49dd-b742-f8545e1564c3 saved successfully.
+2024-06-11 15:36:57,982 - logger - DEBUG - Item with id 58ee2cc0-6794-4ebd-9c56-34bc669b2258 added successfully.
+2024-06-11 15:36:58,070 - logger - DEBUG - Preview image for plate with id 58ee2cc0-6794-4ebd-9c56-34bc669b2258 saved successfully.
+2024-06-11 15:36:58,072 - logger - DEBUG - Item with id afd64ec7-e4c0-4946-8f11-ea92d2a1c4e1 added successfully.
+2024-06-11 15:36:58,156 - logger - DEBUG - Preview image for plate with id afd64ec7-e4c0-4946-8f11-ea92d2a1c4e1 saved successfully.
+2024-06-11 15:36:58,157 - logger - DEBUG - Item with id c14bdcb6-9b99-41c1-9b04-f4fc666fd8cc added successfully.
+2024-06-11 15:36:58,240 - logger - DEBUG - Preview image for plate with id c14bdcb6-9b99-41c1-9b04-f4fc666fd8cc saved successfully.
+2024-06-11 15:36:58,242 - logger - DEBUG - Item with id 2ed9c98d-6ff6-4a7e-a794-c337039df883 added successfully.
+2024-06-11 15:36:58,325 - logger - DEBUG - Preview image for plate with id 2ed9c98d-6ff6-4a7e-a794-c337039df883 saved successfully.
+2024-06-11 15:36:58,328 - logger - DEBUG - Item with id e4d7f9dd-dd89-42c6-ba07-e721e08c1eca added successfully.
+2024-06-11 15:36:58,411 - logger - DEBUG - Preview image for plate with id e4d7f9dd-dd89-42c6-ba07-e721e08c1eca saved successfully.
+2024-06-11 15:36:58,413 - logger - DEBUG - Item with id d843b8fd-65f6-426a-9ff0-cb69cef2d74a added successfully.
+2024-06-11 15:36:58,504 - logger - DEBUG - Preview image for plate with id d843b8fd-65f6-426a-9ff0-cb69cef2d74a saved successfully.
+2024-06-11 15:36:58,506 - logger - DEBUG - Item with id 7d9fc754-9c4a-47ad-b70e-f244bd26c707 added successfully.
+2024-06-11 15:36:58,593 - logger - DEBUG - Preview image for plate with id 7d9fc754-9c4a-47ad-b70e-f244bd26c707 saved successfully.
+2024-06-11 15:36:58,595 - logger - DEBUG - Item with id d97d07ca-50df-47dd-94c9-c48bede20b53 added successfully.
+2024-06-11 15:36:58,679 - logger - DEBUG - Preview image for plate with id d97d07ca-50df-47dd-94c9-c48bede20b53 saved successfully.
+2024-06-11 15:36:58,681 - logger - DEBUG - Item with id c563136a-0300-4274-b569-bbb1ffa2ba9f added successfully.
+2024-06-11 15:36:58,778 - logger - DEBUG - Preview image for plate with id c563136a-0300-4274-b569-bbb1ffa2ba9f saved successfully.
+2024-06-11 15:36:58,780 - logger - DEBUG - Item with id da388964-1fd3-4ce5-b1d6-b2e3890f4cd0 added successfully.
+2024-06-11 15:36:58,874 - logger - DEBUG - Preview image for plate with id da388964-1fd3-4ce5-b1d6-b2e3890f4cd0 saved successfully.
+2024-06-11 15:36:58,875 - logger - DEBUG - Item with id 1d2beb14-cebe-417a-a289-a9048ae07d79 added successfully.
+2024-06-11 15:36:58,956 - logger - DEBUG - Preview image for plate with id 1d2beb14-cebe-417a-a289-a9048ae07d79 saved successfully.
+2024-06-11 15:36:58,958 - logger - DEBUG - Item with id e39101e9-2629-4312-b61b-67bb4d6d552f added successfully.
+2024-06-11 15:36:59,042 - logger - DEBUG - Preview image for plate with id e39101e9-2629-4312-b61b-67bb4d6d552f saved successfully.
+2024-06-11 15:36:59,043 - logger - DEBUG - Item with id 212b673e-7452-4f66-95fa-39cb4138f231 added successfully.
+2024-06-11 15:36:59,124 - logger - DEBUG - Preview image for plate with id 212b673e-7452-4f66-95fa-39cb4138f231 saved successfully.
+2024-06-11 15:36:59,126 - logger - DEBUG - Item with id 0c2e1b9f-100a-4977-aee9-23e496c61faf added successfully.
+2024-06-11 15:36:59,219 - logger - DEBUG - Preview image for plate with id 0c2e1b9f-100a-4977-aee9-23e496c61faf saved successfully.
+2024-06-11 15:36:59,220 - logger - DEBUG - Item with id 7c883503-5abd-463c-9018-de68923633a6 added successfully.
+2024-06-11 15:36:59,319 - logger - DEBUG - Preview image for plate with id 7c883503-5abd-463c-9018-de68923633a6 saved successfully.
+2024-06-11 15:36:59,321 - logger - DEBUG - Item with id 08ad99a5-13a6-48ae-9624-c9c39a56f3c9 added successfully.
+2024-06-11 15:36:59,409 - logger - DEBUG - Preview image for plate with id 08ad99a5-13a6-48ae-9624-c9c39a56f3c9 saved successfully.
+2024-06-11 15:36:59,411 - logger - DEBUG - Item with id 03721fef-770e-402d-81fb-9b7a82ed867f added successfully.
+2024-06-11 15:36:59,495 - logger - DEBUG - Preview image for plate with id 03721fef-770e-402d-81fb-9b7a82ed867f saved successfully.
+2024-06-11 15:36:59,497 - logger - DEBUG - Item with id 06101643-9ab7-4add-8c58-8471bbba1c87 added successfully.
+2024-06-11 15:36:59,582 - logger - DEBUG - Preview image for plate with id 06101643-9ab7-4add-8c58-8471bbba1c87 saved successfully.
+2024-06-11 15:36:59,584 - logger - DEBUG - Item with id b401e611-a322-4669-b624-768c6080e5aa added successfully.
+2024-06-11 15:36:59,663 - logger - DEBUG - Preview image for plate with id b401e611-a322-4669-b624-768c6080e5aa saved successfully.
+2024-06-11 15:36:59,665 - logger - DEBUG - Item with id 4b70db54-d3d6-4b83-a559-16666ce910cc added successfully.
+2024-06-11 15:36:59,749 - logger - DEBUG - Preview image for plate with id 4b70db54-d3d6-4b83-a559-16666ce910cc saved successfully.
+2024-06-11 15:36:59,751 - logger - DEBUG - Item with id bc95ef26-6994-43de-8441-0d649ebbe9dc added successfully.
+2024-06-11 15:36:59,848 - logger - DEBUG - Preview image for plate with id bc95ef26-6994-43de-8441-0d649ebbe9dc saved successfully.
+2024-06-11 15:36:59,850 - logger - DEBUG - Item with id aea3cca2-65a5-44bd-b820-ea987c0a6aa4 added successfully.
+2024-06-11 15:36:59,940 - logger - DEBUG - Preview image for plate with id aea3cca2-65a5-44bd-b820-ea987c0a6aa4 saved successfully.
+2024-06-11 15:36:59,942 - logger - DEBUG - Item with id 647b39ad-1e10-4e49-9c8e-bdd30bfb6515 added successfully.
+2024-06-11 15:37:00,045 - logger - DEBUG - Preview image for plate with id 647b39ad-1e10-4e49-9c8e-bdd30bfb6515 saved successfully.
+2024-06-11 15:37:00,048 - logger - DEBUG - Item with id 79431270-adfd-4a0c-8b65-dad9ee445ee6 added successfully.
+2024-06-11 15:37:00,154 - logger - DEBUG - Preview image for plate with id 79431270-adfd-4a0c-8b65-dad9ee445ee6 saved successfully.
+2024-06-11 15:37:00,156 - logger - DEBUG - Item with id ea04df7d-055a-41c3-8453-bbac81749b83 added successfully.
+2024-06-11 15:37:00,242 - logger - DEBUG - Preview image for plate with id ea04df7d-055a-41c3-8453-bbac81749b83 saved successfully.
+2024-06-11 15:37:00,244 - logger - DEBUG - Item with id b04a735e-e4a6-4fd2-9102-f2d1b05c3b9d added successfully.
+2024-06-11 15:37:00,330 - logger - DEBUG - Preview image for plate with id b04a735e-e4a6-4fd2-9102-f2d1b05c3b9d saved successfully.
+2024-06-11 15:37:00,332 - logger - DEBUG - Item with id 1f219f87-2c52-43fd-b202-f59d98a9c1f7 added successfully.
+2024-06-11 15:37:00,419 - logger - DEBUG - Preview image for plate with id 1f219f87-2c52-43fd-b202-f59d98a9c1f7 saved successfully.
+2024-06-11 15:37:00,421 - logger - DEBUG - Item with id e3ecf734-3e7b-42e5-ac15-44d9b8d5837e added successfully.
+2024-06-11 15:37:00,506 - logger - DEBUG - Preview image for plate with id e3ecf734-3e7b-42e5-ac15-44d9b8d5837e saved successfully.
+2024-06-11 15:37:00,507 - logger - DEBUG - Item with id d74bb2ea-c39a-4675-9854-ddde9dc96e02 added successfully.
+2024-06-11 15:37:00,587 - logger - DEBUG - Preview image for plate with id d74bb2ea-c39a-4675-9854-ddde9dc96e02 saved successfully.
+2024-06-11 15:37:00,589 - logger - DEBUG - Item with id 12cc91d3-31f1-45ca-a70e-956121723e2a added successfully.
+2024-06-11 15:37:00,674 - logger - DEBUG - Preview image for plate with id 12cc91d3-31f1-45ca-a70e-956121723e2a saved successfully.
+2024-06-11 15:37:00,674 - logger - DEBUG - Attempted to add new plate at max amount reached.
+2024-06-11 15:37:00,697 - logger - DEBUG - Item with id 69ad26e3-f961-431b-9f20-7ddc00c33d25 added successfully.
+2024-06-11 15:37:00,801 - logger - DEBUG - Preview image for plate with id 69ad26e3-f961-431b-9f20-7ddc00c33d25 saved successfully.
+2024-06-11 15:37:00,811 - logger - DEBUG - Item with id 68c00b2b-e313-4ac1-a02f-099e41e79249 added successfully.
+2024-06-11 15:37:00,909 - logger - DEBUG - Preview image for plate with id 68c00b2b-e313-4ac1-a02f-099e41e79249 saved successfully.
+2024-06-11 15:37:00,919 - logger - DEBUG - Item with id 18ddd999-44d5-405b-8cc1-aec9e8360b05 added successfully.
+2024-06-11 15:37:01,021 - logger - DEBUG - Preview image for plate with id 18ddd999-44d5-405b-8cc1-aec9e8360b05 saved successfully.
+2024-06-11 15:37:01,030 - logger - DEBUG - Item with id b33dcab6-dd74-4f55-9da0-2482da8e6d5d added successfully.
+2024-06-11 15:37:01,120 - logger - DEBUG - Preview image for plate with id b33dcab6-dd74-4f55-9da0-2482da8e6d5d saved successfully.
+2024-06-11 15:37:01,129 - logger - DEBUG - Item with id f6423bc9-511c-43ef-b493-4fcfa1820907 added successfully.
+2024-06-11 15:37:01,211 - logger - DEBUG - Preview image for plate with id f6423bc9-511c-43ef-b493-4fcfa1820907 saved successfully.
+2024-06-11 15:37:01,218 - logger - DEBUG - Item with id 2b018e72-0a71-4c8f-aeda-7ba0649b23b4 added successfully.
+2024-06-11 15:37:01,304 - logger - DEBUG - Preview image for plate with id 2b018e72-0a71-4c8f-aeda-7ba0649b23b4 saved successfully.
+2024-06-11 15:37:01,306 - logger - DEBUG - Updated item id 2b018e72-0a71-4c8f-aeda-7ba0649b23b4: set contours to k05VTVBZAQB2AHsnZGVzY3InOiAnPGk0JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDMsKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAoBAAAAAgAAAAMAAAA=
+2024-06-11 15:37:01,315 - logger - DEBUG - Item with id 23db0038-4875-4571-9a88-bec64867b530 added successfully.
+2024-06-11 15:37:01,405 - logger - DEBUG - Preview image for plate with id 23db0038-4875-4571-9a88-bec64867b530 saved successfully.
+2024-06-11 15:37:01,407 - logger - DEBUG - Updated item id 23db0038-4875-4571-9a88-bec64867b530: set x to 4999.0
+2024-06-11 15:37:01,415 - logger - DEBUG - Item with id d8ac57f5-9ed1-48f2-bf26-3a80b0c228a8 added successfully.
+2024-06-11 15:37:01,501 - logger - DEBUG - Preview image for plate with id d8ac57f5-9ed1-48f2-bf26-3a80b0c228a8 saved successfully.
+2024-06-11 15:37:01,511 - logger - DEBUG - Item with id 5ed489c4-02d0-4b54-a168-936f84f7a74e added successfully.
+2024-06-11 15:37:01,618 - logger - DEBUG - Preview image for plate with id 5ed489c4-02d0-4b54-a168-936f84f7a74e saved successfully.
+2024-06-11 15:37:01,620 - logger - DEBUG - Updated item id 5ed489c4-02d0-4b54-a168-936f84f7a74e: set y to 4999.0
+2024-06-11 15:37:01,628 - logger - DEBUG - Item with id 86c6f734-c7ae-46cb-9e4f-837b35262f89 added successfully.
+2024-06-11 15:37:01,716 - logger - DEBUG - Preview image for plate with id 86c6f734-c7ae-46cb-9e4f-837b35262f89 saved successfully.
+2024-06-11 15:37:01,723 - logger - DEBUG - Item with id 772f9691-100c-40d8-bab4-c5d4da32afcb added successfully.
+2024-06-11 15:37:01,811 - logger - DEBUG - Preview image for plate with id 772f9691-100c-40d8-bab4-c5d4da32afcb saved successfully.
+2024-06-11 15:37:01,813 - logger - DEBUG - Updated item id 772f9691-100c-40d8-bab4-c5d4da32afcb: set z to 4999.0
+2024-06-11 15:37:01,823 - logger - DEBUG - Item with id 5db1c6c0-1577-4428-a274-28748b11e410 added successfully.
+2024-06-11 15:37:01,917 - logger - DEBUG - Preview image for plate with id 5db1c6c0-1577-4428-a274-28748b11e410 saved successfully.
+2024-06-11 15:37:01,924 - logger - DEBUG - Item with id 0a7b7361-f5cb-4b6c-aff7-bbea7645e571 added successfully.
+2024-06-11 15:37:02,006 - logger - DEBUG - Preview image for plate with id 0a7b7361-f5cb-4b6c-aff7-bbea7645e571 saved successfully.
+2024-06-11 15:37:02,008 - logger - DEBUG - Updated item id 0a7b7361-f5cb-4b6c-aff7-bbea7645e571: set material to Abazaz
+2024-06-11 15:37:02,016 - logger - DEBUG - Item with id 0f01a0be-a96d-4eb2-bd77-6936b7f871a2 added successfully.
+2024-06-11 15:37:02,103 - logger - DEBUG - Preview image for plate with id 0f01a0be-a96d-4eb2-bd77-6936b7f871a2 saved successfully.
+2024-06-11 15:37:02,110 - logger - DEBUG - Item with id 82623179-e6ee-40a4-a771-faf609e8cf77 added successfully.
+2024-06-11 15:37:02,200 - logger - DEBUG - Preview image for plate with id 82623179-e6ee-40a4-a771-faf609e8cf77 saved successfully.
+2024-06-11 15:37:02,201 - logger - DEBUG - Updated item id 82623179-e6ee-40a4-a771-faf609e8cf77: set contours to k05VTVBZAQB2AHsnZGVzY3InOiAnPGk0JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDMsKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAoBAAAAAgAAAAMAAAA=
+2024-06-11 15:37:02,209 - logger - DEBUG - Item with id 738c1632-4133-4e7e-8e8c-5d63a8af286f added successfully.
+2024-06-11 15:37:02,342 - logger - DEBUG - Preview image for plate with id 738c1632-4133-4e7e-8e8c-5d63a8af286f saved successfully.
+2024-06-11 15:37:02,343 - logger - DEBUG - Updated item id 738c1632-4133-4e7e-8e8c-5d63a8af286f: set contours to None
+2024-06-11 15:37:02,345 - logger - DEBUG - Updated item id 738c1632-4133-4e7e-8e8c-5d63a8af286f: set contours to k05VTVBZAQB2AHsnZGVzY3InOiAnPGY4JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDAsKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAo=
+2024-06-11 15:37:02,354 - logger - DEBUG - Item with id 305af928-526d-4eee-8ff8-cce4a3ba4955 added successfully.
+2024-06-11 15:37:02,444 - logger - DEBUG - Preview image for plate with id 305af928-526d-4eee-8ff8-cce4a3ba4955 saved successfully.
+2024-06-11 15:37:03,421 - logger - DEBUG - Item with id 23a02e7d-3c4d-4c9d-b803-f8616cfdfee4 added successfully.
+2024-06-11 15:37:03,530 - logger - DEBUG - Item with id 28d8d065-f33e-4c23-9d8c-79f2076dad0f added successfully.
+2024-06-11 15:37:03,633 - logger - DEBUG - Item with id 1adfcd18-0e95-4bbc-b361-4a758ff49eda added successfully.
+2024-06-11 15:37:03,737 - logger - DEBUG - Item with id c845f81c-3068-445e-aa15-163436b62e2d added successfully.
+2024-06-11 15:37:03,837 - logger - DEBUG - Item with id 4df95906-7d30-4cdc-b16d-22356b7072e2 added successfully.
+2024-06-11 15:37:03,947 - logger - DEBUG - Item with id d8904790-442a-404d-8c88-1b98d7526f90 added successfully.
+2024-06-11 15:37:04,052 - logger - DEBUG - Item with id ac906755-8242-44ff-8f63-f50120b1bf10 added successfully.
+2024-06-11 15:37:04,153 - logger - DEBUG - Item with id f66ee758-8328-44b5-9f43-88c8e20839e6 added successfully.
+2024-06-11 15:37:04,256 - logger - DEBUG - Item with id 0837d188-d08d-4743-832d-52c2eb62b176 added successfully.
+2024-06-11 15:37:04,365 - logger - DEBUG - Item with id 7ed639ad-357b-4427-80c9-b25c5adb2355 added successfully.
+2024-06-11 15:37:04,475 - logger - DEBUG - Item with id d7fde2ac-2601-4475-941b-b767930703eb added successfully.
+2024-06-11 15:37:04,575 - logger - DEBUG - Attempted to add new router at max amount reached.
+2024-06-11 15:37:04,584 - logger - DEBUG - Item with id ec0f7899-53fe-4455-9d9e-bfd764bbd79a added successfully.
+2024-06-11 15:37:04,695 - logger - DEBUG - Item with id b4780b04-26c4-4e43-82cd-6b96e940becd added successfully.
+2024-06-11 15:37:04,842 - logger - DEBUG - Item with id 4ec9f4ce-3474-411d-8b20-ad61e22b487d added successfully.
+2024-06-11 15:37:04,959 - logger - DEBUG - Item with id e2b4a2fb-44ce-489f-8144-a15496d63b5c added successfully.
+2024-06-11 15:37:05,071 - logger - DEBUG - Item with id 512ddcd7-ca75-4b24-b795-194f607fef68 added successfully.
+2024-06-11 15:37:05,200 - logger - DEBUG - Item with id c9e8e4f4-b347-46a8-9edd-d4ad1327cf81 added successfully.
+2024-06-11 15:37:05,729 - logger - DEBUG - Item with id 8bc85384-713e-4470-ba8d-ef5dd13f6f9b added successfully.
+2024-06-11 15:37:05,850 - logger - DEBUG - Item with id 5422b3ef-28de-4d24-aa39-a3f24bbfa42e added successfully.
+2024-06-11 15:37:05,970 - logger - DEBUG - Item with id d2899b01-145c-4f62-ae37-9c3995a6e22e added successfully.
+2024-06-11 15:37:06,083 - logger - DEBUG - Item with id ab8c2c65-31e4-4235-aa44-fa6c0a66c4d8 added successfully.
+2024-06-11 15:37:06,187 - logger - DEBUG - Updated item id ab8c2c65-31e4-4235-aa44-fa6c0a66c4d8: set name to New Name
+2024-06-11 15:37:06,195 - logger - DEBUG - Item with id 2d87541b-85d5-4587-80c8-69103c068da0 added successfully.
+2024-06-11 15:37:06,302 - logger - DEBUG - Item with id d1d752e0-900a-4b2d-926b-ece42c58b914 added successfully.
+2024-06-11 15:37:06,404 - logger - DEBUG - Updated item id d1d752e0-900a-4b2d-926b-ece42c58b914: set x to 4999.0
+2024-06-11 15:37:06,411 - logger - DEBUG - Item with id 61a05910-4383-4749-b06d-232fc9f450b0 added successfully.
+2024-06-11 15:37:06,526 - logger - DEBUG - Item with id db519c83-3d1b-46b9-bda9-d8e0df5ea598 added successfully.
+2024-06-11 15:37:06,640 - logger - DEBUG - Updated item id db519c83-3d1b-46b9-bda9-d8e0df5ea598: set y to 4999.0
+2024-06-11 15:37:06,649 - logger - DEBUG - Item with id 46a4425e-f5b5-4ce1-9fcc-a8d042925e83 added successfully.
+2024-06-11 15:37:06,772 - logger - DEBUG - Item with id 412baff9-84db-496a-88d9-84c8e5360953 added successfully.
+2024-06-11 15:37:06,893 - logger - DEBUG - Updated item id 412baff9-84db-496a-88d9-84c8e5360953: set z to 4999.0
+2024-06-11 15:37:06,903 - logger - DEBUG - Item with id df68cf88-e348-4b1a-aa81-40065b696bdf added successfully.
+2024-06-11 15:37:07,031 - logger - DEBUG - Item with id 8bdd1e97-64aa-451e-8cee-9e291e33b683 added successfully.
+2024-06-11 15:37:07,148 - logger - DEBUG - Updated item id 8bdd1e97-64aa-451e-8cee-9e291e33b683: set plate_x to 4999.0
+2024-06-11 15:37:07,156 - logger - DEBUG - Item with id 1497e373-5a5b-45ce-83c5-37b41d0a1309 added successfully.
+2024-06-11 15:37:07,267 - logger - DEBUG - Item with id e8894940-a46d-425a-a093-2625771bf3a0 added successfully.
+2024-06-11 15:37:07,370 - logger - DEBUG - Updated item id e8894940-a46d-425a-a093-2625771bf3a0: set plate_y to 4999.0
+2024-06-11 15:37:07,378 - logger - DEBUG - Item with id 59c81594-8cac-4383-8307-896331b825bd added successfully.
+2024-06-11 15:37:07,497 - logger - DEBUG - Item with id 2e7eb51a-9556-413b-95c4-be400c020892 added successfully.
+2024-06-11 15:37:07,602 - logger - DEBUG - Updated item id 2e7eb51a-9556-413b-95c4-be400c020892: set plate_z to 4999.0
+2024-06-11 15:37:07,609 - logger - DEBUG - Item with id 11813285-bf2d-4cf1-af44-0df8785333b2 added successfully.
+2024-06-11 15:37:07,725 - logger - DEBUG - Item with id 2d8725bd-a661-4048-9adc-fdb72d1d5b77 added successfully.
+2024-06-11 15:37:07,842 - logger - DEBUG - Updated item id 2d8725bd-a661-4048-9adc-fdb72d1d5b77: set min_safe_dist_from_edge to 5.0
+2024-06-11 15:37:07,851 - logger - DEBUG - Item with id c71b468e-205a-4e57-92f7-ade5f0891d00 added successfully.
+2024-06-11 15:37:07,967 - logger - DEBUG - Updated item id c71b468e-205a-4e57-92f7-ade5f0891d00: set mill_bit_diameter to 99.0
+2024-06-11 15:37:07,975 - logger - DEBUG - Item with id 7115a1c3-775e-4cbe-af62-c51560bf8885 added successfully.
+2024-06-11 15:37:08,086 - logger - DEBUG - Item with id f97f5b04-4cb5-4093-b70d-96bfce79524c added successfully.
+2024-06-11 15:37:08,228 - logger - DEBUG - Updated item id f97f5b04-4cb5-4093-b70d-96bfce79524c: set drill_bit_diameter to 99.0
+2024-06-11 15:37:08,239 - logger - DEBUG - Item with id d52e143e-9193-4cc6-a262-9fce0f51ba46 added successfully.
+2024-06-11 15:37:08,351 - logger - DEBUG - Item with id c608f507-5334-41c3-963d-c6ceb087b7b2 added successfully.
+2024-06-11 15:37:08,562 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:37:08,664 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:37:08,745 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:37:08,825 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:37:08,941 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:37:09,042 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:37:09,138 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:37:09,253 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:37:09,350 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:37:09,428 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:37:09,428 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:37:09,429 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:37:09,429 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:37:09,430 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:37:09,438 - logger - DEBUG - Finding contours...
+2024-06-11 15:37:09,440 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:37:09,440 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:37:09,442 - logger - DEBUG - Parsing complete.
+2024-06-11 15:37:09,442 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:37:09,649 - logger - DEBUG - Saving preview image...
+2024-06-11 15:37:09,822 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpf06kt5ac\preview_image.png.
+2024-06-11 15:37:09,832 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
+2024-06-11 15:37:09,842 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-46\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-11 15:37:09,853 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-46\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-11 15:42:57,300 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-11 15:42:57,303 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:42:57,305 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:42:57,305 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:42:57,305 - logger - ERROR - Threshold must be integer value
+2024-06-11 15:42:57,322 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:42:57,539 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: nonexistent/path/image.jpg
+2024-06-11 15:42:57,539 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:42:57,555 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-11 15:42:57,567 - logger - DEBUG - Item with id 1 added successfully.
+2024-06-11 15:42:57,575 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-11 15:42:57,586 - logger - DEBUG - Item with id 1 removed successfully.
+2024-06-11 15:42:57,596 - logger - DEBUG - Item with id 1 removed successfully.
+2024-06-11 15:42:57,605 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:42:57,613 - logger - DEBUG - Item with id 1 removed successfully.
+2024-06-11 15:42:57,620 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:42:57,627 - logger - DEBUG - Successfully cleared out data table.
+2024-06-11 15:42:57,635 - logger - DEBUG - Successfully cleared out data table.
+2024-06-11 15:42:57,663 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:42:57,671 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-11 15:42:57,698 - logger - DEBUG - Updated item id 1: set description to Updated description
+2024-06-11 15:42:57,707 - logger - ERROR - New value for item parameter <class 'int'> does not match intended type <class 'str'>
+2024-06-11 15:42:57,713 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:42:57,720 - logger - ERROR - Item with id None does not exist.
+2024-06-11 15:42:57,731 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-11 15:42:57,744 - logger - ERROR - Indicated image editing directory path does not exist: invalid directory
+2024-06-11 15:42:57,752 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:42:57,752 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:42:57,753 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:42:57,769 - logger - ERROR - Attempted to import raw image in wrong ImageEditingController state.
+2024-06-11 15:42:57,778 - logger - ERROR - Indicated raw image filepath does not exist: random invalid path
+2024-06-11 15:42:57,787 - logger - ERROR - Image file is of invalid format: .STL
+2024-06-11 15:42:57,873 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpfyhm5jqa\raw.png
+2024-06-11 15:42:57,874 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:42:57,932 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: -100, -100
+2024-06-11 15:42:57,932 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:42:58,004 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmprzikdg4a\raw.png
+2024-06-11 15:42:58,004 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:42:58,004 - logger - ERROR - Attempted to get binary image in wrong state.
+2024-06-11 15:42:58,061 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpc81u0ma0\raw.png
+2024-06-11 15:42:58,063 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:42:58,063 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:42:58,063 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:42:58,063 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:42:58,116 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpeh73jn2h\raw.png
+2024-06-11 15:42:58,117 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:42:58,178 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:42:58,236 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmp_e_ujlpw\raw.png
+2024-06-11 15:42:58,236 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:42:58,301 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:42:58,302 - logger - ERROR - Attempted to extract features in wrong state.
+2024-06-11 15:42:58,360 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpn8315dpx\raw.png
+2024-06-11 15:42:58,361 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:42:58,432 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:42:58,455 - logger - DEBUG - Image features extracted successfully.
+2024-06-11 15:47:55,725 - logger - ERROR - Indicated image editing directory path does not exist: invalid directory
+2024-06-11 15:47:55,729 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:47:55,729 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:47:55,730 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:47:55,738 - logger - ERROR - Attempted to import raw image in wrong ImageEditingController state.
+2024-06-11 15:47:55,742 - logger - ERROR - Indicated raw image filepath does not exist: random invalid path
+2024-06-11 15:47:55,746 - logger - ERROR - Image file is of invalid format: .STL
+2024-06-11 15:47:56,002 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmph164n0dl\raw.png
+2024-06-11 15:47:56,003 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:47:56,044 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: -100, -100
+2024-06-11 15:47:56,044 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:47:56,286 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpr0hqr_do\raw.png
+2024-06-11 15:47:56,287 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:47:56,287 - logger - ERROR - Attempted to get binary image in wrong state.
+2024-06-11 15:47:56,539 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpmzuschd3\raw.png
+2024-06-11 15:47:56,540 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:47:56,541 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:47:56,541 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:47:56,541 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:47:56,792 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpcuqvsrdw\raw.png
+2024-06-11 15:47:56,792 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:47:56,884 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:47:57,127 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpyegx8o93\raw.png
+2024-06-11 15:47:57,127 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:47:57,234 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:47:57,235 - logger - ERROR - Attempted to extract features in wrong state.
+2024-06-11 15:47:57,496 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmplsevvk1g\raw.png
+2024-06-11 15:47:57,497 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:47:57,591 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:47:57,665 - logger - DEBUG - Image features extracted successfully.
+2024-06-11 15:47:57,968 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmp0poi46y5\raw.png
+2024-06-11 15:47:57,969 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:47:58,052 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:47:58,129 - logger - DEBUG - Image features extracted successfully.
+2024-06-11 15:47:58,129 - logger - ERROR - Attempted to save image features in wrong state.
+2024-06-11 15:47:58,391 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmp8yk07d05\raw.png
+2024-06-11 15:47:58,391 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:47:58,480 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:47:58,560 - logger - DEBUG - Image features extracted successfully.
+2024-06-11 15:47:58,633 - logger - DEBUG - Image features saved successfully to C:\Users\CACOCO~1\AppData\Local\Temp\tmp8yk07d05\features.png
+2024-06-11 15:48:29,968 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-11 15:48:29,971 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:48:29,973 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:48:29,973 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:48:29,973 - logger - ERROR - Threshold must be integer value
+2024-06-11 15:50:23,295 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-11 15:50:23,297 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:50:23,316 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:50:23,316 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:50:23,317 - logger - ERROR - Threshold must be integer value
+2024-06-11 15:50:59,658 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-11 15:51:20,715 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:35,289 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-11 15:53:35,291 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:35,298 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:53:35,298 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:53:35,298 - logger - ERROR - Threshold must be integer value
+2024-06-11 15:53:35,475 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:53:35,694 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: nonexistent/path/image.jpg
+2024-06-11 15:53:35,695 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:35,773 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-11 15:53:35,783 - logger - DEBUG - Item with id 1 added successfully.
+2024-06-11 15:53:35,790 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-11 15:53:35,799 - logger - DEBUG - Item with id 1 removed successfully.
+2024-06-11 15:53:35,809 - logger - DEBUG - Item with id 1 removed successfully.
+2024-06-11 15:53:35,816 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:53:35,824 - logger - DEBUG - Item with id 1 removed successfully.
+2024-06-11 15:53:35,830 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:53:35,836 - logger - DEBUG - Successfully cleared out data table.
+2024-06-11 15:53:35,844 - logger - DEBUG - Successfully cleared out data table.
+2024-06-11 15:53:35,867 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:53:35,875 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-11 15:53:35,899 - logger - DEBUG - Updated item id 1: set description to Updated description
+2024-06-11 15:53:35,907 - logger - ERROR - New value for item parameter <class 'int'> does not match intended type <class 'str'>
+2024-06-11 15:53:35,912 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:53:35,918 - logger - ERROR - Item with id None does not exist.
+2024-06-11 15:53:35,927 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-11 15:53:35,939 - logger - ERROR - Indicated image editing directory path does not exist: invalid directory
+2024-06-11 15:53:35,946 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:53:35,946 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:53:35,947 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:53:35,961 - logger - ERROR - Attempted to import raw image in wrong ImageEditingController state.
+2024-06-11 15:53:35,968 - logger - ERROR - Indicated raw image filepath does not exist: random invalid path
+2024-06-11 15:53:35,976 - logger - ERROR - Image file is of invalid format: .STL
+2024-06-11 15:53:36,231 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpuglysz95\raw.png
+2024-06-11 15:53:36,232 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:53:36,282 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: -100, -100
+2024-06-11 15:53:36,283 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:53:36,557 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpk9qg5eml\raw.png
+2024-06-11 15:53:36,558 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:53:36,558 - logger - ERROR - Attempted to get binary image in wrong state.
+2024-06-11 15:53:36,826 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpdv3tdr76\raw.png
+2024-06-11 15:53:36,827 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:53:36,828 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:53:36,828 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:53:36,828 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:53:37,099 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmph5fuaf70\raw.png
+2024-06-11 15:53:37,100 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:53:37,193 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:53:37,448 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpiuo8gsfe\raw.png
+2024-06-11 15:53:37,449 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:53:37,541 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:53:37,541 - logger - ERROR - Attempted to extract features in wrong state.
+2024-06-11 15:53:37,801 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmplrgs2zed\raw.png
+2024-06-11 15:53:37,802 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:53:37,899 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:53:37,977 - logger - DEBUG - Image features extracted successfully.
+2024-06-11 15:53:38,291 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpl2utg6fy\raw.png
+2024-06-11 15:53:38,292 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:53:38,395 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:53:38,483 - logger - DEBUG - Image features extracted successfully.
+2024-06-11 15:53:38,483 - logger - ERROR - Attempted to save image features in wrong state.
+2024-06-11 15:53:38,729 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmp2hbcuaxh\raw.png
+2024-06-11 15:53:38,730 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:53:38,818 - logger - DEBUG - Binary image saved successfully.
+2024-06-11 15:53:38,905 - logger - DEBUG - Image features extracted successfully.
+2024-06-11 15:53:38,970 - logger - DEBUG - Image features saved successfully to C:\Users\CACOCO~1\AppData\Local\Temp\tmp2hbcuaxh\features.png
+2024-06-11 15:53:38,976 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 5
+2024-06-11 15:53:38,976 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 5, 0
+2024-06-11 15:53:38,995 - logger - ERROR - STL file does not exist: invalid path
+2024-06-11 15:53:39,003 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL
+2024-06-11 15:53:39,004 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:53:39,004 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:53:39,004 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:53:39,004 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:53:39,004 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:53:39,004 - logger - DEBUG - Finding contours...
+2024-06-11 15:53:39,004 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:53:39,004 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:53:39,004 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-11 15:53:39,011 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-11 15:53:39,011 - logger - ERROR - STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-11 15:53:39,011 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg: STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-11 15:53:39,019 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:39,127 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:53:39,127 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:53:39,128 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:53:39,129 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:53:39,129 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:53:39,142 - logger - DEBUG - Finding contours...
+2024-06-11 15:53:39,144 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:53:39,145 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:53:39,147 - logger - DEBUG - Parsing complete.
+2024-06-11 15:53:39,150 - logger - DEBUG - Item with id 14d5607a-7589-4cfc-9be3-41e4e3c160e8 added successfully.
+2024-06-11 15:53:39,150 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:53:39,554 - logger - DEBUG - Saving preview image...
+2024-06-11 15:53:39,766 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmppyi2d61q\14d5607a-7589-4cfc-9be3-41e4e3c160e8.png.
+2024-06-11 15:53:39,766 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:53:39,774 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:39,871 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:53:39,871 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:53:39,871 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:53:39,872 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:53:39,872 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:53:39,881 - logger - DEBUG - Finding contours...
+2024-06-11 15:53:39,883 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:53:39,883 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:53:39,885 - logger - DEBUG - Parsing complete.
+2024-06-11 15:53:39,887 - logger - DEBUG - Item with id b11b487d-05c0-4b95-b8be-f96735cdad7e added successfully.
+2024-06-11 15:53:39,887 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:53:40,097 - logger - DEBUG - Saving preview image...
+2024-06-11 15:53:40,279 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmp717rq7nh\b11b487d-05c0-4b95-b8be-f96735cdad7e.png.
+2024-06-11 15:53:40,279 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:53:40,281 - logger - DEBUG - Attempted to add already existing STL file: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:40,296 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:40,376 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:53:40,376 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:53:40,376 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:53:40,377 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:53:40,377 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:53:40,386 - logger - DEBUG - Finding contours...
+2024-06-11 15:53:40,388 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:53:40,388 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:53:40,390 - logger - DEBUG - Parsing complete.
+2024-06-11 15:53:40,392 - logger - DEBUG - Item with id 128d8813-6889-400b-9cbe-161369825b47 added successfully.
+2024-06-11 15:53:40,392 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:53:40,686 - logger - DEBUG - Saving preview image...
+2024-06-11 15:53:40,898 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpugi_jazi\128d8813-6889-400b-9cbe-161369825b47.png.
+2024-06-11 15:53:40,898 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:53:40,899 - logger - DEBUG - Attempted to add already existing STL file: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:40,908 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:41,020 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:53:41,020 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:53:41,021 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:53:41,021 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:53:41,022 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:53:41,039 - logger - DEBUG - Finding contours...
+2024-06-11 15:53:41,042 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:53:41,042 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:53:41,046 - logger - DEBUG - Parsing complete.
+2024-06-11 15:53:41,048 - logger - DEBUG - Item with id 3853d8de-ff75-4c1b-b468-123b9c92dce0 added successfully.
+2024-06-11 15:53:41,048 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:53:41,284 - logger - DEBUG - Saving preview image...
+2024-06-11 15:53:41,447 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpb1a807nv\3853d8de-ff75-4c1b-b468-123b9c92dce0.png.
+2024-06-11 15:53:41,447 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:53:41,456 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:41,536 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:53:41,536 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:53:41,537 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:53:41,537 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:53:41,537 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:53:41,546 - logger - DEBUG - Finding contours...
+2024-06-11 15:53:41,548 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:53:41,548 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:53:41,550 - logger - DEBUG - Parsing complete.
+2024-06-11 15:53:41,551 - logger - DEBUG - Item with id 7a3d566b-1d21-446c-9f0d-adc280269101 added successfully.
+2024-06-11 15:53:41,551 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:53:41,897 - logger - DEBUG - Saving preview image...
+2024-06-11 15:53:42,089 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmppwxd97uc\7a3d566b-1d21-446c-9f0d-adc280269101.png.
+2024-06-11 15:53:42,089 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:53:42,099 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:42,202 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:53:42,202 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:53:42,203 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:53:42,203 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:53:42,203 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:53:42,212 - logger - DEBUG - Finding contours...
+2024-06-11 15:53:42,214 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:53:42,214 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:53:42,216 - logger - DEBUG - Parsing complete.
+2024-06-11 15:53:42,218 - logger - DEBUG - Item with id fee221d7-e94d-44fd-af70-606fe92accd5 added successfully.
+2024-06-11 15:53:42,218 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:53:42,434 - logger - DEBUG - Saving preview image...
+2024-06-11 15:53:42,599 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmp2k3k2m9a\fee221d7-e94d-44fd-af70-606fe92accd5.png.
+2024-06-11 15:53:42,599 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:53:42,608 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:42,712 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:53:42,712 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:53:42,713 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:53:42,713 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:53:42,713 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:53:42,723 - logger - DEBUG - Finding contours...
+2024-06-11 15:53:42,725 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:53:42,725 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:53:42,727 - logger - DEBUG - Parsing complete.
+2024-06-11 15:53:42,729 - logger - DEBUG - Item with id f9c42882-d5fb-4aa4-be51-d6128dd29ce0 added successfully.
+2024-06-11 15:53:42,729 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:53:43,078 - logger - DEBUG - Saving preview image...
+2024-06-11 15:53:43,258 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpphbxxp4n\f9c42882-d5fb-4aa4-be51-d6128dd29ce0.png.
+2024-06-11 15:53:43,258 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:53:43,266 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:43,361 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:53:43,361 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:53:43,362 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:53:43,362 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:53:43,362 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:53:43,375 - logger - DEBUG - Finding contours...
+2024-06-11 15:53:43,377 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:53:43,377 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:53:43,379 - logger - DEBUG - Parsing complete.
+2024-06-11 15:53:43,382 - logger - DEBUG - Item with id 15abcb03-0d5b-4ab1-846e-f6c44388295a added successfully.
+2024-06-11 15:53:43,382 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:53:43,590 - logger - DEBUG - Saving preview image...
+2024-06-11 15:53:43,770 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpths5ggl9\15abcb03-0d5b-4ab1-846e-f6c44388295a.png.
+2024-06-11 15:53:43,770 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:53:43,778 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:43,859 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:53:43,860 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:53:43,860 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:53:43,860 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:53:43,861 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:53:43,870 - logger - DEBUG - Finding contours...
+2024-06-11 15:53:43,871 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:53:43,872 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:53:43,873 - logger - DEBUG - Parsing complete.
+2024-06-11 15:53:43,875 - logger - DEBUG - Item with id 99fd471a-d5b2-44c1-a410-b676f88f347d added successfully.
+2024-06-11 15:53:43,875 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:53:44,094 - logger - DEBUG - Saving preview image...
+2024-06-11 15:53:44,261 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmp8019tg9x\99fd471a-d5b2-44c1-a410-b676f88f347d.png.
+2024-06-11 15:53:44,261 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:53:44,263 - logger - DEBUG - Updated item id 99fd471a-d5b2-44c1-a410-b676f88f347d: set material to new_material
+2024-06-11 15:53:44,272 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:44,360 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:53:44,360 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:53:44,361 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:53:44,361 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:53:44,361 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:53:44,369 - logger - DEBUG - Finding contours...
+2024-06-11 15:53:44,370 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:53:44,371 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:53:44,373 - logger - DEBUG - Parsing complete.
+2024-06-11 15:53:44,375 - logger - DEBUG - Item with id 30b6721a-84ca-425b-b05d-70a9eb0785de added successfully.
+2024-06-11 15:53:44,375 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:53:44,841 - logger - DEBUG - Saving preview image...
+2024-06-11 15:53:45,008 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpg1jo9nl2\30b6721a-84ca-425b-b05d-70a9eb0785de.png.
+2024-06-11 15:53:45,008 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:53:45,017 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:45,098 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:53:45,098 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:53:45,099 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:53:45,099 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:53:45,099 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:53:45,109 - logger - DEBUG - Finding contours...
+2024-06-11 15:53:45,110 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:53:45,111 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:53:45,113 - logger - DEBUG - Parsing complete.
+2024-06-11 15:53:45,114 - logger - DEBUG - Item with id e2bb08db-1f6a-4e27-9404-1c305c534d21 added successfully.
+2024-06-11 15:53:45,114 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:53:45,326 - logger - DEBUG - Saving preview image...
+2024-06-11 15:53:45,513 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmp7dzwatn3\e2bb08db-1f6a-4e27-9404-1c305c534d21.png.
+2024-06-11 15:53:45,513 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:53:45,516 - logger - DEBUG - Updated item id e2bb08db-1f6a-4e27-9404-1c305c534d21: set amount to 2
+2024-06-11 15:53:45,525 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:45,626 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:53:45,626 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:53:45,627 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:53:45,628 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:53:45,628 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:53:45,640 - logger - DEBUG - Finding contours...
+2024-06-11 15:53:45,643 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:53:45,643 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:53:45,646 - logger - DEBUG - Parsing complete.
+2024-06-11 15:53:45,648 - logger - DEBUG - Item with id 62fdb139-d5ef-486e-8b52-2b27a0c9a2f4 added successfully.
+2024-06-11 15:53:45,648 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:53:45,896 - logger - DEBUG - Saving preview image...
+2024-06-11 15:53:46,079 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmph78g425r\62fdb139-d5ef-486e-8b52-2b27a0c9a2f4.png.
+2024-06-11 15:53:46,079 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:53:46,080 - logger - ERROR - Attempted invalid input value for part amount: 0
+2024-06-11 15:53:46,080 - logger - ERROR - Attempted invalid input value for part amount: 5.13
+2024-06-11 15:53:46,080 - logger - ERROR - Attempted invalid input value for part amount: -2
+2024-06-11 15:53:46,088 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:46,185 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:53:46,185 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:53:46,186 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:53:46,186 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:53:46,186 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:53:46,197 - logger - DEBUG - Finding contours...
+2024-06-11 15:53:46,199 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:53:46,200 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:53:46,202 - logger - DEBUG - Parsing complete.
+2024-06-11 15:53:46,203 - logger - DEBUG - Item with id b74424d1-be86-4a9f-9c13-006a5fe564f2 added successfully.
+2024-06-11 15:53:46,204 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:53:46,673 - logger - DEBUG - Saving preview image...
+2024-06-11 15:53:46,859 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmp0ke5nv6l\b74424d1-be86-4a9f-9c13-006a5fe564f2.png.
+2024-06-11 15:53:46,859 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-11 15:53:47,097 - logger - DEBUG - Preview image for plate with id 48f7a30b-7a71-485f-a3ad-1b8c99ad79e0 saved successfully.
+2024-06-11 15:53:47,246 - logger - DEBUG - Preview image for plate with id 14ca40d3-37d0-4d20-bab0-8f89ac257adc saved successfully.
+2024-06-11 15:53:47,441 - logger - DEBUG - Preview image for plate with id e48e867c-8335-409f-bf75-66c3713af47c saved successfully.
+2024-06-11 15:53:47,611 - logger - DEBUG - Preview image for plate with id ce858183-1fc9-46ff-a71f-0e15f0e59f44 saved successfully.
+2024-06-11 15:53:47,812 - logger - DEBUG - Preview image for plate with id 3b3a74ab-f9ba-4b55-8c85-ee40310b0964 saved successfully.
+2024-06-11 15:53:47,933 - logger - DEBUG - Preview image for plate with id 147885be-adea-4451-91b3-32e456647e71 saved successfully.
+2024-06-11 15:53:48,072 - logger - DEBUG - Preview image for plate with id 2628e17f-1f86-4793-8668-6335fc40b260 saved successfully.
+2024-06-11 15:53:48,202 - logger - DEBUG - Preview image for plate with id a7f43cf8-0b7b-411f-8c43-221f894b5881 saved successfully.
+2024-06-11 15:53:48,352 - logger - DEBUG - Preview image for plate with id 3a9fc9ed-a55e-4b93-afe3-eb5b5df12001 saved successfully.
+2024-06-11 15:53:48,494 - logger - DEBUG - Preview image for plate with id 09c0ff19-9ef0-453d-a791-0c0a3b3b2116 saved successfully.
+2024-06-11 15:53:48,586 - logger - DEBUG - Preview image for plate with id 598249f3-49c3-450f-bda6-7fc11f513f32 saved successfully.
+2024-06-11 15:53:48,684 - logger - DEBUG - Preview image for plate with id efa15476-db91-4b6b-b6f6-2649724c4a0b saved successfully.
+2024-06-11 15:53:48,820 - logger - DEBUG - Preview image for plate with id 1a37887b-a9ae-4457-9af9-aaa9daa52382 saved successfully.
+2024-06-11 15:53:48,933 - logger - DEBUG - Preview image for plate with id 5ef7d6d7-f7e7-49b1-a088-49fbf163e7af saved successfully.
+2024-06-11 15:53:49,041 - logger - DEBUG - Preview image for plate with id 94fedbaa-19fc-41a6-bd22-3c9ec98db782 saved successfully.
+2024-06-11 15:53:49,153 - logger - DEBUG - Preview image for plate with id ac81864c-046d-4eb6-b610-c5e148331d48 saved successfully.
+2024-06-11 15:53:49,263 - logger - DEBUG - Preview image for plate with id 82e57b89-777d-4cf1-b4b4-c589b3136bb1 saved successfully.
+2024-06-11 15:53:49,391 - logger - DEBUG - Preview image for plate with id 7a9a8f11-3548-469a-acc2-e1cbd1f9524e saved successfully.
+2024-06-11 15:53:49,535 - logger - DEBUG - Preview image for plate with id fd1bded5-2a4f-4252-9ee7-89b5e075aea8 saved successfully.
+2024-06-11 15:53:49,632 - logger - DEBUG - Preview image for plate with id 59534abc-8930-4f03-96d2-82ff55e277be saved successfully.
+2024-06-11 15:53:49,724 - logger - DEBUG - Preview image for plate with id 1f90cc5c-c75d-4f45-a162-bfb401682a8d saved successfully.
+2024-06-11 15:53:49,825 - logger - DEBUG - Preview image for plate with id 0881e982-a76e-459d-ad75-352f7a8f4584 saved successfully.
+2024-06-11 15:53:49,927 - logger - DEBUG - Preview image for plate with id d72fe0e7-8924-4152-96e6-ad09b0761f55 saved successfully.
+2024-06-11 15:53:50,053 - logger - DEBUG - Preview image for plate with id db0f655c-fc4c-4355-bc5d-5b030d5677c0 saved successfully.
+2024-06-11 15:53:50,153 - logger - DEBUG - Preview image for plate with id cd9c3e2c-1bed-447c-a3c8-ea0ba9c91ef5 saved successfully.
+2024-06-11 15:53:50,239 - logger - DEBUG - Preview image for plate with id 3e279be3-4691-432b-bb77-b872bf56423e saved successfully.
+2024-06-11 15:53:50,335 - logger - DEBUG - Preview image for plate with id 64616b77-a3bf-4284-af49-2e63fe425bdb saved successfully.
+2024-06-11 15:53:50,452 - logger - DEBUG - Preview image for plate with id 1dafc4f6-daad-4810-a34f-d82c567c6827 saved successfully.
+2024-06-11 15:53:50,541 - logger - DEBUG - Preview image for plate with id 765c8616-b328-49f7-a8d0-efcb548b41ae saved successfully.
+2024-06-11 15:53:50,638 - logger - DEBUG - Preview image for plate with id 398d39e8-4e86-4914-aee1-b67fa6f22160 saved successfully.
+2024-06-11 15:53:50,728 - logger - DEBUG - Preview image for plate with id d3192abd-c2a3-4b62-bc63-4bf7d3853216 saved successfully.
+2024-06-11 15:53:50,828 - logger - DEBUG - Preview image for plate with id 3278d649-f749-4b85-ba8b-c1482b75fad5 saved successfully.
+2024-06-11 15:53:50,942 - logger - DEBUG - Preview image for plate with id ed7711ba-c437-4eb3-a70f-6de72b27d8f8 saved successfully.
+2024-06-11 15:53:51,030 - logger - DEBUG - Preview image for plate with id 31a48eb2-b33f-478b-aaaa-7e3301bb6829 saved successfully.
+2024-06-11 15:53:51,113 - logger - DEBUG - Preview image for plate with id b66c4a54-196e-4c8c-a25c-75cd7c365428 saved successfully.
+2024-06-11 15:53:51,202 - logger - DEBUG - Preview image for plate with id 4579432f-1f01-46c9-93bf-b0286b94e0e0 saved successfully.
+2024-06-11 15:53:51,291 - logger - DEBUG - Preview image for plate with id 105b22f8-75bf-431f-8153-d98f855940a7 saved successfully.
+2024-06-11 15:53:51,394 - logger - DEBUG - Preview image for plate with id c0c54692-6352-4ad7-8aad-e549aca12ded saved successfully.
+2024-06-11 15:53:51,509 - logger - DEBUG - Preview image for plate with id b33adb41-d290-4c27-8b03-8931a351a359 saved successfully.
+2024-06-11 15:53:51,594 - logger - DEBUG - Preview image for plate with id 4ee16d5f-69b1-4dc9-bc87-55f167eaf408 saved successfully.
+2024-06-11 15:53:51,692 - logger - DEBUG - Preview image for plate with id 965b991e-bfb5-4932-b335-9fc0cf183d2c saved successfully.
+2024-06-11 15:53:51,786 - logger - DEBUG - Preview image for plate with id 3368256a-1eb4-464c-b8d4-661ceb0a2fb7 saved successfully.
+2024-06-11 15:53:51,882 - logger - DEBUG - Preview image for plate with id 45b984fb-abcd-4792-a560-f831205c339d saved successfully.
+2024-06-11 15:53:51,972 - logger - DEBUG - Preview image for plate with id 5340955b-6fd3-4fce-a3a1-1241940aef4d saved successfully.
+2024-06-11 15:53:52,056 - logger - DEBUG - Preview image for plate with id e7f21cc1-47dd-4146-a7dc-5e317d55f99b saved successfully.
+2024-06-11 15:53:52,169 - logger - DEBUG - Preview image for plate with id 45dac9ce-82b3-466e-ae64-cb9353a3805b saved successfully.
+2024-06-11 15:53:52,268 - logger - DEBUG - Preview image for plate with id cb1c1eee-8cae-4f55-a4aa-d59df685474b saved successfully.
+2024-06-11 15:53:52,356 - logger - DEBUG - Preview image for plate with id 1dcc95d3-e74a-4884-b9fd-da156d3abc13 saved successfully.
+2024-06-11 15:53:52,528 - logger - DEBUG - Preview image for plate with id 96c77377-24fa-4294-bef1-4be8cecb975c saved successfully.
+2024-06-11 15:53:52,565 - logger - DEBUG - Item with id d04a508d-082b-4024-8e73-603b4fbde68c added successfully.
+2024-06-11 15:53:52,671 - logger - DEBUG - Preview image for plate with id d04a508d-082b-4024-8e73-603b4fbde68c saved successfully.
+2024-06-11 15:53:52,673 - logger - DEBUG - Item with id 814656f8-0bdf-4ade-8b66-345aff4387fa added successfully.
+2024-06-11 15:53:52,757 - logger - DEBUG - Preview image for plate with id 814656f8-0bdf-4ade-8b66-345aff4387fa saved successfully.
+2024-06-11 15:53:52,759 - logger - DEBUG - Item with id aba94ed5-d8a5-4aee-9689-e59f53c5629c added successfully.
+2024-06-11 15:53:52,886 - logger - DEBUG - Preview image for plate with id aba94ed5-d8a5-4aee-9689-e59f53c5629c saved successfully.
+2024-06-11 15:53:52,888 - logger - DEBUG - Item with id c2272806-e6b7-437d-a65b-f5bfbfaa75fc added successfully.
+2024-06-11 15:53:52,983 - logger - DEBUG - Preview image for plate with id c2272806-e6b7-437d-a65b-f5bfbfaa75fc saved successfully.
+2024-06-11 15:53:52,985 - logger - DEBUG - Item with id 385b19f8-5467-4390-9aa6-d591ecc928ee added successfully.
+2024-06-11 15:53:53,081 - logger - DEBUG - Preview image for plate with id 385b19f8-5467-4390-9aa6-d591ecc928ee saved successfully.
+2024-06-11 15:53:53,084 - logger - DEBUG - Item with id 5a045fc3-94e1-44a5-a9f2-d6df374128f2 added successfully.
+2024-06-11 15:53:53,198 - logger - DEBUG - Preview image for plate with id 5a045fc3-94e1-44a5-a9f2-d6df374128f2 saved successfully.
+2024-06-11 15:53:53,200 - logger - DEBUG - Item with id 0c65ce4d-0e78-4ac7-9c6f-8b428cc98816 added successfully.
+2024-06-11 15:53:53,281 - logger - DEBUG - Preview image for plate with id 0c65ce4d-0e78-4ac7-9c6f-8b428cc98816 saved successfully.
+2024-06-11 15:53:53,283 - logger - DEBUG - Item with id 1389b6fc-5eae-4c28-9018-8d59442ec815 added successfully.
+2024-06-11 15:53:53,366 - logger - DEBUG - Preview image for plate with id 1389b6fc-5eae-4c28-9018-8d59442ec815 saved successfully.
+2024-06-11 15:53:53,368 - logger - DEBUG - Item with id 57694eac-485a-4cf5-98c4-96d2d37e6e32 added successfully.
+2024-06-11 15:53:53,457 - logger - DEBUG - Preview image for plate with id 57694eac-485a-4cf5-98c4-96d2d37e6e32 saved successfully.
+2024-06-11 15:53:53,459 - logger - DEBUG - Item with id 54788fed-aa9e-48f3-b731-b97c4f416cdb added successfully.
+2024-06-11 15:53:53,571 - logger - DEBUG - Preview image for plate with id 54788fed-aa9e-48f3-b731-b97c4f416cdb saved successfully.
+2024-06-11 15:53:53,573 - logger - DEBUG - Item with id 0d4b75dc-a0ff-4009-b3fc-96601dab6eef added successfully.
+2024-06-11 15:53:53,664 - logger - DEBUG - Preview image for plate with id 0d4b75dc-a0ff-4009-b3fc-96601dab6eef saved successfully.
+2024-06-11 15:53:53,666 - logger - DEBUG - Item with id 3916a126-863b-4d94-9828-6fb27b727bf4 added successfully.
+2024-06-11 15:53:53,745 - logger - DEBUG - Preview image for plate with id 3916a126-863b-4d94-9828-6fb27b727bf4 saved successfully.
+2024-06-11 15:53:53,747 - logger - DEBUG - Item with id 48c13929-c57c-492a-b5b2-177072473c18 added successfully.
+2024-06-11 15:53:53,826 - logger - DEBUG - Preview image for plate with id 48c13929-c57c-492a-b5b2-177072473c18 saved successfully.
+2024-06-11 15:53:53,827 - logger - DEBUG - Item with id eaca7797-1172-4544-9bcd-f18d7500b639 added successfully.
+2024-06-11 15:53:53,913 - logger - DEBUG - Preview image for plate with id eaca7797-1172-4544-9bcd-f18d7500b639 saved successfully.
+2024-06-11 15:53:53,915 - logger - DEBUG - Item with id dad2cec8-2f9d-4083-9ef2-9d2d1023007c added successfully.
+2024-06-11 15:53:54,017 - logger - DEBUG - Preview image for plate with id dad2cec8-2f9d-4083-9ef2-9d2d1023007c saved successfully.
+2024-06-11 15:53:54,021 - logger - DEBUG - Item with id 704a1bf9-3417-4a00-a90f-5cab5c8626dd added successfully.
+2024-06-11 15:53:54,138 - logger - DEBUG - Preview image for plate with id 704a1bf9-3417-4a00-a90f-5cab5c8626dd saved successfully.
+2024-06-11 15:53:54,140 - logger - DEBUG - Item with id 193df72c-8168-499b-9980-aea069811bbb added successfully.
+2024-06-11 15:53:54,238 - logger - DEBUG - Preview image for plate with id 193df72c-8168-499b-9980-aea069811bbb saved successfully.
+2024-06-11 15:53:54,240 - logger - DEBUG - Item with id f2609fad-8f5d-451d-894c-7501df9d5fd7 added successfully.
+2024-06-11 15:53:54,322 - logger - DEBUG - Preview image for plate with id f2609fad-8f5d-451d-894c-7501df9d5fd7 saved successfully.
+2024-06-11 15:53:54,324 - logger - DEBUG - Item with id f71743ff-29d9-4fb9-ad16-f528b9711263 added successfully.
+2024-06-11 15:53:54,412 - logger - DEBUG - Preview image for plate with id f71743ff-29d9-4fb9-ad16-f528b9711263 saved successfully.
+2024-06-11 15:53:54,414 - logger - DEBUG - Item with id fe0ae122-1eae-45e2-bbff-b81f99eb5521 added successfully.
+2024-06-11 15:53:54,506 - logger - DEBUG - Preview image for plate with id fe0ae122-1eae-45e2-bbff-b81f99eb5521 saved successfully.
+2024-06-11 15:53:54,507 - logger - DEBUG - Item with id 2dc1f764-01f3-43b8-a6be-803b4e1ca838 added successfully.
+2024-06-11 15:53:54,594 - logger - DEBUG - Preview image for plate with id 2dc1f764-01f3-43b8-a6be-803b4e1ca838 saved successfully.
+2024-06-11 15:53:54,596 - logger - DEBUG - Item with id 85aae107-c76f-4f65-a306-b4a00b23a61b added successfully.
+2024-06-11 15:53:54,676 - logger - DEBUG - Preview image for plate with id 85aae107-c76f-4f65-a306-b4a00b23a61b saved successfully.
+2024-06-11 15:53:54,678 - logger - DEBUG - Item with id d70d2e19-4d5d-48ae-aab2-87e48c0c329d added successfully.
+2024-06-11 15:53:55,103 - logger - DEBUG - Preview image for plate with id d70d2e19-4d5d-48ae-aab2-87e48c0c329d saved successfully.
+2024-06-11 15:53:55,105 - logger - DEBUG - Item with id e16e4097-c5e7-44d7-b26e-33f00b1c1d70 added successfully.
+2024-06-11 15:53:55,203 - logger - DEBUG - Preview image for plate with id e16e4097-c5e7-44d7-b26e-33f00b1c1d70 saved successfully.
+2024-06-11 15:53:55,205 - logger - DEBUG - Item with id 80bbbfd9-1046-4a37-8f39-e41545a235b2 added successfully.
+2024-06-11 15:53:55,308 - logger - DEBUG - Preview image for plate with id 80bbbfd9-1046-4a37-8f39-e41545a235b2 saved successfully.
+2024-06-11 15:53:55,310 - logger - DEBUG - Item with id c51470bf-c850-4721-84b6-fba2b2652f42 added successfully.
+2024-06-11 15:53:55,394 - logger - DEBUG - Preview image for plate with id c51470bf-c850-4721-84b6-fba2b2652f42 saved successfully.
+2024-06-11 15:53:55,396 - logger - DEBUG - Item with id d9070064-0b5e-461d-9f9b-9bed7b5ac95b added successfully.
+2024-06-11 15:53:55,482 - logger - DEBUG - Preview image for plate with id d9070064-0b5e-461d-9f9b-9bed7b5ac95b saved successfully.
+2024-06-11 15:53:55,484 - logger - DEBUG - Item with id ddb1e70b-c062-4a98-b8be-3051d348b4d7 added successfully.
+2024-06-11 15:53:55,563 - logger - DEBUG - Preview image for plate with id ddb1e70b-c062-4a98-b8be-3051d348b4d7 saved successfully.
+2024-06-11 15:53:55,565 - logger - DEBUG - Item with id 8863b8d1-e34d-41de-83b8-5ae0b09334dc added successfully.
+2024-06-11 15:53:55,646 - logger - DEBUG - Preview image for plate with id 8863b8d1-e34d-41de-83b8-5ae0b09334dc saved successfully.
+2024-06-11 15:53:55,648 - logger - DEBUG - Item with id 21363783-050a-4ecc-b4d5-aceb76e367d2 added successfully.
+2024-06-11 15:53:55,727 - logger - DEBUG - Preview image for plate with id 21363783-050a-4ecc-b4d5-aceb76e367d2 saved successfully.
+2024-06-11 15:53:55,729 - logger - DEBUG - Item with id 799f054c-40d2-48c3-8a2f-30207970747e added successfully.
+2024-06-11 15:53:55,813 - logger - DEBUG - Preview image for plate with id 799f054c-40d2-48c3-8a2f-30207970747e saved successfully.
+2024-06-11 15:53:55,815 - logger - DEBUG - Item with id 5e9f88e3-4ed1-4f9f-953f-211dc8f8d0f3 added successfully.
+2024-06-11 15:53:55,913 - logger - DEBUG - Preview image for plate with id 5e9f88e3-4ed1-4f9f-953f-211dc8f8d0f3 saved successfully.
+2024-06-11 15:53:55,915 - logger - DEBUG - Item with id 01fb7a11-b47b-4e84-9fc2-1ecd9265220e added successfully.
+2024-06-11 15:53:56,022 - logger - DEBUG - Preview image for plate with id 01fb7a11-b47b-4e84-9fc2-1ecd9265220e saved successfully.
+2024-06-11 15:53:56,024 - logger - DEBUG - Item with id 328d48bd-85c1-4a0e-8dbb-7da4be72d113 added successfully.
+2024-06-11 15:53:56,118 - logger - DEBUG - Preview image for plate with id 328d48bd-85c1-4a0e-8dbb-7da4be72d113 saved successfully.
+2024-06-11 15:53:56,119 - logger - DEBUG - Item with id 0371ec0c-4564-46af-9c25-71a43998caff added successfully.
+2024-06-11 15:53:56,200 - logger - DEBUG - Preview image for plate with id 0371ec0c-4564-46af-9c25-71a43998caff saved successfully.
+2024-06-11 15:53:56,201 - logger - DEBUG - Item with id b8937f4f-282e-4291-bb02-6bba71db3901 added successfully.
+2024-06-11 15:53:56,296 - logger - DEBUG - Preview image for plate with id b8937f4f-282e-4291-bb02-6bba71db3901 saved successfully.
+2024-06-11 15:53:56,298 - logger - DEBUG - Item with id 90e63440-b03d-46ae-aef8-1799d4655655 added successfully.
+2024-06-11 15:53:56,408 - logger - DEBUG - Preview image for plate with id 90e63440-b03d-46ae-aef8-1799d4655655 saved successfully.
+2024-06-11 15:53:56,410 - logger - DEBUG - Item with id 77b611fa-cf12-4bc3-98e8-abb5b0740226 added successfully.
+2024-06-11 15:53:56,508 - logger - DEBUG - Preview image for plate with id 77b611fa-cf12-4bc3-98e8-abb5b0740226 saved successfully.
+2024-06-11 15:53:56,510 - logger - DEBUG - Item with id 921b2a65-4669-438c-99e6-9ea80bfbd908 added successfully.
+2024-06-11 15:53:56,594 - logger - DEBUG - Preview image for plate with id 921b2a65-4669-438c-99e6-9ea80bfbd908 saved successfully.
+2024-06-11 15:53:56,596 - logger - DEBUG - Item with id ecdfaf4f-b20f-42af-8329-efd4a5099605 added successfully.
+2024-06-11 15:53:56,681 - logger - DEBUG - Preview image for plate with id ecdfaf4f-b20f-42af-8329-efd4a5099605 saved successfully.
+2024-06-11 15:53:56,683 - logger - DEBUG - Item with id 868ad2d0-06fc-4a67-b05c-f54bb7abd31b added successfully.
+2024-06-11 15:53:56,771 - logger - DEBUG - Preview image for plate with id 868ad2d0-06fc-4a67-b05c-f54bb7abd31b saved successfully.
+2024-06-11 15:53:56,773 - logger - DEBUG - Item with id bf7c2486-5b9a-4117-951d-4044e8ae6529 added successfully.
+2024-06-11 15:53:56,862 - logger - DEBUG - Preview image for plate with id bf7c2486-5b9a-4117-951d-4044e8ae6529 saved successfully.
+2024-06-11 15:53:56,863 - logger - DEBUG - Item with id 89d1dd02-ac08-457f-a52d-23786555713d added successfully.
+2024-06-11 15:53:56,983 - logger - DEBUG - Preview image for plate with id 89d1dd02-ac08-457f-a52d-23786555713d saved successfully.
+2024-06-11 15:53:56,986 - logger - DEBUG - Item with id 4cb2ca10-6484-4099-ab61-3f0f4425bf96 added successfully.
+2024-06-11 15:53:57,100 - logger - DEBUG - Preview image for plate with id 4cb2ca10-6484-4099-ab61-3f0f4425bf96 saved successfully.
+2024-06-11 15:53:57,101 - logger - DEBUG - Item with id c8e70a6b-e2d8-4650-8f9b-b7028754d6da added successfully.
+2024-06-11 15:53:57,200 - logger - DEBUG - Preview image for plate with id c8e70a6b-e2d8-4650-8f9b-b7028754d6da saved successfully.
+2024-06-11 15:53:57,203 - logger - DEBUG - Item with id c2f9eaf3-502e-4036-8f4c-607c8cb42a2a added successfully.
+2024-06-11 15:53:57,301 - logger - DEBUG - Preview image for plate with id c2f9eaf3-502e-4036-8f4c-607c8cb42a2a saved successfully.
+2024-06-11 15:53:57,304 - logger - DEBUG - Item with id 56c36604-9782-46d0-b811-ea39d8eca7cd added successfully.
+2024-06-11 15:53:57,393 - logger - DEBUG - Preview image for plate with id 56c36604-9782-46d0-b811-ea39d8eca7cd saved successfully.
+2024-06-11 15:53:57,395 - logger - DEBUG - Item with id bab8be0b-2f3f-41c2-a0d8-017fd7a5df73 added successfully.
+2024-06-11 15:53:57,490 - logger - DEBUG - Preview image for plate with id bab8be0b-2f3f-41c2-a0d8-017fd7a5df73 saved successfully.
+2024-06-11 15:53:57,492 - logger - DEBUG - Item with id 93dccecd-e0c6-41d7-9017-814b1b13f32a added successfully.
+2024-06-11 15:53:57,576 - logger - DEBUG - Preview image for plate with id 93dccecd-e0c6-41d7-9017-814b1b13f32a saved successfully.
+2024-06-11 15:53:57,578 - logger - DEBUG - Item with id 9fe24998-71b8-4847-a286-ac0226af6b3c added successfully.
+2024-06-11 15:53:57,665 - logger - DEBUG - Preview image for plate with id 9fe24998-71b8-4847-a286-ac0226af6b3c saved successfully.
+2024-06-11 15:53:57,665 - logger - DEBUG - Attempted to add new plate at max amount reached.
+2024-06-11 15:53:57,683 - logger - DEBUG - Item with id 8b3d6355-d042-4bd8-a70f-2907a0c0b0c1 added successfully.
+2024-06-11 15:53:57,775 - logger - DEBUG - Preview image for plate with id 8b3d6355-d042-4bd8-a70f-2907a0c0b0c1 saved successfully.
+2024-06-11 15:53:57,786 - logger - DEBUG - Item with id 9e476a15-3dfe-451c-bec7-3d8d11f88cb3 added successfully.
+2024-06-11 15:53:57,906 - logger - DEBUG - Preview image for plate with id 9e476a15-3dfe-451c-bec7-3d8d11f88cb3 saved successfully.
+2024-06-11 15:53:57,919 - logger - DEBUG - Item with id ef305090-c594-444e-ae4e-1b8437af36a8 added successfully.
+2024-06-11 15:53:58,014 - logger - DEBUG - Preview image for plate with id ef305090-c594-444e-ae4e-1b8437af36a8 saved successfully.
+2024-06-11 15:53:58,025 - logger - DEBUG - Item with id e306e97d-3a7b-49ef-ad81-24cd064312a3 added successfully.
+2024-06-11 15:53:58,127 - logger - DEBUG - Preview image for plate with id e306e97d-3a7b-49ef-ad81-24cd064312a3 saved successfully.
+2024-06-11 15:53:58,137 - logger - DEBUG - Item with id fc5d68cc-a6b0-473e-94ae-63e753695ef8 added successfully.
+2024-06-11 15:53:58,227 - logger - DEBUG - Preview image for plate with id fc5d68cc-a6b0-473e-94ae-63e753695ef8 saved successfully.
+2024-06-11 15:53:58,235 - logger - DEBUG - Item with id cb7a68e9-6fa6-43ab-a51e-c79908fcd532 added successfully.
+2024-06-11 15:53:58,332 - logger - DEBUG - Preview image for plate with id cb7a68e9-6fa6-43ab-a51e-c79908fcd532 saved successfully.
+2024-06-11 15:53:58,335 - logger - DEBUG - Updated item id cb7a68e9-6fa6-43ab-a51e-c79908fcd532: set contours to k05VTVBZAQB2AHsnZGVzY3InOiAnPGk0JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDMsKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAoBAAAAAgAAAAMAAAA=
+2024-06-11 15:53:58,345 - logger - DEBUG - Item with id 7ea3ac4d-ce92-40e6-b4c6-333523ac4872 added successfully.
+2024-06-11 15:53:58,452 - logger - DEBUG - Preview image for plate with id 7ea3ac4d-ce92-40e6-b4c6-333523ac4872 saved successfully.
+2024-06-11 15:53:58,454 - logger - DEBUG - Updated item id 7ea3ac4d-ce92-40e6-b4c6-333523ac4872: set x to 4999.0
+2024-06-11 15:53:58,463 - logger - DEBUG - Item with id 41e7e8cf-bebe-4bdb-af0d-4d044553a3c0 added successfully.
+2024-06-11 15:53:58,575 - logger - DEBUG - Preview image for plate with id 41e7e8cf-bebe-4bdb-af0d-4d044553a3c0 saved successfully.
+2024-06-11 15:53:58,584 - logger - DEBUG - Item with id 863733c8-ae76-4c79-8c46-d11454b1c9ce added successfully.
+2024-06-11 15:53:58,696 - logger - DEBUG - Preview image for plate with id 863733c8-ae76-4c79-8c46-d11454b1c9ce saved successfully.
+2024-06-11 15:53:58,698 - logger - DEBUG - Updated item id 863733c8-ae76-4c79-8c46-d11454b1c9ce: set y to 4999.0
+2024-06-11 15:53:58,711 - logger - DEBUG - Item with id f7bf7994-04d1-4a35-b002-4f4eb4bcb101 added successfully.
+2024-06-11 15:53:58,855 - logger - DEBUG - Preview image for plate with id f7bf7994-04d1-4a35-b002-4f4eb4bcb101 saved successfully.
+2024-06-11 15:53:58,866 - logger - DEBUG - Item with id e7b506f8-2ff9-4a1f-bc5c-ee0610794338 added successfully.
+2024-06-11 15:53:58,977 - logger - DEBUG - Preview image for plate with id e7b506f8-2ff9-4a1f-bc5c-ee0610794338 saved successfully.
+2024-06-11 15:53:58,979 - logger - DEBUG - Updated item id e7b506f8-2ff9-4a1f-bc5c-ee0610794338: set z to 4999.0
+2024-06-11 15:53:58,989 - logger - DEBUG - Item with id da8a2f35-ce6a-4e9e-b27f-1d5e73dd7229 added successfully.
+2024-06-11 15:53:59,082 - logger - DEBUG - Preview image for plate with id da8a2f35-ce6a-4e9e-b27f-1d5e73dd7229 saved successfully.
+2024-06-11 15:53:59,091 - logger - DEBUG - Item with id 6d430b04-2ba1-47e5-bd97-6e43552012d7 added successfully.
+2024-06-11 15:53:59,190 - logger - DEBUG - Preview image for plate with id 6d430b04-2ba1-47e5-bd97-6e43552012d7 saved successfully.
+2024-06-11 15:53:59,192 - logger - DEBUG - Updated item id 6d430b04-2ba1-47e5-bd97-6e43552012d7: set material to Abazaz
+2024-06-11 15:53:59,202 - logger - DEBUG - Item with id 2f413dc1-b9c7-481a-a3ec-3f0e93293bfd added successfully.
+2024-06-11 15:53:59,303 - logger - DEBUG - Preview image for plate with id 2f413dc1-b9c7-481a-a3ec-3f0e93293bfd saved successfully.
+2024-06-11 15:53:59,313 - logger - DEBUG - Item with id 22715b78-0a75-4c23-bb52-439aafa48b8b added successfully.
+2024-06-11 15:53:59,409 - logger - DEBUG - Preview image for plate with id 22715b78-0a75-4c23-bb52-439aafa48b8b saved successfully.
+2024-06-11 15:53:59,411 - logger - DEBUG - Updated item id 22715b78-0a75-4c23-bb52-439aafa48b8b: set contours to k05VTVBZAQB2AHsnZGVzY3InOiAnPGk0JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDMsKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAoBAAAAAgAAAAMAAAA=
+2024-06-11 15:53:59,424 - logger - DEBUG - Item with id 78215730-09dd-40bb-adcb-434faaa0f848 added successfully.
+2024-06-11 15:53:59,555 - logger - DEBUG - Preview image for plate with id 78215730-09dd-40bb-adcb-434faaa0f848 saved successfully.
+2024-06-11 15:53:59,557 - logger - DEBUG - Updated item id 78215730-09dd-40bb-adcb-434faaa0f848: set contours to None
+2024-06-11 15:53:59,558 - logger - DEBUG - Updated item id 78215730-09dd-40bb-adcb-434faaa0f848: set contours to k05VTVBZAQB2AHsnZGVzY3InOiAnPGY4JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDAsKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAo=
+2024-06-11 15:53:59,567 - logger - DEBUG - Item with id 20eb4466-a1e1-4920-9d5b-b5ca3d9aa16e added successfully.
+2024-06-11 15:53:59,650 - logger - DEBUG - Preview image for plate with id 20eb4466-a1e1-4920-9d5b-b5ca3d9aa16e saved successfully.
+2024-06-11 15:54:00,812 - logger - DEBUG - Item with id 5ac230a5-1cb8-467f-ac9a-9928f3d62e6b added successfully.
+2024-06-11 15:54:00,935 - logger - DEBUG - Item with id 69d88408-db0f-4c29-a89e-c1762c9f1ed0 added successfully.
+2024-06-11 15:54:01,079 - logger - DEBUG - Item with id 142e7507-4d66-4124-a628-31c41ee4d604 added successfully.
+2024-06-11 15:54:01,197 - logger - DEBUG - Item with id d5bf4920-60d0-4bff-bce9-217520ff4476 added successfully.
+2024-06-11 15:54:01,333 - logger - DEBUG - Item with id 3ba30f61-e4a2-49b2-9852-4eb54838833c added successfully.
+2024-06-11 15:54:01,471 - logger - DEBUG - Item with id f2b8244a-399c-43d8-99c2-0cfbc17e0a3a added successfully.
+2024-06-11 15:54:01,579 - logger - DEBUG - Item with id a8bb6d90-23ca-4127-a840-b4177fc342e1 added successfully.
+2024-06-11 15:54:01,692 - logger - DEBUG - Item with id 9c78fcf6-40cc-4376-8302-1e6591c0bbec added successfully.
+2024-06-11 15:54:01,795 - logger - DEBUG - Item with id 542e8487-8d8a-49a6-8784-a6f20aeff6d5 added successfully.
+2024-06-11 15:54:01,904 - logger - DEBUG - Item with id 1fb27cb1-adfd-49c4-9274-b36bec0baa9c added successfully.
+2024-06-11 15:54:02,019 - logger - DEBUG - Item with id 0a06b56c-4781-4222-b6af-0a0fcb6a1046 added successfully.
+2024-06-11 15:54:02,129 - logger - DEBUG - Attempted to add new router at max amount reached.
+2024-06-11 15:54:02,140 - logger - DEBUG - Item with id 19e7e7a4-28fe-4b79-8bbf-2b1a3156e9ef added successfully.
+2024-06-11 15:54:02,296 - logger - DEBUG - Item with id 85016357-b763-4480-b658-4e3c922b4bb8 added successfully.
+2024-06-11 15:54:02,429 - logger - DEBUG - Item with id f6e7f4d8-810d-49ab-b662-6ae6e943f71b added successfully.
+2024-06-11 15:54:02,556 - logger - DEBUG - Item with id ac3715dc-ec12-4a58-ba34-e07717e1ff87 added successfully.
+2024-06-11 15:54:02,691 - logger - DEBUG - Item with id 4e7d0f4b-e96a-4cae-aa34-bbf87367204d added successfully.
+2024-06-11 15:54:02,816 - logger - DEBUG - Item with id 25b56760-cbf2-4a97-878b-fb7a561331e1 added successfully.
+2024-06-11 15:54:02,939 - logger - DEBUG - Item with id b0e55360-bc48-4d0e-83b0-7b2b53b7dce4 added successfully.
+2024-06-11 15:54:03,068 - logger - DEBUG - Item with id 25bffaea-7e4b-43cf-aa93-63fd330bad50 added successfully.
+2024-06-11 15:54:03,184 - logger - DEBUG - Item with id b7ec6898-5406-41db-b93a-0cb5b8d16d7b added successfully.
+2024-06-11 15:54:03,314 - logger - DEBUG - Item with id e69c096b-f951-41a4-8b45-433e1ab8d273 added successfully.
+2024-06-11 15:54:03,444 - logger - DEBUG - Updated item id e69c096b-f951-41a4-8b45-433e1ab8d273: set name to New Name
+2024-06-11 15:54:03,452 - logger - DEBUG - Item with id 55218c9c-c3c0-43e9-a79b-a746f03097ae added successfully.
+2024-06-11 15:54:03,575 - logger - DEBUG - Item with id 5a4594e7-623c-4f8d-b2d6-9b1b22cc241c added successfully.
+2024-06-11 15:54:03,682 - logger - DEBUG - Updated item id 5a4594e7-623c-4f8d-b2d6-9b1b22cc241c: set x to 4999.0
+2024-06-11 15:54:03,691 - logger - DEBUG - Item with id 5e3af297-b88e-45ec-b8aa-fa84ee48b436 added successfully.
+2024-06-11 15:54:03,826 - logger - DEBUG - Item with id 3bbe056b-ca51-42b0-9e2f-0b23e15ec9ad added successfully.
+2024-06-11 15:54:04,382 - logger - DEBUG - Updated item id 3bbe056b-ca51-42b0-9e2f-0b23e15ec9ad: set y to 4999.0
+2024-06-11 15:54:04,391 - logger - DEBUG - Item with id e8d17c9d-71d7-41ad-929f-2e96a2ec75b8 added successfully.
+2024-06-11 15:54:04,512 - logger - DEBUG - Item with id a2cad333-c125-4682-a47a-0769ab54d607 added successfully.
+2024-06-11 15:54:04,630 - logger - DEBUG - Updated item id a2cad333-c125-4682-a47a-0769ab54d607: set z to 4999.0
+2024-06-11 15:54:04,640 - logger - DEBUG - Item with id 51d85e59-d87f-4d55-b39f-72bf37f6035c added successfully.
+2024-06-11 15:54:04,802 - logger - DEBUG - Item with id 47d03bf1-3534-4486-a17b-e59b58956133 added successfully.
+2024-06-11 15:54:04,915 - logger - DEBUG - Updated item id 47d03bf1-3534-4486-a17b-e59b58956133: set plate_x to 4999.0
+2024-06-11 15:54:04,924 - logger - DEBUG - Item with id 9d09f79b-4163-485f-a8bc-0452a5c74344 added successfully.
+2024-06-11 15:54:05,063 - logger - DEBUG - Item with id 644cc5d5-9bf7-4d2b-86f0-f83231cb101e added successfully.
+2024-06-11 15:54:05,187 - logger - DEBUG - Updated item id 644cc5d5-9bf7-4d2b-86f0-f83231cb101e: set plate_y to 4999.0
+2024-06-11 15:54:05,196 - logger - DEBUG - Item with id 37d0b71a-ea9b-4145-88a5-bcfde8535fc3 added successfully.
+2024-06-11 15:54:05,318 - logger - DEBUG - Item with id 71e82258-673d-4f1b-bb17-fcdbc98215f1 added successfully.
+2024-06-11 15:54:05,429 - logger - DEBUG - Updated item id 71e82258-673d-4f1b-bb17-fcdbc98215f1: set plate_z to 4999.0
+2024-06-11 15:54:05,438 - logger - DEBUG - Item with id 98e3dc32-4a50-4bd0-9a87-f3ec70749465 added successfully.
+2024-06-11 15:54:05,552 - logger - DEBUG - Item with id 37b7fe66-3154-4ddd-9d2b-3305aea3a9f8 added successfully.
+2024-06-11 15:54:05,663 - logger - DEBUG - Updated item id 37b7fe66-3154-4ddd-9d2b-3305aea3a9f8: set min_safe_dist_from_edge to 5.0
+2024-06-11 15:54:05,673 - logger - DEBUG - Item with id e74b2357-a3d8-4070-ae54-58ee930217ab added successfully.
+2024-06-11 15:54:05,786 - logger - DEBUG - Updated item id e74b2357-a3d8-4070-ae54-58ee930217ab: set mill_bit_diameter to 99.0
+2024-06-11 15:54:05,796 - logger - DEBUG - Item with id d005083e-a80a-49c1-8368-60440ea2a2ca added successfully.
+2024-06-11 15:54:05,924 - logger - DEBUG - Item with id 40c5b8b6-3946-46a3-b816-09f4c372eecb added successfully.
+2024-06-11 15:54:06,037 - logger - DEBUG - Updated item id 40c5b8b6-3946-46a3-b816-09f4c372eecb: set drill_bit_diameter to 99.0
+2024-06-11 15:54:06,046 - logger - DEBUG - Item with id 66e085e4-34a7-4aff-85d7-e7acb2fb48b7 added successfully.
+2024-06-11 15:54:06,174 - logger - DEBUG - Item with id e4ec2054-2c71-48b0-a930-0a9342552edf added successfully.
+2024-06-11 15:54:06,427 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:54:06,515 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:54:06,619 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:54:06,725 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:54:06,845 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:54:06,972 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:54:07,085 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:54:07,211 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:54:07,346 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:54:07,451 - logger - DEBUG - Parsing STL file...
+2024-06-11 15:54:07,451 - logger - DEBUG - Finding flat axis...
+2024-06-11 15:54:07,452 - logger - DEBUG - Calculating thickness...
+2024-06-11 15:54:07,452 - logger - DEBUG - Flattening mesh...
+2024-06-11 15:54:07,452 - logger - DEBUG - Finding outer edges...
+2024-06-11 15:54:07,461 - logger - DEBUG - Finding contours...
+2024-06-11 15:54:07,462 - logger - DEBUG - Finding outermost contour...
+2024-06-11 15:54:07,463 - logger - DEBUG - Smoothing contour...
+2024-06-11 15:54:07,465 - logger - DEBUG - Parsing complete.
+2024-06-11 15:54:07,465 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 15:54:07,672 - logger - DEBUG - Saving preview image...
+2024-06-11 15:54:07,865 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpk3lk7rxa\preview_image.png.
+2024-06-11 15:54:07,874 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
+2024-06-11 15:54:07,888 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-52\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-11 15:54:07,904 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-52\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum

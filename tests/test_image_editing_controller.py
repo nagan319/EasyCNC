@@ -287,4 +287,3 @@ def test_save_image_features_successful(controller, valid_raw_path):
     controller.extract_image_features()
     assert controller.save_image_features() == True
     assert os.path.exists(controller.feat_path)
-

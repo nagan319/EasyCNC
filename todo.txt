@@ -1,3 +1,2 @@
-- debug image controller -> why is image turning black??
 - finish optimization controller
 - create ui without connecting to backend

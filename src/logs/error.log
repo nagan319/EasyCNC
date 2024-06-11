@@ -1410,3 +1410,197 @@ WHERE plates.id = ?
 2024-06-11 15:29:20,363 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
 2024-06-11 15:29:21,007 - logger - ERROR - Attempted to extract features in wrong state.
 2024-06-11 15:29:21,918 - logger - ERROR - Attempted to save image features in wrong state.
+2024-06-11 15:31:15,684 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-11 15:31:15,687 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:15,689 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:31:15,689 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:31:15,689 - logger - ERROR - Threshold must be integer value
+2024-06-11 15:31:15,798 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:31:16,073 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: nonexistent/path/image.jpg
+2024-06-11 15:31:16,074 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:31:16,092 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-11 15:31:16,110 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-11 15:31:16,136 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:31:16,148 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:31:16,183 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:31:16,190 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-11 15:31:16,220 - logger - ERROR - New value for item parameter <class 'int'> does not match intended type <class 'str'>
+2024-06-11 15:31:16,224 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:31:16,230 - logger - ERROR - Item with id None does not exist.
+2024-06-11 15:31:16,238 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-11 15:31:16,251 - logger - ERROR - Indicated image editing directory path does not exist: invalid directory
+2024-06-11 15:31:16,258 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:31:16,259 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:31:16,259 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:31:16,276 - logger - ERROR - Attempted to import raw image in wrong ImageEditingController state.
+2024-06-11 15:31:16,284 - logger - ERROR - Indicated raw image filepath does not exist: random invalid path
+2024-06-11 15:31:16,295 - logger - ERROR - Image file is of invalid format: .STL
+2024-06-11 15:31:16,466 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: -100, -100
+2024-06-11 15:31:16,466 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:31:16,528 - logger - ERROR - Attempted to get binary image in wrong state.
+2024-06-11 15:31:16,583 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:31:16,584 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:31:16,584 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:31:16,813 - logger - ERROR - Attempted to extract features in wrong state.
+2024-06-11 15:31:17,390 - logger - ERROR - Attempted to save image features in wrong state.
+2024-06-11 15:31:17,610 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 5
+2024-06-11 15:31:17,611 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 5, 0
+2024-06-11 15:31:17,629 - logger - ERROR - STL file does not exist: invalid path
+2024-06-11 15:31:17,661 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-11 15:31:17,671 - logger - ERROR - STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-11 15:31:17,671 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg: STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-11 15:31:26,215 - logger - ERROR - Attempted invalid input value for part amount: 0
+2024-06-11 15:31:26,215 - logger - ERROR - Attempted invalid input value for part amount: 5.13
+2024-06-11 15:31:26,215 - logger - ERROR - Attempted invalid input value for part amount: -2
+2024-06-11 15:31:45,546 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
+2024-06-11 15:31:45,562 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-45\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-11 15:31:45,574 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-45\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-11 15:36:41,876 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-11 15:36:41,877 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:41,878 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:36:41,880 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:36:41,880 - logger - ERROR - Threshold must be integer value
+2024-06-11 15:36:41,895 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:36:42,105 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: nonexistent/path/image.jpg
+2024-06-11 15:36:42,105 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:36:42,117 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-11 15:36:42,132 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-11 15:36:42,156 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:36:42,170 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:36:42,203 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:36:42,209 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-11 15:36:42,233 - logger - ERROR - New value for item parameter <class 'int'> does not match intended type <class 'str'>
+2024-06-11 15:36:42,237 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:36:42,242 - logger - ERROR - Item with id None does not exist.
+2024-06-11 15:36:42,249 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-11 15:36:42,259 - logger - ERROR - Indicated image editing directory path does not exist: invalid directory
+2024-06-11 15:36:42,265 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:36:42,266 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:36:42,266 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:36:42,278 - logger - ERROR - Attempted to import raw image in wrong ImageEditingController state.
+2024-06-11 15:36:42,284 - logger - ERROR - Indicated raw image filepath does not exist: random invalid path
+2024-06-11 15:36:42,291 - logger - ERROR - Image file is of invalid format: .STL
+2024-06-11 15:36:42,415 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: -100, -100
+2024-06-11 15:36:42,415 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:36:42,480 - logger - ERROR - Attempted to get binary image in wrong state.
+2024-06-11 15:36:42,550 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:36:42,551 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:36:42,551 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:36:42,803 - logger - ERROR - Attempted to extract features in wrong state.
+2024-06-11 15:36:43,345 - logger - ERROR - Attempted to save image features in wrong state.
+2024-06-11 15:36:43,550 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 5
+2024-06-11 15:36:43,551 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 5, 0
+2024-06-11 15:36:43,569 - logger - ERROR - STL file does not exist: invalid path
+2024-06-11 15:36:43,580 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-11 15:36:43,587 - logger - ERROR - STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-11 15:36:43,587 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg: STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-11 15:36:50,533 - logger - ERROR - Attempted invalid input value for part amount: 0
+2024-06-11 15:36:50,534 - logger - ERROR - Attempted invalid input value for part amount: 5.13
+2024-06-11 15:36:50,534 - logger - ERROR - Attempted invalid input value for part amount: -2
+2024-06-11 15:37:09,832 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
+2024-06-11 15:37:09,842 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-46\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-11 15:37:09,853 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-46\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-11 15:42:57,300 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-11 15:42:57,303 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:42:57,305 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:42:57,305 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:42:57,305 - logger - ERROR - Threshold must be integer value
+2024-06-11 15:42:57,322 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:42:57,539 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: nonexistent/path/image.jpg
+2024-06-11 15:42:57,539 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:42:57,555 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-11 15:42:57,575 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-11 15:42:57,605 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:42:57,620 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:42:57,663 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:42:57,671 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-11 15:42:57,707 - logger - ERROR - New value for item parameter <class 'int'> does not match intended type <class 'str'>
+2024-06-11 15:42:57,713 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:42:57,720 - logger - ERROR - Item with id None does not exist.
+2024-06-11 15:42:57,731 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-11 15:42:57,744 - logger - ERROR - Indicated image editing directory path does not exist: invalid directory
+2024-06-11 15:42:57,752 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:42:57,752 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:42:57,753 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:42:57,769 - logger - ERROR - Attempted to import raw image in wrong ImageEditingController state.
+2024-06-11 15:42:57,778 - logger - ERROR - Indicated raw image filepath does not exist: random invalid path
+2024-06-11 15:42:57,787 - logger - ERROR - Image file is of invalid format: .STL
+2024-06-11 15:42:57,932 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: -100, -100
+2024-06-11 15:42:57,932 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:42:58,004 - logger - ERROR - Attempted to get binary image in wrong state.
+2024-06-11 15:42:58,063 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:42:58,063 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:42:58,063 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:42:58,302 - logger - ERROR - Attempted to extract features in wrong state.
+2024-06-11 15:47:55,725 - logger - ERROR - Indicated image editing directory path does not exist: invalid directory
+2024-06-11 15:47:55,729 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:47:55,729 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:47:55,730 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:47:55,738 - logger - ERROR - Attempted to import raw image in wrong ImageEditingController state.
+2024-06-11 15:47:55,742 - logger - ERROR - Indicated raw image filepath does not exist: random invalid path
+2024-06-11 15:47:55,746 - logger - ERROR - Image file is of invalid format: .STL
+2024-06-11 15:47:56,044 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: -100, -100
+2024-06-11 15:47:56,044 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:47:56,287 - logger - ERROR - Attempted to get binary image in wrong state.
+2024-06-11 15:47:56,541 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:47:56,541 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:47:56,541 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:47:57,235 - logger - ERROR - Attempted to extract features in wrong state.
+2024-06-11 15:47:58,129 - logger - ERROR - Attempted to save image features in wrong state.
+2024-06-11 15:48:29,968 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-11 15:48:29,971 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:48:29,973 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:48:29,973 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:48:29,973 - logger - ERROR - Threshold must be integer value
+2024-06-11 15:50:23,295 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-11 15:50:23,297 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:50:23,316 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:50:23,316 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:50:23,317 - logger - ERROR - Threshold must be integer value
+2024-06-11 15:50:59,658 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-11 15:51:20,715 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:35,289 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-11 15:53:35,291 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:35,298 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:53:35,298 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-11 15:53:35,298 - logger - ERROR - Threshold must be integer value
+2024-06-11 15:53:35,475 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:53:35,694 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: nonexistent/path/image.jpg
+2024-06-11 15:53:35,695 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-11 15:53:35,773 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-11 15:53:35,790 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-11 15:53:35,816 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:53:35,830 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:53:35,867 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:53:35,875 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-11 15:53:35,907 - logger - ERROR - New value for item parameter <class 'int'> does not match intended type <class 'str'>
+2024-06-11 15:53:35,912 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-11 15:53:35,918 - logger - ERROR - Item with id None does not exist.
+2024-06-11 15:53:35,927 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-11 15:53:35,939 - logger - ERROR - Indicated image editing directory path does not exist: invalid directory
+2024-06-11 15:53:35,946 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:53:35,946 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:53:35,947 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-11 15:53:35,961 - logger - ERROR - Attempted to import raw image in wrong ImageEditingController state.
+2024-06-11 15:53:35,968 - logger - ERROR - Indicated raw image filepath does not exist: random invalid path
+2024-06-11 15:53:35,976 - logger - ERROR - Image file is of invalid format: .STL
+2024-06-11 15:53:36,282 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: -100, -100
+2024-06-11 15:53:36,283 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-11 15:53:36,558 - logger - ERROR - Attempted to get binary image in wrong state.
+2024-06-11 15:53:36,828 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:53:36,828 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:53:36,828 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-11 15:53:37,541 - logger - ERROR - Attempted to extract features in wrong state.
+2024-06-11 15:53:38,483 - logger - ERROR - Attempted to save image features in wrong state.
+2024-06-11 15:53:38,976 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 5
+2024-06-11 15:53:38,976 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 5, 0
+2024-06-11 15:53:38,995 - logger - ERROR - STL file does not exist: invalid path
+2024-06-11 15:53:39,004 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-11 15:53:39,011 - logger - ERROR - STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-11 15:53:39,011 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg: STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-11 15:53:46,080 - logger - ERROR - Attempted invalid input value for part amount: 0
+2024-06-11 15:53:46,080 - logger - ERROR - Attempted invalid input value for part amount: 5.13
+2024-06-11 15:53:46,080 - logger - ERROR - Attempted invalid input value for part amount: -2
+2024-06-11 15:54:07,874 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
+2024-06-11 15:54:07,888 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-52\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-11 15:54:07,904 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-52\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum

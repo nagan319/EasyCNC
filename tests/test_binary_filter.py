@@ -8,6 +8,7 @@ import numpy as np
 import cv2
 import pytest
 from src.app.utils.image_processing.filters import BinaryFilter
+import tempfile
 
 """
 Tests for binary filter.
@@ -26,17 +27,11 @@ def invalid_filetype():
     return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test data', 'stl files', 'RollerConnectorPlate.STL')
 
 @pytest.fixture
-def setup_binary_filter(src_path):
+def setup_binary_filter(src_path, tmp_path):
     src_path = src_path
-    dst_path = "binary_filter_test.png"
+    dst_path = os.path.join(tmp_path, "binary_filter_test.png")
     threshold = 127
-
-    image = np.zeros((100, 100, 3), dtype=np.uint8)
-    cv2.imwrite(src_path, image)
-
     yield src_path, dst_path, threshold
-
-    os.remove(dst_path)
 
 def test_binary_filter_invalid_src_path():
     with pytest.raises(FileNotFoundError):
@@ -46,22 +41,24 @@ def test_binary_filter_invalid_src_filetype(invalid_filetype):
     with pytest.raises(FileNotFoundError):
         BinaryFilter(invalid_filetype, "dst_path.png", 100)
 
-def test_binary_filter_invalid_threshold(src_path):
+def test_binary_filter_invalid_threshold(src_path, tmp_path):
+
+    dst_path = os.path.join(tmp_path, "binary_filter_test.png")
 
     with pytest.raises(ValueError):
-        BinaryFilter(src_path, "dst_path.png", -1)
+        BinaryFilter(src_path, dst_path, -1)
 
     with pytest.raises(ValueError):
-        BinaryFilter(src_path, "dst_path.png", 256)
+        BinaryFilter(src_path, dst_path, 256)
 
     with pytest.raises(TypeError):
-        BinaryFilter(src_path, "dst_path.png", 128.5)
+        BinaryFilter(src_path, dst_path, 128.5)
 
     with pytest.raises(TypeError):
-        BinaryFilter(src_path, "dst_path.png", "invalid")
+        BinaryFilter(src_path, dst_path, "invalid")
 
     with pytest.raises(TypeError):
-        BinaryFilter(src_path, "dst_path.png", None)
+        BinaryFilter(src_path, dst_path, None)
 
 def test_binary_filter_save_image(setup_binary_filter):
     src_path, dst_path, threshold = setup_binary_filter
