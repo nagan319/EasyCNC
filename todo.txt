@@ -1,32 +1,3 @@
-Todo:
-- db migration using alembic
-- git autocommit etc. for synchronization
-
-Notes:
-- ensure consistent 'amount' related methods
-- determine best approach to handle atexit logic
-
-6/6/2024 (thurs)
-- finish required tests DONE (except STLParser)
-- plan and implement user settings controller DONE
-
-6/7/2024 (fri)
-- plan image controller architecture -> Implement image size etc. DONE and manual (TODO)
-- come up with image controller tests DONE
-- implement transformation function for detected contours (to avoid re-detecting)
-- create basic app using qfluentwidgets to figure out framework
-
-Something is causing side effects when saving features (wrong directory??)
-
-6/8/2024 (sat)
-- figure out image controller bug DONE - why is src image being removed?
-- figure out structure for imagecontroller interface class
-- implement manual feature editing DONE
-- improve STLParser tests
-- implement ui using qfluentwidgets
-
-6/9/2024 (sun)
-- create mock optimization controller/ui 
-- work on polygon processing library (evaluate amount of work left)
-
-6/10/2024 (mon)
+- debug image controller -> why is image turning black??
+- finish optimization controller
+- create ui without connecting to backend

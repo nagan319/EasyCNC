@@ -35,19 +35,19 @@ class FeaturePlotter:
             if self.features.plate_contour is not None:
                 contours = [self.features.plate_contour.reshape((-1, 1, 2))]
                 thickness = 8 if self.features.selected_contour_idx == 0 else 2
-                color = self.colors.plate_color 
-                cv2.drawContours(canvas, contours, -1, color, thickness)
+                color = (*self.colors.plate_color, 100)
+                cv2.drawContours(canvas, contours, -1, color, thickness, cv2.LINE_AA)
 
             if self.features.other_contours is not None:
                 for idx, contour in enumerate(self.features.other_contours):
                     contour = contour.reshape((-1, 1, 2))
                     thickness = 8 if idx == self.features.selected_contour_idx else 2
                     color = self.colors.contour_color if idx == self.features.selected_contour_idx else (0, 255, 0)
-                    cv2.drawContours(canvas, [contour], -1, color, thickness)
+                    cv2.drawContours(canvas, [contour], -1, color, thickness, cv2.LINE_AA)
 
             for idx, corner in enumerate(self.features.corners):
                 radius = 50 if idx == self.features.selected_corner_idx else 25
-                color = (255, 0, 0) if idx == self.features.selected_corner_idx else self.colors.corner_color
+                color = (*self.colors.selected_element_color, 200) if idx == self.features.selected_corner_idx else (*self.colors.corner_color, 100)
                 cv2.circle(canvas, corner, radius=radius, color=color, thickness=5)
 
             cv2.imwrite(self.dst_path, canvas)

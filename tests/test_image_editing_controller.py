@@ -105,18 +105,6 @@ def controller(session, temp_dir):
     controller = ImageEditingController(session, image_editing_directory, valid_plate)
     return controller
 
-@pytest.fixture
-def sample_features():
-    return Features(
-        plate_contour = np.array([[[1, 2]], [[2, 3]], [[3, 4]]]),
-        other_contours = [
-            np.array([[[1, 2]], [[2, 3]], [[3, 4]]]), 
-            np.array([[[1, 2]], [[2, 3]], [[3, 4]]])
-        ],
-        corners = [(10, 10), (10, 90), (90, 90), (90, 10)],
-        selected_contour_idx=1, 
-        selected_corner_idx=2)
-
 def test_init_invalid_directory(session):
     with raises(FileNotFoundError):
         ImageEditingController(session, "invalid directory", Plate())
@@ -219,49 +207,67 @@ def test_extract_features_successful(controller, valid_raw_path):
     assert controller.features.selected_contour_idx is None
     assert controller.state == EditorState.FEATURES_EXTRACTED
 
-def test_unselect_corner(controller, sample_features):
-    controller.features = sample_features
+def test_select_corner(controller):
+    controller.features = Features(corners=[(1, 1), (2, 2)], selected_corner_idx=None)
+    controller.select_corner(1)
+    assert controller.features.selected_corner_idx == 1
+
+def test_unselect_corner(controller):
+    controller.features = Features(corners=[(1, 1), (2, 2)], selected_corner_idx=None)
     controller.select_corner(1)
     controller.unselect_corner()
     assert controller.features.selected_corner_idx is None
 
-def test_select_contour(controller, sample_features):
-    controller.features = sample_features
+def test_select_contour(controller):
+    controller.features = Features(other_contours=[np.array([[[1, 1]], [[2, 2]]])])
     controller.select_contour(0)
     assert controller.features.selected_contour_idx == 0
 
-def test_unselect_contour(controller, sample_features):
-    controller.features = sample_features
-    controller.select_contour(0)
+def test_unselect_contour(controller):
+    controller.features = Features(other_contours=[np.array([[[1, 1]], [[2, 2]]])])
+    controller.select_contour(1)
     controller.unselect_contour()
     assert controller.features.selected_contour_idx is None
 
-def test_remove_selected_corner(controller, sample_features):
-    controller.features = sample_features
+def test_remove_selected_corner(controller):
+    controller.features = Features(corners=[(1, 1), (2, 2), (3, 3)])
     controller.features.selected_corner_idx = 1
     controller.remove_selected_corner()
     assert controller.features.selected_corner_idx is None
     assert len(controller.features.corners) == 2
 
-def test_remove_selected_contour(controller, sample_features):
-    controller.features = sample_features
+def test_remove_selected_contour(controller):
+    controller.features = Features(other_contours=[np.array([[[1, 1]], [[2, 2]]])])
     controller.features.selected_contour_idx = 0
     controller.remove_selected_contour()
     assert controller.features.selected_contour_idx is None
     assert len(controller.features.other_contours) == 0  
 
-def test_check_feature_selected_corner_match(controller, sample_features):
-    controller.features = sample_features
+def test_add_corner(controller):
+    controller.features = Features(corners=[(1, 1), (2, 2), (3, 3)])
+    controller.processing_resolution = Size(100, 100)
+    amt_before = len(controller.features.corners)
+    controller.add_corner((99, 99))
+    assert len(controller.features.corners) == amt_before + 1
+
+def test_add_corner_invalid_values(controller):
+    controller.features = Features()
+    controller.processing_resolution = Size(100, 100)
+    assert controller.add_corner((-1, 0)) == False
+    assert controller.add_corner((99, 100)) == False
+
+def test_check_feature_selected_corner_match(controller):
+    controller.features = Features(corners=[(26, 26)])
     assert controller.check_feature_selected((15, 15)) == True
     assert controller.features.selected_corner_idx == 0
 
-def test_check_feature_selected_contour_match(controller, sample_features):
-    controller.features = sample_features
+def test_check_feature_selected_contour_match(controller):
+    controller.features = Features(other_contours=np.array([[[7, 7]]]))
     assert controller.check_feature_selected((20, 20)) == True
     assert controller.features.selected_contour_idx == 0
 
-def test_check_feature_selected_no_match(controller, sample_features):
-    controller.features = sample_features
+def test_check_feature_selected_no_match(controller):
+    controller.features = Features(corners=[(80, 80)])
     assert controller.check_feature_selected((100, 100)) == False
     assert controller.features.selected_corner_idx is None
     assert controller.features.selected_contour_idx is None

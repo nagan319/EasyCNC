@@ -278,34 +278,51 @@ class ImageEditingController:
     def remove_selected_corner(self):
         """ Removes selected corner. """
         if self.features is None or self.features.selected_corner_idx is None:
-            return
-        self.features.corners.pop(self.features.selected_corner_idx)
-        self.unselect_corner()
+            return False
+        if 0 <= self.features.selected_corner_idx < len(self.features.corners):
+            del self.features.corners[self.features.selected_corner_idx]
+            self.unselect_corner()
+            return True
+        return False
 
-    def remove_selected_contour(self):
+    def remove_selected_contour(self) -> bool:
         """ Removes selected contour. """
         if self.features is None or self.features.selected_contour_idx is None:
-            return
-        self.features.other_contours.pop(self.features.selected_contour_idx)
-        self.unselect_contour()
+            return False
+        if 0 <= self.features.selected_contour_idx < len(self.features.other_contours):
+            del self.features.other_contours[self.features.selected_contour_idx]
+            self.unselect_contour()
+            return True
+        return False
+
+    def add_corner(self, coordinates: tuple) -> bool:
+        """ Add a new corner at the specified coordinate. Returns True if added successfully. """
+        x, y = coordinates
+        if not (0 <= x < self.processing_resolution.w) or not (0 <= y < self.processing_resolution.h):
+            return False
+        new_corner = (x, y)
+        self.features.corners.append(new_corner)
+        return True
 
     def check_feature_selected(self, coordinates: Tuple[float, float]) -> bool:
         """ Check if a feature is present near the selected coordinate, and select if true. """
         THRESHOLD: int = 20
 
-        for i, corner in enumerate(self.features.corners):
-            if ImageEditingController.distance(coordinates, corner) < THRESHOLD:
-                self.unselect_contour()
-                self.select_corner(i)
-                return True
+        if self.features.corners is not None:
+            for i, corner in enumerate(self.features.corners):
+                if ImageEditingController.distance(coordinates, corner) < THRESHOLD:
+                    self.unselect_contour()
+                    self.select_corner(i)
+                    return True
         
         ''' Skips points for increased speed '''
-        for i, contour in enumerate(self.features.other_contours):
-            for point in contour[::int(THRESHOLD*2)]:
-                if ImageEditingController.distance(coordinates, point) < THRESHOLD:
-                    self.unselect_corner()
-                    self.select_contour(i)
-                    return True
+        if self.features.other_contours is not None:
+            for i, contour in enumerate(self.features.other_contours):
+                for point in contour[::int(THRESHOLD*2)]:
+                    if ImageEditingController.distance(coordinates, point) < THRESHOLD:
+                        self.unselect_corner()
+                        self.select_contour(i)
+                        return True
 
         return False
 
