@@ -8,6 +8,9 @@ from typing import List
 
 from .views.view_manager import ViewManager 
 from .views.home_view import HomeView
+from .views.part_view import PartView
+from .views.plate_view import PlateView
+from .views.router_view import RouterView
 
 from .widgets.nav_bar import NavBar
 
@@ -27,11 +30,17 @@ class MainWindow(QMainWindow):
         self.setMinimumSize(MIN_WIDTH, MIN_HEIGHT)
 
         nav_buttons = [
-            "Home"
+            "Home",
+            "Import Parts",
+            "Manage Stock",
+            "Manage Routers"
         ]
 
         views = [
-            HomeView()
+            HomeView(),
+            PartView(),
+            PlateView(),
+            RouterView()
         ]   
 
         nav_bar = NavBar(nav_buttons)
@@ -46,5 +55,7 @@ class MainWindow(QMainWindow):
         widget = QWidget()
         widget.setLayout(layout)
         self.setCentralWidget(widget)
+
+        nav_bar.button_clicked.connect(view_manager.set_view)
 
         logger.debug("Main window initialized successfully.")

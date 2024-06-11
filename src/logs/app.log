@@ -14666,3 +14666,26 @@ WHERE plates.id = ?
 2024-06-11 15:54:07,874 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
 2024-06-11 15:54:07,888 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-52\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
 2024-06-11 15:54:07,904 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-52\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-11 15:59:15,048 - logger - DEBUG - Initialized home view.
+2024-06-11 15:59:15,052 - logger - DEBUG - Successfully initialized PartsView.
+2024-06-11 15:59:15,074 - logger - DEBUG - Set app view to index 0
+2024-06-11 15:59:15,074 - logger - DEBUG - Main window initialized successfully.
+2024-06-11 16:05:44,698 - logger - DEBUG - Initialized home view.
+2024-06-11 16:05:44,700 - logger - DEBUG - Successfully initialized PartsView.
+2024-06-11 16:05:44,700 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-11 16:05:44,700 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-11 16:05:44,713 - logger - DEBUG - Set app view to index 0
+2024-06-11 16:05:44,713 - logger - DEBUG - Main window initialized successfully.
+2024-06-11 16:05:55,913 - logger - DEBUG - Initialized home view.
+2024-06-11 16:05:55,914 - logger - DEBUG - Successfully initialized PartsView.
+2024-06-11 16:05:55,914 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-11 16:05:55,914 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-11 16:05:55,927 - logger - DEBUG - Set app view to index 0
+2024-06-11 16:05:55,927 - logger - DEBUG - Main window initialized successfully.
+2024-06-11 16:05:57,665 - logger - DEBUG - Set app view to index 1
+2024-06-11 16:05:59,353 - logger - DEBUG - Set app view to index 2
+2024-06-11 16:06:00,255 - logger - DEBUG - Set app view to index 3
+2024-06-11 16:06:01,992 - logger - DEBUG - Set app view to index 0
+2024-06-11 16:06:02,287 - logger - DEBUG - Set app view to index 2
+2024-06-11 16:06:02,663 - logger - DEBUG - Set app view to index 2
+2024-06-11 16:06:02,985 - logger - DEBUG - Set app view to index 3
