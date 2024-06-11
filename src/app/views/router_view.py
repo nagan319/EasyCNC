@@ -4,34 +4,22 @@ Date: 2024/06/11
 """
 
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QScrollArea
-
 from .view_template import ViewTemplate
 
+from ..controllers.router_controller import RouterController
+
 from ..logging import logger
-
-'''
-Consists of scrollable view with plate widgets
-    
-    Scrollable view: 
-        contains router widgets
-
-        Part widget:
-            - display widget which references image
-            - editable name field
-            - editable fields for parameters
-            - delete button 
-
-    Buttons:
-        - add new router
-'''
 
 class RouterView(ViewTemplate):
     """
     View for handling routers. 
     """
-    def __init__(self):
+    def __init__(self, session, router_preview_dir: str):
         super().__init__()
         self._setup_ui()
+
+        self.controller = RouterController(session, router_preview_dir)
+
         logger.debug("Successfully initialized RouterView.")
 
     def _setup_ui(self):

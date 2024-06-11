@@ -4,33 +4,21 @@ Date: 2024/06/11
 """
 
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QFileDialog, QScrollArea
-
 from .view_template import ViewTemplate
 
+from ..controllers.plate_controller import PlateController
+
 from ..logging import logger
-
-'''
-Consists of scrollable view with plate widgets
-    
-    Scrollable view: 
-        contains plate widgets
-
-        Part widget:
-            - display widget which references image
-            - editable fields for size parameters
-            - import image button
-            - delete button 
-
-    Buttons:
-        - add new part
-'''
 
 class PlateView(ViewTemplate):
     """
     View for handling plates. 
     """
-    def __init__(self):
+    def __init__(self, session, plate_preview_dir: str):
         super().__init__()
+
+        self.controller = PlateController(session, plate_preview_dir)
+
         self._setup_ui()
         logger.debug("Successfully initialized PlateView.")
 

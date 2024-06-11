@@ -235,7 +235,7 @@ class ImageEditingController:
                 size=self.processing_resolution, 
                 features=self.features) # default colors
             feature_plotter.save_features()
-            logger.debug("Image features saved successfully.")
+            logger.debug(f"Image features saved successfully to {self.feat_path}")
             return True
         except Exception as e:
             logger.error(f"Encountered exception while attempting to save image features: {e}")

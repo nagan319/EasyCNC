@@ -14689,3 +14689,16 @@ WHERE plates.id = ?
 2024-06-11 16:06:02,287 - logger - DEBUG - Set app view to index 2
 2024-06-11 16:06:02,663 - logger - DEBUG - Set app view to index 2
 2024-06-11 16:06:02,985 - logger - DEBUG - Set app view to index 3
+2024-06-11 16:26:23,395 - logger - DEBUG - Database setup complete and session started.
+2024-06-11 16:26:23,442 - logger - DEBUG - Initialized home view.
+2024-06-11 16:26:23,443 - logger - DEBUG - Successfully initialized PartsView.
+2024-06-11 16:26:23,450 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-11 16:26:23,477 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-11 16:26:23,492 - logger - DEBUG - Set app view to index 0
+2024-06-11 16:26:23,492 - logger - DEBUG - Main window initialized successfully.
+2024-06-11 16:26:25,417 - logger - DEBUG - Set app view to index 1
+2024-06-11 16:26:26,689 - logger - DEBUG - Set app view to index 2
+2024-06-11 16:26:27,257 - logger - DEBUG - Set app view to index 3
+2024-06-11 16:26:28,354 - logger - DEBUG - Database session closed.
+2024-06-11 16:26:28,355 - logger - DEBUG - Database teardown complete.
+2024-06-11 16:26:28,355 - logger - DEBUG - Database connection disposed.

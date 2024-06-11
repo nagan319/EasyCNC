@@ -11,8 +11,10 @@ from .views.home_view import HomeView
 from .views.part_view import PartView
 from .views.plate_view import PlateView
 from .views.router_view import RouterView
-
 from .widgets.nav_bar import NavBar
+
+from .database import init_db, teardown_db, get_session, close_session
+from ..paths import IMAGE_PREVIEW_PATH, PART_PREVIEW_PATH, PLATE_PREVIEW_PATH, ROUTER_PREVIEW_PATH
 
 from .logging import logger
 
@@ -29,6 +31,8 @@ class MainWindow(QMainWindow):
         self.setWindowTitle(APP_TITLE)
         self.setMinimumSize(MIN_WIDTH, MIN_HEIGHT)
 
+        self.setup_db()
+
         nav_buttons = [
             "Home",
             "Import Parts",
@@ -38,9 +42,9 @@ class MainWindow(QMainWindow):
 
         views = [
             HomeView(),
-            PartView(),
-            PlateView(),
-            RouterView()
+            PartView(self.session, PART_PREVIEW_PATH),
+            PlateView(self.session, PLATE_PREVIEW_PATH),
+            RouterView(self.session, ROUTER_PREVIEW_PATH)
         ]   
 
         nav_bar = NavBar(nav_buttons)
@@ -59,3 +63,24 @@ class MainWindow(QMainWindow):
         nav_bar.button_clicked.connect(view_manager.set_view)
 
         logger.debug("Main window initialized successfully.")
+
+    def setup_db(self):
+        """ Initialize database. """
+        try:
+            init_db()
+            self.session = get_session()
+            logger.debug("Database setup complete and session started.")
+        except Exception as e:
+            logger.error(f"Error initializing database: {e}")
+
+    def closeEvent(self, event):
+        """ Close application at exit. """
+        try:
+            if self.session:
+                close_session()
+                logger.debug("Database session closed.")
+            teardown_db()
+            logger.debug("Database connection disposed.")
+        except Exception as e:
+            logger.error(f"Error closing database: {e}")
+        event.accept()

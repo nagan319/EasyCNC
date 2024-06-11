@@ -4,33 +4,21 @@ Date: 2024/06/10
 """
 
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QFileDialog, QScrollArea
-
 from .view_template import ViewTemplate
 
+from ..controllers.part_controller import PartController
+
 from ..logging import logger
-
-'''
-Consists of scrollable view with imported part widgets
-    
-    Scrollable view: 
-        contains part widgets
-
-        Part widget:
-            - display widget which references image
-            - label containing part filename
-            - editable 'thickness' field
-            - delete button 
-
-    Buttons:
-        - add new part
-'''
 
 class PartView(ViewTemplate):
     """
     View for handling imported parts. 
     """
-    def __init__(self):
+    def __init__(self, session, part_preview_dir: str):
         super().__init__()
+
+        self.controller = PartController(session, part_preview_dir)
+
         self._setup_ui()
         logger.debug("Successfully initialized PartsView.")
 
