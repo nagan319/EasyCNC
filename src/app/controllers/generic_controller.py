@@ -112,6 +112,13 @@ class GenericController:
             logger.error(f"Encountered error while attempting to clear out data table: {e}")
             self.session.rollback()
 
+    def _get_item_by_id(self, item_id: str) -> Union[T, None]:
+        try:
+            return self.session.query(self.db_table).filter_by(id=item_id).first()
+        except Exception as e:
+            logger.error(f"Encountered error while attempting to retrieve item with id {item_id} from db: {e}")
+            return None
+
     def _get_all_items(self) -> List[T]:
         """
         Get all items stored in db table.

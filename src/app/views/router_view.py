@@ -1,8 +1,3 @@
-"""
-Author: nagan319
-Date: 2024/06/10
-"""
-
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QScrollArea, QMessageBox
 from .view_template import ViewTemplate
 from ..widgets.router_widget import RouterWidget
@@ -56,8 +51,7 @@ class RouterView(ViewTemplate):
         try:
             routers = self.controller.get_all()
             for router in routers:
-                router_widget = RouterWidget(router.id, self.controller._get_preview_image_path(router.id))
-                router_widget.saveRequested.connect(self.on_save_requested)
+                router_widget = RouterWidget(router.id, self.controller._get_preview_image_path(router.id), self.controller)
                 router_widget.deleteRequested.connect(self.on_delete_requested)
                 self.scroll_layout.addWidget(router_widget)
                 self.widget_map[router.id] = router_widget
@@ -74,8 +68,7 @@ class RouterView(ViewTemplate):
         try: 
             router = self.controller.add_new()
             if router is not None:
-                new_router_widget = RouterWidget(router.id, self.controller._get_preview_image_path(router.id))
-                new_router_widget.saveRequested.connect(self.on_save_requested)
+                new_router_widget = RouterWidget(router.id, self.controller._get_preview_image_path(router.id), self.controller)
                 new_router_widget.deleteRequested.connect(self.on_delete_requested)
                 self.scroll_layout.addWidget(new_router_widget)
                 self.widget_map[router.id] = new_router_widget
@@ -87,25 +80,6 @@ class RouterView(ViewTemplate):
             QMessageBox.critical(self, "Error", f"An error occurred while adding a new router: {e}")
             logger.error(f"Error adding new router: {str(e)}")
 
-    def on_save_requested(self, router_id: str, new_data: dict):
-        """
-        Assess validity of new input parameters and update db properties if valid.
-        """
-        try:
-            self.controller.edit_x(router_id, new_data['x'])
-            self.controller.edit_y(router_id, new_data['y'])
-            self.controller.edit_z(router_id, new_data['z'])
-            self.controller.edit_plate_x(router_id, new_data['plate_x'])
-            self.controller.edit_plate_y(router_id, new_data['plate_y'])
-            self.controller.edit_plate_z(router_id, new_data['plate_z'])
-            self.controller.edit_min_safe_dist_from_edge(router_id, new_data['min_safe_dist_from_edge'])
-            self.controller.edit_drill_bit_diameter(router_id, new_data['drill_bit_diameter'])
-            self.controller.edit_mill_bit_diameter(router_id, new_data['mill_bit_diameter'])
-            self.controller.save_preview(router_id)
-        except Exception as e:
-            QMessageBox.critical(self, "Error", f"An error occurred while updating router properties: {e}")
-            logger.error(f"Error updating router: {str(e)}")          
-            
     def on_delete_requested(self, router_id: str) -> None:
         """ Delete widget from db. """
         try:
@@ -122,4 +96,4 @@ class RouterView(ViewTemplate):
         try:
             self.import_button.setText(f"Add Routers: {self.controller.get_amount()}/{self.controller.MAX_ROUTER_AMOUNT}")
         except Exception as e:
-            logger.error(f"Encountered exception while updating amount widget: {e}")            
+            logger.error(f"Encountered exception while updating amount widget: {e}")

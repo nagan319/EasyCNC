@@ -62,6 +62,10 @@ class RouterController(GenericController):
     '''
     Get router attributes
     '''
+    def get_by_id(self, id: str) -> Union[Router, None]:
+        """ Get router by id. """
+        return self._get_item_by_id(id)
+
     def get_amount(self) -> int:
         """ Get amount of routers in db. Returns -1 if an error is encountered. """ 
         return self._get_item_amount()
@@ -69,6 +73,14 @@ class RouterController(GenericController):
     def get_all(self) -> Union[List[Router], None]:
         """ Get all routers in db. """
         return self._get_all_items()
+
+    def get_attribute(self, id: str, attr_name: str) -> Union[any, None]:
+        """ Get router attribute by name. Returns None if an error occurs. """
+        return self._get_item_attr(id, attr_name)
+
+    def get_name(self, id: str) -> Union[str, None]:
+        """ Get router name. Returns None if an error occurs. """
+        return self._get_item_attr(id, 'name')
 
     def get_x(self, id: str) -> Union[float, None]:
         """ Get router x dimension. Returns None if an error occurs."""

@@ -1,8 +1,9 @@
 from PyQt6.QtCore import Qt, pyqtSignal
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton, QMessageBox
 from PyQt6.QtGui import QPixmap
 
-from ..models.router_model import Router, RouterConstants
+from ..models.router_model import RouterConstants
+from ..controllers.router_controller import RouterController
 from ..utils.input_parser import InputParser
 
 from ..logging import logger
@@ -13,7 +14,6 @@ class RouterWidget(QWidget):
     """
 
     deleteRequested = pyqtSignal(str)
-    saveRequested = pyqtSignal(str, dict)
 
     MAX_VALUES = {
         "x": RouterConstants.MAX_ROUTER_DIMENSION,
@@ -28,29 +28,30 @@ class RouterWidget(QWidget):
     }
 
     FIELD_DEFINITIONS = {
-        "x": ("Router x dimension:", f"0-{MAX_VALUES['x']}", RouterConstants.DEFAULT_X),
-        "y": ("Router y dimension:", f"0-{MAX_VALUES['y']}", RouterConstants.DEFAULT_Y),
-        "z": ("Router z dimension:", f"0-{MAX_VALUES['z']}", RouterConstants.DEFAULT_Z),
-        "plate_x": ("Max plate x dimension:", f"0-{MAX_VALUES['plate_x']}", RouterConstants.DEFAULT_PLATE_X),
-        "plate_y": ("Max plate y dimension:", f"0-{MAX_VALUES['plate_y']}", RouterConstants.DEFAULT_PLATE_Y),
-        "plate_z": ("Max plate z dimension:", f"0-{MAX_VALUES['plate_z']}", RouterConstants.DEFAULT_PLATE_Z),
-        "min_safe_dist_from_edge": ("Minimum safe edge distance:", f"0-{MAX_VALUES['min_safe_dist_from_edge']}", RouterConstants.DEFAULT_SAFE_DISTANCE),
-        "drill_bit_diameter": ("Drill bit diameter:", f"0-{MAX_VALUES['drill_bit_diameter']}", RouterConstants.DEFAULT_DRILL_BIT_DIAMETER),
-        "mill_bit_diameter": ("Mill bit diameter:", f"0-{MAX_VALUES['mill_bit_diameter']}", RouterConstants.DEFAULT_MILL_BIT_DIAMETER)
+        "x": ("Router x dimension:", f"0-{MAX_VALUES['x']}", 'x'),
+        "y": ("Router y dimension:", f"0-{MAX_VALUES['y']}", 'y'),
+        "z": ("Router z dimension:", f"0-{MAX_VALUES['z']}", 'z'),
+        "plate_x": ("Max plate x dimension:", f"0-{MAX_VALUES['plate_x']}", 'plate_x'),
+        "plate_y": ("Max plate y dimension:", f"0-{MAX_VALUES['plate_y']}", 'plate_y'),
+        "plate_z": ("Max plate z dimension:", f"0-{MAX_VALUES['plate_z']}", 'plate_z'),
+        "min_safe_dist_from_edge": ("Minimum safe edge distance:", f"0-{MAX_VALUES['min_safe_dist_from_edge']}", 'min_safe_dist_from_edge'),
+        "drill_bit_diameter": ("Drill bit diameter:", f"0-{MAX_VALUES['drill_bit_diameter']}", 'drill_bit_diameter'),
+        "mill_bit_diameter": ("Mill bit diameter:", f"0-{MAX_VALUES['mill_bit_diameter']}", 'mill_bit_diameter')
     }
 
-    def __init__(self, router_id: str, preview_path: str):
+    def __init__(self, router_id: str, preview_path: str, controller: RouterController):
         super().__init__()
         self.id = router_id
         self.preview_path = preview_path
         self.fields = {}
+        self.controller = controller  
 
-        preview_widget = self._get_preview_widget()
-        editable_fields_widget = self._get_editable_fields_widget()
+        self.preview_widget = self._get_preview_widget()
+        self.editable_fields_widget = self._get_editable_fields_widget()
 
         layout = QHBoxLayout()
-        layout.addWidget(preview_widget)
-        layout.addWidget(editable_fields_widget)
+        layout.addWidget(self.preview_widget)
+        layout.addWidget(self.editable_fields_widget)
         self.setLayout(layout)
 
     def _get_preview_widget(self) -> QLabel:
@@ -79,23 +80,23 @@ class RouterWidget(QWidget):
         layout = QVBoxLayout()
 
         self.name_input = QLineEdit()
-        self.name_input.setPlaceholderText(RouterConstants.ROUTER_DEFAULT_NAME)
+        self.name_input.setObjectName("nameInput")
+        self.name_input.setPlaceholderText(self.controller.get_name(self.id))
         name_layout = QHBoxLayout()
-        name_layout.addWidget(QLabel("Name:"))
         name_layout.addWidget(self.name_input)
         layout.addLayout(name_layout)
 
-        for field_name, (label_text, placeholder_text, default_value) in self.FIELD_DEFINITIONS.items():
-            field_layout, input_field = self._create_input_field(label_text, placeholder_text, default_value)
+        for field_name, (label_text, placeholder_text, attribute_name) in self.FIELD_DEFINITIONS.items(): # add routercontroller public method
+            field_layout, input_field = self._create_input_field(label_text, placeholder_text, self.controller.get_attribute(self.id, attribute_name))
             layout.addLayout(field_layout)
             self.fields[field_name] = input_field
 
         button_widget = QWidget()
         button_layout = QHBoxLayout()
         save_button = QPushButton("Save")
-        save_button.pressed.connect(self.on_save_requested)
+        save_button.pressed.connect(self.on_save_pressed)
         delete_button = QPushButton("Delete")
-        delete_button.pressed.connect(self.on_delete_requested)
+        delete_button.pressed.connect(self.on_delete_pressed)
         button_layout.addStretch(1)
         button_layout.addWidget(save_button, 1)
         button_layout.addWidget(delete_button, 1)
@@ -105,6 +106,11 @@ class RouterWidget(QWidget):
 
         widget.setLayout(layout)
         return widget
+
+    def update_preview(self):
+        """ Update router preview."""
+        image = QPixmap(self.preview_path)
+        self.preview_widget.setPixmap(image)
 
     def on_field_edited(self):
         """ Update field value when editing is finished. """
@@ -119,17 +125,27 @@ class RouterWidget(QWidget):
                     sender.setText(str(parsed_value))
                 break
 
-    def on_save_requested(self):
+    def on_save_pressed(self):
         """ User presses save button. """
-        updated_data = {
-            'name': self.name_input.text()
-        }
-        for field_name, input_field in self.fields.items():
-            max_value = self.MAX_VALUES.get(field_name, None)
-            if max_value is not None:
-                updated_data[field_name] = InputParser.parse_text(input_field.text(), 0, max_value)
-        self.saveRequested.emit(self.id, updated_data)
+        try:
+            router_id = self.id
+            self.controller.edit_name(router_id, self.name_input.text())
+            self.controller.edit_x(router_id, float(self.fields["x"].text()))
+            self.controller.edit_y(router_id, float(self.fields["y"].text()))
+            self.controller.edit_z(router_id, float(self.fields["z"].text()))
+            self.controller.edit_plate_x(router_id, float(self.fields["plate_x"].text()))
+            self.controller.edit_plate_y(router_id, float(self.fields["plate_y"].text()))
+            self.controller.edit_plate_z(router_id, float(self.fields["plate_z"].text()))
+            self.controller.edit_min_safe_dist_from_edge(router_id, float(self.fields["min_safe_dist_from_edge"].text()))
+            self.controller.edit_drill_bit_diameter(router_id, float(self.fields["drill_bit_diameter"].text()))
+            self.controller.edit_mill_bit_diameter(router_id, float(self.fields["mill_bit_diameter"].text()))
+            self.controller.save_preview(self.controller.get_by_id(router_id))
+            self.update_preview()
+        except ValueError as ve:
+            QMessageBox.critical(self, "Error", f"Invalid input: {ve}")
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"An error occured while updating the router: {e}")
 
-    def on_delete_requested(self):
+    def on_delete_pressed(self):
         """ User deletes widget. """
         self.deleteRequested.emit(self.id)
