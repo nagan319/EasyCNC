@@ -63,6 +63,10 @@ class PlateController(GenericController):
         """ Get amount of plates in db. Returns -1 if an error is encountered. """ 
         return self._get_item_amount()
 
+    def get_all(self) -> Union[List[Plate], None]:
+        """ Get all plates in db. """
+        return self._get_all_items()
+
     def get_x(self, id: str) -> Union[float, None]:
         """ Get plate x dimension. Returns None if an error occurs."""
         return self._get_item_attr(id, 'x')

@@ -36,10 +36,17 @@ class PartView(ViewTemplate):
         self.import_button = QPushButton("Import Parts")
         self.import_button.pressed.connect(self.import_file)
 
+        import_button_wrapper = QWidget()
+        import_button_wrapper_layout = QHBoxLayout()
+        import_button_wrapper_layout.addStretch(2)
+        import_button_wrapper_layout.addWidget(self.import_button, 1)
+        import_button_wrapper_layout.addStretch(2)
+        import_button_wrapper.setLayout(import_button_wrapper_layout)
+
         main_widget = QWidget()
         main_layout = QVBoxLayout()
         main_layout.addWidget(self.scroll_area)
-        main_layout.addWidget(self.import_button)
+        main_layout.addWidget(import_button_wrapper)
         main_widget.setLayout(main_layout)
 
         self._update_button_amount()
@@ -78,7 +85,6 @@ class PartView(ViewTemplate):
             row_layout = QHBoxLayout()
             row_widget.setLayout(row_layout)
             self.scroll_layout.addWidget(row_widget)
-
         row_layout.addWidget(part_widget)
 
         remaining_spaces = 3 - row_layout.count()
