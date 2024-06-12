@@ -85,6 +85,21 @@ class GenericController:
             self.session.rollback()
             return False
 
+    def _remove_all_items_and_previews(self) -> bool:
+        """
+        Remove all items from the database and delete their corresponding preview images.
+        Returns True if successful, False otherwise.
+        """
+        try:
+            self._remove_all_items_from_db()
+            for filename in os.listdir(self.preview_image_directory):
+                filepath = os.path.join(self.preview_image_directory, filename)
+                os.remove(filepath)
+            return True
+        except Exception as e:
+            logger.error(f"Encountered exception while removing all items and their previews: {e}")
+            return False
+
     def _remove_all_items_from_db(self):
         """
         Remove all items of specified type from db.

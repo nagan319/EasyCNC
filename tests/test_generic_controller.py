@@ -179,6 +179,35 @@ def test_remove_all_items_from_db(controller, session):
     items = session.query(SampleTable).all()
     assert len(items) == 0
 
+def test_remove_all_items_and_previews_empty_db(controller, session):
+    assert controller._remove_all_items_and_previews()
+    items = session.query(SampleTable).all()
+    assert len(items) == 0
+
+def test_remove_all_items_and_previews(controller, session, temp_dir):
+    item1 = SampleTable(name="ItemToRemove1", description="Item 1")
+    item2 = SampleTable(name="ItemToRemove2", description="Item 2")
+    session.add_all([item1, item2])
+    session.commit()
+
+    preview_file_path1 = controller._get_preview_image_path(item1.id)
+    preview_file_path2 = controller._get_preview_image_path(item2.id)
+
+    with open(preview_file_path1, 'w') as file1:
+        file1.write("This is a test file 1.")
+    with open(preview_file_path2, 'w') as file2:
+        file2.write("This is a test file 2.")
+
+    assert os.path.exists(preview_file_path1)
+    assert os.path.exists(preview_file_path2)
+
+    assert controller._remove_all_items_and_previews()
+
+    items = session.query(SampleTable).all()
+    assert len(items) == 0
+    assert not os.path.exists(preview_file_path1)
+    assert not os.path.exists(preview_file_path2)
+
 def test_get_all_empty_db(controller, session):
     items = controller._get_all_items()
     assert len(items) == 0

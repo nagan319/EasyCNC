@@ -1,2 +1,3 @@
 - finish optimization controller
-- create ui without connecting to backend
+
+- add max part constraint func

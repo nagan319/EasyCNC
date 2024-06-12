@@ -71,6 +71,10 @@ class PartController(GenericController):
     def remove_all(self):
         """ Clears out part db. """
         self._remove_all_items_from_db()
+
+    def remove_all_with_previews(self):
+        """ Clear out part db and remove image previews. """
+        self._remove_all_items_and_previews()
     '''
     Get part attributes
     '''
