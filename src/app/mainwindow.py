@@ -12,6 +12,7 @@ from .views.home_view import HomeView
 from .views.part_view import PartView
 from .views.plate_view import PlateView
 from .views.router_view import RouterView
+from .views.help_view import HelpView
 from .widgets.nav_bar import NavBar
 
 from .database import init_db, teardown_db, get_session, close_session
@@ -39,14 +40,16 @@ class MainWindow(QMainWindow):
             "Home",
             "Import Parts",
             "Manage Stock",
-            "Manage Routers"
+            "Manage Routers",
+            "Help"
         ]
 
         views = [
             HomeView(),
             PartView(self.session, PART_PREVIEW_PATH),
             PlateView(self.session, PLATE_PREVIEW_PATH),
-            RouterView(self.session, ROUTER_PREVIEW_PATH)
+            RouterView(self.session, ROUTER_PREVIEW_PATH),
+            HelpView()
         ]   
 
         nav_bar = NavBar(nav_buttons)
@@ -65,8 +68,6 @@ class MainWindow(QMainWindow):
         nav_bar.button_clicked.connect(view_manager.set_view)
 
         logger.debug("Main window initialized successfully.")
-
-
 
     def setup_db(self):
         """ Initialize database. """
