@@ -19,6 +19,7 @@ class ViewTemplate(QWidget):
         self.content_layout = QVBoxLayout()
 
         self.title = QLabel(title_text)
+        self.title.setObjectName("titleText")
         self.title.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.content_layout.addWidget(self.title, 1)

@@ -1684,3 +1684,73 @@ WHERE plates.id = ?
 2024-06-11 20:51:41,917 - logger - ERROR - Item with id invalid id does not exist.
 2024-06-11 20:51:41,922 - logger - ERROR - Item with id None does not exist.
 2024-06-11 20:51:41,932 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-11 22:04:25,797 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:26,231 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:26,473 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:26,540 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:26,683 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:26,770 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:26,929 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:27,008 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:27,085 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:27,172 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:27,392 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:27,452 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:05:11,352 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:11,553 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:11,708 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:11,803 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:11,959 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:12,040 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:12,088 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:12,183 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:12,388 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:12,430 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-12 09:24:46,703 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-12 09:24:46,713 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:24:46,740 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-12 09:24:46,741 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-12 09:24:46,742 - logger - ERROR - Threshold must be integer value
+2024-06-12 09:24:47,336 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-12 09:24:47,918 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: nonexistent/path/image.jpg
+2024-06-12 09:24:47,918 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:24:48,197 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-12 09:24:48,243 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-12 09:24:48,320 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-12 09:24:48,366 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-12 09:24:48,514 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-12 09:24:48,532 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-12 09:24:48,626 - logger - ERROR - New value for item parameter <class 'int'> does not match intended type <class 'str'>
+2024-06-12 09:24:48,647 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-12 09:24:48,670 - logger - ERROR - Item with id None does not exist.
+2024-06-12 09:24:48,700 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-12 09:24:48,739 - logger - ERROR - Indicated image editing directory path does not exist: invalid directory
+2024-06-12 09:24:48,762 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-12 09:24:48,765 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-12 09:24:48,765 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-12 09:24:48,808 - logger - ERROR - Attempted to import raw image in wrong ImageEditingController state.
+2024-06-12 09:24:48,830 - logger - ERROR - Indicated raw image filepath does not exist: random invalid path
+2024-06-12 09:24:48,856 - logger - ERROR - Image file is of invalid format: .STL
+2024-06-12 09:24:49,712 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: -100, -100
+2024-06-12 09:24:49,712 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-12 09:24:50,482 - logger - ERROR - Attempted to get binary image in wrong state.
+2024-06-12 09:24:51,113 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-12 09:24:51,113 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-12 09:24:51,114 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-12 09:24:52,776 - logger - ERROR - Attempted to extract features in wrong state.
+2024-06-12 09:24:54,921 - logger - ERROR - Attempted to save image features in wrong state.
+2024-06-12 09:24:56,125 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 5
+2024-06-12 09:24:56,125 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 5, 0
+2024-06-12 09:24:56,200 - logger - ERROR - STL file does not exist: invalid path
+2024-06-12 09:24:56,261 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-12 09:24:56,284 - logger - ERROR - STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-12 09:24:56,285 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg: STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-12 09:25:13,864 - logger - ERROR - Attempted invalid input value for part amount: 0
+2024-06-12 09:25:13,865 - logger - ERROR - Attempted invalid input value for part amount: 5.13
+2024-06-12 09:25:13,865 - logger - ERROR - Attempted invalid input value for part amount: -2
+2024-06-12 09:26:09,845 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
+2024-06-12 09:26:09,882 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-54\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-12 09:26:09,912 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-54\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-12 10:18:39,891 - logger - ERROR - Error updating router: 'min_safe_dist_from_edge'
+2024-06-12 10:18:45,115 - logger - ERROR - Error updating router: 'min_safe_dist_from_edge'
+2024-06-12 11:05:45,791 - logger - ERROR - Error updating router: 'min_safe_dist_from_edge'

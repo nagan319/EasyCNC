@@ -11,7 +11,6 @@ class PartWidget(QWidget):
     Widget for displaying part information.
     """
 
-    ''' Id and new value if applicable'''
     deleteRequested = pyqtSignal(str)
     amountEdited = pyqtSignal(str, int)
     materialEdited = pyqtSignal(str, str)
@@ -40,26 +39,35 @@ class PartWidget(QWidget):
     def _get_editable_fields_widget(self) -> QWidget:
         """ Widget containing editable fields and delete button. """
         widget = QWidget()
-        layout = QHBoxLayout()
+        layout = QVBoxLayout()
 
-        amount_input = QLineEdit()
-        amount_input.setPlaceholderText("Amount")
-        amount_input.textEdited.connect(self.on_amount_edited)
-        amount_input.setText("1")
+        amount_layout = QHBoxLayout()
+        amount_label = QLabel("Amount:")
+        self.amount_input = QLineEdit()
+        self.amount_input.setPlaceholderText("Amount")
+        self.amount_input.textEdited.connect(self.on_amount_edited)
+        self.amount_input.setText("1")
+        amount_layout.addWidget(amount_label)
+        amount_layout.addWidget(self.amount_input)
 
-        material_input = QLineEdit()
-        material_input.setPlaceholderText("Material")
-        material_input.textEdited.connect(self.on_material_edited)
-        material_input.setText(PartConstants.DEFAULT_MATERIAL)
+        material_layout = QHBoxLayout()
+        material_label = QLabel("Material:")
+        self.material_input = QLineEdit()
+        self.material_input.setPlaceholderText("Material")
+        self.material_input.textEdited.connect(self.on_material_edited)
+        self.material_input.setText(PartConstants.DEFAULT_MATERIAL)
+        material_layout.addWidget(material_label)
+        material_layout.addWidget(self.material_input)
 
+        button_layout = QHBoxLayout()
         delete_button = QPushButton("Delete")
-        delete_button.pressed.connect(self.on_delete_requested) 
+        delete_button.pressed.connect(self.on_delete_requested)
+        button_layout.addWidget(delete_button)
 
-        layout.addStretch(2)
-        layout.addWidget(amount_input, 1)
-        layout.addWidget(material_input, 1)
-        layout.addWidget(delete_button, 1)
-        layout.addStretch(2)
+        layout.addLayout(amount_layout)
+        layout.addLayout(material_layout)
+        layout.addLayout(button_layout)
+        layout.addStretch(1)
 
         widget.setLayout(layout)
         return widget

@@ -18,9 +18,11 @@ class NavBar(QWidget):
 
         for i, button_text in enumerate(button_names):
             button = QPushButton(button_text)
+            button.setObjectName("menuButton")
             button.clicked.connect(lambda _, index=i: self.button_clicked.emit(index))
             layout.addWidget(button, 1)
 
         footer = QWidget() 
+        footer.setObjectName("navBar")
         layout.addWidget(footer, 10)
         self.setLayout(layout)

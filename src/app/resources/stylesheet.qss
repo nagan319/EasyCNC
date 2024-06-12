@@ -1,3 +1,97 @@
 QWidget {
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff; 
+    padding: 0px
+}
+
+QWidget#navBar {
+    background-color: #eeeeee;
+    padding: 0px;
+    border-right: 4px solid #b7de70; 
+}
+
+QPushButton {
+    font-family: 'Gotham';
+    font-size: 14px;
+    text-align: center;
+    background-color: #eeeeee;
+    color: #000000;
+    padding: 10px;
+    border: 0px;
+    border-radius: 0px; 
+}
+
+QPushButton:hover {
+    background-color: #bbbbbb; 
+}
+
+QPushButton#menuButton {
+    font-family: 'Gotham';
+    font-size: 18px;
+    text-align: left;
+    background-color: #eeeeee;
+    color: #000000;
+    padding: 10px;
+    border: 0px;
+    border-radius: 0px; 
+    border-right: 4px solid #b7de70; 
+}   
+
+QPushButton#menuButton:hover {
+    background-color: #bbbbbb; 
+}
+
+QLabel {
+    font-family: 'Gotham';
+    font-size: 14px;
+    color: #333333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+QLabel#titleText {
+    font-family: 'Gotham';
+    font-size: 32px;
+    color: #333333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+QLineEdit {
+    font-family: 'Gotham';
+    font-size: 14px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 0px; 
+}
+
+QScrollArea {
+    border: none;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background: transparent;
+    width: 10px; 
+}
+
+QScrollBar::handle:vertical {
+    background: #cccccc; 
+    min-height: 20px;
+}
+
+QScrollBar::add-line:vertical {
+    background: transparent;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+    background: transparent;
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
 }

@@ -30,4 +30,7 @@ ROUTER_PREVIEW_PATH = os.path.join(CACHE_DIR, 'router preview')
 Resource paths
 """
 
-LOGO_PATH = os.path.join(ROOT_DIR, 'app', 'resources', 'images', 'kinney.PNG')
+LOGO_PATH = os.path.join(ROOT_DIR, 'app', 'resources', 'images', 'app logo.PNG')
+ICON_PATH = os.path.join(ROOT_DIR, 'app', 'resources', 'images', 'app icon.PNG')
+FONT_PATH = os.path.join(ROOT_DIR, 'app', 'resources', 'Gotham-Light.ttf')
+STYLESHEET_PATH = os.path.join(ROOT_DIR, 'app', 'resources', 'stylesheet.qss')

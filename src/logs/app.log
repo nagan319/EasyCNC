@@ -15755,3 +15755,1796 @@ WHERE plates.id = ?
 2024-06-11 21:57:09,211 - logger - DEBUG - Database session closed.
 2024-06-11 21:57:09,212 - logger - DEBUG - Database teardown complete.
 2024-06-11 21:57:09,212 - logger - DEBUG - Database connection disposed.
+2024-06-11 22:00:27,119 - logger - DEBUG - Database setup complete and session started.
+2024-06-11 22:00:27,278 - logger - DEBUG - Initialized home view.
+2024-06-11 22:00:27,297 - logger - DEBUG - Successfully cleared out data table.
+2024-06-11 22:00:27,300 - logger - DEBUG - Successfully initialized PartsView.
+2024-06-11 22:00:27,308 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-11 22:00:27,350 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-11 22:00:27,374 - logger - DEBUG - Set app view to index 0
+2024-06-11 22:00:27,375 - logger - DEBUG - Main window initialized successfully.
+2024-06-11 22:00:35,644 - logger - DEBUG - Set app view to index 1
+2024-06-11 22:00:44,713 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-11 22:00:44,905 - logger - DEBUG - Parsing STL file...
+2024-06-11 22:00:44,905 - logger - DEBUG - Finding flat axis...
+2024-06-11 22:00:44,906 - logger - DEBUG - Calculating thickness...
+2024-06-11 22:00:44,907 - logger - DEBUG - Flattening mesh...
+2024-06-11 22:00:44,907 - logger - DEBUG - Finding outer edges...
+2024-06-11 22:00:44,928 - logger - DEBUG - Finding contours...
+2024-06-11 22:00:44,932 - logger - DEBUG - Finding outermost contour...
+2024-06-11 22:00:44,933 - logger - DEBUG - Smoothing contour...
+2024-06-11 22:00:44,938 - logger - DEBUG - Parsing complete.
+2024-06-11 22:00:44,996 - logger - DEBUG - Item with id 8a15aeaf-c3ce-413d-9ad4-ca63b44faeee added successfully.
+2024-06-11 22:00:44,997 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 22:00:45,545 - logger - DEBUG - Saving preview image...
+2024-06-11 22:00:45,910 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\8a15aeaf-c3ce-413d-9ad4-ca63b44faeee.png.
+2024-06-11 22:00:45,910 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL successfully
+2024-06-11 22:00:45,942 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-11 22:00:49,015 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:00:49,083 - logger - DEBUG - Changed amount to value 4
+2024-06-11 22:00:49,698 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:00:50,115 - logger - DEBUG - Changed amount to value 3
+2024-06-11 22:00:50,220 - logger - DEBUG - Changed amount to value 34
+2024-06-11 22:00:50,450 - logger - DEBUG - Changed amount to value 3
+2024-06-11 22:00:50,593 - logger - DEBUG - Changed amount to value 32
+2024-06-11 22:00:50,866 - logger - DEBUG - Changed amount to value 3
+2024-06-11 22:00:51,022 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:00:51,071 - logger - DEBUG - Changed amount to value 2
+2024-06-11 22:00:51,121 - logger - DEBUG - Changed amount to value 23
+2024-06-11 22:00:51,387 - logger - DEBUG - Changed amount to value 2
+2024-06-11 22:00:51,453 - logger - DEBUG - Changed amount to value 23
+2024-06-11 22:00:51,660 - logger - DEBUG - Changed amount to value 233
+2024-06-11 22:00:51,783 - logger - DEBUG - Changed amount to value 23
+2024-06-11 22:00:51,949 - logger - DEBUG - Changed amount to value 233
+2024-06-11 22:00:52,077 - logger - DEBUG - Changed amount to value 23
+2024-06-11 22:00:52,252 - logger - DEBUG - Changed amount to value 2
+2024-06-11 22:00:52,394 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:00:52,513 - logger - DEBUG - Changed amount to value 3
+2024-06-11 22:01:03,789 - logger - DEBUG - Database session closed.
+2024-06-11 22:01:03,790 - logger - DEBUG - Database teardown complete.
+2024-06-11 22:01:03,791 - logger - DEBUG - Database connection disposed.
+2024-06-11 22:01:40,676 - logger - DEBUG - Database setup complete and session started.
+2024-06-11 22:01:40,775 - logger - DEBUG - Initialized home view.
+2024-06-11 22:01:40,829 - logger - DEBUG - Successfully cleared out data table.
+2024-06-11 22:01:40,834 - logger - DEBUG - Successfully initialized PartsView.
+2024-06-11 22:01:40,846 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-11 22:01:40,912 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-11 22:01:40,970 - logger - DEBUG - Set app view to index 0
+2024-06-11 22:01:40,971 - logger - DEBUG - Main window initialized successfully.
+2024-06-11 22:01:42,393 - logger - DEBUG - Set app view to index 1
+2024-06-11 22:01:54,155 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-11 22:01:54,297 - logger - DEBUG - Parsing STL file...
+2024-06-11 22:01:54,297 - logger - DEBUG - Finding flat axis...
+2024-06-11 22:01:54,298 - logger - DEBUG - Calculating thickness...
+2024-06-11 22:01:54,299 - logger - DEBUG - Flattening mesh...
+2024-06-11 22:01:54,299 - logger - DEBUG - Finding outer edges...
+2024-06-11 22:01:54,315 - logger - DEBUG - Finding contours...
+2024-06-11 22:01:54,318 - logger - DEBUG - Finding outermost contour...
+2024-06-11 22:01:54,319 - logger - DEBUG - Smoothing contour...
+2024-06-11 22:01:54,322 - logger - DEBUG - Parsing complete.
+2024-06-11 22:01:54,374 - logger - DEBUG - Item with id 756c1730-768a-4072-8e36-9eb826431c6a added successfully.
+2024-06-11 22:01:54,375 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 22:01:54,895 - logger - DEBUG - Saving preview image...
+2024-06-11 22:01:55,223 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\756c1730-768a-4072-8e36-9eb826431c6a.png.
+2024-06-11 22:01:55,223 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL successfully
+2024-06-11 22:01:55,239 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-11 22:01:57,733 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:01:58,518 - logger - DEBUG - Changed amount to value 2
+2024-06-11 22:01:58,580 - logger - DEBUG - Changed amount to value 23
+2024-06-11 22:01:58,692 - logger - DEBUG - Changed amount to value 234
+2024-06-11 22:01:58,994 - logger - DEBUG - Changed amount to value 2342
+2024-06-11 22:01:59,037 - logger - DEBUG - Changed amount to value 23423
+2024-06-11 22:01:59,123 - logger - DEBUG - Changed amount to value 234234
+2024-06-11 22:01:59,243 - logger - DEBUG - Changed amount to value 2342342
+2024-06-11 22:02:00,960 - logger - DEBUG - Changed amount to value A
+2024-06-11 22:02:01,223 - logger - DEBUG - Changed amount to value A;
+2024-06-11 22:02:05,661 - logger - DEBUG - Database session closed.
+2024-06-11 22:02:05,663 - logger - DEBUG - Database teardown complete.
+2024-06-11 22:02:05,663 - logger - DEBUG - Database connection disposed.
+2024-06-11 22:02:32,009 - logger - DEBUG - Database setup complete and session started.
+2024-06-11 22:02:32,135 - logger - DEBUG - Initialized home view.
+2024-06-11 22:02:32,191 - logger - DEBUG - Successfully cleared out data table.
+2024-06-11 22:02:32,196 - logger - DEBUG - Successfully initialized PartsView.
+2024-06-11 22:02:32,208 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-11 22:02:32,282 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-11 22:02:32,322 - logger - DEBUG - Set app view to index 0
+2024-06-11 22:02:32,323 - logger - DEBUG - Main window initialized successfully.
+2024-06-11 22:02:33,434 - logger - DEBUG - Set app view to index 1
+2024-06-11 22:02:45,442 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-11 22:02:45,581 - logger - DEBUG - Parsing STL file...
+2024-06-11 22:02:45,581 - logger - DEBUG - Finding flat axis...
+2024-06-11 22:02:45,582 - logger - DEBUG - Calculating thickness...
+2024-06-11 22:02:45,582 - logger - DEBUG - Flattening mesh...
+2024-06-11 22:02:45,582 - logger - DEBUG - Finding outer edges...
+2024-06-11 22:02:45,597 - logger - DEBUG - Finding contours...
+2024-06-11 22:02:45,600 - logger - DEBUG - Finding outermost contour...
+2024-06-11 22:02:45,600 - logger - DEBUG - Smoothing contour...
+2024-06-11 22:02:45,604 - logger - DEBUG - Parsing complete.
+2024-06-11 22:02:45,652 - logger - DEBUG - Item with id e120db29-603b-42a2-be43-e35c3d0d6bb4 added successfully.
+2024-06-11 22:02:45,653 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 22:02:46,170 - logger - DEBUG - Saving preview image...
+2024-06-11 22:02:46,491 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\e120db29-603b-42a2-be43-e35c3d0d6bb4.png.
+2024-06-11 22:02:46,491 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL successfully
+2024-06-11 22:02:46,506 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-11 22:02:48,366 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:02:48,468 - logger - DEBUG - Changed amount to value 3
+2024-06-11 22:02:49,264 - logger - DEBUG - Changed amount to value 35
+2024-06-11 22:02:49,296 - logger - DEBUG - Changed amount to value 352
+2024-06-11 22:02:49,492 - logger - DEBUG - Changed amount to value 3525
+2024-06-11 22:02:49,619 - logger - DEBUG - Changed amount to value 35252
+2024-06-11 22:02:51,196 - logger - DEBUG - Database session closed.
+2024-06-11 22:02:51,197 - logger - DEBUG - Database teardown complete.
+2024-06-11 22:02:51,198 - logger - DEBUG - Database connection disposed.
+2024-06-11 22:04:10,597 - logger - DEBUG - Database setup complete and session started.
+2024-06-11 22:04:10,695 - logger - DEBUG - Initialized home view.
+2024-06-11 22:04:10,747 - logger - DEBUG - Successfully cleared out data table.
+2024-06-11 22:04:10,752 - logger - DEBUG - Successfully initialized PartsView.
+2024-06-11 22:04:10,763 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-11 22:04:10,841 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-11 22:04:10,892 - logger - DEBUG - Set app view to index 0
+2024-06-11 22:04:10,893 - logger - DEBUG - Main window initialized successfully.
+2024-06-11 22:04:12,154 - logger - DEBUG - Set app view to index 1
+2024-06-11 22:04:20,462 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-11 22:04:20,697 - logger - DEBUG - Parsing STL file...
+2024-06-11 22:04:20,698 - logger - DEBUG - Finding flat axis...
+2024-06-11 22:04:20,699 - logger - DEBUG - Calculating thickness...
+2024-06-11 22:04:20,699 - logger - DEBUG - Flattening mesh...
+2024-06-11 22:04:20,699 - logger - DEBUG - Finding outer edges...
+2024-06-11 22:04:20,715 - logger - DEBUG - Finding contours...
+2024-06-11 22:04:20,717 - logger - DEBUG - Finding outermost contour...
+2024-06-11 22:04:20,718 - logger - DEBUG - Smoothing contour...
+2024-06-11 22:04:20,721 - logger - DEBUG - Parsing complete.
+2024-06-11 22:04:20,774 - logger - DEBUG - Item with id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62 added successfully.
+2024-06-11 22:04:20,775 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 22:04:21,315 - logger - DEBUG - Saving preview image...
+2024-06-11 22:04:21,656 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\e9aacda0-1e36-4c38-8ed8-2e2f897d8d62.png.
+2024-06-11 22:04:21,657 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL successfully
+2024-06-11 22:04:21,683 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-11 22:04:23,429 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:04:23,633 - logger - DEBUG - Updated item id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62: set amount to 5
+2024-06-11 22:04:23,636 - logger - DEBUG - Changed amount to value 5
+2024-06-11 22:04:25,797 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:25,800 - logger - DEBUG - Changed amount to value K
+2024-06-11 22:04:26,231 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:26,234 - logger - DEBUG - Changed amount to value Ky
+2024-06-11 22:04:26,473 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:26,475 - logger - DEBUG - Changed amount to value K
+2024-06-11 22:04:26,540 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:26,542 - logger - DEBUG - Changed amount to value Kr
+2024-06-11 22:04:26,683 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:26,686 - logger - DEBUG - Changed amount to value Kry
+2024-06-11 22:04:26,770 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:26,773 - logger - DEBUG - Changed amount to value Kryp
+2024-06-11 22:04:26,929 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:26,931 - logger - DEBUG - Changed amount to value Krypt
+2024-06-11 22:04:27,008 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:27,010 - logger - DEBUG - Changed amount to value Krypto
+2024-06-11 22:04:27,085 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:27,088 - logger - DEBUG - Changed amount to value Krypton
+2024-06-11 22:04:27,172 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:27,175 - logger - DEBUG - Changed amount to value Kryptoni
+2024-06-11 22:04:27,392 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:27,395 - logger - DEBUG - Changed amount to value Kryptonit
+2024-06-11 22:04:27,452 - logger - ERROR - Attempted invalid input value for part amount: -246564944
+2024-06-11 22:04:27,455 - logger - DEBUG - Changed amount to value Kryptonite
+2024-06-11 22:04:33,371 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:04:33,505 - logger - DEBUG - Updated item id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62: set amount to 6
+2024-06-11 22:04:33,508 - logger - DEBUG - Changed amount to value 6
+2024-06-11 22:04:35,168 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:04:35,743 - logger - DEBUG - Updated item id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62: set amount to 2
+2024-06-11 22:04:35,746 - logger - DEBUG - Changed amount to value 2
+2024-06-11 22:04:35,755 - logger - DEBUG - Changed amount to value 21
+2024-06-11 22:04:38,774 - logger - DEBUG - Updated item id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62: set amount to 2
+2024-06-11 22:04:38,777 - logger - DEBUG - Changed amount to value 2
+2024-06-11 22:04:39,043 - logger - DEBUG - Updated item id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62: set amount to 20
+2024-06-11 22:04:39,046 - logger - DEBUG - Changed amount to value 20
+2024-06-11 22:04:40,916 - logger - DEBUG - Updated item id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62: set amount to 2
+2024-06-11 22:04:40,919 - logger - DEBUG - Changed amount to value 2
+2024-06-11 22:04:41,042 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:04:41,220 - logger - DEBUG - Updated item id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62: set amount to 1
+2024-06-11 22:04:41,223 - logger - DEBUG - Changed amount to value 1
+2024-06-11 22:04:41,787 - logger - DEBUG - Updated item id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62: set amount to 19
+2024-06-11 22:04:41,790 - logger - DEBUG - Changed amount to value 19
+2024-06-11 22:04:43,441 - logger - DEBUG - Updated item id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62: set amount to 1
+2024-06-11 22:04:43,444 - logger - DEBUG - Changed amount to value 1
+2024-06-11 22:04:43,518 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:04:43,681 - logger - DEBUG - Updated item id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62: set amount to 2
+2024-06-11 22:04:43,684 - logger - DEBUG - Changed amount to value 2
+2024-06-11 22:04:43,778 - logger - DEBUG - Changed amount to value 22
+2024-06-11 22:04:48,895 - logger - DEBUG - Updated item id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62: set amount to 2
+2024-06-11 22:04:48,897 - logger - DEBUG - Changed amount to value 2
+2024-06-11 22:04:49,030 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:04:49,428 - logger - DEBUG - Updated item id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62: set amount to 1
+2024-06-11 22:04:49,431 - logger - DEBUG - Changed amount to value 1
+2024-06-11 22:04:49,514 - logger - DEBUG - Updated item id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62: set amount to 19
+2024-06-11 22:04:49,517 - logger - DEBUG - Changed amount to value 19
+2024-06-11 22:04:50,246 - logger - DEBUG - Updated item id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62: set amount to 1
+2024-06-11 22:04:50,249 - logger - DEBUG - Changed amount to value 1
+2024-06-11 22:04:50,354 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:04:50,565 - logger - DEBUG - Updated item id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62: set amount to 5
+2024-06-11 22:04:50,567 - logger - DEBUG - Changed amount to value 5
+2024-06-11 22:05:01,536 - logger - DEBUG - Item with id e9aacda0-1e36-4c38-8ed8-2e2f897d8d62 removed successfully.
+2024-06-11 22:05:06,123 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-11 22:05:06,333 - logger - DEBUG - Parsing STL file...
+2024-06-11 22:05:06,333 - logger - DEBUG - Finding flat axis...
+2024-06-11 22:05:06,335 - logger - DEBUG - Calculating thickness...
+2024-06-11 22:05:06,335 - logger - DEBUG - Flattening mesh...
+2024-06-11 22:05:06,335 - logger - DEBUG - Finding outer edges...
+2024-06-11 22:05:06,353 - logger - DEBUG - Finding contours...
+2024-06-11 22:05:06,356 - logger - DEBUG - Finding outermost contour...
+2024-06-11 22:05:06,356 - logger - DEBUG - Smoothing contour...
+2024-06-11 22:05:06,360 - logger - DEBUG - Parsing complete.
+2024-06-11 22:05:06,407 - logger - DEBUG - Item with id b2ed9351-af5e-479f-aa31-0dfef1338dfd added successfully.
+2024-06-11 22:05:06,407 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 22:05:07,018 - logger - DEBUG - Saving preview image...
+2024-06-11 22:05:07,346 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\b2ed9351-af5e-479f-aa31-0dfef1338dfd.png.
+2024-06-11 22:05:07,346 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL successfully
+2024-06-11 22:05:07,362 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-11 22:05:09,448 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:05:09,607 - logger - DEBUG - Updated item id b2ed9351-af5e-479f-aa31-0dfef1338dfd: set amount to 5
+2024-06-11 22:05:09,610 - logger - DEBUG - Changed amount to value 5
+2024-06-11 22:05:11,352 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:11,355 - logger - DEBUG - Changed amount to value K
+2024-06-11 22:05:11,553 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:11,556 - logger - DEBUG - Changed amount to value Kr
+2024-06-11 22:05:11,708 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:11,709 - logger - DEBUG - Changed amount to value Kry
+2024-06-11 22:05:11,803 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:11,805 - logger - DEBUG - Changed amount to value Kryp
+2024-06-11 22:05:11,959 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:11,962 - logger - DEBUG - Changed amount to value Krypt
+2024-06-11 22:05:12,040 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:12,042 - logger - DEBUG - Changed amount to value Krypto
+2024-06-11 22:05:12,088 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:12,090 - logger - DEBUG - Changed amount to value Krypton
+2024-06-11 22:05:12,183 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:12,186 - logger - DEBUG - Changed amount to value Kryptoni
+2024-06-11 22:05:12,388 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:12,391 - logger - DEBUG - Changed amount to value Kryptonit
+2024-06-11 22:05:12,430 - logger - ERROR - Attempted invalid input value for part amount: -239451280
+2024-06-11 22:05:12,432 - logger - DEBUG - Changed amount to value Kryptonite
+2024-06-11 22:05:14,410 - logger - DEBUG - Database session closed.
+2024-06-11 22:05:14,412 - logger - DEBUG - Database teardown complete.
+2024-06-11 22:05:14,412 - logger - DEBUG - Database connection disposed.
+2024-06-11 22:47:34,654 - logger - DEBUG - Database setup complete and session started.
+2024-06-11 22:47:34,797 - logger - DEBUG - Initialized home view.
+2024-06-11 22:47:34,854 - logger - DEBUG - Successfully cleared out data table.
+2024-06-11 22:47:34,918 - logger - DEBUG - Successfully initialized PartView.
+2024-06-11 22:47:34,930 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-11 22:47:34,958 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-11 22:47:37,297 - logger - DEBUG - Set app view to index 0
+2024-06-11 22:47:37,305 - logger - DEBUG - Main window initialized successfully.
+2024-06-11 22:47:44,619 - logger - DEBUG - Set app view to index 1
+2024-06-11 22:47:48,171 - logger - DEBUG - Set app view to index 2
+2024-06-11 22:47:49,347 - logger - DEBUG - Set app view to index 3
+2024-06-11 22:47:51,435 - logger - DEBUG - Set app view to index 2
+2024-06-11 22:47:51,930 - logger - DEBUG - Set app view to index 1
+2024-06-11 22:47:53,235 - logger - DEBUG - Set app view to index 0
+2024-06-11 22:47:55,507 - logger - DEBUG - Set app view to index 1
+2024-06-11 22:48:05,781 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-11 22:48:05,939 - logger - DEBUG - Parsing STL file...
+2024-06-11 22:48:05,939 - logger - DEBUG - Finding flat axis...
+2024-06-11 22:48:05,941 - logger - DEBUG - Calculating thickness...
+2024-06-11 22:48:05,941 - logger - DEBUG - Flattening mesh...
+2024-06-11 22:48:05,941 - logger - DEBUG - Finding outer edges...
+2024-06-11 22:48:05,956 - logger - DEBUG - Finding contours...
+2024-06-11 22:48:05,959 - logger - DEBUG - Finding outermost contour...
+2024-06-11 22:48:05,960 - logger - DEBUG - Smoothing contour...
+2024-06-11 22:48:05,963 - logger - DEBUG - Parsing complete.
+2024-06-11 22:48:05,974 - logger - DEBUG - Item with id 214d6050-17ce-43e4-bc20-f12d8b84dbd4 added successfully.
+2024-06-11 22:48:05,974 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 22:48:06,539 - logger - DEBUG - Saving preview image...
+2024-06-11 22:48:06,975 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\214d6050-17ce-43e4-bc20-f12d8b84dbd4.png.
+2024-06-11 22:48:06,975 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL successfully
+2024-06-11 22:48:06,999 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-11 22:48:32,073 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:48:32,181 - logger - DEBUG - Updated item id 214d6050-17ce-43e4-bc20-f12d8b84dbd4: set amount to 5
+2024-06-11 22:48:32,184 - logger - DEBUG - Changed amount to value 5
+2024-06-11 22:48:32,729 - logger - WARNING - Attempted to change amount to invalid string: 
+2024-06-11 22:48:32,823 - logger - DEBUG - Updated item id 214d6050-17ce-43e4-bc20-f12d8b84dbd4: set amount to 6
+2024-06-11 22:48:32,826 - logger - DEBUG - Changed amount to value 6
+2024-06-11 22:49:03,059 - logger - DEBUG - Set app view to index 0
+2024-06-11 22:49:07,637 - logger - DEBUG - Database session closed.
+2024-06-11 22:49:07,638 - logger - DEBUG - Database teardown complete.
+2024-06-11 22:49:07,638 - logger - DEBUG - Database connection disposed.
+2024-06-11 22:56:58,825 - logger - DEBUG - Database setup complete and session started.
+2024-06-11 22:56:58,958 - logger - DEBUG - Initialized home view.
+2024-06-11 22:56:59,016 - logger - DEBUG - Successfully cleared out data table.
+2024-06-11 22:56:59,094 - logger - DEBUG - Successfully initialized PartView.
+2024-06-11 22:56:59,105 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-11 22:56:59,131 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-11 22:57:00,371 - logger - DEBUG - Set app view to index 0
+2024-06-11 22:57:00,376 - logger - DEBUG - Main window initialized successfully.
+2024-06-11 22:57:23,802 - logger - DEBUG - Database session closed.
+2024-06-11 22:57:23,804 - logger - DEBUG - Database teardown complete.
+2024-06-11 22:57:23,804 - logger - DEBUG - Database connection disposed.
+2024-06-11 22:59:58,838 - logger - DEBUG - Database setup complete and session started.
+2024-06-11 22:59:58,941 - logger - DEBUG - Initialized home view.
+2024-06-11 22:59:58,997 - logger - DEBUG - Successfully cleared out data table.
+2024-06-11 22:59:59,078 - logger - DEBUG - Successfully initialized PartView.
+2024-06-11 22:59:59,090 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-11 22:59:59,114 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-11 22:59:59,187 - logger - DEBUG - Set app view to index 0
+2024-06-11 22:59:59,195 - logger - DEBUG - Main window initialized successfully.
+2024-06-11 23:00:02,956 - logger - DEBUG - Set app view to index 1
+2024-06-11 23:00:05,441 - logger - DEBUG - Set app view to index 2
+2024-06-11 23:00:06,468 - logger - DEBUG - Set app view to index 3
+2024-06-11 23:00:08,051 - logger - DEBUG - Set app view to index 0
+2024-06-11 23:00:18,299 - logger - DEBUG - Set app view to index 1
+2024-06-11 23:00:25,865 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-11 23:00:26,030 - logger - DEBUG - Parsing STL file...
+2024-06-11 23:00:26,031 - logger - DEBUG - Finding flat axis...
+2024-06-11 23:00:26,032 - logger - DEBUG - Calculating thickness...
+2024-06-11 23:00:26,032 - logger - DEBUG - Flattening mesh...
+2024-06-11 23:00:26,032 - logger - DEBUG - Finding outer edges...
+2024-06-11 23:00:26,048 - logger - DEBUG - Finding contours...
+2024-06-11 23:00:26,051 - logger - DEBUG - Finding outermost contour...
+2024-06-11 23:00:26,051 - logger - DEBUG - Smoothing contour...
+2024-06-11 23:00:26,055 - logger - DEBUG - Parsing complete.
+2024-06-11 23:00:26,108 - logger - DEBUG - Item with id dd7073cf-cf85-41b7-88c9-0a7d647e90e0 added successfully.
+2024-06-11 23:00:26,108 - logger - DEBUG - Creating plot for preview image...
+2024-06-11 23:00:26,655 - logger - DEBUG - Saving preview image...
+2024-06-11 23:00:27,014 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\dd7073cf-cf85-41b7-88c9-0a7d647e90e0.png.
+2024-06-11 23:00:27,014 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL successfully
+2024-06-11 23:00:27,031 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-11 23:00:36,611 - logger - DEBUG - Database session closed.
+2024-06-11 23:00:36,613 - logger - DEBUG - Database teardown complete.
+2024-06-11 23:00:36,613 - logger - DEBUG - Database connection disposed.
+2024-06-12 09:24:46,703 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: random invalid path
+2024-06-12 09:24:46,713 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:24:46,740 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-12 09:24:46,741 - logger - ERROR - Threshold value must be in range 0-255
+2024-06-12 09:24:46,742 - logger - ERROR - Threshold must be integer value
+2024-06-12 09:24:47,336 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-12 09:24:47,918 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src path: nonexistent/path/image.jpg
+2024-06-12 09:24:47,918 - logger - ERROR - Attempted to initialize BinaryFilter with invalid src filetype: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:24:48,197 - logger - ERROR - Attempted to create controller with invalid preview image directory: invalid directory
+2024-06-12 09:24:48,227 - logger - DEBUG - Item with id 1 added successfully.
+2024-06-12 09:24:48,243 - logger - ERROR - Encountered exception while adding item with id unknown: Class 'builtins.str' is not mapped
+2024-06-12 09:24:48,270 - logger - DEBUG - Item with id 1 removed successfully.
+2024-06-12 09:24:48,298 - logger - DEBUG - Item with id 1 removed successfully.
+2024-06-12 09:24:48,320 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-12 09:24:48,346 - logger - DEBUG - Item with id 1 removed successfully.
+2024-06-12 09:24:48,366 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-12 09:24:48,385 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 09:24:48,411 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 09:24:48,426 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 09:24:48,449 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 09:24:48,514 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-12 09:24:48,532 - logger - ERROR - Attribute invalid attr does not exist on item with id 1
+2024-06-12 09:24:48,604 - logger - DEBUG - Updated item id 1: set description to Updated description
+2024-06-12 09:24:48,626 - logger - ERROR - New value for item parameter <class 'int'> does not match intended type <class 'str'>
+2024-06-12 09:24:48,647 - logger - ERROR - Item with id invalid id does not exist.
+2024-06-12 09:24:48,670 - logger - ERROR - Item with id None does not exist.
+2024-06-12 09:24:48,700 - logger - ERROR - Attempted to get preview image path of empty index.
+2024-06-12 09:24:48,739 - logger - ERROR - Indicated image editing directory path does not exist: invalid directory
+2024-06-12 09:24:48,762 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-12 09:24:48,765 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-12 09:24:48,765 - logger - ERROR - Attempted to use image editor with plate of invalid dimensions.
+2024-06-12 09:24:48,808 - logger - ERROR - Attempted to import raw image in wrong ImageEditingController state.
+2024-06-12 09:24:48,830 - logger - ERROR - Indicated raw image filepath does not exist: random invalid path
+2024-06-12 09:24:48,856 - logger - ERROR - Image file is of invalid format: .STL
+2024-06-12 09:24:49,589 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmp6u9l9uot\raw.png
+2024-06-12 09:24:49,590 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-12 09:24:49,712 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: -100, -100
+2024-06-12 09:24:49,712 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 0
+2024-06-12 09:24:50,479 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpl7hvbnud\raw.png
+2024-06-12 09:24:50,482 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-12 09:24:50,482 - logger - ERROR - Attempted to get binary image in wrong state.
+2024-06-12 09:24:51,111 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpxb85m8v2\raw.png
+2024-06-12 09:24:51,112 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-12 09:24:51,113 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-12 09:24:51,113 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-12 09:24:51,114 - logger - ERROR - Attempted to generate binary image with invalid threshold value.
+2024-06-12 09:24:51,718 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpcunq49tg\raw.png
+2024-06-12 09:24:51,719 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-12 09:24:51,941 - logger - DEBUG - Binary image saved successfully.
+2024-06-12 09:24:52,572 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpyar1t9ka\raw.png
+2024-06-12 09:24:52,574 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-12 09:24:52,775 - logger - DEBUG - Binary image saved successfully.
+2024-06-12 09:24:52,776 - logger - ERROR - Attempted to extract features in wrong state.
+2024-06-12 09:24:53,375 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpxr83ya2e\raw.png
+2024-06-12 09:24:53,377 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-12 09:24:53,578 - logger - DEBUG - Binary image saved successfully.
+2024-06-12 09:24:53,751 - logger - DEBUG - Image features extracted successfully.
+2024-06-12 09:24:54,477 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmp3c_gw_p1\raw.png
+2024-06-12 09:24:54,479 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-12 09:24:54,683 - logger - DEBUG - Binary image saved successfully.
+2024-06-12 09:24:54,921 - logger - DEBUG - Image features extracted successfully.
+2024-06-12 09:24:54,921 - logger - ERROR - Attempted to save image features in wrong state.
+2024-06-12 09:24:55,586 - logger - DEBUG - Successfully saved resized image from C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg to C:\Users\CACOCO~1\AppData\Local\Temp\tmpelrwyfjl\raw.png
+2024-06-12 09:24:55,588 - logger - DEBUG - Raw image saved successfully: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-12 09:24:55,803 - logger - DEBUG - Binary image saved successfully.
+2024-06-12 09:24:55,969 - logger - DEBUG - Image features extracted successfully.
+2024-06-12 09:24:56,107 - logger - DEBUG - Image features saved successfully to C:\Users\CACOCO~1\AppData\Local\Temp\tmpelrwyfjl\features.png
+2024-06-12 09:24:56,125 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 0, 5
+2024-06-12 09:24:56,125 - logger - ERROR - Attempted to initialize Size class with invalid dimensions: 5, 0
+2024-06-12 09:24:56,200 - logger - ERROR - STL file does not exist: invalid path
+2024-06-12 09:24:56,229 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL
+2024-06-12 09:24:56,254 - logger - DEBUG - Parsing STL file...
+2024-06-12 09:24:56,254 - logger - DEBUG - Finding flat axis...
+2024-06-12 09:24:56,258 - logger - DEBUG - Calculating thickness...
+2024-06-12 09:24:56,258 - logger - DEBUG - Flattening mesh...
+2024-06-12 09:24:56,260 - logger - DEBUG - Finding outer edges...
+2024-06-12 09:24:56,260 - logger - DEBUG - Finding contours...
+2024-06-12 09:24:56,260 - logger - DEBUG - Finding outermost contour...
+2024-06-12 09:24:56,261 - logger - DEBUG - Smoothing contour...
+2024-06-12 09:24:56,261 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\invalid.STL: 'NoneType' object is not subscriptable
+2024-06-12 09:24:56,283 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg
+2024-06-12 09:24:56,284 - logger - ERROR - STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-12 09:24:56,285 - logger - ERROR - Encountered error while attempting to import file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg: STL file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\images\image5.jpeg is invalid
+2024-06-12 09:24:56,309 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:24:56,504 - logger - DEBUG - Parsing STL file...
+2024-06-12 09:24:56,505 - logger - DEBUG - Finding flat axis...
+2024-06-12 09:24:56,506 - logger - DEBUG - Calculating thickness...
+2024-06-12 09:24:56,507 - logger - DEBUG - Flattening mesh...
+2024-06-12 09:24:56,507 - logger - DEBUG - Finding outer edges...
+2024-06-12 09:24:56,530 - logger - DEBUG - Finding contours...
+2024-06-12 09:24:56,534 - logger - DEBUG - Finding outermost contour...
+2024-06-12 09:24:56,571 - logger - DEBUG - Smoothing contour...
+2024-06-12 09:24:56,577 - logger - DEBUG - Parsing complete.
+2024-06-12 09:24:56,584 - logger - DEBUG - Item with id 428e7056-6d30-4dcd-93b3-08974390bfa3 added successfully.
+2024-06-12 09:24:56,584 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 09:24:57,962 - logger - DEBUG - Saving preview image...
+2024-06-12 09:24:58,790 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpesuwk4ij\428e7056-6d30-4dcd-93b3-08974390bfa3.png.
+2024-06-12 09:24:58,791 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-12 09:24:58,819 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:24:59,035 - logger - DEBUG - Parsing STL file...
+2024-06-12 09:24:59,035 - logger - DEBUG - Finding flat axis...
+2024-06-12 09:24:59,037 - logger - DEBUG - Calculating thickness...
+2024-06-12 09:24:59,038 - logger - DEBUG - Flattening mesh...
+2024-06-12 09:24:59,038 - logger - DEBUG - Finding outer edges...
+2024-06-12 09:24:59,060 - logger - DEBUG - Finding contours...
+2024-06-12 09:24:59,064 - logger - DEBUG - Finding outermost contour...
+2024-06-12 09:24:59,065 - logger - DEBUG - Smoothing contour...
+2024-06-12 09:24:59,069 - logger - DEBUG - Parsing complete.
+2024-06-12 09:24:59,072 - logger - DEBUG - Item with id 165679f8-9af5-4966-9a63-44736112c3e0 added successfully.
+2024-06-12 09:24:59,073 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 09:24:59,593 - logger - DEBUG - Saving preview image...
+2024-06-12 09:25:00,048 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpl4n8e4_8\165679f8-9af5-4966-9a63-44736112c3e0.png.
+2024-06-12 09:25:00,049 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-12 09:25:00,051 - logger - DEBUG - Attempted to add already existing STL file: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:25:00,083 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:25:00,282 - logger - DEBUG - Parsing STL file...
+2024-06-12 09:25:00,282 - logger - DEBUG - Finding flat axis...
+2024-06-12 09:25:00,284 - logger - DEBUG - Calculating thickness...
+2024-06-12 09:25:00,284 - logger - DEBUG - Flattening mesh...
+2024-06-12 09:25:00,285 - logger - DEBUG - Finding outer edges...
+2024-06-12 09:25:00,308 - logger - DEBUG - Finding contours...
+2024-06-12 09:25:00,312 - logger - DEBUG - Finding outermost contour...
+2024-06-12 09:25:00,313 - logger - DEBUG - Smoothing contour...
+2024-06-12 09:25:00,318 - logger - DEBUG - Parsing complete.
+2024-06-12 09:25:00,321 - logger - DEBUG - Item with id c0b494e2-9d45-4c77-8f53-38f971cf5994 added successfully.
+2024-06-12 09:25:00,321 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 09:25:01,060 - logger - DEBUG - Saving preview image...
+2024-06-12 09:25:01,557 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmputa6nh_w\c0b494e2-9d45-4c77-8f53-38f971cf5994.png.
+2024-06-12 09:25:01,557 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-12 09:25:01,560 - logger - DEBUG - Attempted to add already existing STL file: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:25:01,586 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:25:01,804 - logger - DEBUG - Parsing STL file...
+2024-06-12 09:25:01,804 - logger - DEBUG - Finding flat axis...
+2024-06-12 09:25:01,806 - logger - DEBUG - Calculating thickness...
+2024-06-12 09:25:01,806 - logger - DEBUG - Flattening mesh...
+2024-06-12 09:25:01,807 - logger - DEBUG - Finding outer edges...
+2024-06-12 09:25:01,829 - logger - DEBUG - Finding contours...
+2024-06-12 09:25:01,833 - logger - DEBUG - Finding outermost contour...
+2024-06-12 09:25:01,834 - logger - DEBUG - Smoothing contour...
+2024-06-12 09:25:01,839 - logger - DEBUG - Parsing complete.
+2024-06-12 09:25:01,842 - logger - DEBUG - Item with id c62e67d6-d81e-4c28-ba11-62b02aa95128 added successfully.
+2024-06-12 09:25:01,842 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 09:25:02,326 - logger - DEBUG - Saving preview image...
+2024-06-12 09:25:02,800 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmp8lqluv28\c62e67d6-d81e-4c28-ba11-62b02aa95128.png.
+2024-06-12 09:25:02,801 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-12 09:25:02,828 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:25:03,041 - logger - DEBUG - Parsing STL file...
+2024-06-12 09:25:03,041 - logger - DEBUG - Finding flat axis...
+2024-06-12 09:25:03,043 - logger - DEBUG - Calculating thickness...
+2024-06-12 09:25:03,044 - logger - DEBUG - Flattening mesh...
+2024-06-12 09:25:03,044 - logger - DEBUG - Finding outer edges...
+2024-06-12 09:25:03,071 - logger - DEBUG - Finding contours...
+2024-06-12 09:25:03,076 - logger - DEBUG - Finding outermost contour...
+2024-06-12 09:25:03,077 - logger - DEBUG - Smoothing contour...
+2024-06-12 09:25:03,083 - logger - DEBUG - Parsing complete.
+2024-06-12 09:25:03,086 - logger - DEBUG - Item with id 49a50faa-5ac9-4c20-a379-563f014fb708 added successfully.
+2024-06-12 09:25:03,087 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 09:25:03,743 - logger - DEBUG - Saving preview image...
+2024-06-12 09:25:04,216 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpxgzj_5uy\49a50faa-5ac9-4c20-a379-563f014fb708.png.
+2024-06-12 09:25:04,216 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-12 09:25:04,236 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:25:04,463 - logger - DEBUG - Parsing STL file...
+2024-06-12 09:25:04,464 - logger - DEBUG - Finding flat axis...
+2024-06-12 09:25:04,465 - logger - DEBUG - Calculating thickness...
+2024-06-12 09:25:04,466 - logger - DEBUG - Flattening mesh...
+2024-06-12 09:25:04,466 - logger - DEBUG - Finding outer edges...
+2024-06-12 09:25:04,489 - logger - DEBUG - Finding contours...
+2024-06-12 09:25:04,492 - logger - DEBUG - Finding outermost contour...
+2024-06-12 09:25:04,493 - logger - DEBUG - Smoothing contour...
+2024-06-12 09:25:04,498 - logger - DEBUG - Parsing complete.
+2024-06-12 09:25:04,501 - logger - DEBUG - Item with id 6bb508e8-bd20-4383-821d-268c727a6a50 added successfully.
+2024-06-12 09:25:04,501 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 09:25:05,154 - logger - DEBUG - Saving preview image...
+2024-06-12 09:25:05,659 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmp0u9at0dz\6bb508e8-bd20-4383-821d-268c727a6a50.png.
+2024-06-12 09:25:05,659 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-12 09:25:05,681 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:25:05,924 - logger - DEBUG - Parsing STL file...
+2024-06-12 09:25:05,924 - logger - DEBUG - Finding flat axis...
+2024-06-12 09:25:05,926 - logger - DEBUG - Calculating thickness...
+2024-06-12 09:25:05,927 - logger - DEBUG - Flattening mesh...
+2024-06-12 09:25:05,927 - logger - DEBUG - Finding outer edges...
+2024-06-12 09:25:05,952 - logger - DEBUG - Finding contours...
+2024-06-12 09:25:05,956 - logger - DEBUG - Finding outermost contour...
+2024-06-12 09:25:05,956 - logger - DEBUG - Smoothing contour...
+2024-06-12 09:25:05,961 - logger - DEBUG - Parsing complete.
+2024-06-12 09:25:05,964 - logger - DEBUG - Item with id f9e15d46-fe98-44e1-9de6-9ae5380cb8b4 added successfully.
+2024-06-12 09:25:05,965 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 09:25:06,660 - logger - DEBUG - Saving preview image...
+2024-06-12 09:25:07,148 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpsj_nnm8v\f9e15d46-fe98-44e1-9de6-9ae5380cb8b4.png.
+2024-06-12 09:25:07,148 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-12 09:25:07,172 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:25:07,370 - logger - DEBUG - Parsing STL file...
+2024-06-12 09:25:07,370 - logger - DEBUG - Finding flat axis...
+2024-06-12 09:25:07,371 - logger - DEBUG - Calculating thickness...
+2024-06-12 09:25:07,372 - logger - DEBUG - Flattening mesh...
+2024-06-12 09:25:07,372 - logger - DEBUG - Finding outer edges...
+2024-06-12 09:25:07,394 - logger - DEBUG - Finding contours...
+2024-06-12 09:25:07,398 - logger - DEBUG - Finding outermost contour...
+2024-06-12 09:25:07,399 - logger - DEBUG - Smoothing contour...
+2024-06-12 09:25:07,403 - logger - DEBUG - Parsing complete.
+2024-06-12 09:25:07,406 - logger - DEBUG - Item with id 58319a53-6e6c-4d05-a246-186eff4462b2 added successfully.
+2024-06-12 09:25:07,407 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 09:25:07,955 - logger - DEBUG - Saving preview image...
+2024-06-12 09:25:08,446 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmptao7grej\58319a53-6e6c-4d05-a246-186eff4462b2.png.
+2024-06-12 09:25:08,447 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-12 09:25:08,472 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:25:08,692 - logger - DEBUG - Parsing STL file...
+2024-06-12 09:25:08,692 - logger - DEBUG - Finding flat axis...
+2024-06-12 09:25:08,694 - logger - DEBUG - Calculating thickness...
+2024-06-12 09:25:08,695 - logger - DEBUG - Flattening mesh...
+2024-06-12 09:25:08,695 - logger - DEBUG - Finding outer edges...
+2024-06-12 09:25:08,716 - logger - DEBUG - Finding contours...
+2024-06-12 09:25:08,720 - logger - DEBUG - Finding outermost contour...
+2024-06-12 09:25:08,721 - logger - DEBUG - Smoothing contour...
+2024-06-12 09:25:08,725 - logger - DEBUG - Parsing complete.
+2024-06-12 09:25:08,728 - logger - DEBUG - Item with id 8fd2b65d-9f03-4ace-9825-04f2e3097e5b added successfully.
+2024-06-12 09:25:08,729 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 09:25:09,326 - logger - DEBUG - Saving preview image...
+2024-06-12 09:25:09,834 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmportt3u0w\8fd2b65d-9f03-4ace-9825-04f2e3097e5b.png.
+2024-06-12 09:25:09,834 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-12 09:25:09,839 - logger - DEBUG - Updated item id 8fd2b65d-9f03-4ace-9825-04f2e3097e5b: set material to new_material
+2024-06-12 09:25:09,863 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:25:10,079 - logger - DEBUG - Parsing STL file...
+2024-06-12 09:25:10,079 - logger - DEBUG - Finding flat axis...
+2024-06-12 09:25:10,081 - logger - DEBUG - Calculating thickness...
+2024-06-12 09:25:10,081 - logger - DEBUG - Flattening mesh...
+2024-06-12 09:25:10,082 - logger - DEBUG - Finding outer edges...
+2024-06-12 09:25:10,105 - logger - DEBUG - Finding contours...
+2024-06-12 09:25:10,110 - logger - DEBUG - Finding outermost contour...
+2024-06-12 09:25:10,111 - logger - DEBUG - Smoothing contour...
+2024-06-12 09:25:10,118 - logger - DEBUG - Parsing complete.
+2024-06-12 09:25:10,122 - logger - DEBUG - Item with id 707d703b-821b-40b1-bde5-749e97ff88e4 added successfully.
+2024-06-12 09:25:10,123 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 09:25:10,951 - logger - DEBUG - Saving preview image...
+2024-06-12 09:25:11,407 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpuqf176nb\707d703b-821b-40b1-bde5-749e97ff88e4.png.
+2024-06-12 09:25:11,407 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-12 09:25:11,431 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:25:11,621 - logger - DEBUG - Parsing STL file...
+2024-06-12 09:25:11,621 - logger - DEBUG - Finding flat axis...
+2024-06-12 09:25:11,623 - logger - DEBUG - Calculating thickness...
+2024-06-12 09:25:11,624 - logger - DEBUG - Flattening mesh...
+2024-06-12 09:25:11,624 - logger - DEBUG - Finding outer edges...
+2024-06-12 09:25:11,645 - logger - DEBUG - Finding contours...
+2024-06-12 09:25:11,649 - logger - DEBUG - Finding outermost contour...
+2024-06-12 09:25:11,650 - logger - DEBUG - Smoothing contour...
+2024-06-12 09:25:11,655 - logger - DEBUG - Parsing complete.
+2024-06-12 09:25:11,658 - logger - DEBUG - Item with id 41867c19-62c7-4838-888f-edcf3eec7e7f added successfully.
+2024-06-12 09:25:11,658 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 09:25:12,174 - logger - DEBUG - Saving preview image...
+2024-06-12 09:25:12,618 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpnwe3is3a\41867c19-62c7-4838-888f-edcf3eec7e7f.png.
+2024-06-12 09:25:12,618 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-12 09:25:12,624 - logger - DEBUG - Updated item id 41867c19-62c7-4838-888f-edcf3eec7e7f: set amount to 2
+2024-06-12 09:25:12,640 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:25:12,840 - logger - DEBUG - Parsing STL file...
+2024-06-12 09:25:12,840 - logger - DEBUG - Finding flat axis...
+2024-06-12 09:25:12,842 - logger - DEBUG - Calculating thickness...
+2024-06-12 09:25:12,842 - logger - DEBUG - Flattening mesh...
+2024-06-12 09:25:12,843 - logger - DEBUG - Finding outer edges...
+2024-06-12 09:25:12,866 - logger - DEBUG - Finding contours...
+2024-06-12 09:25:12,870 - logger - DEBUG - Finding outermost contour...
+2024-06-12 09:25:12,870 - logger - DEBUG - Smoothing contour...
+2024-06-12 09:25:12,875 - logger - DEBUG - Parsing complete.
+2024-06-12 09:25:12,878 - logger - DEBUG - Item with id 9b90f14b-b0e9-4a41-a8fa-259515feb493 added successfully.
+2024-06-12 09:25:12,878 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 09:25:13,409 - logger - DEBUG - Saving preview image...
+2024-06-12 09:25:13,863 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpyqjeq2gr\9b90f14b-b0e9-4a41-a8fa-259515feb493.png.
+2024-06-12 09:25:13,864 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-12 09:25:13,864 - logger - ERROR - Attempted invalid input value for part amount: 0
+2024-06-12 09:25:13,865 - logger - ERROR - Attempted invalid input value for part amount: 5.13
+2024-06-12 09:25:13,865 - logger - ERROR - Attempted invalid input value for part amount: -2
+2024-06-12 09:25:13,886 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:25:14,086 - logger - DEBUG - Parsing STL file...
+2024-06-12 09:25:14,086 - logger - DEBUG - Finding flat axis...
+2024-06-12 09:25:14,088 - logger - DEBUG - Calculating thickness...
+2024-06-12 09:25:14,088 - logger - DEBUG - Flattening mesh...
+2024-06-12 09:25:14,089 - logger - DEBUG - Finding outer edges...
+2024-06-12 09:25:14,111 - logger - DEBUG - Finding contours...
+2024-06-12 09:25:14,115 - logger - DEBUG - Finding outermost contour...
+2024-06-12 09:25:14,116 - logger - DEBUG - Smoothing contour...
+2024-06-12 09:25:14,122 - logger - DEBUG - Parsing complete.
+2024-06-12 09:25:14,126 - logger - DEBUG - Item with id 3da9c1ac-23d0-46df-97b5-287a2c5069a8 added successfully.
+2024-06-12 09:25:14,126 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 09:25:14,946 - logger - DEBUG - Saving preview image...
+2024-06-12 09:25:15,430 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmp8iovruyh\3da9c1ac-23d0-46df-97b5-287a2c5069a8.png.
+2024-06-12 09:25:15,430 - logger - DEBUG - Imported file C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL successfully
+2024-06-12 09:25:15,977 - logger - DEBUG - Preview image for plate with id e4f1574b-8d7f-4325-b66e-4f3ab49f44c1 saved successfully.
+2024-06-12 09:25:16,326 - logger - DEBUG - Preview image for plate with id 6bcdffec-1a5c-4925-9c73-62e3d62d53d5 saved successfully.
+2024-06-12 09:25:16,680 - logger - DEBUG - Preview image for plate with id ca06de6e-9095-4368-8412-a30fb5d6498e saved successfully.
+2024-06-12 09:25:16,955 - logger - DEBUG - Preview image for plate with id 2bc257c9-2d9d-45cb-9637-e66406f7677f saved successfully.
+2024-06-12 09:25:17,211 - logger - DEBUG - Preview image for plate with id 8b790bd9-c212-4100-8620-39575c5b0347 saved successfully.
+2024-06-12 09:25:17,509 - logger - DEBUG - Preview image for plate with id f0fbceb7-48bb-43f5-a205-84198e679fa0 saved successfully.
+2024-06-12 09:25:17,786 - logger - DEBUG - Preview image for plate with id c6008a12-35c9-4a8e-b25d-67170db50e56 saved successfully.
+2024-06-12 09:25:18,022 - logger - DEBUG - Preview image for plate with id f083d1e9-7fd8-4c4b-a760-a6d0cd18b0dc saved successfully.
+2024-06-12 09:25:18,261 - logger - DEBUG - Preview image for plate with id fee07bde-b754-42fb-a2a7-0cdfd6b81e5c saved successfully.
+2024-06-12 09:25:18,512 - logger - DEBUG - Preview image for plate with id f8cced25-c779-4245-be53-6956aedb9ee8 saved successfully.
+2024-06-12 09:25:18,741 - logger - DEBUG - Preview image for plate with id 33b4a121-8be8-422b-ba7d-d45cc10df9dd saved successfully.
+2024-06-12 09:25:18,987 - logger - DEBUG - Preview image for plate with id a989ebfa-3694-49bb-beed-68cbab194679 saved successfully.
+2024-06-12 09:25:19,210 - logger - DEBUG - Preview image for plate with id 99474934-3d38-4d6a-974d-eb351626c2e8 saved successfully.
+2024-06-12 09:25:19,477 - logger - DEBUG - Preview image for plate with id 35f1cbc7-32c9-4b74-b9ee-a439a5323c2f saved successfully.
+2024-06-12 09:25:19,779 - logger - DEBUG - Preview image for plate with id d2f66526-0111-4220-a962-34b291a9695c saved successfully.
+2024-06-12 09:25:20,069 - logger - DEBUG - Preview image for plate with id effd1e8b-5f14-4c35-8fc4-7f31a0222852 saved successfully.
+2024-06-12 09:25:20,333 - logger - DEBUG - Preview image for plate with id 3b94c66e-5030-4293-91aa-d030065180c8 saved successfully.
+2024-06-12 09:25:20,584 - logger - DEBUG - Preview image for plate with id 81e8fd5a-c72a-453a-86c8-c9aa61e3d878 saved successfully.
+2024-06-12 09:25:20,839 - logger - DEBUG - Preview image for plate with id f205adfc-6c03-4af5-8166-f21db2133e2c saved successfully.
+2024-06-12 09:25:21,099 - logger - DEBUG - Preview image for plate with id 70d596dc-d405-4461-a53f-47a02242f0ea saved successfully.
+2024-06-12 09:25:21,336 - logger - DEBUG - Preview image for plate with id a70ff180-631d-4bda-bf08-050575509578 saved successfully.
+2024-06-12 09:25:21,686 - logger - DEBUG - Preview image for plate with id ad954968-ff2b-466a-972f-13f14fbbf44a saved successfully.
+2024-06-12 09:25:21,950 - logger - DEBUG - Preview image for plate with id cc3c4ef1-d40d-41e5-afee-27dadf940f7c saved successfully.
+2024-06-12 09:25:22,213 - logger - DEBUG - Preview image for plate with id 3b9eb1a9-ba35-4d88-9003-027bc2d20138 saved successfully.
+2024-06-12 09:25:22,435 - logger - DEBUG - Preview image for plate with id 81366302-a694-45a3-b4a0-adf3fbcc27c2 saved successfully.
+2024-06-12 09:25:22,696 - logger - DEBUG - Preview image for plate with id 1f1876fc-2e1b-46bb-a0dc-6ccba3315f5d saved successfully.
+2024-06-12 09:25:22,919 - logger - DEBUG - Preview image for plate with id cdda6981-7250-42d9-a15a-7f4068d65d2a saved successfully.
+2024-06-12 09:25:23,158 - logger - DEBUG - Preview image for plate with id 361b9515-3ba1-4a71-b2f3-a26d0eecca65 saved successfully.
+2024-06-12 09:25:23,407 - logger - DEBUG - Preview image for plate with id a78c9299-c835-4e10-8812-72586aff766c saved successfully.
+2024-06-12 09:25:23,642 - logger - DEBUG - Preview image for plate with id b1a6276a-cf0e-4adb-b705-fb64f508ae76 saved successfully.
+2024-06-12 09:25:23,884 - logger - DEBUG - Preview image for plate with id f250170b-81b1-44cd-9d80-1c33ca67eb18 saved successfully.
+2024-06-12 09:25:24,112 - logger - DEBUG - Preview image for plate with id a2caba39-ceae-4791-979e-714abde5f207 saved successfully.
+2024-06-12 09:25:24,329 - logger - DEBUG - Preview image for plate with id 3c3119fb-c9ed-4bd3-994e-fe7a2155fb99 saved successfully.
+2024-06-12 09:25:24,544 - logger - DEBUG - Preview image for plate with id a6c47dcb-28a5-48bf-8247-8bbe8c6362da saved successfully.
+2024-06-12 09:25:24,810 - logger - DEBUG - Preview image for plate with id ec5d4783-25f9-4570-b072-2eaaa2a292f8 saved successfully.
+2024-06-12 09:25:25,075 - logger - DEBUG - Preview image for plate with id 89867b4f-68b5-4556-980f-00c0440063b9 saved successfully.
+2024-06-12 09:25:25,291 - logger - DEBUG - Preview image for plate with id 121fbd0c-8bbf-4a3a-9285-90d3fd74932a saved successfully.
+2024-06-12 09:25:25,510 - logger - DEBUG - Preview image for plate with id 4ab3d23e-e68a-4947-a978-67a6b5553179 saved successfully.
+2024-06-12 09:25:25,769 - logger - DEBUG - Preview image for plate with id a0a02cbb-f6d8-4980-b998-fe14ac8b141d saved successfully.
+2024-06-12 09:25:25,988 - logger - DEBUG - Preview image for plate with id 6415cf27-a98e-47cb-9010-073b1681b0c5 saved successfully.
+2024-06-12 09:25:26,213 - logger - DEBUG - Preview image for plate with id 8b68c3b7-07ec-41ca-aaea-8f267f62763e saved successfully.
+2024-06-12 09:25:26,429 - logger - DEBUG - Preview image for plate with id 585069be-23fc-4760-9663-3eed329fb57a saved successfully.
+2024-06-12 09:25:26,657 - logger - DEBUG - Preview image for plate with id 9e4b0d0f-5986-4ba9-a119-27d524c85295 saved successfully.
+2024-06-12 09:25:26,918 - logger - DEBUG - Preview image for plate with id fc42e312-6f6e-4774-86d6-2502baf7d52f saved successfully.
+2024-06-12 09:25:27,137 - logger - DEBUG - Preview image for plate with id d8f59c98-dffd-4cf5-888e-c791bdb5d51d saved successfully.
+2024-06-12 09:25:27,360 - logger - DEBUG - Preview image for plate with id 90f62f42-8488-43ba-8e34-6a931ba8ad10 saved successfully.
+2024-06-12 09:25:27,577 - logger - DEBUG - Preview image for plate with id bd575b91-450e-4331-804b-09e090337cc9 saved successfully.
+2024-06-12 09:25:27,834 - logger - DEBUG - Preview image for plate with id 28fd8abf-a93a-47e6-bed2-4f28d38dcd6b saved successfully.
+2024-06-12 09:25:28,068 - logger - DEBUG - Preview image for plate with id 0ada9673-dc02-48f6-9955-57552a90b604 saved successfully.
+2024-06-12 09:25:28,163 - logger - DEBUG - Item with id dc773eac-7260-4240-a7d4-7ce077d5ed69 added successfully.
+2024-06-12 09:25:28,440 - logger - DEBUG - Preview image for plate with id dc773eac-7260-4240-a7d4-7ce077d5ed69 saved successfully.
+2024-06-12 09:25:28,444 - logger - DEBUG - Item with id 0b9e8d50-f643-45d8-9563-b2bb28d103ed added successfully.
+2024-06-12 09:25:28,684 - logger - DEBUG - Preview image for plate with id 0b9e8d50-f643-45d8-9563-b2bb28d103ed saved successfully.
+2024-06-12 09:25:28,689 - logger - DEBUG - Item with id 39920bc9-2682-4804-b9f1-37f636a7f9e7 added successfully.
+2024-06-12 09:25:29,024 - logger - DEBUG - Preview image for plate with id 39920bc9-2682-4804-b9f1-37f636a7f9e7 saved successfully.
+2024-06-12 09:25:29,030 - logger - DEBUG - Item with id e329e9e0-31cb-4d1f-b7fb-e180ec567441 added successfully.
+2024-06-12 09:25:29,320 - logger - DEBUG - Preview image for plate with id e329e9e0-31cb-4d1f-b7fb-e180ec567441 saved successfully.
+2024-06-12 09:25:29,325 - logger - DEBUG - Item with id 8a868810-4852-40d9-b7ef-c1dfd442f790 added successfully.
+2024-06-12 09:25:29,601 - logger - DEBUG - Preview image for plate with id 8a868810-4852-40d9-b7ef-c1dfd442f790 saved successfully.
+2024-06-12 09:25:29,608 - logger - DEBUG - Item with id 049b9f13-1173-4811-b547-74b3e6ffb525 added successfully.
+2024-06-12 09:25:29,952 - logger - DEBUG - Preview image for plate with id 049b9f13-1173-4811-b547-74b3e6ffb525 saved successfully.
+2024-06-12 09:25:29,956 - logger - DEBUG - Item with id 3f77e0c4-3520-4daa-9fec-7ffa13da9fbc added successfully.
+2024-06-12 09:25:30,176 - logger - DEBUG - Preview image for plate with id 3f77e0c4-3520-4daa-9fec-7ffa13da9fbc saved successfully.
+2024-06-12 09:25:30,179 - logger - DEBUG - Item with id c6cb5575-4318-49e5-93af-015cb4e03aa7 added successfully.
+2024-06-12 09:25:30,413 - logger - DEBUG - Preview image for plate with id c6cb5575-4318-49e5-93af-015cb4e03aa7 saved successfully.
+2024-06-12 09:25:30,417 - logger - DEBUG - Item with id e1cdd2ec-ee0d-42aa-8ef9-ff123376eaa4 added successfully.
+2024-06-12 09:25:30,653 - logger - DEBUG - Preview image for plate with id e1cdd2ec-ee0d-42aa-8ef9-ff123376eaa4 saved successfully.
+2024-06-12 09:25:30,657 - logger - DEBUG - Item with id f0b7b2bf-f68e-4560-9947-3c488bd5138d added successfully.
+2024-06-12 09:25:30,907 - logger - DEBUG - Preview image for plate with id f0b7b2bf-f68e-4560-9947-3c488bd5138d saved successfully.
+2024-06-12 09:25:30,911 - logger - DEBUG - Item with id 2e747502-5d7b-4333-ad5d-0cd0e79daaec added successfully.
+2024-06-12 09:25:31,156 - logger - DEBUG - Preview image for plate with id 2e747502-5d7b-4333-ad5d-0cd0e79daaec saved successfully.
+2024-06-12 09:25:31,160 - logger - DEBUG - Item with id 946c2802-8b21-49e6-88c0-3cb79524f0f9 added successfully.
+2024-06-12 09:25:31,387 - logger - DEBUG - Preview image for plate with id 946c2802-8b21-49e6-88c0-3cb79524f0f9 saved successfully.
+2024-06-12 09:25:31,392 - logger - DEBUG - Item with id 258eacb2-6be8-4c6a-908f-b40333cc37d0 added successfully.
+2024-06-12 09:25:31,623 - logger - DEBUG - Preview image for plate with id 258eacb2-6be8-4c6a-908f-b40333cc37d0 saved successfully.
+2024-06-12 09:25:31,627 - logger - DEBUG - Item with id fbdd19d9-ac7f-483c-991e-e27b8dbf769a added successfully.
+2024-06-12 09:25:31,912 - logger - DEBUG - Preview image for plate with id fbdd19d9-ac7f-483c-991e-e27b8dbf769a saved successfully.
+2024-06-12 09:25:31,917 - logger - DEBUG - Item with id bf8e809f-0126-4ab3-972a-f72d69c948d3 added successfully.
+2024-06-12 09:25:32,173 - logger - DEBUG - Preview image for plate with id bf8e809f-0126-4ab3-972a-f72d69c948d3 saved successfully.
+2024-06-12 09:25:32,178 - logger - DEBUG - Item with id 61d722d1-44ed-4f56-92e3-7c9e7e49ee5b added successfully.
+2024-06-12 09:25:32,422 - logger - DEBUG - Preview image for plate with id 61d722d1-44ed-4f56-92e3-7c9e7e49ee5b saved successfully.
+2024-06-12 09:25:32,427 - logger - DEBUG - Item with id 3b0886cc-f6df-4f62-ba95-9739892d8a10 added successfully.
+2024-06-12 09:25:32,655 - logger - DEBUG - Preview image for plate with id 3b0886cc-f6df-4f62-ba95-9739892d8a10 saved successfully.
+2024-06-12 09:25:32,659 - logger - DEBUG - Item with id fae5f2a3-226c-4ef0-89e9-fccc15d7e3e7 added successfully.
+2024-06-12 09:25:32,882 - logger - DEBUG - Preview image for plate with id fae5f2a3-226c-4ef0-89e9-fccc15d7e3e7 saved successfully.
+2024-06-12 09:25:32,886 - logger - DEBUG - Item with id a7a5d300-1236-4b04-80eb-8e56579e749f added successfully.
+2024-06-12 09:25:33,120 - logger - DEBUG - Preview image for plate with id a7a5d300-1236-4b04-80eb-8e56579e749f saved successfully.
+2024-06-12 09:25:33,124 - logger - DEBUG - Item with id 0199501f-a4fa-4185-a373-99d2f5eda15e added successfully.
+2024-06-12 09:25:33,813 - logger - DEBUG - Preview image for plate with id 0199501f-a4fa-4185-a373-99d2f5eda15e saved successfully.
+2024-06-12 09:25:33,820 - logger - DEBUG - Item with id 35c01b5f-2807-41ab-b2ea-bf5828431a08 added successfully.
+2024-06-12 09:25:34,056 - logger - DEBUG - Preview image for plate with id 35c01b5f-2807-41ab-b2ea-bf5828431a08 saved successfully.
+2024-06-12 09:25:34,060 - logger - DEBUG - Item with id 67761988-7c6d-4ba2-8a42-f5b4b6117a91 added successfully.
+2024-06-12 09:25:34,276 - logger - DEBUG - Preview image for plate with id 67761988-7c6d-4ba2-8a42-f5b4b6117a91 saved successfully.
+2024-06-12 09:25:34,280 - logger - DEBUG - Item with id 554b7bd7-a967-46f5-a40a-75268effcb1e added successfully.
+2024-06-12 09:25:34,499 - logger - DEBUG - Preview image for plate with id 554b7bd7-a967-46f5-a40a-75268effcb1e saved successfully.
+2024-06-12 09:25:34,502 - logger - DEBUG - Item with id 482e281a-2ff2-4b3a-8cdd-77e5eb584fc7 added successfully.
+2024-06-12 09:25:34,719 - logger - DEBUG - Preview image for plate with id 482e281a-2ff2-4b3a-8cdd-77e5eb584fc7 saved successfully.
+2024-06-12 09:25:34,723 - logger - DEBUG - Item with id dfcb19cd-7f60-49cd-9e97-d324d68c568b added successfully.
+2024-06-12 09:25:34,951 - logger - DEBUG - Preview image for plate with id dfcb19cd-7f60-49cd-9e97-d324d68c568b saved successfully.
+2024-06-12 09:25:34,955 - logger - DEBUG - Item with id bb6ae901-96c0-4c3a-9964-26a896ba6d0f added successfully.
+2024-06-12 09:25:35,179 - logger - DEBUG - Preview image for plate with id bb6ae901-96c0-4c3a-9964-26a896ba6d0f saved successfully.
+2024-06-12 09:25:35,183 - logger - DEBUG - Item with id 9db2cab3-99d7-4199-b515-bcb6056785f1 added successfully.
+2024-06-12 09:25:35,415 - logger - DEBUG - Preview image for plate with id 9db2cab3-99d7-4199-b515-bcb6056785f1 saved successfully.
+2024-06-12 09:25:35,420 - logger - DEBUG - Item with id 55fab9cd-e8f4-4174-8eff-52db357cdd11 added successfully.
+2024-06-12 09:25:35,647 - logger - DEBUG - Preview image for plate with id 55fab9cd-e8f4-4174-8eff-52db357cdd11 saved successfully.
+2024-06-12 09:25:35,651 - logger - DEBUG - Item with id 8de8cce4-0e5d-4d26-af68-16d8b9fda8bb added successfully.
+2024-06-12 09:25:35,880 - logger - DEBUG - Preview image for plate with id 8de8cce4-0e5d-4d26-af68-16d8b9fda8bb saved successfully.
+2024-06-12 09:25:35,884 - logger - DEBUG - Item with id 60e30685-d6ea-40c2-b9e2-cae0002ec3d3 added successfully.
+2024-06-12 09:25:36,098 - logger - DEBUG - Preview image for plate with id 60e30685-d6ea-40c2-b9e2-cae0002ec3d3 saved successfully.
+2024-06-12 09:25:36,102 - logger - DEBUG - Item with id f21bbbcc-ceaa-413c-b1ca-5115716fa254 added successfully.
+2024-06-12 09:25:36,320 - logger - DEBUG - Preview image for plate with id f21bbbcc-ceaa-413c-b1ca-5115716fa254 saved successfully.
+2024-06-12 09:25:36,324 - logger - DEBUG - Item with id 764fe5b9-02d7-49ca-b91e-516c9a99950a added successfully.
+2024-06-12 09:25:36,542 - logger - DEBUG - Preview image for plate with id 764fe5b9-02d7-49ca-b91e-516c9a99950a saved successfully.
+2024-06-12 09:25:36,547 - logger - DEBUG - Item with id 117a6caf-c2a0-4e54-9289-223aec21883f added successfully.
+2024-06-12 09:25:36,767 - logger - DEBUG - Preview image for plate with id 117a6caf-c2a0-4e54-9289-223aec21883f saved successfully.
+2024-06-12 09:25:36,772 - logger - DEBUG - Item with id 6dbb8daf-040b-43ae-8416-c2404c946057 added successfully.
+2024-06-12 09:25:37,029 - logger - DEBUG - Preview image for plate with id 6dbb8daf-040b-43ae-8416-c2404c946057 saved successfully.
+2024-06-12 09:25:37,034 - logger - DEBUG - Item with id 90c6c16d-3fc8-4792-8fc6-7d555848c7ec added successfully.
+2024-06-12 09:25:37,258 - logger - DEBUG - Preview image for plate with id 90c6c16d-3fc8-4792-8fc6-7d555848c7ec saved successfully.
+2024-06-12 09:25:37,262 - logger - DEBUG - Item with id d3f034d6-df72-4323-aeb7-b5b95a2fa66d added successfully.
+2024-06-12 09:25:37,515 - logger - DEBUG - Preview image for plate with id d3f034d6-df72-4323-aeb7-b5b95a2fa66d saved successfully.
+2024-06-12 09:25:37,521 - logger - DEBUG - Item with id 931938d8-67c4-4b96-8141-47884b93430a added successfully.
+2024-06-12 09:25:37,767 - logger - DEBUG - Preview image for plate with id 931938d8-67c4-4b96-8141-47884b93430a saved successfully.
+2024-06-12 09:25:37,772 - logger - DEBUG - Item with id b7f3a055-bd4a-4cfd-a1df-c7350fb55bb6 added successfully.
+2024-06-12 09:25:38,047 - logger - DEBUG - Preview image for plate with id b7f3a055-bd4a-4cfd-a1df-c7350fb55bb6 saved successfully.
+2024-06-12 09:25:38,051 - logger - DEBUG - Item with id 156c8854-98c5-4abc-bc93-4cac1ef0a5f9 added successfully.
+2024-06-12 09:25:38,275 - logger - DEBUG - Preview image for plate with id 156c8854-98c5-4abc-bc93-4cac1ef0a5f9 saved successfully.
+2024-06-12 09:25:38,279 - logger - DEBUG - Item with id f10cdd5b-236d-4153-949d-72ce6b386e3a added successfully.
+2024-06-12 09:25:38,508 - logger - DEBUG - Preview image for plate with id f10cdd5b-236d-4153-949d-72ce6b386e3a saved successfully.
+2024-06-12 09:25:38,511 - logger - DEBUG - Item with id ab55aba4-b00f-496c-9df2-3fddba879f36 added successfully.
+2024-06-12 09:25:38,744 - logger - DEBUG - Preview image for plate with id ab55aba4-b00f-496c-9df2-3fddba879f36 saved successfully.
+2024-06-12 09:25:38,748 - logger - DEBUG - Item with id 422a1af1-bd02-4f42-a336-feb3d43b9995 added successfully.
+2024-06-12 09:25:39,082 - logger - DEBUG - Preview image for plate with id 422a1af1-bd02-4f42-a336-feb3d43b9995 saved successfully.
+2024-06-12 09:25:39,091 - logger - DEBUG - Item with id 3c5df6e9-5eec-4722-8ecb-95336f011264 added successfully.
+2024-06-12 09:25:39,361 - logger - DEBUG - Preview image for plate with id 3c5df6e9-5eec-4722-8ecb-95336f011264 saved successfully.
+2024-06-12 09:25:39,364 - logger - DEBUG - Item with id 23683d82-b140-4e69-b443-379e9fc9160a added successfully.
+2024-06-12 09:25:39,593 - logger - DEBUG - Preview image for plate with id 23683d82-b140-4e69-b443-379e9fc9160a saved successfully.
+2024-06-12 09:25:39,597 - logger - DEBUG - Item with id 110501ca-b1bf-4e7a-9ae0-e456c839974e added successfully.
+2024-06-12 09:25:39,829 - logger - DEBUG - Preview image for plate with id 110501ca-b1bf-4e7a-9ae0-e456c839974e saved successfully.
+2024-06-12 09:25:39,834 - logger - DEBUG - Item with id 7aa4838f-a749-498e-ad26-7f9e25255691 added successfully.
+2024-06-12 09:25:40,063 - logger - DEBUG - Preview image for plate with id 7aa4838f-a749-498e-ad26-7f9e25255691 saved successfully.
+2024-06-12 09:25:40,067 - logger - DEBUG - Item with id 18170979-62d4-4d34-81f6-2a3d08593eb9 added successfully.
+2024-06-12 09:25:40,292 - logger - DEBUG - Preview image for plate with id 18170979-62d4-4d34-81f6-2a3d08593eb9 saved successfully.
+2024-06-12 09:25:40,296 - logger - DEBUG - Item with id 25a0b223-ebc5-426f-b647-63d74b9b497e added successfully.
+2024-06-12 09:25:40,533 - logger - DEBUG - Preview image for plate with id 25a0b223-ebc5-426f-b647-63d74b9b497e saved successfully.
+2024-06-12 09:25:40,537 - logger - DEBUG - Item with id d77c4bae-1b44-43e0-878a-84f7dc0e2fbf added successfully.
+2024-06-12 09:25:40,792 - logger - DEBUG - Preview image for plate with id d77c4bae-1b44-43e0-878a-84f7dc0e2fbf saved successfully.
+2024-06-12 09:25:40,796 - logger - DEBUG - Item with id 77b4e235-32bc-4aa2-b903-0a168ee98004 added successfully.
+2024-06-12 09:25:41,016 - logger - DEBUG - Preview image for plate with id 77b4e235-32bc-4aa2-b903-0a168ee98004 saved successfully.
+2024-06-12 09:25:41,017 - logger - DEBUG - Attempted to add new plate at max amount reached.
+2024-06-12 09:25:41,102 - logger - DEBUG - Item with id c2b69f2f-840f-4996-912c-f62725035f08 added successfully.
+2024-06-12 09:25:41,399 - logger - DEBUG - Preview image for plate with id c2b69f2f-840f-4996-912c-f62725035f08 saved successfully.
+2024-06-12 09:25:41,423 - logger - DEBUG - Item with id 88096376-f362-49f8-a998-7f995034658b added successfully.
+2024-06-12 09:25:41,773 - logger - DEBUG - Preview image for plate with id 88096376-f362-49f8-a998-7f995034658b saved successfully.
+2024-06-12 09:25:41,794 - logger - DEBUG - Item with id 0256f94e-5ef1-42b8-af29-fd5953b3a83d added successfully.
+2024-06-12 09:25:42,076 - logger - DEBUG - Preview image for plate with id 0256f94e-5ef1-42b8-af29-fd5953b3a83d saved successfully.
+2024-06-12 09:25:42,098 - logger - DEBUG - Item with id 147dc6bd-844d-4805-af9f-f9af02688fc6 added successfully.
+2024-06-12 09:25:42,341 - logger - DEBUG - Preview image for plate with id 147dc6bd-844d-4805-af9f-f9af02688fc6 saved successfully.
+2024-06-12 09:25:42,360 - logger - DEBUG - Item with id 8003753a-8651-4bbf-b3e6-983a3adb4200 added successfully.
+2024-06-12 09:25:42,602 - logger - DEBUG - Preview image for plate with id 8003753a-8651-4bbf-b3e6-983a3adb4200 saved successfully.
+2024-06-12 09:25:42,621 - logger - DEBUG - Item with id ca7069a9-aa02-4b91-b592-3f161429431d added successfully.
+2024-06-12 09:25:42,863 - logger - DEBUG - Preview image for plate with id ca7069a9-aa02-4b91-b592-3f161429431d saved successfully.
+2024-06-12 09:25:42,869 - logger - DEBUG - Updated item id ca7069a9-aa02-4b91-b592-3f161429431d: set contours to k05VTVBZAQB2AHsnZGVzY3InOiAnPGk0JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDMsKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAoBAAAAAgAAAAMAAAA=
+2024-06-12 09:25:42,892 - logger - DEBUG - Item with id 21b2ac33-c865-4ba5-8fad-919c328d9830 added successfully.
+2024-06-12 09:25:43,132 - logger - DEBUG - Preview image for plate with id 21b2ac33-c865-4ba5-8fad-919c328d9830 saved successfully.
+2024-06-12 09:25:43,135 - logger - DEBUG - Updated item id 21b2ac33-c865-4ba5-8fad-919c328d9830: set x to 4999.0
+2024-06-12 09:25:43,153 - logger - DEBUG - Item with id b045a53a-a3fe-436e-8354-a5517644ef39 added successfully.
+2024-06-12 09:25:43,421 - logger - DEBUG - Preview image for plate with id b045a53a-a3fe-436e-8354-a5517644ef39 saved successfully.
+2024-06-12 09:25:43,442 - logger - DEBUG - Item with id f8e7868c-bb9a-49ae-8be4-43d4f0e1f167 added successfully.
+2024-06-12 09:25:43,703 - logger - DEBUG - Preview image for plate with id f8e7868c-bb9a-49ae-8be4-43d4f0e1f167 saved successfully.
+2024-06-12 09:25:43,708 - logger - DEBUG - Updated item id f8e7868c-bb9a-49ae-8be4-43d4f0e1f167: set y to 4999.0
+2024-06-12 09:25:43,725 - logger - DEBUG - Item with id 471c07a5-fe74-49d5-bb9c-3b3747e3489f added successfully.
+2024-06-12 09:25:43,962 - logger - DEBUG - Preview image for plate with id 471c07a5-fe74-49d5-bb9c-3b3747e3489f saved successfully.
+2024-06-12 09:25:43,980 - logger - DEBUG - Item with id df615638-8978-4528-9c1b-83caac70630e added successfully.
+2024-06-12 09:25:44,197 - logger - DEBUG - Preview image for plate with id df615638-8978-4528-9c1b-83caac70630e saved successfully.
+2024-06-12 09:25:44,202 - logger - DEBUG - Updated item id df615638-8978-4528-9c1b-83caac70630e: set z to 4999.0
+2024-06-12 09:25:44,223 - logger - DEBUG - Item with id 17f1fb28-1c13-4d6e-8222-d360ad8dd5ea added successfully.
+2024-06-12 09:25:44,467 - logger - DEBUG - Preview image for plate with id 17f1fb28-1c13-4d6e-8222-d360ad8dd5ea saved successfully.
+2024-06-12 09:25:44,484 - logger - DEBUG - Item with id 9dc9a60f-8867-4738-a1dd-cb99020b647d added successfully.
+2024-06-12 09:25:44,734 - logger - DEBUG - Preview image for plate with id 9dc9a60f-8867-4738-a1dd-cb99020b647d saved successfully.
+2024-06-12 09:25:44,739 - logger - DEBUG - Updated item id 9dc9a60f-8867-4738-a1dd-cb99020b647d: set material to Abazaz
+2024-06-12 09:25:44,760 - logger - DEBUG - Item with id 89db7e65-ca92-49e2-aa35-78084b3c3ca2 added successfully.
+2024-06-12 09:25:44,992 - logger - DEBUG - Preview image for plate with id 89db7e65-ca92-49e2-aa35-78084b3c3ca2 saved successfully.
+2024-06-12 09:25:45,010 - logger - DEBUG - Item with id f1e27b75-e84f-4262-9b16-ebcfe1409395 added successfully.
+2024-06-12 09:25:45,234 - logger - DEBUG - Preview image for plate with id f1e27b75-e84f-4262-9b16-ebcfe1409395 saved successfully.
+2024-06-12 09:25:45,238 - logger - DEBUG - Updated item id f1e27b75-e84f-4262-9b16-ebcfe1409395: set contours to k05VTVBZAQB2AHsnZGVzY3InOiAnPGk0JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDMsKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAoBAAAAAgAAAAMAAAA=
+2024-06-12 09:25:45,261 - logger - DEBUG - Item with id 0d94507a-c1b5-40d3-8c97-545803c45e46 added successfully.
+2024-06-12 09:25:45,500 - logger - DEBUG - Preview image for plate with id 0d94507a-c1b5-40d3-8c97-545803c45e46 saved successfully.
+2024-06-12 09:25:45,503 - logger - DEBUG - Updated item id 0d94507a-c1b5-40d3-8c97-545803c45e46: set contours to None
+2024-06-12 09:25:45,507 - logger - DEBUG - Updated item id 0d94507a-c1b5-40d3-8c97-545803c45e46: set contours to k05VTVBZAQB2AHsnZGVzY3InOiAnPGY4JywgJ2ZvcnRyYW5fb3JkZXInOiBGYWxzZSwgJ3NoYXBlJzogKDAsKSwgfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAo=
+2024-06-12 09:25:45,528 - logger - DEBUG - Item with id e81fcbf8-a119-4510-a7ac-a6fcb2d5e747 added successfully.
+2024-06-12 09:25:45,777 - logger - DEBUG - Preview image for plate with id e81fcbf8-a119-4510-a7ac-a6fcb2d5e747 saved successfully.
+2024-06-12 09:25:49,445 - logger - DEBUG - Item with id 035d026c-f4f4-41b0-9700-8e4c48c14b5e added successfully.
+2024-06-12 09:25:49,859 - logger - DEBUG - Item with id 780954d7-c244-4cab-962f-3ef6e24fe78c added successfully.
+2024-06-12 09:25:50,292 - logger - DEBUG - Item with id fdad0e1e-34ce-4367-8e9e-7ef2a49aaa5f added successfully.
+2024-06-12 09:25:50,646 - logger - DEBUG - Item with id 5cfbd699-4f15-4269-8852-eb69ceb52ff7 added successfully.
+2024-06-12 09:25:51,092 - logger - DEBUG - Item with id 82f48f6e-5fb9-4536-8757-2b8097b01f8f added successfully.
+2024-06-12 09:25:51,431 - logger - DEBUG - Item with id 22473596-f59b-4929-8de8-27aa2f268853 added successfully.
+2024-06-12 09:25:51,797 - logger - DEBUG - Item with id 664d1115-f67a-4422-9084-a6c93383dbfa added successfully.
+2024-06-12 09:25:52,181 - logger - DEBUG - Item with id 884ea7e3-7add-4001-ae9d-1540beda24d1 added successfully.
+2024-06-12 09:25:52,534 - logger - DEBUG - Item with id c33d8429-c836-4caf-8598-056541fa4b7d added successfully.
+2024-06-12 09:25:52,964 - logger - DEBUG - Item with id 5830e379-8cfe-41a6-8f95-3db1985d4b8d added successfully.
+2024-06-12 09:25:53,310 - logger - DEBUG - Item with id 3e6855ea-0c4d-4ff0-b36f-3e5c1a97f578 added successfully.
+2024-06-12 09:25:53,660 - logger - DEBUG - Attempted to add new router at max amount reached.
+2024-06-12 09:25:53,701 - logger - DEBUG - Item with id 3555ecaa-ff93-4fe1-a41d-e39f5189964a added successfully.
+2024-06-12 09:25:54,210 - logger - DEBUG - Item with id 1712ad78-8e04-4998-b5c4-ff3a97829faf added successfully.
+2024-06-12 09:25:54,622 - logger - DEBUG - Item with id feb7b7f4-5d7e-4883-9d26-0292a601ac78 added successfully.
+2024-06-12 09:25:55,214 - logger - DEBUG - Item with id a2c4d68e-33f4-478b-92a1-fcf624fd0faf added successfully.
+2024-06-12 09:25:55,782 - logger - DEBUG - Item with id d560db56-4a08-4611-8862-b8cdd78ac047 added successfully.
+2024-06-12 09:25:56,192 - logger - DEBUG - Item with id 26c0991c-1aa0-4d2a-82a4-53d5a4568d56 added successfully.
+2024-06-12 09:25:56,575 - logger - DEBUG - Item with id 1aab1775-b090-434e-8beb-02f0656f90b6 added successfully.
+2024-06-12 09:25:56,952 - logger - DEBUG - Item with id cbf08d9c-1f72-4cff-ba0b-5d2cb94823d2 added successfully.
+2024-06-12 09:25:57,354 - logger - DEBUG - Item with id 398a88d8-4546-41b1-827d-0324f53f40f5 added successfully.
+2024-06-12 09:25:57,767 - logger - DEBUG - Item with id 1b2708c3-5bcd-414f-baf4-0f96ff978333 added successfully.
+2024-06-12 09:25:58,714 - logger - DEBUG - Updated item id 1b2708c3-5bcd-414f-baf4-0f96ff978333: set name to New Name
+2024-06-12 09:25:58,745 - logger - DEBUG - Item with id 9117005b-42ff-4f78-8be3-83c3cf609754 added successfully.
+2024-06-12 09:25:59,104 - logger - DEBUG - Item with id 7e9d9d9c-e79f-4062-8a32-633c74164967 added successfully.
+2024-06-12 09:25:59,463 - logger - DEBUG - Updated item id 7e9d9d9c-e79f-4062-8a32-633c74164967: set x to 4999.0
+2024-06-12 09:25:59,488 - logger - DEBUG - Item with id 9f905ca7-a3d6-4bed-9215-c5d2bc7d66ed added successfully.
+2024-06-12 09:25:59,957 - logger - DEBUG - Item with id 5eb22694-f2f4-48fd-926a-47c1e1d6e576 added successfully.
+2024-06-12 09:26:00,367 - logger - DEBUG - Updated item id 5eb22694-f2f4-48fd-926a-47c1e1d6e576: set y to 4999.0
+2024-06-12 09:26:00,393 - logger - DEBUG - Item with id 7cf4ce99-04f6-4b69-a627-4bf0f0edc5a5 added successfully.
+2024-06-12 09:26:00,839 - logger - DEBUG - Item with id 4c00583f-6668-462a-a881-3f0883da4c07 added successfully.
+2024-06-12 09:26:01,250 - logger - DEBUG - Updated item id 4c00583f-6668-462a-a881-3f0883da4c07: set z to 4999.0
+2024-06-12 09:26:01,276 - logger - DEBUG - Item with id 616c8f34-d44b-467e-b1c9-ec08fe4f73fb added successfully.
+2024-06-12 09:26:01,662 - logger - DEBUG - Item with id 0c7e475e-c31a-440d-a01e-9bd78ec93874 added successfully.
+2024-06-12 09:26:02,041 - logger - DEBUG - Updated item id 0c7e475e-c31a-440d-a01e-9bd78ec93874: set plate_x to 4999.0
+2024-06-12 09:26:02,076 - logger - DEBUG - Item with id 97c56449-3e1a-455a-9b78-6e554bd6c766 added successfully.
+2024-06-12 09:26:02,463 - logger - DEBUG - Item with id 98a3fd20-6d96-4474-a5f1-ecb4920293e6 added successfully.
+2024-06-12 09:26:02,811 - logger - DEBUG - Updated item id 98a3fd20-6d96-4474-a5f1-ecb4920293e6: set plate_y to 4999.0
+2024-06-12 09:26:02,830 - logger - DEBUG - Item with id 20a34330-7e96-43e0-9a77-b7f66d8fd0b2 added successfully.
+2024-06-12 09:26:03,232 - logger - DEBUG - Item with id bad7dbb5-9fc0-439d-9232-b23da5686be0 added successfully.
+2024-06-12 09:26:03,611 - logger - DEBUG - Updated item id bad7dbb5-9fc0-439d-9232-b23da5686be0: set plate_z to 4999.0
+2024-06-12 09:26:03,640 - logger - DEBUG - Item with id 462617d3-933e-4ef2-93a6-af5107dab3e0 added successfully.
+2024-06-12 09:26:04,056 - logger - DEBUG - Item with id 10941509-9432-4f95-8d50-cc922549aded added successfully.
+2024-06-12 09:26:04,467 - logger - DEBUG - Updated item id 10941509-9432-4f95-8d50-cc922549aded: set min_safe_dist_from_edge to 5.0
+2024-06-12 09:26:04,502 - logger - DEBUG - Item with id 6c1991d9-0337-4102-86f5-c9389f4949f7 added successfully.
+2024-06-12 09:26:04,904 - logger - DEBUG - Updated item id 6c1991d9-0337-4102-86f5-c9389f4949f7: set mill_bit_diameter to 99.0
+2024-06-12 09:26:04,936 - logger - DEBUG - Item with id 19a4d401-49c3-4ff8-b223-3223de1a8b5e added successfully.
+2024-06-12 09:26:05,381 - logger - DEBUG - Item with id e6300d58-b97d-47a1-8cbf-d5e3a357f8b5 added successfully.
+2024-06-12 09:26:05,727 - logger - DEBUG - Updated item id e6300d58-b97d-47a1-8cbf-d5e3a357f8b5: set drill_bit_diameter to 99.0
+2024-06-12 09:26:05,746 - logger - DEBUG - Item with id ecdaff57-e7e4-4b10-8cc9-623645503f5e added successfully.
+2024-06-12 09:26:06,121 - logger - DEBUG - Item with id 32d486e3-d34d-411e-bc83-9e163c0cbc2c added successfully.
+2024-06-12 09:26:06,725 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:26:06,950 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:26:07,141 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:26:07,354 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:26:07,634 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:26:07,885 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:26:08,131 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:26:08,360 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:26:08,608 - logger - DEBUG - Initializing STLParser with source path: C:\Users\Caco Cola\Desktop\EasyCNC\tests\test data\stl files\RollerConnectorPlate.STL
+2024-06-12 09:26:08,818 - logger - DEBUG - Parsing STL file...
+2024-06-12 09:26:08,818 - logger - DEBUG - Finding flat axis...
+2024-06-12 09:26:08,820 - logger - DEBUG - Calculating thickness...
+2024-06-12 09:26:08,820 - logger - DEBUG - Flattening mesh...
+2024-06-12 09:26:08,821 - logger - DEBUG - Finding outer edges...
+2024-06-12 09:26:08,842 - logger - DEBUG - Finding contours...
+2024-06-12 09:26:08,846 - logger - DEBUG - Finding outermost contour...
+2024-06-12 09:26:08,847 - logger - DEBUG - Smoothing contour...
+2024-06-12 09:26:08,851 - logger - DEBUG - Parsing complete.
+2024-06-12 09:26:08,852 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 09:26:09,354 - logger - DEBUG - Saving preview image...
+2024-06-12 09:26:09,813 - logger - DEBUG - Image saved to C:\Users\CACOCO~1\AppData\Local\Temp\tmpsfzqf7bg\preview_image.png.
+2024-06-12 09:26:09,845 - logger - ERROR - Attempted to initialize UserSettingsController with invalid filepath random invalid path
+2024-06-12 09:26:09,882 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-54\test_get_language_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-12 09:26:09,912 - logger - ERROR - Error loading settings from C:\Users\Caco Cola\AppData\Local\Temp\pytest-of-Caco Cola\pytest-54\test_get_units_invalid0\user_settings\invalid_user_settings.json: -1 is not a valid LanguageEnum
+2024-06-12 09:29:58,381 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 09:29:58,568 - logger - DEBUG - Initialized home view.
+2024-06-12 09:29:58,598 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 09:29:58,677 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 09:29:58,684 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 09:29:58,698 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 09:29:58,751 - logger - DEBUG - Set app view to index 0
+2024-06-12 09:29:58,760 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 09:30:03,331 - logger - DEBUG - Set app view to index 1
+2024-06-12 09:30:06,806 - logger - DEBUG - Set app view to index 2
+2024-06-12 09:30:07,918 - logger - DEBUG - Set app view to index 3
+2024-06-12 09:30:09,278 - logger - DEBUG - Set app view to index 2
+2024-06-12 09:30:09,958 - logger - DEBUG - Set app view to index 1
+2024-06-12 09:30:10,565 - logger - DEBUG - Set app view to index 2
+2024-06-12 09:30:10,926 - logger - DEBUG - Set app view to index 3
+2024-06-12 09:30:11,678 - logger - DEBUG - Set app view to index 1
+2024-06-12 09:30:12,654 - logger - DEBUG - Set app view to index 0
+2024-06-12 09:30:13,494 - logger - DEBUG - Set app view to index 1
+2024-06-12 09:30:14,254 - logger - DEBUG - Set app view to index 2
+2024-06-12 09:30:14,790 - logger - DEBUG - Set app view to index 3
+2024-06-12 09:30:18,245 - logger - DEBUG - Database session closed.
+2024-06-12 09:30:18,247 - logger - DEBUG - Database teardown complete.
+2024-06-12 09:30:18,247 - logger - DEBUG - Database connection disposed.
+2024-06-12 10:04:18,027 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 10:04:18,212 - logger - DEBUG - Initialized home view.
+2024-06-12 10:04:18,235 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 10:04:18,302 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 10:04:18,313 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 10:04:18,335 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 10:04:18,365 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:04:18,370 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 10:04:20,818 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:04:22,945 - logger - DEBUG - Database session closed.
+2024-06-12 10:04:22,947 - logger - DEBUG - Database teardown complete.
+2024-06-12 10:04:22,947 - logger - DEBUG - Database connection disposed.
+2024-06-12 10:04:42,780 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 10:04:42,898 - logger - DEBUG - Initialized home view.
+2024-06-12 10:04:42,953 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 10:04:43,035 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 10:04:43,046 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 10:04:43,070 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 10:04:43,106 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:04:43,112 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 10:04:56,586 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:04:57,709 - logger - DEBUG - Item with id 5cd48b77-d223-40d7-afcc-6d0f6e5db6ab added successfully.
+2024-06-12 10:04:58,100 - logger - DEBUG - New router added successfully.
+2024-06-12 10:05:16,307 - logger - DEBUG - Item with id 5cd48b77-d223-40d7-afcc-6d0f6e5db6ab removed successfully.
+2024-06-12 10:05:17,462 - logger - DEBUG - Item with id de52380d-cc91-4911-9776-46aad95120cf added successfully.
+2024-06-12 10:05:17,852 - logger - DEBUG - New router added successfully.
+2024-06-12 10:08:11,192 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 10:08:11,370 - logger - DEBUG - Initialized home view.
+2024-06-12 10:08:11,429 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 10:08:11,505 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 10:08:11,513 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 10:08:12,097 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 10:08:12,103 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:08:12,104 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 10:08:17,547 - logger - DEBUG - Set app view to index 1
+2024-06-12 10:08:19,664 - logger - DEBUG - Database session closed.
+2024-06-12 10:08:19,666 - logger - DEBUG - Database teardown complete.
+2024-06-12 10:08:19,666 - logger - DEBUG - Database connection disposed.
+2024-06-12 10:08:51,277 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 10:08:51,544 - logger - DEBUG - Initialized home view.
+2024-06-12 10:08:51,561 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 10:08:51,588 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 10:08:51,656 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 10:08:52,566 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 10:08:52,589 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:08:52,590 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 10:08:54,602 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:08:57,561 - logger - DEBUG - Set app view to index 1
+2024-06-12 10:08:58,970 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:08:59,832 - logger - DEBUG - Item with id a37121cc-3578-4405-b28e-8db126991c28 added successfully.
+2024-06-12 10:09:00,104 - logger - DEBUG - New router added successfully.
+2024-06-12 10:16:10,234 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 10:16:10,444 - logger - DEBUG - Initialized home view.
+2024-06-12 10:16:10,497 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 10:16:10,512 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 10:16:10,588 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 10:16:11,767 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 10:16:11,771 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:16:11,771 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 10:16:14,194 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:16:15,534 - logger - DEBUG - Item with id 34305c2a-7448-4c00-93ec-87e17917ccc4 added successfully.
+2024-06-12 10:16:15,839 - logger - DEBUG - New router added successfully.
+2024-06-12 10:16:38,113 - logger - DEBUG - Database session closed.
+2024-06-12 10:16:38,114 - logger - DEBUG - Database teardown complete.
+2024-06-12 10:16:38,114 - logger - DEBUG - Database connection disposed.
+2024-06-12 10:17:45,064 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 10:17:45,164 - logger - DEBUG - Initialized home view.
+2024-06-12 10:17:45,216 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 10:17:45,229 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 10:17:45,289 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 10:17:46,460 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 10:17:46,467 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:17:46,468 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 10:17:48,475 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:17:49,582 - logger - DEBUG - Item with id 135d5d63-01a1-41e0-b87b-ec733c470ff3 added successfully.
+2024-06-12 10:17:49,959 - logger - DEBUG - New router added successfully.
+2024-06-12 10:18:09,947 - logger - DEBUG - Item with id 045d309f-566f-4d0f-9189-4ab6cbe03f23 added successfully.
+2024-06-12 10:18:10,311 - logger - DEBUG - New router added successfully.
+2024-06-12 10:18:37,092 - logger - DEBUG - Updated item id 135d5d63-01a1-41e0-b87b-ec733c470ff3: set x to 750.0
+2024-06-12 10:18:37,096 - logger - DEBUG - Updated item id 135d5d63-01a1-41e0-b87b-ec733c470ff3: set y to 1500.0
+2024-06-12 10:18:37,100 - logger - DEBUG - Updated item id 135d5d63-01a1-41e0-b87b-ec733c470ff3: set z to 500.0
+2024-06-12 10:18:37,155 - logger - DEBUG - Updated item id 135d5d63-01a1-41e0-b87b-ec733c470ff3: set plate_x to 1500.0
+2024-06-12 10:18:37,160 - logger - DEBUG - Updated item id 135d5d63-01a1-41e0-b87b-ec733c470ff3: set plate_y to 2000.0
+2024-06-12 10:18:37,165 - logger - DEBUG - Updated item id 135d5d63-01a1-41e0-b87b-ec733c470ff3: set plate_z to 500.0
+2024-06-12 10:18:39,891 - logger - ERROR - Error updating router: 'min_safe_dist_from_edge'
+2024-06-12 10:18:44,083 - logger - DEBUG - Updated item id 135d5d63-01a1-41e0-b87b-ec733c470ff3: set x to 750.0
+2024-06-12 10:18:44,087 - logger - DEBUG - Updated item id 135d5d63-01a1-41e0-b87b-ec733c470ff3: set y to 1500.0
+2024-06-12 10:18:44,091 - logger - DEBUG - Updated item id 135d5d63-01a1-41e0-b87b-ec733c470ff3: set z to 500.0
+2024-06-12 10:18:44,096 - logger - DEBUG - Updated item id 135d5d63-01a1-41e0-b87b-ec733c470ff3: set plate_x to 1500.0
+2024-06-12 10:18:44,100 - logger - DEBUG - Updated item id 135d5d63-01a1-41e0-b87b-ec733c470ff3: set plate_y to 2000.0
+2024-06-12 10:18:44,104 - logger - DEBUG - Updated item id 135d5d63-01a1-41e0-b87b-ec733c470ff3: set plate_z to 500.0
+2024-06-12 10:18:45,115 - logger - ERROR - Error updating router: 'min_safe_dist_from_edge'
+2024-06-12 10:18:48,433 - logger - DEBUG - Item with id 135d5d63-01a1-41e0-b87b-ec733c470ff3 removed successfully.
+2024-06-12 10:18:49,755 - logger - DEBUG - Item with id 045d309f-566f-4d0f-9189-4ab6cbe03f23 removed successfully.
+2024-06-12 10:18:51,977 - logger - DEBUG - Database session closed.
+2024-06-12 10:18:51,980 - logger - DEBUG - Database teardown complete.
+2024-06-12 10:18:51,980 - logger - DEBUG - Database connection disposed.
+2024-06-12 10:20:03,178 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 10:20:03,358 - logger - DEBUG - Initialized home view.
+2024-06-12 10:20:03,415 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 10:20:03,498 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 10:20:03,507 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 10:20:05,233 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 10:20:05,236 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:20:05,237 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 10:20:07,834 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:20:09,594 - logger - DEBUG - Item with id c4f87f6f-a874-40c9-b415-b4cfef948f65 added successfully.
+2024-06-12 10:20:09,989 - logger - DEBUG - New router added successfully.
+2024-06-12 10:20:21,313 - logger - DEBUG - Database session closed.
+2024-06-12 10:20:21,315 - logger - DEBUG - Database teardown complete.
+2024-06-12 10:20:21,315 - logger - DEBUG - Database connection disposed.
+2024-06-12 10:20:46,795 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 10:20:46,941 - logger - DEBUG - Initialized home view.
+2024-06-12 10:20:46,998 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 10:20:47,079 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 10:20:47,090 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 10:20:48,589 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 10:20:48,595 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:20:48,600 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 10:20:50,554 - logger - DEBUG - Set app view to index 1
+2024-06-12 10:20:52,265 - logger - DEBUG - Set app view to index 2
+2024-06-12 10:20:52,857 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:20:54,403 - logger - DEBUG - Item with id 4db218be-920b-4b3f-92e4-8c6569dbfb98 added successfully.
+2024-06-12 10:20:54,696 - logger - DEBUG - New router added successfully.
+2024-06-12 10:21:00,578 - logger - DEBUG - Item with id 0be182fb-8ed5-4276-bf34-9c2b7de6a1b2 added successfully.
+2024-06-12 10:21:00,944 - logger - DEBUG - New router added successfully.
+2024-06-12 10:21:17,954 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:21:19,258 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:29:59,712 - logger - DEBUG - Database session closed.
+2024-06-12 10:29:59,712 - logger - DEBUG - Database teardown complete.
+2024-06-12 10:29:59,712 - logger - DEBUG - Database connection disposed.
+2024-06-12 10:33:56,815 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 10:33:56,968 - logger - DEBUG - Initialized home view.
+2024-06-12 10:33:57,022 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 10:33:57,072 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 10:33:57,078 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 10:33:59,467 - logger - DEBUG - Router widget added successfully for router ID: de52380d-cc91-4911-9776-46aad95120cf
+2024-06-12 10:33:59,490 - logger - DEBUG - Router widget added successfully for router ID: a37121cc-3578-4405-b28e-8db126991c28
+2024-06-12 10:33:59,513 - logger - DEBUG - Router widget added successfully for router ID: 34305c2a-7448-4c00-93ec-87e17917ccc4
+2024-06-12 10:33:59,536 - logger - DEBUG - Router widget added successfully for router ID: c4f87f6f-a874-40c9-b415-b4cfef948f65
+2024-06-12 10:33:59,563 - logger - DEBUG - Router widget added successfully for router ID: 4db218be-920b-4b3f-92e4-8c6569dbfb98
+2024-06-12 10:33:59,599 - logger - DEBUG - Router widget added successfully for router ID: 0be182fb-8ed5-4276-bf34-9c2b7de6a1b2
+2024-06-12 10:33:59,600 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 10:33:59,664 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:33:59,748 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 10:34:02,032 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:34:06,850 - logger - DEBUG - Item with id 0be182fb-8ed5-4276-bf34-9c2b7de6a1b2 removed successfully.
+2024-06-12 10:34:07,619 - logger - DEBUG - Item with id 4db218be-920b-4b3f-92e4-8c6569dbfb98 removed successfully.
+2024-06-12 10:34:08,118 - logger - DEBUG - Item with id c4f87f6f-a874-40c9-b415-b4cfef948f65 removed successfully.
+2024-06-12 10:34:08,517 - logger - DEBUG - Item with id 34305c2a-7448-4c00-93ec-87e17917ccc4 removed successfully.
+2024-06-12 10:34:08,983 - logger - DEBUG - Item with id a37121cc-3578-4405-b28e-8db126991c28 removed successfully.
+2024-06-12 10:34:09,464 - logger - DEBUG - Item with id de52380d-cc91-4911-9776-46aad95120cf removed successfully.
+2024-06-12 10:34:11,190 - logger - DEBUG - Item with id fa90179f-d1dd-4660-9a68-550ae336b08f added successfully.
+2024-06-12 10:34:11,559 - logger - DEBUG - New router added successfully.
+2024-06-12 10:34:17,829 - logger - DEBUG - Item with id 7746bc6a-0649-4127-aae8-8c645f5a32a5 added successfully.
+2024-06-12 10:34:18,163 - logger - DEBUG - New router added successfully.
+2024-06-12 10:34:25,696 - logger - DEBUG - Item with id 2bd9d3e6-d757-491a-b712-bd2f5aa5e567 added successfully.
+2024-06-12 10:34:26,016 - logger - DEBUG - New router added successfully.
+2024-06-12 10:35:28,546 - logger - DEBUG - Database session closed.
+2024-06-12 10:35:28,548 - logger - DEBUG - Database teardown complete.
+2024-06-12 10:35:28,548 - logger - DEBUG - Database connection disposed.
+2024-06-12 10:35:38,660 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 10:35:38,796 - logger - DEBUG - Initialized home view.
+2024-06-12 10:35:38,854 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 10:35:38,922 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 10:35:38,931 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 10:35:40,182 - logger - DEBUG - Router widget added successfully for router ID: fa90179f-d1dd-4660-9a68-550ae336b08f
+2024-06-12 10:35:40,217 - logger - DEBUG - Router widget added successfully for router ID: 7746bc6a-0649-4127-aae8-8c645f5a32a5
+2024-06-12 10:35:40,252 - logger - DEBUG - Router widget added successfully for router ID: 2bd9d3e6-d757-491a-b712-bd2f5aa5e567
+2024-06-12 10:35:40,263 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 10:35:40,298 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:35:40,378 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 10:35:43,340 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:35:46,454 - logger - DEBUG - Item with id 2bd9d3e6-d757-491a-b712-bd2f5aa5e567 removed successfully.
+2024-06-12 10:35:47,353 - logger - DEBUG - Item with id 7746bc6a-0649-4127-aae8-8c645f5a32a5 removed successfully.
+2024-06-12 10:35:47,989 - logger - DEBUG - Item with id fa90179f-d1dd-4660-9a68-550ae336b08f removed successfully.
+2024-06-12 10:35:50,009 - logger - DEBUG - Database session closed.
+2024-06-12 10:35:50,011 - logger - DEBUG - Database teardown complete.
+2024-06-12 10:35:50,011 - logger - DEBUG - Database connection disposed.
+2024-06-12 10:37:18,133 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 10:37:18,277 - logger - DEBUG - Initialized home view.
+2024-06-12 10:37:18,332 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 10:37:18,386 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 10:37:18,392 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 10:37:18,407 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 10:37:18,432 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:37:18,436 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 10:37:21,737 - logger - DEBUG - Set app view to index 1
+2024-06-12 10:37:22,641 - logger - DEBUG - Set app view to index 2
+2024-06-12 10:37:23,899 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:37:25,393 - logger - DEBUG - Set app view to index 1
+2024-06-12 10:37:26,346 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:37:27,705 - logger - DEBUG - Item with id 24d369b7-b38f-4649-b495-9441fcf8a810 added successfully.
+2024-06-12 10:37:28,071 - logger - DEBUG - New router added successfully.
+2024-06-12 10:37:42,849 - logger - DEBUG - Database session closed.
+2024-06-12 10:37:42,851 - logger - DEBUG - Database teardown complete.
+2024-06-12 10:37:42,851 - logger - DEBUG - Database connection disposed.
+2024-06-12 10:45:28,159 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 10:45:28,382 - logger - DEBUG - Initialized home view.
+2024-06-12 10:45:28,435 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 10:45:28,510 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 10:45:28,521 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 10:45:29,140 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 10:45:29,152 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 10:45:29,166 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:45:29,184 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 10:46:20,459 - logger - DEBUG - Set app view to index 1
+2024-06-12 10:46:21,826 - logger - DEBUG - Set app view to index 2
+2024-06-12 10:46:22,765 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:46:24,890 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:46:28,825 - logger - DEBUG - Database session closed.
+2024-06-12 10:46:28,827 - logger - DEBUG - Database teardown complete.
+2024-06-12 10:46:28,827 - logger - DEBUG - Database connection disposed.
+2024-06-12 10:54:04,745 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 10:54:04,916 - logger - DEBUG - Initialized home view.
+2024-06-12 10:54:04,936 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 10:54:04,994 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 10:54:05,004 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 10:54:05,580 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 10:54:05,590 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 10:54:05,600 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:54:05,616 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 10:54:34,754 - logger - DEBUG - Set app view to index 1
+2024-06-12 10:54:35,347 - logger - DEBUG - Set app view to index 2
+2024-06-12 10:54:35,791 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:54:37,426 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:54:38,321 - logger - DEBUG - Set app view to index 2
+2024-06-12 10:54:38,802 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:54:42,874 - logger - DEBUG - Set app view to index 1
+2024-06-12 10:54:51,456 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 10:54:51,662 - logger - DEBUG - Parsing STL file...
+2024-06-12 10:54:51,662 - logger - DEBUG - Finding flat axis...
+2024-06-12 10:54:51,664 - logger - DEBUG - Calculating thickness...
+2024-06-12 10:54:51,664 - logger - DEBUG - Flattening mesh...
+2024-06-12 10:54:51,664 - logger - DEBUG - Finding outer edges...
+2024-06-12 10:54:51,682 - logger - DEBUG - Finding contours...
+2024-06-12 10:54:51,686 - logger - DEBUG - Finding outermost contour...
+2024-06-12 10:54:51,686 - logger - DEBUG - Smoothing contour...
+2024-06-12 10:54:51,690 - logger - DEBUG - Parsing complete.
+2024-06-12 10:54:51,701 - logger - DEBUG - Item with id e4389c28-2d84-413e-89f5-ed7992f84cfb added successfully.
+2024-06-12 10:54:51,702 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 10:54:52,143 - logger - DEBUG - Saving preview image...
+2024-06-12 10:54:52,567 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\e4389c28-2d84-413e-89f5-ed7992f84cfb.png.
+2024-06-12 10:54:52,567 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL successfully
+2024-06-12 10:54:52,587 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 10:55:04,370 - logger - DEBUG - Set app view to index 2
+2024-06-12 10:55:05,066 - logger - DEBUG - Set app view to index 1
+2024-06-12 10:55:05,602 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:55:07,707 - logger - DEBUG - Set app view to index 2
+2024-06-12 10:55:08,370 - logger - DEBUG - Set app view to index 2
+2024-06-12 10:55:09,059 - logger - DEBUG - Set app view to index 1
+2024-06-12 10:55:10,170 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:55:16,089 - logger - DEBUG - Database session closed.
+2024-06-12 10:55:16,091 - logger - DEBUG - Database teardown complete.
+2024-06-12 10:55:16,091 - logger - DEBUG - Database connection disposed.
+2024-06-12 10:57:50,795 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 10:57:50,972 - logger - DEBUG - Initialized home view.
+2024-06-12 10:57:51,027 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 10:57:51,098 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 10:57:51,107 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 10:57:51,566 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 10:57:51,577 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 10:57:51,590 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:57:51,609 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 10:58:18,107 - logger - DEBUG - Set app view to index 1
+2024-06-12 10:58:20,088 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:58:25,954 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:58:30,730 - logger - DEBUG - Set app view to index 1
+2024-06-12 10:58:31,531 - logger - DEBUG - Set app view to index 2
+2024-06-12 10:58:32,074 - logger - DEBUG - Set app view to index 1
+2024-06-12 10:58:32,778 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:58:38,897 - logger - DEBUG - Set app view to index 2
+2024-06-12 10:58:39,426 - logger - DEBUG - Set app view to index 1
+2024-06-12 10:58:40,754 - logger - DEBUG - Set app view to index 0
+2024-06-12 10:58:41,665 - logger - DEBUG - Set app view to index 2
+2024-06-12 10:58:42,210 - logger - DEBUG - Set app view to index 3
+2024-06-12 10:58:46,161 - logger - DEBUG - Database session closed.
+2024-06-12 10:58:46,163 - logger - DEBUG - Database teardown complete.
+2024-06-12 10:58:46,163 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:02:10,261 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:02:10,438 - logger - DEBUG - Initialized home view.
+2024-06-12 11:02:10,492 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:02:10,559 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:02:10,569 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:02:11,037 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 11:02:11,046 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:02:11,056 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:02:11,072 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:02:14,427 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:02:22,565 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 11:02:22,715 - logger - DEBUG - Parsing STL file...
+2024-06-12 11:02:22,715 - logger - DEBUG - Finding flat axis...
+2024-06-12 11:02:22,716 - logger - DEBUG - Calculating thickness...
+2024-06-12 11:02:22,716 - logger - DEBUG - Flattening mesh...
+2024-06-12 11:02:22,717 - logger - DEBUG - Finding outer edges...
+2024-06-12 11:02:22,733 - logger - DEBUG - Finding contours...
+2024-06-12 11:02:22,737 - logger - DEBUG - Finding outermost contour...
+2024-06-12 11:02:22,737 - logger - DEBUG - Smoothing contour...
+2024-06-12 11:02:22,741 - logger - DEBUG - Parsing complete.
+2024-06-12 11:02:22,792 - logger - DEBUG - Item with id 17b329f0-9d13-4502-ac9a-733e480429e9 added successfully.
+2024-06-12 11:02:22,793 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 11:02:23,236 - logger - DEBUG - Saving preview image...
+2024-06-12 11:02:23,626 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\17b329f0-9d13-4502-ac9a-733e480429e9.png.
+2024-06-12 11:02:23,626 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL successfully
+2024-06-12 11:02:23,640 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 11:02:37,442 - logger - DEBUG - Database session closed.
+2024-06-12 11:02:37,443 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:02:37,443 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:02:45,130 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:02:45,316 - logger - DEBUG - Initialized home view.
+2024-06-12 11:02:45,370 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:02:45,446 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:02:45,459 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:02:45,965 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 11:02:45,975 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:02:45,986 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:02:46,005 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:02:47,371 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:02:55,038 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 11:02:55,214 - logger - DEBUG - Parsing STL file...
+2024-06-12 11:02:55,215 - logger - DEBUG - Finding flat axis...
+2024-06-12 11:02:55,217 - logger - DEBUG - Calculating thickness...
+2024-06-12 11:02:55,217 - logger - DEBUG - Flattening mesh...
+2024-06-12 11:02:55,218 - logger - DEBUG - Finding outer edges...
+2024-06-12 11:02:55,245 - logger - DEBUG - Finding contours...
+2024-06-12 11:02:55,255 - logger - DEBUG - Finding outermost contour...
+2024-06-12 11:02:55,257 - logger - DEBUG - Smoothing contour...
+2024-06-12 11:02:55,266 - logger - DEBUG - Parsing complete.
+2024-06-12 11:02:55,326 - logger - DEBUG - Item with id b7ce9a2a-f950-4344-846b-120b4583c551 added successfully.
+2024-06-12 11:02:55,326 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 11:02:55,923 - logger - DEBUG - Saving preview image...
+2024-06-12 11:02:56,257 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\b7ce9a2a-f950-4344-846b-120b4583c551.png.
+2024-06-12 11:02:56,258 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL successfully
+2024-06-12 11:02:56,278 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 11:03:05,761 - logger - DEBUG - Database session closed.
+2024-06-12 11:03:05,763 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:03:05,763 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:04:02,719 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:04:03,060 - logger - DEBUG - Initialized home view.
+2024-06-12 11:04:03,089 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:04:03,177 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:04:03,188 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:04:03,893 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 11:04:03,901 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:04:03,914 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:04:03,934 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:04:05,393 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:04:12,875 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 11:04:13,112 - logger - DEBUG - Parsing STL file...
+2024-06-12 11:04:13,112 - logger - DEBUG - Finding flat axis...
+2024-06-12 11:04:13,113 - logger - DEBUG - Calculating thickness...
+2024-06-12 11:04:13,114 - logger - DEBUG - Flattening mesh...
+2024-06-12 11:04:13,114 - logger - DEBUG - Finding outer edges...
+2024-06-12 11:04:13,130 - logger - DEBUG - Finding contours...
+2024-06-12 11:04:13,132 - logger - DEBUG - Finding outermost contour...
+2024-06-12 11:04:13,133 - logger - DEBUG - Smoothing contour...
+2024-06-12 11:04:13,136 - logger - DEBUG - Parsing complete.
+2024-06-12 11:04:13,188 - logger - DEBUG - Item with id 0175b92f-8bb7-4a3f-9d13-ce0f8f681efd added successfully.
+2024-06-12 11:04:13,189 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 11:04:13,643 - logger - DEBUG - Saving preview image...
+2024-06-12 11:04:14,105 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\0175b92f-8bb7-4a3f-9d13-ce0f8f681efd.png.
+2024-06-12 11:04:14,106 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL successfully
+2024-06-12 11:04:14,122 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 11:04:30,050 - logger - DEBUG - Database session closed.
+2024-06-12 11:04:30,051 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:04:30,052 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:04:46,070 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:04:46,242 - logger - DEBUG - Initialized home view.
+2024-06-12 11:04:46,295 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:04:46,356 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:04:46,366 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:04:46,822 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 11:04:46,831 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:04:46,840 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:04:46,856 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:04:48,234 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:04:59,285 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 11:04:59,436 - logger - DEBUG - Parsing STL file...
+2024-06-12 11:04:59,437 - logger - DEBUG - Finding flat axis...
+2024-06-12 11:04:59,438 - logger - DEBUG - Calculating thickness...
+2024-06-12 11:04:59,439 - logger - DEBUG - Flattening mesh...
+2024-06-12 11:04:59,439 - logger - DEBUG - Finding outer edges...
+2024-06-12 11:04:59,460 - logger - DEBUG - Finding contours...
+2024-06-12 11:04:59,464 - logger - DEBUG - Finding outermost contour...
+2024-06-12 11:04:59,465 - logger - DEBUG - Smoothing contour...
+2024-06-12 11:04:59,469 - logger - DEBUG - Parsing complete.
+2024-06-12 11:04:59,525 - logger - DEBUG - Item with id 8f46a196-0bf2-4964-b8ab-e4f624be138d added successfully.
+2024-06-12 11:04:59,526 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 11:05:00,016 - logger - DEBUG - Saving preview image...
+2024-06-12 11:05:00,378 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\8f46a196-0bf2-4964-b8ab-e4f624be138d.png.
+2024-06-12 11:05:00,379 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL successfully
+2024-06-12 11:05:00,397 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 11:05:14,491 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:05:15,687 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:05:43,077 - logger - DEBUG - Updated item id 24d369b7-b38f-4649-b495-9441fcf8a810: set x to 750.0
+2024-06-12 11:05:43,081 - logger - DEBUG - Updated item id 24d369b7-b38f-4649-b495-9441fcf8a810: set y to 1500.0
+2024-06-12 11:05:43,084 - logger - DEBUG - Updated item id 24d369b7-b38f-4649-b495-9441fcf8a810: set z to 500.0
+2024-06-12 11:05:43,088 - logger - DEBUG - Updated item id 24d369b7-b38f-4649-b495-9441fcf8a810: set plate_x to 1000.0
+2024-06-12 11:05:43,091 - logger - DEBUG - Updated item id 24d369b7-b38f-4649-b495-9441fcf8a810: set plate_y to 2000.0
+2024-06-12 11:05:43,095 - logger - DEBUG - Updated item id 24d369b7-b38f-4649-b495-9441fcf8a810: set plate_z to 500.0
+2024-06-12 11:05:45,791 - logger - ERROR - Error updating router: 'min_safe_dist_from_edge'
+2024-06-12 11:05:49,745 - logger - DEBUG - Database session closed.
+2024-06-12 11:05:49,746 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:05:49,747 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:10:43,842 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:10:44,057 - logger - DEBUG - Initialized home view.
+2024-06-12 11:10:44,116 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:10:44,190 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:10:44,203 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:10:44,714 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 11:10:44,725 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:10:44,739 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:10:44,759 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:10:46,379 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:10:55,107 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 11:10:55,322 - logger - DEBUG - Parsing STL file...
+2024-06-12 11:10:55,323 - logger - DEBUG - Finding flat axis...
+2024-06-12 11:10:55,324 - logger - DEBUG - Calculating thickness...
+2024-06-12 11:10:55,324 - logger - DEBUG - Flattening mesh...
+2024-06-12 11:10:55,325 - logger - DEBUG - Finding outer edges...
+2024-06-12 11:10:55,346 - logger - DEBUG - Finding contours...
+2024-06-12 11:10:55,349 - logger - DEBUG - Finding outermost contour...
+2024-06-12 11:10:55,350 - logger - DEBUG - Smoothing contour...
+2024-06-12 11:10:55,354 - logger - DEBUG - Parsing complete.
+2024-06-12 11:10:55,367 - logger - DEBUG - Item with id 29adc832-10c8-449c-b64f-198409791be4 added successfully.
+2024-06-12 11:10:55,368 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 11:10:55,760 - logger - DEBUG - Saving preview image...
+2024-06-12 11:10:56,183 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\29adc832-10c8-449c-b64f-198409791be4.png.
+2024-06-12 11:10:56,184 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL successfully
+2024-06-12 11:10:56,211 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 11:11:03,180 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate copy 2.STL
+2024-06-12 11:11:03,329 - logger - DEBUG - Parsing STL file...
+2024-06-12 11:11:03,329 - logger - DEBUG - Finding flat axis...
+2024-06-12 11:11:03,331 - logger - DEBUG - Calculating thickness...
+2024-06-12 11:11:03,331 - logger - DEBUG - Flattening mesh...
+2024-06-12 11:11:03,331 - logger - DEBUG - Finding outer edges...
+2024-06-12 11:11:03,352 - logger - DEBUG - Finding contours...
+2024-06-12 11:11:03,356 - logger - DEBUG - Finding outermost contour...
+2024-06-12 11:11:03,357 - logger - DEBUG - Smoothing contour...
+2024-06-12 11:11:03,362 - logger - DEBUG - Parsing complete.
+2024-06-12 11:11:03,413 - logger - DEBUG - Item with id 28f01a48-8ef6-40eb-9fc4-d18388f4d68d added successfully.
+2024-06-12 11:11:03,413 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 11:11:04,027 - logger - DEBUG - Saving preview image...
+2024-06-12 11:11:04,398 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\28f01a48-8ef6-40eb-9fc4-d18388f4d68d.png.
+2024-06-12 11:11:04,398 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate copy 2.STL successfully
+2024-06-12 11:11:04,414 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate copy 2.STL
+2024-06-12 11:11:09,066 - logger - DEBUG - Database session closed.
+2024-06-12 11:11:09,067 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:11:09,067 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:12:48,204 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:12:48,382 - logger - DEBUG - Initialized home view.
+2024-06-12 11:12:48,437 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:12:48,519 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:12:48,529 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:12:49,021 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 11:12:49,031 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:12:49,042 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:12:49,062 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:12:50,731 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:12:59,676 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 11:12:59,820 - logger - DEBUG - Parsing STL file...
+2024-06-12 11:12:59,820 - logger - DEBUG - Finding flat axis...
+2024-06-12 11:12:59,821 - logger - DEBUG - Calculating thickness...
+2024-06-12 11:12:59,822 - logger - DEBUG - Flattening mesh...
+2024-06-12 11:12:59,822 - logger - DEBUG - Finding outer edges...
+2024-06-12 11:12:59,839 - logger - DEBUG - Finding contours...
+2024-06-12 11:12:59,842 - logger - DEBUG - Finding outermost contour...
+2024-06-12 11:12:59,843 - logger - DEBUG - Smoothing contour...
+2024-06-12 11:12:59,846 - logger - DEBUG - Parsing complete.
+2024-06-12 11:12:59,896 - logger - DEBUG - Item with id c6159427-a966-47c6-8eb2-12fd52171f1d added successfully.
+2024-06-12 11:12:59,896 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 11:13:00,331 - logger - DEBUG - Saving preview image...
+2024-06-12 11:13:00,815 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\c6159427-a966-47c6-8eb2-12fd52171f1d.png.
+2024-06-12 11:13:00,815 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL successfully
+2024-06-12 11:13:00,835 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 11:13:05,883 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate copy 2.STL
+2024-06-12 11:13:06,031 - logger - DEBUG - Parsing STL file...
+2024-06-12 11:13:06,031 - logger - DEBUG - Finding flat axis...
+2024-06-12 11:13:06,032 - logger - DEBUG - Calculating thickness...
+2024-06-12 11:13:06,033 - logger - DEBUG - Flattening mesh...
+2024-06-12 11:13:06,033 - logger - DEBUG - Finding outer edges...
+2024-06-12 11:13:06,049 - logger - DEBUG - Finding contours...
+2024-06-12 11:13:06,051 - logger - DEBUG - Finding outermost contour...
+2024-06-12 11:13:06,052 - logger - DEBUG - Smoothing contour...
+2024-06-12 11:13:06,055 - logger - DEBUG - Parsing complete.
+2024-06-12 11:13:06,104 - logger - DEBUG - Item with id 39a2f8ee-8170-460b-b450-3e5b4a1f2e06 added successfully.
+2024-06-12 11:13:06,105 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 11:13:06,601 - logger - DEBUG - Saving preview image...
+2024-06-12 11:13:07,000 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\39a2f8ee-8170-460b-b450-3e5b4a1f2e06.png.
+2024-06-12 11:13:07,001 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate copy 2.STL successfully
+2024-06-12 11:13:07,025 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate copy 2.STL
+2024-06-12 11:13:09,865 - logger - DEBUG - Database session closed.
+2024-06-12 11:13:09,867 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:13:09,867 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:31:41,796 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:31:42,003 - logger - DEBUG - Initialized home view.
+2024-06-12 11:31:42,056 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:31:42,143 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:31:42,156 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:31:42,682 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 11:31:42,694 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:31:42,709 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:31:42,734 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:31:44,290 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:31:59,978 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 11:32:00,165 - logger - DEBUG - Parsing STL file...
+2024-06-12 11:32:00,165 - logger - DEBUG - Finding flat axis...
+2024-06-12 11:32:00,166 - logger - DEBUG - Calculating thickness...
+2024-06-12 11:32:00,167 - logger - DEBUG - Flattening mesh...
+2024-06-12 11:32:00,167 - logger - DEBUG - Finding outer edges...
+2024-06-12 11:32:00,185 - logger - DEBUG - Finding contours...
+2024-06-12 11:32:00,188 - logger - DEBUG - Finding outermost contour...
+2024-06-12 11:32:00,189 - logger - DEBUG - Smoothing contour...
+2024-06-12 11:32:00,193 - logger - DEBUG - Parsing complete.
+2024-06-12 11:32:00,242 - logger - DEBUG - Item with id 654cf306-b35c-481d-bb96-1a4103b786da added successfully.
+2024-06-12 11:32:00,243 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 11:32:00,649 - logger - DEBUG - Saving preview image...
+2024-06-12 11:32:01,107 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\654cf306-b35c-481d-bb96-1a4103b786da.png.
+2024-06-12 11:32:01,107 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL successfully
+2024-06-12 11:32:01,122 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate.STL
+2024-06-12 11:32:12,277 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate copy 3.STL
+2024-06-12 11:32:12,469 - logger - DEBUG - Parsing STL file...
+2024-06-12 11:32:12,469 - logger - DEBUG - Finding flat axis...
+2024-06-12 11:32:12,470 - logger - DEBUG - Calculating thickness...
+2024-06-12 11:32:12,470 - logger - DEBUG - Flattening mesh...
+2024-06-12 11:32:12,471 - logger - DEBUG - Finding outer edges...
+2024-06-12 11:32:12,487 - logger - DEBUG - Finding contours...
+2024-06-12 11:32:12,490 - logger - DEBUG - Finding outermost contour...
+2024-06-12 11:32:12,490 - logger - DEBUG - Smoothing contour...
+2024-06-12 11:32:12,494 - logger - DEBUG - Parsing complete.
+2024-06-12 11:32:12,540 - logger - DEBUG - Item with id ddd46067-2b76-4559-b47d-72922d53d3c6 added successfully.
+2024-06-12 11:32:12,540 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 11:32:13,074 - logger - DEBUG - Saving preview image...
+2024-06-12 11:32:13,511 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\ddd46067-2b76-4559-b47d-72922d53d3c6.png.
+2024-06-12 11:32:13,511 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate copy 3.STL successfully
+2024-06-12 11:32:13,538 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate copy 3.STL
+2024-06-12 11:32:21,414 - logger - DEBUG - Attempted to add already existing STL file: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate copy 3.STL
+2024-06-12 11:32:22,595 - logger - WARNING - Failed to import part from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate copy 3.STL
+2024-06-12 11:32:26,805 - logger - DEBUG - Initializing STLParser with source path: C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate copy.STL
+2024-06-12 11:32:27,026 - logger - DEBUG - Parsing STL file...
+2024-06-12 11:32:27,027 - logger - DEBUG - Finding flat axis...
+2024-06-12 11:32:27,028 - logger - DEBUG - Calculating thickness...
+2024-06-12 11:32:27,028 - logger - DEBUG - Flattening mesh...
+2024-06-12 11:32:27,029 - logger - DEBUG - Finding outer edges...
+2024-06-12 11:32:27,045 - logger - DEBUG - Finding contours...
+2024-06-12 11:32:27,048 - logger - DEBUG - Finding outermost contour...
+2024-06-12 11:32:27,049 - logger - DEBUG - Smoothing contour...
+2024-06-12 11:32:27,052 - logger - DEBUG - Parsing complete.
+2024-06-12 11:32:27,098 - logger - DEBUG - Item with id 8d92b088-0973-4f8e-b367-3350e30d055f added successfully.
+2024-06-12 11:32:27,098 - logger - DEBUG - Creating plot for preview image...
+2024-06-12 11:32:27,550 - logger - DEBUG - Saving preview image...
+2024-06-12 11:32:27,938 - logger - DEBUG - Image saved to C:\Users\Caco Cola\Desktop\EasyCNC\src\data\cache\part preview\8d92b088-0973-4f8e-b367-3350e30d055f.png.
+2024-06-12 11:32:27,939 - logger - DEBUG - Imported file C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate copy.STL successfully
+2024-06-12 11:32:27,956 - logger - DEBUG - Part added successfully from C:/Users/Caco Cola/Desktop/EasyCNC/tests/test data/stl files/RollerConnectorPlate copy.STL
+2024-06-12 11:32:33,992 - logger - DEBUG - Database session closed.
+2024-06-12 11:32:33,993 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:32:33,994 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:35:53,882 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:35:54,090 - logger - DEBUG - Initialized home view.
+2024-06-12 11:35:54,146 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:35:54,227 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:35:54,238 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:35:56,617 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 11:35:56,626 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:35:56,696 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:35:56,724 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:36:05,371 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:36:07,394 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:36:08,413 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:36:16,914 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:36:18,297 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:36:19,985 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:36:21,057 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:36:23,473 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:36:24,337 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:36:25,065 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:36:27,329 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:36:28,153 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:36:29,497 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:36:30,650 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:36:31,058 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:36:34,505 - logger - DEBUG - Database session closed.
+2024-06-12 11:36:34,507 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:36:34,507 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:37:15,243 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:37:15,421 - logger - DEBUG - Initialized home view.
+2024-06-12 11:37:15,438 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:37:15,491 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:37:15,501 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:37:16,961 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 11:37:16,970 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:37:17,036 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:37:17,060 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:37:43,257 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:37:48,709 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:38:03,496 - logger - DEBUG - Database session closed.
+2024-06-12 11:38:03,498 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:38:03,498 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:38:17,332 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:38:17,509 - logger - DEBUG - Initialized home view.
+2024-06-12 11:38:17,565 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:38:17,644 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:38:17,654 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:38:19,104 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 11:38:19,114 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:38:19,132 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:38:19,153 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:38:30,305 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:38:32,785 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:38:33,749 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:38:39,137 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:38:43,057 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:38:45,049 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:38:46,129 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:40:55,497 - logger - DEBUG - Database session closed.
+2024-06-12 11:40:55,500 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:40:55,500 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:41:01,712 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:41:01,888 - logger - DEBUG - Initialized home view.
+2024-06-12 11:41:01,901 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:41:01,946 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:41:01,951 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:41:03,747 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 11:41:03,757 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:41:03,782 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:41:03,811 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:41:08,474 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:41:10,850 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:41:11,497 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:41:12,161 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:41:12,856 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:41:13,285 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:41:14,129 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:41:14,697 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:41:15,409 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:41:16,528 - logger - DEBUG - Database session closed.
+2024-06-12 11:41:16,530 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:41:16,530 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:41:32,822 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:41:32,979 - logger - DEBUG - Initialized home view.
+2024-06-12 11:41:33,028 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:41:33,104 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:41:33,114 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:41:34,684 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 11:41:34,698 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:41:34,742 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:41:34,777 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:41:36,194 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:41:37,737 - logger - DEBUG - Database session closed.
+2024-06-12 11:41:37,739 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:41:37,739 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:43:01,979 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:43:02,177 - logger - DEBUG - Initialized home view.
+2024-06-12 11:43:02,190 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:43:02,250 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:43:02,260 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:43:03,623 - logger - DEBUG - Router widget added successfully for router ID: 24d369b7-b38f-4649-b495-9441fcf8a810
+2024-06-12 11:43:03,631 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:43:03,652 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:43:03,670 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:43:05,258 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:43:10,897 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:43:12,093 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:43:25,426 - logger - DEBUG - Item with id 59c277ba-384b-46d9-b246-89f3c06772a5 added successfully.
+2024-06-12 11:43:25,807 - logger - DEBUG - New router added successfully.
+2024-06-12 11:43:32,865 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:43:33,753 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:43:40,041 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:43:43,145 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:43:43,577 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:43:44,657 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:43:45,265 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:43:54,179 - logger - DEBUG - Item with id 24d369b7-b38f-4649-b495-9441fcf8a810 removed successfully.
+2024-06-12 11:43:55,294 - logger - DEBUG - Item with id 59c277ba-384b-46d9-b246-89f3c06772a5 removed successfully.
+2024-06-12 11:43:57,494 - logger - DEBUG - Item with id 692a2bc4-6b30-47b5-9bf8-9b3523dd0612 added successfully.
+2024-06-12 11:43:57,833 - logger - DEBUG - New router added successfully.
+2024-06-12 11:44:10,441 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:44:11,169 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:44:11,962 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:44:12,802 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:44:13,216 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:44:14,368 - logger - DEBUG - Database session closed.
+2024-06-12 11:44:14,370 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:44:14,370 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:45:31,471 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:45:31,587 - logger - DEBUG - Initialized home view.
+2024-06-12 11:45:31,626 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:45:31,694 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:45:31,704 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:45:33,331 - logger - DEBUG - Router widget added successfully for router ID: 692a2bc4-6b30-47b5-9bf8-9b3523dd0612
+2024-06-12 11:45:33,339 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:45:33,357 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:45:33,378 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:45:59,035 - logger - DEBUG - Database session closed.
+2024-06-12 11:45:59,037 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:45:59,037 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:46:06,192 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:46:06,364 - logger - DEBUG - Initialized home view.
+2024-06-12 11:46:06,420 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:46:06,488 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:46:06,497 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:46:08,152 - logger - DEBUG - Router widget added successfully for router ID: 692a2bc4-6b30-47b5-9bf8-9b3523dd0612
+2024-06-12 11:46:08,161 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:46:25,134 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:46:25,297 - logger - DEBUG - Initialized home view.
+2024-06-12 11:46:25,314 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:46:25,382 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:46:25,394 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:46:26,957 - logger - DEBUG - Router widget added successfully for router ID: 692a2bc4-6b30-47b5-9bf8-9b3523dd0612
+2024-06-12 11:46:26,968 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:46:26,990 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:46:27,013 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:47:05,624 - logger - DEBUG - Database session closed.
+2024-06-12 11:47:05,627 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:47:05,627 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:47:12,634 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:47:12,825 - logger - DEBUG - Initialized home view.
+2024-06-12 11:47:12,881 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:47:12,974 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:47:12,988 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:47:14,486 - logger - DEBUG - Router widget added successfully for router ID: 692a2bc4-6b30-47b5-9bf8-9b3523dd0612
+2024-06-12 11:47:14,494 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:47:14,513 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:47:14,535 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:47:22,296 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:47:23,882 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:47:24,701 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:47:27,441 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:47:52,057 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:47:53,393 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:47:57,354 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:47:57,993 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:47:58,585 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:47:59,729 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:48:00,520 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:48:01,657 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:48:02,778 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:48:03,697 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:48:05,762 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:48:08,129 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:48:11,673 - logger - DEBUG - Database session closed.
+2024-06-12 11:48:11,675 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:48:11,675 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:49:50,746 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:49:50,916 - logger - DEBUG - Initialized home view.
+2024-06-12 11:49:50,970 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:49:51,038 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:49:51,047 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:49:51,520 - logger - DEBUG - Router widget added successfully for router ID: 692a2bc4-6b30-47b5-9bf8-9b3523dd0612
+2024-06-12 11:49:51,530 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:49:51,545 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:49:51,569 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:49:53,761 - logger - DEBUG - Database session closed.
+2024-06-12 11:49:53,762 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:49:53,762 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:50:25,816 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:50:25,982 - logger - DEBUG - Initialized home view.
+2024-06-12 11:50:25,997 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:50:26,047 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:50:26,057 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:50:27,597 - logger - DEBUG - Router widget added successfully for router ID: 692a2bc4-6b30-47b5-9bf8-9b3523dd0612
+2024-06-12 11:50:27,605 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:50:27,623 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:50:27,642 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:52:42,457 - logger - DEBUG - Database session closed.
+2024-06-12 11:52:42,459 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:52:42,459 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:53:04,056 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:53:04,231 - logger - DEBUG - Initialized home view.
+2024-06-12 11:53:04,285 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:53:04,341 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:53:04,347 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:53:05,772 - logger - DEBUG - Router widget added successfully for router ID: 692a2bc4-6b30-47b5-9bf8-9b3523dd0612
+2024-06-12 11:53:05,780 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:53:05,799 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:53:05,819 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:53:24,017 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:53:29,246 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:53:35,665 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:53:36,745 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:53:39,130 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:53:40,433 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:53:43,433 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:53:44,178 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:53:45,089 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:53:45,545 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:53:46,337 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:53:47,274 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:53:55,762 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:54:01,433 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:54:03,361 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:54:03,833 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:54:05,908 - logger - DEBUG - Item with id f470f303-bf4f-48ab-9337-e99f98e44464 added successfully.
+2024-06-12 11:54:06,254 - logger - DEBUG - New router added successfully.
+2024-06-12 11:54:10,840 - logger - DEBUG - Database session closed.
+2024-06-12 11:54:10,841 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:54:10,842 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:54:37,709 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:54:37,894 - logger - DEBUG - Initialized home view.
+2024-06-12 11:54:37,950 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:54:38,010 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:54:38,018 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:54:39,892 - logger - DEBUG - Router widget added successfully for router ID: 692a2bc4-6b30-47b5-9bf8-9b3523dd0612
+2024-06-12 11:54:39,922 - logger - DEBUG - Router widget added successfully for router ID: f470f303-bf4f-48ab-9337-e99f98e44464
+2024-06-12 11:54:39,930 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:54:39,955 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:54:39,992 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:54:42,239 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:55:13,849 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:55:32,034 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:55:33,578 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:55:33,970 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:55:43,329 - logger - DEBUG - Database session closed.
+2024-06-12 11:55:43,331 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:55:43,331 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:56:41,176 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:56:41,361 - logger - DEBUG - Initialized home view.
+2024-06-12 11:56:41,414 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:56:41,490 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:56:41,503 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:56:43,340 - logger - DEBUG - Router widget added successfully for router ID: 692a2bc4-6b30-47b5-9bf8-9b3523dd0612
+2024-06-12 11:56:43,364 - logger - DEBUG - Router widget added successfully for router ID: f470f303-bf4f-48ab-9337-e99f98e44464
+2024-06-12 11:56:43,372 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:56:43,398 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:56:43,434 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:56:45,354 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:56:48,535 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:57:17,034 - logger - DEBUG - Set app view to index 1
+2024-06-12 11:57:18,161 - logger - DEBUG - Set app view to index 2
+2024-06-12 11:57:18,930 - logger - DEBUG - Set app view to index 3
+2024-06-12 11:57:22,191 - logger - DEBUG - Item with id 692a2bc4-6b30-47b5-9bf8-9b3523dd0612 removed successfully.
+2024-06-12 11:57:23,164 - logger - DEBUG - Item with id f470f303-bf4f-48ab-9337-e99f98e44464 removed successfully.
+2024-06-12 11:57:24,914 - logger - DEBUG - Item with id 88569866-c205-4ec5-93b5-3768d5546bd7 added successfully.
+2024-06-12 11:57:25,227 - logger - DEBUG - New router added successfully.
+2024-06-12 11:57:28,202 - logger - DEBUG - Item with id 95dd95bb-6693-4ff1-8a20-a05082801e41 added successfully.
+2024-06-12 11:57:28,603 - logger - DEBUG - New router added successfully.
+2024-06-12 11:57:34,785 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:57:40,329 - logger - DEBUG - Database session closed.
+2024-06-12 11:57:40,330 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:57:40,330 - logger - DEBUG - Database connection disposed.
+2024-06-12 11:59:18,954 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 11:59:19,130 - logger - DEBUG - Initialized home view.
+2024-06-12 11:59:19,183 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 11:59:19,255 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 11:59:19,267 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 11:59:21,305 - logger - DEBUG - Router widget added successfully for router ID: 88569866-c205-4ec5-93b5-3768d5546bd7
+2024-06-12 11:59:21,333 - logger - DEBUG - Router widget added successfully for router ID: 95dd95bb-6693-4ff1-8a20-a05082801e41
+2024-06-12 11:59:21,340 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 11:59:21,370 - logger - DEBUG - Set app view to index 0
+2024-06-12 11:59:21,407 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 11:59:24,897 - logger - DEBUG - Database session closed.
+2024-06-12 11:59:24,898 - logger - DEBUG - Database teardown complete.
+2024-06-12 11:59:24,899 - logger - DEBUG - Database connection disposed.
+2024-06-12 12:26:15,037 - logger - DEBUG - Database setup complete and session started.
+2024-06-12 12:26:15,225 - logger - DEBUG - Initialized home view.
+2024-06-12 12:26:15,280 - logger - DEBUG - Successfully cleared out data table.
+2024-06-12 12:26:15,358 - logger - DEBUG - Successfully initialized PartView.
+2024-06-12 12:26:15,370 - logger - DEBUG - Successfully initialized PlateView.
+2024-06-12 12:26:17,640 - logger - DEBUG - Router widget added successfully for router ID: 88569866-c205-4ec5-93b5-3768d5546bd7
+2024-06-12 12:26:17,668 - logger - DEBUG - Router widget added successfully for router ID: 95dd95bb-6693-4ff1-8a20-a05082801e41
+2024-06-12 12:26:17,680 - logger - DEBUG - Successfully initialized RouterView.
+2024-06-12 12:26:17,701 - logger - DEBUG - Set app view to index 0
+2024-06-12 12:26:17,737 - logger - DEBUG - Main window initialized successfully.
+2024-06-12 12:26:23,447 - logger - DEBUG - Set app view to index 1
+2024-06-12 12:26:26,361 - logger - DEBUG - Set app view to index 2
+2024-06-12 12:26:27,078 - logger - DEBUG - Set app view to index 3
+2024-06-12 12:26:49,096 - logger - DEBUG - Set app view to index 0
+2024-06-12 12:27:00,904 - logger - DEBUG - Set app view to index 1
+2024-06-12 12:27:02,128 - logger - DEBUG - Set app view to index 0
+2024-06-12 12:27:07,864 - logger - DEBUG - Set app view to index 1
+2024-06-12 12:27:08,785 - logger - DEBUG - Set app view to index 3
+2024-06-12 12:27:13,888 - logger - DEBUG - Set app view to index 2
+2024-06-12 12:27:15,848 - logger - DEBUG - Set app view to index 3
+2024-06-12 12:27:23,328 - logger - DEBUG - Set app view to index 1
+2024-06-12 12:27:23,800 - logger - DEBUG - Set app view to index 0
+2024-06-12 12:27:27,641 - logger - DEBUG - Set app view to index 1
+2024-06-12 12:27:28,576 - logger - DEBUG - Set app view to index 3
+2024-06-12 12:27:35,152 - logger - DEBUG - Set app view to index 1
+2024-06-12 12:27:35,952 - logger - DEBUG - Set app view to index 0
+2024-06-12 12:27:56,928 - logger - DEBUG - Set app view to index 3
+2024-06-12 12:28:12,136 - logger - DEBUG - Database session closed.
+2024-06-12 12:28:12,137 - logger - DEBUG - Database teardown complete.
+2024-06-12 12:28:12,137 - logger - DEBUG - Database connection disposed.

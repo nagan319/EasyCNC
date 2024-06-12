@@ -4,6 +4,7 @@ Date: 2024/06/10
 """
 
 from PyQt6.QtWidgets import QMainWindow, QHBoxLayout, QWidget
+from PyQt6.QtGui import QIcon, QFont, QFontDatabase
 from typing import List
 
 from .views.view_manager import ViewManager 
@@ -14,7 +15,7 @@ from .views.router_view import RouterView
 from .widgets.nav_bar import NavBar
 
 from .database import init_db, teardown_db, get_session, close_session
-from ..paths import IMAGE_PREVIEW_PATH, PART_PREVIEW_PATH, PLATE_PREVIEW_PATH, ROUTER_PREVIEW_PATH
+from ..paths import IMAGE_PREVIEW_PATH, PART_PREVIEW_PATH, PLATE_PREVIEW_PATH, ROUTER_PREVIEW_PATH, ICON_PATH, FONT_PATH
 
 from .logging import logger
 
@@ -29,6 +30,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle(APP_TITLE)
+        self.setWindowIcon(QIcon(ICON_PATH))
         self.setMinimumSize(MIN_WIDTH, MIN_HEIGHT)
 
         self.setup_db()
@@ -63,6 +65,8 @@ class MainWindow(QMainWindow):
         nav_bar.button_clicked.connect(view_manager.set_view)
 
         logger.debug("Main window initialized successfully.")
+
+
 
     def setup_db(self):
         """ Initialize database. """

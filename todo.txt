@@ -1,3 +1,13 @@
 - finish optimization controller
 
-- add max part constraint func
+- part view multiple columns
+- router widget editing
+- handsome styling
+    - general background
+    - line edits
+    - buttons
+    - titles
+    - generic text
+- part widget
+- part view
+- image preview controller

@@ -4,7 +4,7 @@ Date: 2024/06/03
 """
 
 import os
-from typing import Union, Tuple
+from typing import Union, Tuple, List
 
 import numpy as np
 from sqlalchemy import func
@@ -66,7 +66,9 @@ class RouterController(GenericController):
         """ Get amount of routers in db. Returns -1 if an error is encountered. """ 
         return self._get_item_amount()
 
-
+    def get_all(self) -> Union[List[Router], None]:
+        """ Get all routers in db. """
+        return self._get_all_items()
 
     def get_x(self, id: str) -> Union[float, None]:
         """ Get router x dimension. Returns None if an error occurs."""
