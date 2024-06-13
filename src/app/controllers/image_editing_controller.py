@@ -52,11 +52,6 @@ image_filenames = {
     EditorState.FLAT_FINALIZED: 'flat.png'
 }
 
-''''
-Necessary refactoring:
-- separate saving images and updating state
-'''
-
 class ImageEditingController(GenericController):
     """
     Controller for editing plate contours using imported image.
@@ -197,9 +192,12 @@ class ImageEditingController(GenericController):
             logger.error(f"Encountered exception while attempting to save binary image: {e}")
             return False
         
-    def finalize_binary(self):
+    def finalize_binary(self) -> bool:
         """ Modifies state to confirm finalization of binary image editing."""
-        self.state = EditorState.FEATURES
+        if self.state == EditorState.BINARY:
+            self.state = EditorState.FEATURES
+            return True
+        return False
     '''
     Feature handling
     '''
@@ -253,9 +251,12 @@ class ImageEditingController(GenericController):
             self.features.plate_contour is not None and \
             len(self.features.corners) == 4
     
-    def finalize_features(self):
+    def finalize_features(self) -> bool:
         """ Modifies state to confirm finalization of feature editing."""
-        self.state = EditorState.FEATURES_FINALIZED
+        if self.state == EditorState.FEATURES_EXTRACTED:
+            self.state = EditorState.FEATURES_FINALIZED
+            return True
+        return False
     '''
     Manual feature editing
     '''
@@ -387,7 +388,7 @@ class ImageEditingController(GenericController):
             logger.error(f"Encountered exception while attempting to save flattened image: {e}")
             return False       
 
-    def save_flattened_contours(self) -> bool:
+    def update_plate(self) -> bool:
         """
         Save flattened contours to db.
         """

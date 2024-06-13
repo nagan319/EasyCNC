@@ -10,7 +10,7 @@ QWidget#navBar {
 }
 
 QPushButton {
-    font-family: 'Gotham';
+    font-family: 'Metropolis';
     font-size: 14px;
     text-align: center;
     background-color: #eeeeee;
@@ -25,7 +25,7 @@ QPushButton:hover {
 }
 
 QPushButton#menuButton {
-    font-family: 'Gotham';
+    font-family: 'Metropolis';
     font-size: 18px;
     text-align: left;
     background-color: #eeeeee;
@@ -41,7 +41,7 @@ QPushButton#menuButton:hover {
 }
 
 QLabel {
-    font-family: 'Gotham';
+    font-family: 'Metropolis';
     font-size: 14px;
     color: #333333;
     padding: 10px;
@@ -49,7 +49,7 @@ QLabel {
 }
 
 QLabel#titleText {
-    font-family: 'Gotham';
+    font-family: 'Metropolis';
     font-size: 32px;
     color: #333333;
     padding: 10px;
@@ -57,7 +57,7 @@ QLabel#titleText {
 }
 
 QLineEdit {
-    font-family: 'Gotham';
+    font-family: 'Metropolis';
     font-size: 14px;
     text-align: center;
     background-color: #ffffff;
@@ -68,7 +68,7 @@ QLineEdit {
 }
 
 QLineEdit#nameInput {
-    font-family: 'Gotham';
+    font-family: 'Metropolis';
     font-size: 18px;
     text-align: center;
     background-color: #ffffff;
