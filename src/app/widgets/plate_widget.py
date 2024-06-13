@@ -6,6 +6,9 @@ from ..models.plate_model import Plate, PlateConstants
 from ..controllers.plate_controller import PlateController
 from ..utils.input_parser import InputParser
 
+from ..views.image_editor_status import ImageEditorStatus
+from ..views.image_editor_window import ImageEditorWindow
+
 from ..logging import logger
 
 class PlateWidget(QWidget):
@@ -28,12 +31,14 @@ class PlateWidget(QWidget):
         "material": ("Material:", "", PlateConstants.DEFAULT_MATERIAL),
     }
 
-    def __init__(self, plate_id: str, preview_path: str, controller: PlateController):
+    def __init__(self, plate_id: str, preview_path: str, controller: PlateController, image_editor_status: ImageEditorStatus):
         super().__init__()
         self.id = plate_id
         self.preview_path = preview_path
         self.fields = {}
         self.controller = controller
+
+        self.image_editor_status = image_editor_status
 
         self.preview_widget = self._get_preview_widget()
         self.editable_fields_widget = self._get_editable_fields_widget()
@@ -75,11 +80,14 @@ class PlateWidget(QWidget):
 
         button_widget = QWidget()
         button_layout = QHBoxLayout()
+        import_image_button = QPushButton("Import Image")
+        import_image_button.pressed.connect(self.on_image_imported)
         save_button = QPushButton("Save")
         save_button.pressed.connect(self.on_save_requested)
         delete_button = QPushButton("Delete")
         delete_button.pressed.connect(self.on_delete_requested)
         button_layout.addStretch(1)
+        button_layout.addWidget(import_image_button, 2)
         button_layout.addWidget(save_button, 1)
         button_layout.addWidget(delete_button, 1)
         button_layout.addStretch(1)
@@ -117,6 +125,15 @@ class PlateWidget(QWidget):
             QMessageBox.critical(self, "Error", f"Invalid input: {ve}")
         except Exception as e:
             QMessageBox.critical(self, "Error", f"An error occured while updating the plate: {e}")
+
+    def on_image_imported(self):
+        """User chooses to import image."""
+        plate = self.controller.get_by_id(self.id)
+        controller = self.controller
+        if self.image_editor_status.initialized:
+            QMessageBox.warning(self, "Warning", "Image editor window is already initialized.")
+            return
+        self.image_editor_window = ImageEditorWindow(plate, controller)
 
     def on_delete_requested(self):
         """ User deletes widget. """

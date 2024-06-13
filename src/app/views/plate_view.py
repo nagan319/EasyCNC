@@ -5,6 +5,7 @@ Date: 2024/06/11
 
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QScrollArea, QMessageBox
 from .view_template import ViewTemplate
+from .image_editor_status import ImageEditorStatus
 from ..widgets.plate_widget import PlateWidget
 from ..controllers.plate_controller import PlateController
 from ..logging import logger
@@ -18,6 +19,8 @@ class PlateView(ViewTemplate):
 
         self.controller = PlateController(session, plate_preview_dir)
         self.widget_map = {}
+
+        self.image_editor_status = ImageEditorStatus()
 
         self._setup_ui()
         self.populate_plate_widgets()
@@ -54,7 +57,7 @@ class PlateView(ViewTemplate):
         try:
             plates = self.controller.get_all()
             for plate in plates:
-                plate_widget = PlateWidget(plate.id, self.controller._get_preview_image_path(plate.id), self.controller)
+                plate_widget = PlateWidget(plate.id, self.controller._get_preview_image_path(plate.id), self.controller, self.image_editor_status)
                 plate_widget.deleteRequested.connect(self.on_delete_requested)
                 self.add_plate_widget_to_layout(plate_widget)
                 self.widget_map[plate.id] = plate_widget
@@ -72,7 +75,7 @@ class PlateView(ViewTemplate):
             plate = self.controller.add_new()
             
             if plate is not None:
-                new_plate_widget = PlateWidget(plate.id, self.controller._get_preview_image_path(plate.id), self.controller)
+                new_plate_widget = PlateWidget(plate.id, self.controller._get_preview_image_path(plate.id), self.controller, self.image_editor_status)
                 new_plate_widget.deleteRequested.connect(self.on_delete_requested)
                 self.add_plate_widget_to_layout(new_plate_widget)
                 self.widget_map[plate.id] = new_plate_widget
