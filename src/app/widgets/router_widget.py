@@ -86,7 +86,7 @@ class RouterWidget(QWidget):
         name_layout.addWidget(self.name_input)
         layout.addLayout(name_layout)
 
-        for field_name, (label_text, placeholder_text, attribute_name) in self.FIELD_DEFINITIONS.items(): # add routercontroller public method
+        for field_name, (label_text, placeholder_text, attribute_name) in self.FIELD_DEFINITIONS.items(): 
             field_layout, input_field = self._create_input_field(label_text, placeholder_text, self.controller.get_attribute(self.id, attribute_name))
             layout.addLayout(field_layout)
             self.fields[field_name] = input_field

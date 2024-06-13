@@ -66,6 +66,10 @@ class PlateController(GenericController):
     def get_all(self) -> Union[List[Plate], None]:
         """ Get all plates in db. """
         return self._get_all_items()
+    
+    def get_attribute(self, id: str, attr_name: str) -> Union[any, None]:
+        """ Get router attribute by name. Returns None if an error occurs. """
+        return self._get_item_attr(id, attr_name)
 
     def get_x(self, id: str) -> Union[float, None]:
         """ Get plate x dimension. Returns None if an error occurs."""

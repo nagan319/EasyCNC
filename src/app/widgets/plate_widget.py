@@ -1,8 +1,9 @@
 from PyQt6.QtCore import Qt, pyqtSignal
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton, QMessageBox
 from PyQt6.QtGui import QPixmap
 
 from ..models.plate_model import Plate, PlateConstants
+from ..controllers.plate_controller import PlateController
 from ..utils.input_parser import InputParser
 
 from ..logging import logger
@@ -13,7 +14,6 @@ class PlateWidget(QWidget):
     """
 
     deleteRequested = pyqtSignal(str)
-    saveRequested = pyqtSignal(str, dict)
 
     MAX_VALUES = {
         "x": PlateConstants.MAX_X,
@@ -22,24 +22,25 @@ class PlateWidget(QWidget):
     }
 
     FIELD_DEFINITIONS = {
-        "x": ("Plate x dimension:", f"0-{MAX_VALUES['x']}", PlateConstants.DEFAULT_X),
-        "y": ("Plate y dimension:", f"0-{MAX_VALUES['y']}", PlateConstants.DEFAULT_Y),
-        "z": ("Plate z dimension:", f"0-{MAX_VALUES['z']}", PlateConstants.DEFAULT_Z),
+        "x": ("Plate x dimension:", f"0-{MAX_VALUES['x']}", 'x'),
+        "y": ("Plate y dimension:", f"0-{MAX_VALUES['y']}", 'y'),
+        "z": ("Plate z dimension:", f"0-{MAX_VALUES['z']}", 'z'),
         "material": ("Material:", "", PlateConstants.DEFAULT_MATERIAL),
     }
 
-    def __init__(self, plate_id: str, preview_path: str):
+    def __init__(self, plate_id: str, preview_path: str, controller: PlateController):
         super().__init__()
         self.id = plate_id
         self.preview_path = preview_path
         self.fields = {}
+        self.controller = controller
 
-        preview_widget = self._get_preview_widget()
-        editable_fields_widget = self._get_editable_fields_widget()
+        self.preview_widget = self._get_preview_widget()
+        self.editable_fields_widget = self._get_editable_fields_widget()
 
         layout = QVBoxLayout()
-        layout.addWidget(preview_widget)
-        layout.addWidget(editable_fields_widget)
+        layout.addWidget(self.preview_widget)
+        layout.addWidget(self.editable_fields_widget)
         self.setLayout(layout)
 
     def _get_preview_widget(self) -> QLabel:
@@ -67,8 +68,8 @@ class PlateWidget(QWidget):
         widget = QWidget()
         layout = QVBoxLayout()
 
-        for field_name, (label_text, placeholder_text, default_value) in self.FIELD_DEFINITIONS.items():
-            field_layout, input_field = self._create_input_field(label_text, placeholder_text, default_value)
+        for field_name, (label_text, placeholder_text, attribute_name) in self.FIELD_DEFINITIONS.items():
+            field_layout, input_field = self._create_input_field(label_text, placeholder_text, self.controller.get_attribute(self.id, attribute_name))
             layout.addLayout(field_layout)
             self.fields[field_name] = input_field
 
@@ -88,6 +89,11 @@ class PlateWidget(QWidget):
         widget.setLayout(layout)
         return widget
 
+    def update_preview(self):
+        """ Update plate preview."""
+        image = QPixmap(self.preview_path)
+        self.preview_widget.setPixmap(image)
+
     def on_field_edited(self):
         """ Update field value when editing is finished. """
         sender = self.sender()
@@ -101,12 +107,16 @@ class PlateWidget(QWidget):
 
     def on_save_requested(self):
         """ User presses save button. """
-        updated_data = {}
-        for field_name, input_field in self.fields.items():
-            max_value = self.MAX_VALUES.get(field_name, None)
-            if max_value is not None:
-                updated_data[field_name] = InputParser.parse_text(input_field.text(), 0, max_value)
-        self.saveRequested.emit(self.id, updated_data)
+        try:
+            plate_id = self.id
+            self.controller.edit_x(plate_id, float(self.fields["x"].text()))
+            self.controller.edit_y(plate_id, float(self.fields["y"].text()))
+            self.controller.edit_z(plate_id, float(self.fields["z"].text()))
+            self.update_preview()
+        except ValueError as ve:
+            QMessageBox.critical(self, "Error", f"Invalid input: {ve}")
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"An error occured while updating the plate: {e}")
 
     def on_delete_requested(self):
         """ User deletes widget. """

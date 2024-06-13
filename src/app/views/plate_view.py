@@ -20,7 +20,7 @@ class PlateView(ViewTemplate):
         self.widget_map = {}
 
         self._setup_ui()
-        self._populate_plates()
+        self.populate_plate_widgets()
         logger.debug("Successfully initialized PlateView.")
 
     def _setup_ui(self):
@@ -43,12 +43,27 @@ class PlateView(ViewTemplate):
 
         main_widget = QWidget()
         main_layout = QVBoxLayout()
-        main_layout.addWidget(self.scroll_area)
+        main_layout.addWidget(self.scroll_area, 1)
         main_layout.addWidget(import_button_wrapper)
         main_widget.setLayout(main_layout)
 
         self.__init_template_gui__("Manage Stock", main_widget)
     
+    def populate_plate_widgets(self):
+        """ Populate the layout with existing plates from the database. """
+        try:
+            plates = self.controller.get_all()
+            for plate in plates:
+                plate_widget = PlateWidget(plate.id, self.controller._get_preview_image_path(plate.id), self.controller)
+                plate_widget.deleteRequested.connect(self.on_delete_requested)
+                self.add_plate_widget_to_layout(plate_widget)
+                self.widget_map[plate.id] = plate_widget
+                logger.debug(f"Plate widget added successfully for plate ID: {plate.id}")
+            self._update_button_amount()
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"An error occurred while populating plates: {e}")
+            logger.error(f"Error populating plates: {str(e)}")
+
     def add_plate(self):
         """
         Add a new default plate.
@@ -57,8 +72,7 @@ class PlateView(ViewTemplate):
             plate = self.controller.add_new()
             
             if plate is not None:
-                new_plate_widget = PlateWidget(plate.id, self.controller._get_preview_image_path(plate.id))
-                new_plate_widget.saveRequested.connect(self.on_save_requested)
+                new_plate_widget = PlateWidget(plate.id, self.controller._get_preview_image_path(plate.id), self.controller)
                 new_plate_widget.deleteRequested.connect(self.on_delete_requested)
                 self.add_plate_widget_to_layout(new_plate_widget)
                 self.widget_map[plate.id] = new_plate_widget
@@ -86,16 +100,6 @@ class PlateView(ViewTemplate):
             placeholder_widget.setFixedSize(plate_widget.sizeHint()) 
             row_layout.addWidget(placeholder_widget)
 
-    def on_save_requested(self, plate_id: str, new_data: dict):
-        """ Update plate stored in db to reflect UI change. """
-        try:
-            self.controller.edit_x(plate_id, new_data['x'])
-            self.controller.edit_y(plate_id, new_data['y'])
-            self.controller.edit_z(plate_id, new_data['z'])
-            self.controller.edit_material(plate_id, new_data['material'])
-        except Exception as e:
-            logger.error(f"Encountered exception while updating plate {plate_id}: {e}")
-
     def on_delete_requested(self, plate_id: str):
         """ Delete widget from db. """
         try:
@@ -106,21 +110,6 @@ class PlateView(ViewTemplate):
             self._update_button_amount()
         except Exception as e:
             logger.error(f"Encountered exception while removing plate {plate_id} from db: {e}")
-
-    def _populate_plates(self):
-        """ Populate the layout with existing plates from the database. """
-        try:
-            plates = self.controller.get_all()
-            for plate in plates:
-                plate_widget = PlateWidget(plate.id, self.controller._get_preview_image_path(plate.id))
-                plate_widget.saveRequested.connect(self.on_save_requested)
-                plate_widget.deleteRequested.connect(self.on_delete_requested)
-                self.add_plate_widget_to_layout(plate_widget)
-                self.widget_map[plate.id] = plate_widget
-            self._update_button_amount()
-        except Exception as e:
-            QMessageBox.critical(self, "Error", f"An error occurred while populating plates: {e}")
-            logger.error(f"Error populating plates: {str(e)}")
 
     def _update_button_amount(self):
         """ Update the import button text to reflect the number of widgets in the layout. """
