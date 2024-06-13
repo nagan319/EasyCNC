@@ -1,3 +1,8 @@
+"""
+Author: nagan319
+Date: 2024/06/11
+"""
+
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel
 from PyQt6.QtGui import QPixmap

@@ -1,3 +1,8 @@
+"""
+Author: nagan319
+Date: 2024/06/10
+"""
+
 from PyQt6.QtCore import pyqtSignal
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QPushButton
 

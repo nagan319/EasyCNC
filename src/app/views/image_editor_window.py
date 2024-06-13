@@ -1,3 +1,8 @@
+"""
+Author: nagan319
+Date: 2024/06/12
+"""
+
 from PyQt6.QtCore import pyqtSignal
 from PyQt6.QtWidgets import QMainWindow, QWidget
 from PyQt6.QtGui import QIcon
@@ -6,6 +11,7 @@ from ...paths import IMAGE_PREVIEW_PATH, ICON_PATH
 
 from src.app.models.plate_model import Plate
 from src.app.controllers.plate_controller import PlateController
+from .image_editor_view import ImageEditorView
 
 class ImageEditorWindow(QMainWindow):
     """
@@ -22,7 +28,7 @@ class ImageEditorWindow(QMainWindow):
         self.setMinimumSize(self.MIN_WIDTH, self.MIN_HEIGHT)
         self.setWindowTitle(self.WINDOW_TITLE)
         self.setWindowIcon(QIcon(ICON_PATH))
-        self.setCentralWidget(QWidget())
+        self.setCentralWidget(ImageEditorView(plate, controller))
         self._initialized = True
         self.show()
 

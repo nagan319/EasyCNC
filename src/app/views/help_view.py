@@ -1,3 +1,8 @@
+"""
+Author: nagan319
+Date: 2024/06/12
+"""
+
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QScrollArea, QLabel
 
 from .view_template import ViewTemplate

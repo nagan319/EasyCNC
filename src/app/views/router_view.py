@@ -1,3 +1,8 @@
+"""
+Author: nagan319
+Date: 2024/06/12
+"""
+
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QScrollArea, QMessageBox
 from .view_template import ViewTemplate
 from ..widgets.router_widget import RouterWidget
