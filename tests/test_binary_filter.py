@@ -7,7 +7,7 @@ import os
 import numpy as np
 import cv2
 import pytest
-from src.app.utils.image_processing.filters import BinaryFilter
+from src.app.utils.image_processing.binary_filter import BinaryFilter
 import tempfile
 
 """

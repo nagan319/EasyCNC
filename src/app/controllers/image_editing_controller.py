@@ -16,10 +16,13 @@ import cv2
 from ..models.plate_model import Plate, PlateConstants
 from ..models.utils import serialize_array, deserialize_array
 
-from ..utils.image_processing.filters import BinaryFilter, FlatFilter
+from ..controllers.generic_controller import GenericController
+
+from ..utils.image_processing.binary_filter import BinaryFilter
 from ..utils.image_processing.features import Features
 from ..utils.image_processing.feature_extractor import FeatureExtractor
 from ..utils.image_processing.feature_plotter import FeaturePlotter
+from ..utils.image_processing.matrix_generator import MatrixGenerator
 from ..utils.image_processing.utils import Size, Colors
 
 from ..logging import logger
@@ -38,14 +41,15 @@ class EditorState(enum.Enum):
     BINARY = 1
     FEATURES = 2
     FEATURES_EXTRACTED = 3
-    FLAT = 4
-    FINALIZED = 5
+    FEATURES_FINALIZED = 4
+    FLAT_CTRS_EXTRACTED = 5
+    FLAT_FINALIZED = 6
 
 image_filenames = {
     EditorState.RAW: 'raw.png',
     EditorState.BINARY: 'binary.png',
     EditorState.FEATURES: 'features.png',
-    EditorState.FLAT: 'flat.png'
+    EditorState.FLAT_FINALIZED: 'flat.png'
 }
 
 ''''
@@ -53,7 +57,7 @@ Necessary refactoring:
 - separate saving images and updating state
 '''
 
-class ImageEditingController:
+class ImageEditingController(GenericController):
     """
     Controller for editing plate contours using imported image.
     ### Parameters:
@@ -62,6 +66,7 @@ class ImageEditingController:
     - plate: plate to be modified.
     """
     MAX_PROCESSING_SIZE = Size(2000, 2000)
+    FLAT_IMAGE_REDUCTION_FACTOR = 5 
 
     def __init__(self, session: Session, image_editing_directory: str, plate: Plate):
         self.session: Session
@@ -78,6 +83,7 @@ class ImageEditingController:
         self.processing_resolution: Size
 
         self.features: Features
+        self.flattened_contours: List[np.ndarray]
 
         if not os.path.exists(image_editing_directory):
             logger.error(f"Indicated image editing directory path does not exist: {image_editing_directory}")
@@ -105,7 +111,7 @@ class ImageEditingController:
         self.raw_path = os.path.join(self.image_editing_directory, image_filenames.get(EditorState.RAW))
         self.bin_path = os.path.join(self.image_editing_directory, image_filenames.get(EditorState.BINARY))
         self.feat_path = os.path.join(self.image_editing_directory, image_filenames.get(EditorState.FEATURES))
-        self.flat_path = os.path.join(self.image_editing_directory, image_filenames.get(EditorState.FLAT))  
+        self.flat_path = os.path.join(self.image_editing_directory, image_filenames.get(EditorState.FLAT_FINALIZED))  
 
     '''
     Raw image handling
@@ -249,7 +255,7 @@ class ImageEditingController:
     
     def finalize_features(self):
         """ Modifies state to confirm finalization of feature editing."""
-        self.state = EditorState.FLAT
+        self.state = EditorState.FEATURES_FINALIZED
     '''
     Manual feature editing
     '''
@@ -335,29 +341,63 @@ class ImageEditingController:
     '''
     Image flattening
     '''
+    def get_flattened_contours(self) -> bool:
+        """
+        Flatten contours using image transformation matrix
+        """
+        if self.state != EditorState.FEATURES_FINALIZED:
+            logger.error("Attempted to extract transformation matrix in wrong state.")
+            return False   
+
+        try:
+            raw_contours = self.features.other_contours
+            output_resolution = Size(self.plate.x, self.plate.y)
+            matrix_generator = MatrixGenerator(output_resolution, self.features.corners)    
+            transformation_matrix = matrix_generator.matrix()
+            flattened_contours = []
+            for contour in raw_contours:
+                flattened_contour = cv2.perspectiveTransform(contour, transformation_matrix)
+                flattened_contours.append(flattened_contour)
+            self.flattened_contours = flattened_contours
+            logger.debug("Successfully extracted flattened contours.")
+            self.state = EditorState.FLAT_CTRS_EXTRACTED
+            return True
+        except Exception as e:
+            logger.error(f"Encountered exception while attempting to retrieve flattened contours: {e}")
+            return False
+
     def save_flattened_image(self) -> bool:
         """
-        Saves flattened image to preview directory. Checks for invalid state and feature image path.
-        Returns True if successful, False otherwise.
+        Save image containing flattened contours to preview directory.
         """
-        if self.state != EditorState.FLAT:
-            logger.error("Attempted to get binary image in wrong state.")
-            return False
-        
-        if not self._valid_features():
-            logger.debug("Cannot flatten image with invalid number of features.")
-            return False
-        
-        try: 
-            flat_filter = FlatFilter(self.feat_path, self.flat_path, self.features.corners)
-            flat_filter.save_image()
-            self.state = EditorState.FINALIZED
+        if self.state != EditorState.FLAT_CTRS_EXTRACTED:
+            logger.error("Attempted to save flattened image in wrong state.")
+            return False 
+
+        try:
+            plotter = FeaturePlotter(
+                self.flat_path, 
+                Size(self.plate.x // self.FLAT_IMAGE_REDUCTION_FACTOR, self.plate.y // self.FLAT_IMAGE_REDUCTION_FACTOR), 
+                Features(other_contours=self.flattened_contours)
+            )
+            plotter.save_features()
+            self.state = EditorState.FLAT_FINALIZED
             return True
         except Exception as e:
             logger.error(f"Encountered exception while attempting to save flattened image: {e}")
-            return False     
+            return False       
 
-    '''
-    def save_changes_to_db(self):
-        self.session.query(Plate)
-    '''
+    def save_flattened_contours(self) -> bool:
+        """
+        Save flattened contours to db.
+        """
+        if self.state != EditorState.FLAT_FINALIZED:
+            logger.error("Attempted to save flat contours in wrong state.")
+            return False   
+
+        try:
+            self._edit_item_attr(self.plate.id, 'contours', serialize_array(self.flattened_contours))
+            return True
+        except Exception as e:
+            logger.error(f"Encountered exception while attempting to save flattened contours: {e}")
+            return False               

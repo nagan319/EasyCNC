@@ -15,6 +15,7 @@ class MatrixGenerator:
     """
     def __init__(self, output_resolution: Size, corners: List[Tuple[float, float]]):
         if len(corners) != 4 or not all(isinstance(point, tuple) and len(point) == 2 for point in corners):
+            logger.error(f"Attempted to initialize matrix generator with invalid corners: {corners}")
             raise ValueError("Corners must be a list of four (x, y) tuples.")
         try:
             self.src_corners = self._sort_corners(corners) 
@@ -23,6 +24,8 @@ class MatrixGenerator:
             logger.debug("Successfully generated transformation matrix.")
         except Exception as e:
             logger.error(f"An error occured while attempting to generate a transformation matrix: {e}")
+            raise ValueError()
+
 
     def matrix(self) -> np.ndarray:
         """ Get transformation matrix."""
