@@ -138,7 +138,13 @@ class PlateWidget(QWidget):
         if self.image_editor_status.initialized:
             QMessageBox.warning(self, "Warning", "Image editor window is already initialized.")
             return
+        self.image_editor_status.initialized = True
         self.image_editor_window = ImageEditorWindow(plate, controller)
+        self.image_editor_window.imageEditorClosed.connect(self.on_image_editor_closed)
+
+    def on_image_editor_closed(self):
+        """ Image editor is closed. """
+        self.image_editor_status.initialized = False
 
     def on_delete_requested(self):
         """ User deletes widget. """

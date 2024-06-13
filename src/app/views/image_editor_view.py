@@ -14,4 +14,5 @@ class ImageEditorView(QStackedWidget):
     View for processing image and detecting features.
     """
     def __init__(self, plate: Plate, controller: PlateController):
-        pass
+        super().__init__()
+        

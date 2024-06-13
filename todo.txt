@@ -1,13 +1,29 @@
 - finish optimization controller
 
-- part view multiple columns
-- router widget editing
-- handsome styling
-    - general background
-    - line edits
-    - buttons
-    - titles
-    - generic text
-- part widget
-- part view
-- image preview controller
+- part/plate widgets correct alignment
+- image editing window
+    - implement contour transformation matrix (remove necessity for manual retrieval)
+    - implement image processing widgets
+
+- create readme
+structure:
+
+shields
+app logo
+explanation
+table of contents
+installation 
+    - local db
+    - set up db on server
+app structure
+    - diagram showing app mvc
+    - explanation
+    - diagram showing conversion process
+    - explanation
+    - diagram showing nfp algorithm/reference
+    - explanation
+FAQ
+    - some questions
+Screenshots/video
+    - a few app screenshots
+    - video showing sample use
