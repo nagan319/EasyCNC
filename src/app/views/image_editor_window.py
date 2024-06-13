@@ -29,7 +29,7 @@ class ImageEditorWindow(QMainWindow):
         self.setMinimumSize(self.MIN_WIDTH, self.MIN_HEIGHT)
         self.setWindowTitle(self.WINDOW_TITLE)
         self.setWindowIcon(QIcon(ICON_PATH))
-        self.setCentralWidget(ImageEditorView(session, plate))
+        self.setCentralWidget(ImageEditorView(session, plate, self.MIN_WIDTH, self.MIN_HEIGHT))
         self.show()
 
     def closeEvent(self, event):
