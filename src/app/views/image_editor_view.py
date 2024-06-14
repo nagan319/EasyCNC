@@ -15,6 +15,7 @@ from ..controllers.image_editing_controller import ImageEditingController
 
 from ..widgets.image_load_widget import ImageLoadWidget
 from ..widgets.image_threshold_widget import ImageThresholdWidget
+from ..widgets.image_feature_widget import ImageFeatureWidget
 
 from ...paths import IMAGE_PREVIEW_PATH
 
@@ -45,8 +46,12 @@ class ImageEditorView(QStackedWidget):
         self.image_threshold_widget = ImageThresholdWidget(self.controller, self.min_height)
         self.image_threshold_widget.thresholdingFinalized.connect(self.on_thresholding_finalized)
 
+        self.image_feature_widget = ImageFeatureWidget(self.controller, self.min_height)
+        self.image_feature_widget.featuresFinalized.connect(self.on_features_finalized)
+
         self.addWidget(self.image_load_widget)
         self.addWidget(self.image_threshold_widget)
+        self.addWidget(self.image_feature_widget)
 
     def on_image_imported(self):
         """ Image importing is finalized. """
@@ -55,20 +60,14 @@ class ImageEditorView(QStackedWidget):
 
     def on_thresholding_finalized(self):
         """ Binary is finalized. """
-        print("Successfully imported binary.")
-        '''
-        self.setCurrentIndex(2)
-        self.image_converter.initialize_features()
-        self.image_converter.save_features()
+        self.setCurrentIndex(EditorViews.FEATURES.value)
+        self.controller.extract_image_features()
         self.image_feature_widget.update()
-        '''
+
+    def on_features_finalized(self):
+        print("features finalized")
 
     '''
-    def on_features_finalized(self):
-        self.setCurrentIndex(3)
-        self.image_converter.save_flattened()
-        self.image_flat_widget.update()
-
     def on_image_saved(self):
         self.editingFinished.emit()
     '''

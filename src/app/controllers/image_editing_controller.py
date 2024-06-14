@@ -326,7 +326,7 @@ class ImageEditingController(GenericController):
         if self.features.other_contours is not None:
             for i, contour in enumerate(self.features.other_contours):
                 for point in contour[::int(THRESHOLD*2)]:
-                    if ImageEditingController.distance(coordinates, point) < THRESHOLD:
+                    if ImageEditingController.distance(coordinates, point[0]) < THRESHOLD:
                         self.unselect_corner()
                         self.select_contour(i)
                         return True
