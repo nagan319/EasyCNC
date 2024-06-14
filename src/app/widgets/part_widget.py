@@ -20,6 +20,8 @@ class PartWidget(QWidget):
     amountEdited = pyqtSignal(str, int)
     materialEdited = pyqtSignal(str, str)
 
+    MAX_HEIGHT = 350
+
     def __init__(self, part_id: str, preview_path: str):
         super().__init__()
         self.id = part_id
@@ -34,6 +36,7 @@ class PartWidget(QWidget):
         layout.addWidget(editable_fields_widget)
         layout.addStretch(1)
         self.setLayout(layout)
+        self.setMaximumHeight(self.MAX_HEIGHT)
 
     def _get_preview_widget(self) -> QLabel:
         """ Widget containing preview container. """

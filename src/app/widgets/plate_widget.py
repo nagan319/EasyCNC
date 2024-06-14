@@ -23,6 +23,8 @@ class PlateWidget(QWidget):
 
     deleteRequested = pyqtSignal(str)
 
+    MAX_HEIGHT = 350
+
     MAX_VALUES = {
         "x": PlateConstants.MAX_X,
         "y": PlateConstants.MAX_Y,
@@ -54,6 +56,7 @@ class PlateWidget(QWidget):
         layout.addWidget(self.editable_fields_widget)
         layout.addStretch(1)
         self.setLayout(layout)
+        self.setMaximumHeight(self.MAX_HEIGHT)
 
     def _get_preview_widget(self) -> QLabel:
         """ Widget containing preview container. """
