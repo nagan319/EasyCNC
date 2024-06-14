@@ -130,6 +130,7 @@ class PlateWidget(QWidget):
             self.controller.edit_x(plate_id, float(self.fields["x"].text()))
             self.controller.edit_y(plate_id, float(self.fields["y"].text()))
             self.controller.edit_z(plate_id, float(self.fields["z"].text()))
+            self.controller.save_preview(self.controller.get_by_id(plate_id))
             self.update_preview()
         except ValueError as ve:
             QMessageBox.critical(self, "Error", f"Invalid input: {ve}")
