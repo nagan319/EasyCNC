@@ -55,8 +55,10 @@ class RouterWidget(QWidget):
         self.editable_fields_widget = self._get_editable_fields_widget()
 
         layout = QHBoxLayout()
+        layout.addStretch(1)
         layout.addWidget(self.preview_widget)
         layout.addWidget(self.editable_fields_widget)
+        layout.addStretch(1)
         self.setLayout(layout)
 
     def _get_preview_widget(self) -> QLabel:

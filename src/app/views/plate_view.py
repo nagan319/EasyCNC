@@ -59,7 +59,7 @@ class PlateView(ViewTemplate):
             for plate in plates:
                 plate_widget = PlateWidget(plate.id, self.controller._get_preview_image_path(plate.id), self.controller, self.image_editor_status)
                 plate_widget.deleteRequested.connect(self.on_delete_requested)
-                self.add_plate_widget_to_layout(plate_widget)
+                self.scroll_layout.addWidget(plate_widget)
                 self.widget_map[plate.id] = plate_widget
                 logger.debug(f"Plate widget added successfully for plate ID: {plate.id}")
             self._update_button_amount()
@@ -77,7 +77,7 @@ class PlateView(ViewTemplate):
             if plate is not None:
                 new_plate_widget = PlateWidget(plate.id, self.controller._get_preview_image_path(plate.id), self.controller, self.image_editor_status)
                 new_plate_widget.deleteRequested.connect(self.on_delete_requested)
-                self.add_plate_widget_to_layout(new_plate_widget)
+                self.scroll_layout.addWidget(new_plate_widget)
                 self.widget_map[plate.id] = new_plate_widget
                 self._update_button_amount()
                 logger.debug(f"Default plate added successfully.")
@@ -87,32 +87,16 @@ class PlateView(ViewTemplate):
             QMessageBox.critical(self, "Error", f"An error occurred while adding a new plate: {e}")
             logger.error(f"Error adding new plate: {str(e)}")
 
-    def add_plate_widget_to_layout(self, plate_widget):
-        """ Add PlateWidget to the layout with up to three widgets per row. """
-        row_layout = self.scroll_layout.itemAt(self.scroll_layout.count() - 1).layout() if self.scroll_layout.count() > 0 else None
-        if not row_layout or row_layout.count() >= 3:
-            row_widget = QWidget()
-            row_layout = QHBoxLayout()
-            row_widget.setLayout(row_layout)
-            self.scroll_layout.addWidget(row_widget)
-        row_layout.addWidget(plate_widget)
-
-        remaining_spaces = 3 - row_layout.count()
-        for _ in range(remaining_spaces):
-            placeholder_widget = QWidget()
-            placeholder_widget.setFixedSize(plate_widget.sizeHint()) 
-            row_layout.addWidget(placeholder_widget)
-
-    def on_delete_requested(self, plate_id: str):
+    def on_delete_requested(self, plate_id: str) -> None:
         """ Delete widget from db. """
         try:
             self.controller.remove(plate_id)
             widget = self.widget_map.pop(plate_id)
-            widget.setParent(None)
+            widget.setParent(None) 
             widget.deleteLater()
             self._update_button_amount()
         except Exception as e:
-            logger.error(f"Encountered exception while removing plate {plate_id} from db: {e}")
+            logger.error(f"Encountered exception while removing router from db: {e}")
 
     def _update_button_amount(self):
         """ Update the import button text to reflect the number of widgets in the layout. """

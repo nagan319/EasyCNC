@@ -67,7 +67,8 @@ class PartView(ViewTemplate):
                     new_part_widget.amountEdited.connect(self.on_amount_edited)
                     new_part_widget.materialEdited.connect(self.on_material_edited)
                     new_part_widget.deleteRequested.connect(self.on_delete_requested)
-                    self.add_part_widget_to_layout(new_part_widget)  
+                    self.scroll_layout.addWidget(new_part_widget)
+                    self.widget_map[part.id] = new_part_widget  
                     self._update_button_amount()
                     logger.debug(f"Part added successfully from {file_path}")
                 else:
@@ -76,22 +77,6 @@ class PartView(ViewTemplate):
             except Exception as e:
                 QMessageBox.critical(self, "Error", f"An error occurred while importing the file: {str(e)}")
                 logger.error(f"Error importing file {file_path}: {str(e)}")
-
-    def add_part_widget_to_layout(self, part_widget):
-        """ Add PartWidget to the layout with up to three widgets per row. """
-        row_layout = self.scroll_layout.itemAt(self.scroll_layout.count() - 1).layout() if self.scroll_layout.count() else None
-        if not row_layout or row_layout.count() == 3:
-            row_widget = QWidget()
-            row_layout = QHBoxLayout()
-            row_widget.setLayout(row_layout)
-            self.scroll_layout.addWidget(row_widget)
-        row_layout.addWidget(part_widget)
-
-        remaining_spaces = 3 - row_layout.count()
-        for _ in range(remaining_spaces):
-            placeholder_widget = QWidget()
-            placeholder_widget.setFixedSize(part_widget.sizeHint()) 
-            row_layout.addWidget(placeholder_widget)
 
     def on_material_edited(self, part_id: str, new_val: str) -> None:
         """ Update material stored in db to reflect ui change. """
@@ -110,7 +95,6 @@ class PartView(ViewTemplate):
 
     def on_delete_requested(self, part_id: str) -> None:
         """ Delete widget from db. """
-        print("Received delete request")
         try:
             self.controller.remove(part_id)
             widget = self.widget_map.pop(part_id)
