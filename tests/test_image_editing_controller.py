@@ -45,14 +45,8 @@ Test Coverage:
     Saving image features:
         - attempt in wrong state
         - successful save
-    Saving flattened image:
-        - attempt in wrong state
-        - nonexistent contour image file
-        - invalid features
-        - successful save
-        - correct state transition
-    Saving modified image to db:
-        IMPLEMENT CORRECT LOGIC
+    Finalizing image features:
+        - test successful state transition
 """
 
 @pytest.fixture
@@ -189,6 +183,12 @@ def test_save_binary_successful(controller, valid_raw_path):
     assert controller.save_binary_image(128)
     assert os.path.exists(controller.bin_path)
 
+def test_finalize_binary(controller):
+    controller.state = EditorState.BINARY
+    assert controller.finalize_binary() == True
+    assert controller.state == EditorState.FEATURES
+    assert controller.finalize_binary() == False
+
 def test_extract_features_invalid_state(controller, valid_raw_path):
     controller.save_src_image(valid_raw_path)
     controller.save_binary_image(128)
@@ -287,3 +287,46 @@ def test_save_image_features_successful(controller, valid_raw_path):
     controller.extract_image_features()
     assert controller.save_image_features() == True
     assert os.path.exists(controller.feat_path)
+
+def test_finalize_features(controller):
+    controller.state = EditorState.FEATURES_EXTRACTED
+    assert controller.finalize_features() == True
+    assert controller.state == EditorState.FEATURES_FINALIZED
+    assert controller.finalize_features() == False
+
+'''
+# make sure to check correct contour flattening using manual test
+
+necessary additions:
+    - test get flattened contours
+        - wrong state
+        - class variable updated correctly and makes sense
+        - state transition
+    - test save flattened image
+        - wrong state
+        - correct save logic
+        - correct state transition
+    - test update plate
+        - wrong state
+        - item in db gets updated correctly
+'''
+
+def test_get_flattened_contours_wrong_state(controller, valid_raw_path):
+    controller.save_src_image(valid_raw_path)
+    controller.save_binary_image(128)
+    controller.finalize_binary()
+    controller.extract_image_features()
+    controller.save_image_features()
+    controller.finalize_features()
+    controller.state = EditorState.BINARY
+    assert controller.get_flattened_contours == False
+
+def test_get_flattened_contours_correct_extraction(controller, valid_raw_path):
+    controller.save_src_image(valid_raw_path)
+    controller.save_binary_image(128)
+    controller.finalize_binary()
+    controller.extract_image_features()
+    controller.save_image_features()
+    controller.finalize_features()
+    assert controller.get_flattened_contours() == True
+    assert len(controller.flattened_contours) == len(controller.features.other_contours)

@@ -12,6 +12,7 @@ from .views.home_view import HomeView
 from .views.part_view import PartView
 from .views.plate_view import PlateView
 from .views.router_view import RouterView
+from .views.optimization_view import OptimizationView
 from .views.help_view import HelpView
 from .widgets.nav_bar import NavBar
 
@@ -43,6 +44,7 @@ class MainWindow(QMainWindow):
             "Import Parts",
             "Manage Stock",
             "Manage Routers",
+            "Generate Layout",
             "Help"
         ]
 
@@ -51,6 +53,7 @@ class MainWindow(QMainWindow):
             PartView(self.session, PART_PREVIEW_PATH),
             PlateView(self.session, PLATE_PREVIEW_PATH),
             RouterView(self.session, ROUTER_PREVIEW_PATH),
+            OptimizationView(self.session),
             HelpView()
         ]   
 

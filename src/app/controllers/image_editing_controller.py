@@ -313,7 +313,7 @@ class ImageEditingController(GenericController):
 
     def check_feature_selected(self, coordinates: Tuple[float, float]) -> bool:
         """ Check if a feature is present near the selected coordinate, and select if true. """
-        THRESHOLD: int = 20
+        THRESHOLD: int = 100
 
         if self.features.corners is not None:
             for i, corner in enumerate(self.features.corners):
