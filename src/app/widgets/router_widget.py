@@ -69,13 +69,13 @@ class RouterWidget(QWidget):
         widget.setPixmap(image)
         return widget
 
-    def _create_input_field(self, label_text: str, placeholder_text: str, default_value: str) -> QHBoxLayout:
+    def _create_input_field(self, label_text: str, placeholder_text: str, value: str) -> QHBoxLayout:
         """ Helper function to create an input field with a label, placeholder, and default value. """
         layout = QHBoxLayout()
         label = QLabel(label_text)
         input_field = QLineEdit()
         input_field.setPlaceholderText(placeholder_text)
-        input_field.setText(str(default_value))
+        input_field.setText(str(value))
         input_field.editingFinished.connect(self.on_field_edited)
         layout.addWidget(label, 2)
         layout.addWidget(input_field, 1)

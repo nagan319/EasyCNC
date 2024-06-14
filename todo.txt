@@ -1,11 +1,16 @@
+- contour transformation
+    - add necessary tests for ImageEditingController class -> check why flat failing
+- implement image processing widgets
+    - image flat widget after tests are finalized
+    - add logging
 - finish optimization controller
+- add settings view
+    - units/language options
+    - add foreign fonts
+- try different db implementations, figure out server hosting
+- refactor redundant controllers etc, remove repetitive functions
 
-- part/plate widgets correct alignment
-- image editing window
-    - implement contour transformation matrix (remove necessity for manual retrieval)
-    - implement image processing widgets
-
-- create readme
+- create proper readme
 structure:
 
 shields

@@ -35,7 +35,7 @@ class PlateWidget(QWidget):
         "x": ("Plate x dimension:", f"0-{MAX_VALUES['x']}", 'x'),
         "y": ("Plate y dimension:", f"0-{MAX_VALUES['y']}", 'y'),
         "z": ("Plate z dimension:", f"0-{MAX_VALUES['z']}", 'z'),
-        "material": ("Material:", "", PlateConstants.DEFAULT_MATERIAL),
+        "material": ("Material:", "", 'material'),
     }
 
     def __init__(self, plate_id: str, preview_path: str, controller: PlateController, image_editor_status: ImageEditorStatus):
@@ -66,13 +66,13 @@ class PlateWidget(QWidget):
         widget.setPixmap(image)
         return widget
 
-    def _create_input_field(self, label_text: str, placeholder_text: str, default_value: str) -> QHBoxLayout:
+    def _create_input_field(self, label_text: str, placeholder_text: str, value: str) -> QHBoxLayout:
         """ Helper function to create an input field with a label, placeholder, and default value. """
         layout = QHBoxLayout()
         label = QLabel(label_text)
         input_field = QLineEdit()
         input_field.setPlaceholderText(placeholder_text)
-        input_field.setText(str(default_value))
+        input_field.setText(str(value))
         input_field.editingFinished.connect(self.on_field_edited)
         layout.addWidget(label, 2)
         layout.addWidget(input_field, 1)
@@ -84,7 +84,8 @@ class PlateWidget(QWidget):
         layout = QVBoxLayout()
 
         for field_name, (label_text, placeholder_text, attribute_name) in self.FIELD_DEFINITIONS.items():
-            field_layout, input_field = self._create_input_field(label_text, placeholder_text, self.controller.get_attribute(self.id, attribute_name))
+            value = self.controller.get_attribute(self.id, attribute_name)
+            field_layout, input_field = self._create_input_field(label_text, placeholder_text, value)
             layout.addLayout(field_layout)
             self.fields[field_name] = input_field
 
@@ -130,6 +131,7 @@ class PlateWidget(QWidget):
             self.controller.edit_x(plate_id, float(self.fields["x"].text()))
             self.controller.edit_y(plate_id, float(self.fields["y"].text()))
             self.controller.edit_z(plate_id, float(self.fields["z"].text()))
+            self.controller.edit_material(plate_id, self.fields["material"].text())
             self.controller.save_preview(self.controller.get_by_id(plate_id))
             self.update_preview()
         except ValueError as ve:
