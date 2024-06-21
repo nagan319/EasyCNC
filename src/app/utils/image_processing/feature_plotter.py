@@ -22,38 +22,63 @@ class FeaturePlotter:
         self.features = features
         self.colors = colors
     
-    def save_features(self) -> bool:
+    def save_features(self):
         """
         Saves image with properties specified at initialization.
         Returns True if successful, False otherwise.
         """
-        try:
-            canvas = np.zeros((self.size.h, self.size.w, 3), dtype=np.uint8)
-            canvas[:, :] = list(self.colors.background_color)
+        canvas = np.zeros((self.size.h, self.size.w, 3), dtype=np.uint8)
+        canvas[:, :] = list(self.colors.background_color)
 
-            """ Thickness and colors vary for selected features. """
-            if self.features.plate_contour is not None:
-                contours = [self.features.plate_contour.reshape((-1, 1, 2))]
-                thickness = 8 
-                color = (*self.colors.plate_color, 100)
-                cv2.drawContours(canvas, contours, -1, color, thickness, cv2.LINE_AA)
+        """ Draw plate contour if available """
+        if self.features.plate_contour is not None:
+            try:
+                self._draw_contour_points(canvas, self.features.plate_contour, self.colors.plate_color)
+                logger.debug("Successfully plotted plate contour")
+            except Exception as e:
+                print("Exception occured during plate contour stage")
+                raise e
 
-            if self.features.other_contours is not None:
-                for idx, contour in enumerate(self.features.other_contours):
-                    contour = contour.reshape((-1, 1, 2))
-                    thickness = 16 if idx == self.features.selected_contour_idx else 8
-                    color = self.colors.selected_element_color if idx == self.features.selected_contour_idx else self.colors.contour_color
-                    cv2.drawContours(canvas, [contour], -1, color, thickness, cv2.LINE_AA)
+        """ Draw other contours """
+        if self.features.other_contours is not None:
+            for idx, contour in enumerate(self.features.other_contours):
+                color = self.colors.selected_element_color if idx == self.features.selected_contour_idx else self.colors.contour_color
+                try:
+                    self._draw_contour_points(canvas, contour, color)
+                except Exception as e: 
+                    logger.error("Exception occured during other contour stage")
+                    raise e
+                logger.debug("Successfully plotted other contours")
 
+        """ Draw corners as individual points """
+        if self.features.corners is not None:
             for idx, corner in enumerate(self.features.corners):
-                radius = 76
-                color = (*self.colors.selected_element_color, 200) if idx == self.features.selected_corner_idx else (*self.colors.corner_color, 100)
-                thickness = 16 if idx == self.features.selected_corner_idx else 8
-                cv2.circle(canvas, corner, radius=radius, color=color, thickness=thickness)
-                cv2.circle(canvas, corner, radius = 1, color=color, thickness=32)
+                radius = 5 
+                color = self.colors.selected_element_color if idx == self.features.selected_corner_idx else self.colors.corner_color
+                try:
+                    cv2.circle(canvas, tuple(corner), radius, color, -1)  
+                except Exception as e:
+                    logger.error("Exception occured during corner stage")
+                    raise e
+            logger.debug("Successfully plotted corners")
 
+        """ Save canvas to file """
+        try:
             cv2.imwrite(self.dst_path, canvas)
-            return True
+            logger.debug("Successfully performed cv2.imwrite")
         except Exception as e:
-            print(f"Error saving features: {e}")
-            return False
+            logger.error(f"Exception while performing cv2 imwrite: {e}")
+            raise e
+
+    def _draw_contour_points(self, canvas, contour, color):
+        """
+        Draw each point in the contour as a separate point on the canvas.
+        """
+        for i, point in enumerate(contour):
+            x, y = int(point[0][0]), int(point[0][1])
+            try:
+                cv2.circle(canvas, (x, y), 1, color, -1)  
+            except Exception as e:
+                logger.error(f"Encountered exception while attempting to draw point number {i}, {(x, y)}: {e}")
+                print(f"Encountered exception while attempting to draw point number {i}, {(x, y)}: {e}")
+                raise e

@@ -14,7 +14,7 @@ from sqlalchemy.orm import Session
 import cv2
 
 from ..models.plate_model import Plate, PlateConstants
-from ..models.utils import serialize_array, deserialize_array
+from ..models.utils import serialize_array_list
 
 from ..controllers.generic_controller import GenericController
 
@@ -97,6 +97,8 @@ class ImageEditingController(GenericController):
         self.session = session
         self.image_editing_directory = image_editing_directory
         self.plate = plate
+
+        super().__init__(self.session, Plate, self.image_editing_directory)
         self.__init_image_paths__()
 
         self.state = EditorState.RAW
@@ -357,8 +359,9 @@ class ImageEditingController(GenericController):
             transformation_matrix = matrix_generator.matrix()
             flattened_contours = []
             for contour in raw_contours:
-                flattened_contour = cv2.perspectiveTransform(contour, transformation_matrix)
-                flattened_contours.append(flattened_contour)
+                contour32 = np.array(contour, dtype=np.float32).reshape(-1, 1, 2)
+                flattened_contour = cv2.perspectiveTransform(contour32, transformation_matrix)
+                flattened_contours.append(flattened_contour.astype(np.int32))
             self.flattened_contours = flattened_contours
             logger.debug("Successfully extracted flattened contours.")
             self.state = EditorState.FLAT_CTRS_EXTRACTED
@@ -374,19 +377,42 @@ class ImageEditingController(GenericController):
         if self.state != EditorState.FLAT_CTRS_EXTRACTED:
             logger.error("Attempted to save flattened image in wrong state.")
             return False 
+        
+        reduction_factor = self.FLAT_IMAGE_REDUCTION_FACTOR
+        reduced_contours = []
 
-        try:
-            plotter = FeaturePlotter(
-                self.flat_path, 
-                Size(self.plate.x // self.FLAT_IMAGE_REDUCTION_FACTOR, self.plate.y // self.FLAT_IMAGE_REDUCTION_FACTOR), 
-                Features(other_contours=self.flattened_contours)
-            )
-            plotter.save_features()
-            self.state = EditorState.FLAT_FINALIZED
-            return True
+        for contour in self.flattened_contours:
+            reduced_contour = (contour // reduction_factor).astype(np.int32)
+            reduced_contours.append(reduced_contour)
+
+        try: 
+            for contour in reduced_contours:
+                assert contour.dtype == np.int32, f"Contour dtype is not np.int32, found {contour.dtype}"
+                assert isinstance(contour, np.ndarray), "Contour is not a numpy array"
+                assert contour.ndim == 3 and contour.shape[2] == 2, "Contour does not have the correct shape (should be Nx1x2)"
+                for point in contour:
+                    assert isinstance(point[0][0], np.int32), f"Point value is not np.int32, found type {type(point[0][0])}"
+                    assert isinstance(point[0][1], np.int32), f"Point value is not np.int32, found type {type(point[0][1])}"
+        except AssertionError as a:
+            logger.error(f"AssertionError while checking contour type: {a}")
+            return False
         except Exception as e:
-            logger.error(f"Encountered exception while attempting to save flattened image: {e}")
-            return False       
+            logger.error(f"Exception while checking contour type: {e}")
+            return False
+        
+        try:
+            feature_plotter = FeaturePlotter(
+                dst_path=self.flat_path, 
+                size=self.processing_resolution, 
+                features=Features(other_contours=reduced_contours)) # default colors
+            feature_plotter.save_features()
+            logger.debug(f"Image features saved successfully to {self.flat_path}")
+        except Exception as e:
+            logger.error(f"Encountered exception while attempting to save image features: {e}")
+            return False   
+        
+        self.state = EditorState.FLAT_FINALIZED
+        return True
 
     def update_plate(self) -> bool:
         """
@@ -395,9 +421,8 @@ class ImageEditingController(GenericController):
         if self.state != EditorState.FLAT_FINALIZED:
             logger.error("Attempted to save flat contours in wrong state.")
             return False   
-
         try:
-            self._edit_item_attr(self.plate.id, 'contours', serialize_array(self.flattened_contours))
+            self._edit_item_attr(self.plate.id, 'contours', serialize_array_list(self.flattened_contours))
             return True
         except Exception as e:
             logger.error(f"Encountered exception while attempting to save flattened contours: {e}")

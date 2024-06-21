@@ -11,6 +11,7 @@ import numpy as np
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+from src.app.models.utils import deserialize_array_list
 from src.app.utils.image_processing.features import Features
 from src.app.utils.image_processing.utils import Size
 from src.app.models.plate_model import Plate, PlateConstants
@@ -96,6 +97,8 @@ def create_plate_table(engine, Base):
 def controller(session, temp_dir):
     image_editing_directory = temp_dir
     valid_plate = Plate(x=PlateConstants.MAX_X, y=PlateConstants.MAX_Y, z=PlateConstants.MAX_Z)  
+    session.add(valid_plate)
+    session.commit()
     controller = ImageEditingController(session, image_editing_directory, valid_plate)
     return controller
 
@@ -262,12 +265,12 @@ def test_check_feature_selected_corner_match(controller):
     assert controller.features.selected_corner_idx == 0
 
 def test_check_feature_selected_contour_match(controller):
-    controller.features = Features(other_contours=np.array([[[7, 7]]]))
+    controller.features = Features(other_contours=[np.array([[[5, 5]], [[6, 6]]])])
     assert controller.check_feature_selected((20, 20)) == True
     assert controller.features.selected_contour_idx == 0
 
 def test_check_feature_selected_no_match(controller):
-    controller.features = Features(corners=[(80, 80)])
+    controller.features = Features(corners=[(0, 0)])
     assert controller.check_feature_selected((100, 100)) == False
     assert controller.features.selected_corner_idx is None
     assert controller.features.selected_contour_idx is None
@@ -319,14 +322,86 @@ def test_get_flattened_contours_wrong_state(controller, valid_raw_path):
     controller.save_image_features()
     controller.finalize_features()
     controller.state = EditorState.BINARY
-    assert controller.get_flattened_contours == False
+    assert controller.get_flattened_contours() == False
 
 def test_get_flattened_contours_correct_extraction(controller, valid_raw_path):
     controller.save_src_image(valid_raw_path)
     controller.save_binary_image(128)
     controller.finalize_binary()
     controller.extract_image_features()
+    controller.add_corner((1000, 1000))
     controller.save_image_features()
     controller.finalize_features()
     assert controller.get_flattened_contours() == True
     assert len(controller.flattened_contours) == len(controller.features.other_contours)
+    assert controller.state == EditorState.FLAT_CTRS_EXTRACTED
+
+    for contour in controller.flattened_contours:
+        assert contour.dtype == np.int32, f"Contour dtype is not np.int32, found {contour.dtype}"
+        assert isinstance(contour, np.ndarray), "Contour is not a numpy array"
+        assert contour.ndim == 3 and contour.shape[2] == 2, "Contour does not have the correct shape (should be Nx1x2)"
+        for point in contour:
+            assert isinstance(point[0][0], np.int32), f"Point value is not np.int32, found type {type(point[0][0])}"
+            assert isinstance(point[0][1], np.int32), f"Point value is not np.int32, found type {type(point[0][1])}"
+
+def test_save_flattened_image_wrong_state(controller, valid_raw_path):
+    controller.save_src_image(valid_raw_path)
+    controller.save_binary_image(128)
+    controller.finalize_binary()
+    controller.extract_image_features()
+    controller.add_corner((1000, 1000))
+    controller.save_image_features()
+    controller.finalize_features()
+    controller.get_flattened_contours()
+    controller.state = EditorState.FLAT_FINALIZED
+    assert controller.save_flattened_image() == False
+
+def test_save_flattened_image_successful(controller, valid_raw_path):
+    controller.save_src_image(valid_raw_path)
+    controller.save_binary_image(128)
+    controller.finalize_binary()
+    controller.extract_image_features()
+    controller.add_corner((1000, 1000))
+    controller.save_image_features()
+    controller.finalize_features()
+    controller.get_flattened_contours()
+    assert controller.save_flattened_image() == True
+    assert os.path.exists(controller.flat_path)
+    assert controller.state == EditorState.FLAT_FINALIZED
+
+def test_update_plate_wrong_state(controller, valid_raw_path):
+    controller.save_src_image(valid_raw_path)
+    controller.save_binary_image(128)
+    controller.finalize_binary()
+    controller.extract_image_features()
+    controller.add_corner((1000, 1000))
+    controller.save_image_features()
+    controller.finalize_features()
+    controller.get_flattened_contours()
+    controller.save_flattened_image()
+    controller.state = EditorState.BINARY
+    assert controller.update_plate() == False
+
+def test_update_plate_successful(controller, valid_raw_path):
+    controller.save_src_image(valid_raw_path)
+    controller.save_binary_image(128)
+    controller.finalize_binary()
+    controller.extract_image_features()
+    controller.add_corner((1000, 1000))
+    controller.save_image_features()
+    controller.finalize_features()
+    controller.get_flattened_contours()
+    controller.save_flattened_image()
+    assert controller.update_plate() == True
+    plate_in_db = controller.session.query(Plate).filter(Plate.id == controller.plate.id).first()
+    print(plate_in_db)
+    db_contours = deserialize_array_list(plate_in_db.contours)
+
+    old = controller.flattened_contours
+    new = db_contours
+
+    assert len(old) == len(new), "Length of the lists do not match"
+    for i in range(len(old)):
+        assert old[i].shape == new[i].shape, f"Shape mismatch at index {i}"
+        assert old[i].dtype == new[i].dtype, f"Dtype mismatch at index {i}"
+        assert np.array_equal(old[i], new[i]), f"Arrays do not match at index {i}"
