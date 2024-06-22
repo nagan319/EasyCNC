@@ -10,7 +10,7 @@ from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from ..models.plate_model import Plate, PlateConstants
-from ..models.utils import serialize_array, deserialize_array
+from ..models.utils import serialize_array, deserialize_array, deserialize_array_list
 
 import matplotlib.pyplot as plt
 from ..utils.plotting_util import PlottingConstants, _generate_rectangle_coordinates
@@ -140,7 +140,7 @@ class PlateController(GenericController):
         """
         try:
             image_path = self._get_preview_image_path(plate.id)
-            image_contours = plate.contours
+            image_contours = deserialize_array_list(plate.contours)
             plate_xy = (plate.x, plate.y)
             plate_rect_x, plate_rect_y = _generate_rectangle_coordinates(*plate_xy)
         except AttributeError as e:
@@ -152,13 +152,11 @@ class PlateController(GenericController):
         plt.plot(plate_rect_x, plate_rect_y, color=PlottingConstants.PLOT_LINE_COLOR)
 
         if image_contours:
-            contours_list = eval(image_contours) 
-            for contour in contours_list:
-                contour_array = np.array(contour)
-                x_coords = contour_array[:, 0]
-                y_coords = contour_array[:, 1]
+            for contour in image_contours:
+                x_coords = [point[0][0] for point in contour] 
+                y_coords = [point[0][1] for point in contour] 
                 plt.plot(x_coords, y_coords, color=PlottingConstants.PLOT_LINE_COLOR, linewidth=1)
-
+                
         plt.grid(True)
         plt.gca().set_facecolor(PlottingConstants.PLOT_BG_COLOR)
         plt.gca().set_aspect('equal')

@@ -16,6 +16,7 @@ from ..controllers.image_editing_controller import ImageEditingController
 from ..widgets.image_load_widget import ImageLoadWidget
 from ..widgets.image_threshold_widget import ImageThresholdWidget
 from ..widgets.image_feature_widget import ImageFeatureWidget
+from ..widgets.image_flat_widget import ImageFlatWidget
 
 from ...paths import IMAGE_PREVIEW_PATH
 
@@ -29,6 +30,8 @@ class ImageEditorView(QStackedWidget):
     """
     View for processing image and detecting features.
     """
+    editingFinished = pyqtSignal()
+
     def __init__(self, session: Session, plate: Plate, min_width: int, min_height: int):
         super().__init__()
         self.plate = plate
@@ -49,9 +52,13 @@ class ImageEditorView(QStackedWidget):
         self.image_feature_widget = ImageFeatureWidget(self.controller, self.min_height)
         self.image_feature_widget.featuresFinalized.connect(self.on_features_finalized)
 
+        self.image_flat_widget = ImageFlatWidget(self.controller, self.min_height)
+        self.image_flat_widget.flatFinalized.connect(self.on_flat_finalized)
+
         self.addWidget(self.image_load_widget)
         self.addWidget(self.image_threshold_widget)
         self.addWidget(self.image_feature_widget)
+        self.addWidget(self.image_flat_widget)
 
     def on_image_imported(self):
         """ Image importing is finalized. """
@@ -65,9 +72,12 @@ class ImageEditorView(QStackedWidget):
         self.image_feature_widget.update()
 
     def on_features_finalized(self):
-        print("features finalized")
+        """ Features are finalized. """
+        self.setCurrentIndex(EditorViews.FLAT.value)
+        self.controller.get_flattened_contours()
+        self.controller.save_flattened_image()
+        self.image_flat_widget.update()
 
-    '''
-    def on_image_saved(self):
+    def on_flat_finalized(self):
+        """ Flattened image finalized. """
         self.editingFinished.emit()
-    '''
