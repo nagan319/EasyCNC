@@ -5,7 +5,7 @@ Date: 2024/05/31
 
 import sys
 from typing import NamedTuple
-from sqlalchemy import Column, String, Float, Text
+from sqlalchemy import Column, String, Float, Text, Boolean
 from ..database import Base
 from .utils import get_uuid
 
@@ -29,4 +29,5 @@ class Plate(Base):
     z = Column(Float, nullable=False, default=PlateConstants.DEFAULT_Z)
     material = Column(String, nullable=False, default=PlateConstants.DEFAULT_MATERIAL)
     contours = Column(Text, nullable=True, default=None)
+    selected = Column(Boolean, nullable=False, default=False)
     

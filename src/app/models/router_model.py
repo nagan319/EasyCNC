@@ -5,7 +5,7 @@ Date: 2024/06/02
 
 import sys
 from typing import NamedTuple
-from sqlalchemy import Column, String, Float
+from sqlalchemy import Column, String, Float, Boolean
 from ..database import Base
 from .utils import get_uuid
 
@@ -45,3 +45,4 @@ class Router(Base):
     min_safe_dist_from_edge = Column(Float, nullable=False, default=RouterConstants.DEFAULT_SAFE_DISTANCE)
     drill_bit_diameter = Column(Float, nullable=False, default=RouterConstants.DEFAULT_DRILL_BIT_DIAMETER)
     mill_bit_diameter = Column(Float, nullable=False, default=RouterConstants.DEFAULT_MILL_BIT_DIAMETER)
+    selected = Column(Boolean, nullable=False, default=False)

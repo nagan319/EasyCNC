@@ -36,7 +36,8 @@ def sample_router_data():
         'plate_z': 500,
         'min_safe_dist_from_edge': 50,
         'drill_bit_diameter': 5,
-        'mill_bit_diameter': 10
+        'mill_bit_diameter': 10,
+        'selected': False
     }
 
 def test_create_router(session, sample_router_data):

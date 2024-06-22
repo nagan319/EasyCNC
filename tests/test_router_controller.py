@@ -44,6 +44,8 @@ Test Coverage:
         - Valid and correct value  
     - Get mill bit diameter
         - Valid and correct value  
+    - Get selected
+        - Valid and correct values
     - Edit name
         - Does not update if input is null
         - Correctly modifies otherwise
@@ -71,6 +73,11 @@ Test Coverage:
     - Edit mill bit diameter
         - Valid and correct value
         - Out of bounds value does not affect data
+    - Edit selected
+        - Null/Invalid value
+        - Set selection to False
+        - Set selection to True when none other selected
+        - Set selection to True when others selected
     - Save preview
         - Test preview image saving correctly
         - Test output image size if possible (related to dpi)
@@ -178,6 +185,10 @@ def test_get_drill_bit_diameter(controller):
 def test_get_mill_bit_diameter(controller):
     new_router = controller.add_new()
     assert controller.get_mill_bit_diameter(new_router.id) == RouterConstants.DEFAULT_MILL_BIT_DIAMETER
+
+def test_get_selected(controller):
+    new_router = controller.add_new()
+    assert controller.get_selected(new_router.id) == False
 
 '''
 Modifying:
@@ -293,6 +304,25 @@ def test_edit_drill_bit_diameter_invalid(controller):
     new_router = controller.add_new()
     modified_router = controller.edit_drill_bit_diameter(new_router.id, 0)
     assert modified_router is None
+
+def test_edit_selected_invalid_value(controller):
+    new_router = controller.add_new()
+    assert controller.edit_selected(new_router.id, 'blarg') is None
+
+def test_edit_selected_single_router(controller):
+    new_router = controller.add_new()
+    controller.edit_selected(new_router.id, True)  
+    assert controller.get_selected(new_router.id) == True
+    controller.edit_selected(new_router.id, False)  
+    assert controller.get_selected(new_router.id) == False
+
+def test_edit_selected_multiple_routers(controller):
+    router1 = controller.add_new()
+    router2 = controller.add_new()
+    controller.edit_selected(router1.id, True)
+    controller.edit_selected(router2.id, True)
+    assert controller.get_selected(router1.id) == False
+    assert controller.get_selected(router2.id) == True
 
 def test_save_preview(controller, temp_dir):
     os.makedirs(temp_dir, exist_ok=True)

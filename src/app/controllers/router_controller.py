@@ -123,6 +123,12 @@ class RouterController(GenericController):
     def get_mill_bit_diameter(self, id: str) -> Union[float, None]:
         """ Get router mill bit diameter. Returns None if an error occurs.""" 
         return self._get_item_attr(id, 'mill_bit_diameter')   
+    
+
+    def get_selected(self, id: str) -> Union[bool, None]:
+        """ Get router selection status. Returns None if an error occurs."""
+        return self._get_item_attr(id, 'selected')
+
     '''
     Modify router attributes
     '''
@@ -188,6 +194,19 @@ class RouterController(GenericController):
         if new_val <= 0 or new_val > RouterConstants.MAX_DRILL_BIT_DIAMETER:
             return None
         return self._edit_item_attr(id, 'drill_bit_diameter', new_val)
+
+    def edit_selected(self, id: str, new_val: float) -> Union[Router, None]:
+        """ Edit router selection. Automatically unselects previously selected router to enforce one selection at a time. """
+        if new_val == False:
+            return self._edit_item_attr(id, 'selected', new_val)
+        if new_val == True:
+            prev_selected = self.session.query(Router).filter(Router.selected == True).first()
+            if prev_selected:
+                prev_selected.selected = False
+                self.session.commit()
+            return self._edit_item_attr(id, 'selected', new_val)
+        return None
+
     '''
     Preview image logic
     '''

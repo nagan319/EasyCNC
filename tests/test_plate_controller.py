@@ -36,6 +36,8 @@ Test Coverage:
     - Get contours
         - Test null value
         - Test correct deserialization of serialized contour
+    - Get selected
+        - Valid and correct value
     - Edit x
         - Valid and correct value
         - Out of bounds value does not affect data
@@ -52,6 +54,9 @@ Test Coverage:
         - Test Null contour
         - Test invalid input contour
         - Test valid contour correct serialization and deserialization
+    - Edit selected
+        - Test Null value
+        - Test correct value
     - Save preview
         - Test preview image saving correctly
         - Test output image size if possible (related to dpi)
@@ -150,6 +155,10 @@ def test_get_contours(controller):
     retrieved_contour = controller.get_contours(new_plate.id)
     assert np.array_equal(retrieved_contour, new_contour)
 
+def test_get_selected(controller):
+    new_plate = controller.add_new()
+    assert controller.get_selected(new_plate.id) == False
+
 def test_edit_x(controller):
     new_plate = controller.add_new()
     modified_plate = controller.edit_x(new_plate.id, float(PlateConstants.MAX_X-1))
@@ -206,6 +215,11 @@ def test_edit_contours_null_contour(controller):
     new_plate = controller.add_new()
     assert controller.edit_contours(new_plate.id, None) is not None
     assert controller.edit_contours(new_plate.id, np.array([])) is not None
+
+def test_edit_selected(controller):
+    new_plate = controller.add_new()
+    assert controller.edit_selected(new_plate.id, True) is not None
+    assert controller.get_selected(new_plate.id) == True
 
 def test_save_preview(controller, temp_dir):
     os.makedirs(temp_dir, exist_ok=True)

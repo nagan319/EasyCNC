@@ -31,7 +31,8 @@ def sample_plate_data():
         'y': 1000,
         'z': 1000,
         'material': 'Aluminum',
-        'contours': 'some_contours_data'
+        'contours': 'some_contours_data',
+        'selected': False
     }
 
 def test_create_plate(session, sample_plate_data):

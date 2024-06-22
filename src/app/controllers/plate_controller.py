@@ -91,6 +91,11 @@ class PlateController(GenericController):
         """ Get plate contours. Returns None if an error occurs."""
         contours_as_string = self._get_item_attr(id, 'contours')
         return deserialize_array(contours_as_string)
+
+    def get_selected(self, id: str) -> Union[bool, None]:
+        """ Get plate selection status. Returns None if an error occurs. """
+        return self._get_item_attr(id, 'selected')
+    
     '''
     Modify plate attributes
     '''
@@ -126,6 +131,15 @@ class PlateController(GenericController):
         """
         contours_as_string = serialize_array(new_contour)
         return self._edit_item_attr(id, 'contours', contours_as_string)
+
+    def edit_selected(self, id: str, new_val: bool) -> Union[Plate, None]:
+        """
+        Edit plate selectinon status. Returns modified plate or None if an error occurs.
+        """
+        if new_val != True and new_val != False:
+            return None
+        return self._edit_item_attr(id, 'selected', new_val)
+    
     '''
     Preview image logic
     '''
