@@ -1,8 +1,3 @@
-- contour transformation
-    - add necessary tests for ImageEditingController class -> check why flat failing
-- implement image processing widgets
-    - image flat widget after tests are finalized
-    - add logging
 - finish optimization controller
 - add settings view
     - units/language options
@@ -32,3 +27,8 @@ FAQ
 Screenshots/video
     - a few app screenshots
     - video showing sample use
+
+current required refactoring:
+- deal with flipped preview image
+- make router/plate/part view widgets more modular
+- they essentially have the same structure, it can be moved to the general preview widget class
