@@ -20,6 +20,8 @@ from ..widgets.image_flat_widget import ImageFlatWidget
 
 from ...paths import IMAGE_PREVIEW_PATH
 
+from ..logging import logger
+
 class EditorViews(enum.Enum):
     LOAD = 0
     THRESHOLD = 1
@@ -64,12 +66,14 @@ class ImageEditorView(QStackedWidget):
         """ Image importing is finalized. """
         self.setCurrentIndex(EditorViews.THRESHOLD.value)
         self.image_threshold_widget.public_update()
+        logger.debug("Image import finished.")
 
     def on_thresholding_finalized(self):
         """ Binary is finalized. """
         self.setCurrentIndex(EditorViews.FEATURES.value)
         self.controller.extract_image_features()
         self.image_feature_widget.update()
+        logger.debug("Image thresholding finished.")
 
     def on_features_finalized(self):
         """ Features are finalized. """
@@ -77,7 +81,9 @@ class ImageEditorView(QStackedWidget):
         self.controller.get_flattened_contours()
         self.controller.save_flattened_image()
         self.image_flat_widget.update()
+        logger.debug("Image features finalized.")
 
     def on_flat_finalized(self):
         """ Flattened image finalized. """
+        logger.debug("Image flattening finalized.")
         self.editingFinished.emit()

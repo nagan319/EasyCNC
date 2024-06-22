@@ -153,6 +153,7 @@ class PlateWidget(QWidget):
     def on_image_editor_closed(self):
         """ Image editor is closed. """
         self.image_editor_status.initialized = False
+        self.update_preview()
 
     def on_delete_requested(self):
         """ User deletes widget. """

@@ -14,6 +14,8 @@ from ...paths import IMAGE_PREVIEW_PATH, ICON_PATH
 from src.app.models.plate_model import Plate
 from .image_editor_view import ImageEditorView
 
+from ..logging import logger
+
 class ImageEditorWindow(QMainWindow):
     """
     Separate window initialized when image editing mode is activated. 
@@ -34,6 +36,7 @@ class ImageEditorWindow(QMainWindow):
         self.image_editor_view.editingFinished.connect(self.onEditingFinished)
         self.setCentralWidget(self.image_editor_view)
         self.show()
+        logger.debug("Initialized image editor window.")
 
     def onEditingFinished(self):
         """ Received editing finished signal from widget. """
@@ -42,4 +45,5 @@ class ImageEditorWindow(QMainWindow):
     def closeEvent(self, event):
         """ Activated on self.close called. """
         self.imageEditorClosed.emit()
+        logger.debug("Closed image editor window.")
         super().closeEvent(event)
