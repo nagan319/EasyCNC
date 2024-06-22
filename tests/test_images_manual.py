@@ -18,17 +18,20 @@ from src.app.utils.image_processing.utils import Size
 """
 Saves images to real directory to assess processor quality.
 """
-
 '''
 def test_images_manual():
 
     engine = create_engine('sqlite:///:memory:')
 
-    session = sessionmaker(bind=engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    Base.metadata.create_all(engine)
     test_directory = 'image test dir'
     if not os.path.exists(test_directory):
         os.mkdir(test_directory)
     plate = Plate(x=1000, y=2000, z=100)
+    session.add(plate)
+    session.commit()
 
     src_image_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test data', 'images', 'image5.jpeg')
 
@@ -38,8 +41,13 @@ def test_images_manual():
     print(f"binary saved: {controller.save_binary_image(128)}")
     controller.finalize_binary()
     print(f"features extracted: {controller.extract_image_features()}")
+    controller.add_corner((1230, 1610))
     generate_report(controller)
     print(f"features saved: {controller.save_image_features()}")
+    print(f"features finalized: {controller.finalize_features()}")
+    print(f"retrieved flattened contours: {controller.get_flattened_contours()}")
+    print(f"flattened image saved: {controller.save_flattened_image()}")
+    print(f"Plate updated: {controller.update_plate()}")
 
     # check_contour_selection_logic(controller)
     # check_corner_selection_logic(controller)

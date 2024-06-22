@@ -27,8 +27,13 @@ class FeaturePlotter:
         Saves image with properties specified at initialization.
         Returns True if successful, False otherwise.
         """
-        canvas = np.zeros((self.size.h, self.size.w, 3), dtype=np.uint8)
-        canvas[:, :] = list(self.colors.background_color)
+        try:
+            canvas = np.zeros((int(self.size.h), int(self.size.w), 3), dtype=np.uint8)
+            canvas[:, :] = list(self.colors.background_color)
+            logger.debug("Initialized canvas.")
+        except Exception as e:
+            logger.error(f"Encountered exception while initailizing canvas: {e}")
+            raise e
 
         """ Draw plate contour if available """
         if self.features.plate_contour is not None:
@@ -53,10 +58,12 @@ class FeaturePlotter:
         """ Draw corners as individual points """
         if self.features.corners is not None:
             for idx, corner in enumerate(self.features.corners):
-                radius = 5 
+                radius = 60 
+                thickness = 8
                 color = self.colors.selected_element_color if idx == self.features.selected_corner_idx else self.colors.corner_color
                 try:
-                    cv2.circle(canvas, tuple(corner), radius, color, -1)  
+                    cv2.circle(canvas, tuple(corner), radius, color, thickness)  
+                    cv2.circle(canvas, tuple(corner), thickness, color, thickness)
                 except Exception as e:
                     logger.error("Exception occured during corner stage")
                     raise e

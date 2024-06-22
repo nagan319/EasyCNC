@@ -377,16 +377,9 @@ class ImageEditingController(GenericController):
         if self.state != EditorState.FLAT_CTRS_EXTRACTED:
             logger.error("Attempted to save flattened image in wrong state.")
             return False 
-        
-        reduction_factor = self.FLAT_IMAGE_REDUCTION_FACTOR
-        reduced_contours = []
-
-        for contour in self.flattened_contours:
-            reduced_contour = (contour // reduction_factor).astype(np.int32)
-            reduced_contours.append(reduced_contour)
 
         try: 
-            for contour in reduced_contours:
+            for contour in self.flattened_contours:
                 assert contour.dtype == np.int32, f"Contour dtype is not np.int32, found {contour.dtype}"
                 assert isinstance(contour, np.ndarray), "Contour is not a numpy array"
                 assert contour.ndim == 3 and contour.shape[2] == 2, "Contour does not have the correct shape (should be Nx1x2)"
@@ -400,11 +393,12 @@ class ImageEditingController(GenericController):
             logger.error(f"Exception while checking contour type: {e}")
             return False
         
-        try:
-            feature_plotter = FeaturePlotter(
+        feature_plotter = FeaturePlotter(
                 dst_path=self.flat_path, 
-                size=self.processing_resolution, 
-                features=Features(other_contours=reduced_contours)) # default colors
+                size=Size(self.plate.x, self.plate.y), 
+                features=Features(other_contours=self.flattened_contours))
+        
+        try:
             feature_plotter.save_features()
             logger.debug(f"Image features saved successfully to {self.flat_path}")
         except Exception as e:
