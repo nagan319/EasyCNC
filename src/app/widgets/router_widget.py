@@ -126,11 +126,11 @@ class RouterWidget(QWidget):
     def update_selection_status(self):
         """ Updates visuals to indicate selection status. """
         if self.controller.get_selected(self.id):
-            self.name_input.setStyleSheet("QWidget {border: 2px solid #b7de70;}")
+            self.preview_widget.setStyleSheet("QWidget {border: 2px solid #b7de70;}")
             self.select_button.setStyleSheet("QPushButton {background-color: #b7de70;}")
             self.select_button.setText("Unselect")
         else:
-            self.name_input.setStyleSheet("QWidget {border: 0px solid white;}")
+            self.preview_widget.setStyleSheet("QWidget {border: 0px solid white;}")
             self.select_button.setStyleSheet("QPushButton {background-color: #eeeeee;}")
             self.select_button.setText("Select")
 
