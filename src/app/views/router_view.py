@@ -57,6 +57,7 @@ class RouterView(ViewTemplate):
             routers = self.controller.get_all()
             for router in routers:
                 router_widget = RouterWidget(router.id, self.controller._get_preview_image_path(router.id), self.controller)
+                router_widget.selectionChanged.connect(self.on_selection_changed)
                 router_widget.deleteRequested.connect(self.on_delete_requested)
                 self.scroll_layout.addWidget(router_widget)
                 self.widget_map[router.id] = router_widget
@@ -74,6 +75,7 @@ class RouterView(ViewTemplate):
             router = self.controller.add_new()
             if router is not None:
                 new_router_widget = RouterWidget(router.id, self.controller._get_preview_image_path(router.id), self.controller)
+                new_router_widget.selectionChanged.connect(self.on_selection_changed)
                 new_router_widget.deleteRequested.connect(self.on_delete_requested)
                 self.scroll_layout.addWidget(new_router_widget)
                 self.widget_map[router.id] = new_router_widget
@@ -84,6 +86,11 @@ class RouterView(ViewTemplate):
         except Exception as e:
             QMessageBox.critical(self, "Error", f"An error occurred while adding a new router: {e}")
             logger.error(f"Error adding new router: {str(e)}")
+
+    def on_selection_changed(self) -> None:
+        """ Changes selection status of all routers. """
+        for router_widget in self.widget_map.values():
+            router_widget.update_selection_status()
 
     def on_delete_requested(self, router_id: str) -> None:
         """ Delete widget from db. """
