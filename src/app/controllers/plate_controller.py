@@ -139,7 +139,31 @@ class PlateController(GenericController):
         if new_val != True and new_val != False:
             return None
         return self._edit_item_attr(id, 'selected', new_val)
-    
+    '''
+    Automatic plate selection
+    '''
+    def select_by_property(self, z: float, material: str) -> bool:
+        """
+        Automatically select all plates with desired thickness and material.
+        """
+        Z_THRESH = .05
+
+        try:
+            material = material.strip().lower()
+            all_plates = self.get_all()
+            
+            for plate in all_plates:
+                plate_z = plate.z  
+                plate_material = plate.material.strip().lower()
+                selection_status = (plate_material == material and abs(plate_z - z) <= Z_THRESH)
+                self.edit_selected(plate.id, selection_status)                 
+                
+            return True
+        
+        except Exception as e:
+            logger.error(f"Encountered exception while attempting to automatically select plates: {e}")
+            return False
+
     '''
     Preview image logic
     '''

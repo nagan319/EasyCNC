@@ -79,7 +79,7 @@ QLineEdit#nameInput {
 }
 
 QScrollArea {
-    border: none;
+    border: 2px solid #dddddd;
 }
 
 QScrollBar:vertical, QScrollBar:horizontal {

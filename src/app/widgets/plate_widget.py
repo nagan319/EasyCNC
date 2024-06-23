@@ -91,6 +91,8 @@ class PlateWidget(QWidget):
 
         button_widget = QWidget()
         button_layout = QHBoxLayout()
+        self.select_button = QPushButton("Select")
+        self.select_button.pressed.connect(self.on_select_pressed)
         import_image_button = QPushButton("Import Image")
         import_image_button.pressed.connect(self.on_image_imported)
         save_button = QPushButton("Save")
@@ -99,6 +101,7 @@ class PlateWidget(QWidget):
         delete_button.pressed.connect(self.on_delete_requested)
         button_layout.addStretch(1)
         button_layout.addWidget(import_image_button, 2)
+        button_layout.addWidget(self.select_button, 1)
         button_layout.addWidget(save_button, 1)
         button_layout.addWidget(delete_button, 1)
         button_layout.addStretch(1)
@@ -123,6 +126,17 @@ class PlateWidget(QWidget):
                     parsed_value = InputParser.parse_text(sender.text(), 0, max_value)
                     sender.setText(str(parsed_value))
                 break
+
+    def update_selection_status(self):
+        """ Updates visuals to indicate selection status. """
+        if self.controller.get_selected(self.id):
+            self.preview_widget.setStyleSheet("QLabel {border: 2px solid #b7de70;}")
+            self.select_button.setStyleSheet("QPushButton {background-color: #b7de70;}")
+            self.select_button.setText("Unselect")
+        else:
+            self.preview_widget.setStyleSheet("QLabel {border: 0px solid white;}")
+            self.select_button.setStyleSheet("QPushButton {background-color: #eeeeee;}")
+            self.select_button.setText("Select")
 
     def on_save_requested(self):
         """ User presses save button. """
@@ -154,6 +168,15 @@ class PlateWidget(QWidget):
         """ Image editor is closed. """
         self.image_editor_status.initialized = False
         self.update_preview()
+
+    def on_select_pressed(self):
+        """ User presses select / unselect button. """
+        try:
+            curr_status = self.controller.get_selected(self.id)
+            self.controller.edit_selected(self.id, (not curr_status))
+            self.update_selection_status()
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"An error occured while selecting/unselecting the router: {e}")
 
     def on_delete_requested(self):
         """ User deletes widget. """

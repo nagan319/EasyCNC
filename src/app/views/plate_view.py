@@ -3,7 +3,7 @@ Author: nagan319
 Date: 2024/06/11
 """
 
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QScrollArea, QMessageBox
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QScrollArea, QMessageBox, QLineEdit
 from .view_template import ViewTemplate
 from .image_editor_status import ImageEditorStatus
 from ..widgets.plate_widget import PlateWidget
@@ -34,8 +34,28 @@ class PlateView(ViewTemplate):
         self.scroll_layout = QVBoxLayout(self.scroll_widget)
         self.scroll_area.setWidget(self.scroll_widget)
 
+        self.select_thickness_input = QLineEdit()
+        self.select_thickness_input.setPlaceholderText("Thickness")
+        self.select_thickness_input.setMinimumWidth(120)
+
+        self.select_material_input = QLineEdit()
+        self.select_material_input.setPlaceholderText("Material")
+        self.select_material_input.setMinimumWidth(120)
+
+        self.select_button = QPushButton("Select by property:")
+        self.select_button.pressed.connect(self.on_select_by_property)
+
         self.import_button = QPushButton("Add New Plate")
         self.import_button.pressed.connect(self.add_plate)
+
+        selection_wrapper = QWidget()
+        selection_wrapper_layout = QHBoxLayout()
+        selection_wrapper_layout.addStretch(2)
+        selection_wrapper_layout.addWidget(self.select_button, 2)  
+        selection_wrapper_layout.addWidget(self.select_thickness_input, 1)
+        selection_wrapper_layout.addWidget(self.select_material_input, 1)
+        selection_wrapper_layout.addStretch(2)
+        selection_wrapper.setLayout(selection_wrapper_layout)
 
         import_button_wrapper = QWidget()
         import_button_wrapper_layout = QHBoxLayout()
@@ -44,10 +64,17 @@ class PlateView(ViewTemplate):
         import_button_wrapper_layout.addStretch(2)
         import_button_wrapper.setLayout(import_button_wrapper_layout)
 
+        bottom_layout = QHBoxLayout()
+        bottom_layout.addStretch(1)
+        bottom_layout.addWidget(import_button_wrapper, 1)
+        bottom_layout.addStretch(1)
+        bottom_layout.addWidget(selection_wrapper, 2)
+        bottom_layout.addStretch(1)
+
         main_widget = QWidget()
         main_layout = QVBoxLayout()
         main_layout.addWidget(self.scroll_area, 1)
-        main_layout.addWidget(import_button_wrapper)
+        main_layout.addLayout(bottom_layout)
         main_widget.setLayout(main_layout)
 
         self.__init_template_gui__("Manage Stock", main_widget)
@@ -73,7 +100,6 @@ class PlateView(ViewTemplate):
         """
         try:
             plate = self.controller.add_new()
-            
             if plate is not None:
                 new_plate_widget = PlateWidget(plate.id, self.controller._get_preview_image_path(plate.id), self.controller, self.image_editor_status)
                 new_plate_widget.deleteRequested.connect(self.on_delete_requested)
@@ -86,6 +112,22 @@ class PlateView(ViewTemplate):
         except Exception as e:
             QMessageBox.critical(self, "Error", f"An error occurred while adding a new plate: {e}")
             logger.error(f"Error adding new plate: {str(e)}")
+
+    def on_select_by_property(self):
+        """ Selection based on material and thickness. """
+        try:
+            thickness = float(self.select_thickness_input.text())
+            material = self.select_material_input.text()
+            if not self.controller.select_by_property(thickness, material):
+                QMessageBox.critical(self, "Error", "Failed to select plates by property.")  
+                return
+            for plate_widget in self.widget_map.values():
+                plate_widget.update_selection_status()
+        except ValueError:
+            QMessageBox.warning(self, "Invalid Input", "Invalid value for plate thickness input.")
+        except AttributeError as e:
+            QMessageBox.critical(self, "Error", f"An error occurred while selecting plates by property: {e}")
+            logger.error(f"Error selecting plates: {str(e)}")
 
     def on_delete_requested(self, plate_id: str) -> None:
         """ Delete widget from db. """
