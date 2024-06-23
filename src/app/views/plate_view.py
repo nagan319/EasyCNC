@@ -8,6 +8,7 @@ from .view_template import ViewTemplate
 from .image_editor_status import ImageEditorStatus
 from ..widgets.plate_widget import PlateWidget
 from ..controllers.plate_controller import PlateController
+from ..utils.input_parser import InputParser
 from ..logging import logger
 
 class PlateView(ViewTemplate):
@@ -90,6 +91,7 @@ class PlateView(ViewTemplate):
                 self.widget_map[plate.id] = plate_widget
                 logger.debug(f"Plate widget added successfully for plate ID: {plate.id}")
             self._update_button_amount()
+            self.on_selection_changed()
         except Exception as e:
             QMessageBox.critical(self, "Error", f"An error occurred while populating plates: {e}")
             logger.error(f"Error populating plates: {str(e)}")
@@ -113,16 +115,20 @@ class PlateView(ViewTemplate):
             QMessageBox.critical(self, "Error", f"An error occurred while adding a new plate: {e}")
             logger.error(f"Error adding new plate: {str(e)}")
 
+    def on_selection_changed(self) -> None:
+        """ Changes selection status of all plates. """
+        for plate_widget in self.widget_map.values():
+            plate_widget.update_selection_status()
+
     def on_select_by_property(self):
         """ Selection based on material and thickness. """
         try:
-            thickness = float(self.select_thickness_input.text())
+            thickness = float(InputParser.parse_text(self.select_thickness_input.text()))
             material = self.select_material_input.text()
             if not self.controller.select_by_property(thickness, material):
                 QMessageBox.critical(self, "Error", "Failed to select plates by property.")  
                 return
-            for plate_widget in self.widget_map.values():
-                plate_widget.update_selection_status()
+            self.on_selection_changed()
         except ValueError:
             QMessageBox.warning(self, "Invalid Input", "Invalid value for plate thickness input.")
         except AttributeError as e:
