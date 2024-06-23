@@ -146,7 +146,7 @@ class PlateController(GenericController):
         """
         Automatically select all plates with desired thickness and material.
         """
-        Z_THRESH = .05
+        Z_THRESH = .01
 
         try:
             material = material.strip().lower()
