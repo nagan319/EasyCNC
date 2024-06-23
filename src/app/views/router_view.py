@@ -63,6 +63,7 @@ class RouterView(ViewTemplate):
                 self.widget_map[router.id] = router_widget
                 logger.debug(f"Router widget added successfully for router ID: {router.id}")
             self._update_button_amount()
+            self.on_selection_changed()
         except Exception as e:
             QMessageBox.critical(self, "Error", f"An error occurred while populating router widgets: {e}")
             logger.error(f"Error populating router widgets: {str(e)}")
