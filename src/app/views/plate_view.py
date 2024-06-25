@@ -5,7 +5,7 @@ Date: 2024/06/11
 
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QScrollArea, QMessageBox, QLineEdit
 from .view_template import ViewTemplate
-from .image_editor_status import ImageEditorStatus
+from ..utils.image_processing.image_editor_status import ImageEditorStatus
 from ..widgets.plate_widget import PlateWidget
 from ..controllers.plate_controller import PlateController
 from ..utils.input_parser import InputParser

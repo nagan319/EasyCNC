@@ -11,7 +11,7 @@ from ..models.plate_model import Plate, PlateConstants
 from ..controllers.plate_controller import PlateController
 from ..utils.input_parser import InputParser
 
-from ..views.image_editor_status import ImageEditorStatus
+from ..utils.image_processing.image_editor_status import ImageEditorStatus
 from ..views.image_editor_window import ImageEditorWindow
 
 from ..logging import logger
