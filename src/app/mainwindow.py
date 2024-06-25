@@ -13,6 +13,7 @@ from .views.part_view import PartView
 from .views.plate_view import PlateView
 from .views.router_view import RouterView
 from .views.optimization_view import OptimizationView
+from .views.settings_view import SettingsView
 from .views.help_view import HelpView
 from .widgets.nav_bar import NavBar
 
@@ -39,26 +40,18 @@ class MainWindow(QMainWindow):
 
         self.setup_db()
 
-        nav_buttons = [
-            "Home",
-            "Import Parts",
-            "Manage Stock",
-            "Manage Routers",
-            "Generate Layout",
-            "Help"
-        ]
+        views = {
+            "Home": HomeView(),
+            "Import Parts": PartView(self.session, PART_PREVIEW_PATH),
+            "Manage Stock": PlateView(self.session, PLATE_PREVIEW_PATH),
+            "Manage Routers": RouterView(self.session, ROUTER_PREVIEW_PATH),
+            "Generate Layout": OptimizationView(self.session),
+            "Settings": SettingsView(),
+            "Help": HelpView()
+        }
 
-        views = [
-            HomeView(),
-            PartView(self.session, PART_PREVIEW_PATH),
-            PlateView(self.session, PLATE_PREVIEW_PATH),
-            RouterView(self.session, ROUTER_PREVIEW_PATH),
-            OptimizationView(self.session),
-            HelpView()
-        ]   
-
-        nav_bar = NavBar(nav_buttons)
-        view_manager = ViewManager(views)
+        nav_bar = NavBar(views.keys())
+        view_manager = ViewManager(views.values())
 
         layout = QHBoxLayout()
         layout.setContentsMargins(0, 0, 0, 0) 
