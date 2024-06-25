@@ -20,7 +20,7 @@ from .widgets.nav_bar import NavBar
 from .utils.clear_dir import clear_dir
 
 from .database import init_db, teardown_db, get_session, close_session
-from ..paths import IMAGE_PREVIEW_PATH, PART_PREVIEW_PATH, PLATE_PREVIEW_PATH, ROUTER_PREVIEW_PATH, ICON_PATH
+from ..paths import IMAGE_PREVIEW_PATH, PART_PREVIEW_PATH, PLATE_PREVIEW_PATH, ROUTER_PREVIEW_PATH, ICON_PATH, USER_SETTINGS_PATH
 
 from .logging import logger
 
@@ -46,7 +46,7 @@ class MainWindow(QMainWindow):
             "Manage Stock": PlateView(self.session, PLATE_PREVIEW_PATH),
             "Manage Routers": RouterView(self.session, ROUTER_PREVIEW_PATH),
             "Generate Layout": OptimizationView(self.session),
-            "Settings": SettingsView(),
+            "Settings": SettingsView(USER_SETTINGS_PATH),
             "Help": HelpView()
         }
 

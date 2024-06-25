@@ -110,3 +110,35 @@ QScrollBar::sub-line:vertical, QScrollBar::sub-line:horizontal {
     subcontrol-position: top;
     subcontrol-origin: margin;
 }
+
+QComboBox {
+    font-family: 'Metropolis';
+    font-size: 14px;
+    text-align: left;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 0px;
+}
+
+QComboBox:hover {
+    background-color: #bbbbbb;
+}
+
+QComboBox::drop-down {
+    width: 0px; 
+    border: none;
+}
+
+
+QComboBox QAbstractItemView {
+    font-family: 'Metropolis';
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #000000;
+    selection-background-color: #bbbbbb;
+    selection-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 0px;
+}

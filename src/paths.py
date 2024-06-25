@@ -25,6 +25,7 @@ IMAGE_PREVIEW_PATH = os.path.join(CACHE_DIR, 'image preview')
 PART_PREVIEW_PATH = os.path.join(CACHE_DIR, 'part preview')
 PLATE_PREVIEW_PATH = os.path.join(CACHE_DIR, 'plate preview')
 ROUTER_PREVIEW_PATH = os.path.join(CACHE_DIR, 'router preview')
+USER_SETTINGS_PATH = os.path.join(DATA_DIR, 'user_settings.json')
 
 """
 Resource paths
