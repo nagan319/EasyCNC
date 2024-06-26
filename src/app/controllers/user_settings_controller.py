@@ -5,7 +5,7 @@ Date: 2024/06/05
 
 import json
 import os
-from ..utils.settings_enum import LanguageEnum, UnitsEnum
+from ..utils.settings_enum import LanguageEnum, UnitsEnum, DEFAULT_LANGUAGE, DEFAULT_UNITS
 from ..logging import logger
 
 class UserSettingsController:
@@ -13,9 +13,6 @@ class UserSettingsController:
     Controller for handling user settings.
     - user_settings_path: path to user json folder.
     """
-
-    DEFAULT_LANGUAGE = LanguageEnum.ENG_US
-    DEFAULT_UNITS = UnitsEnum.MM
 
     def __init__(self, user_settings_path: str):
         if not os.path.exists(user_settings_path):
@@ -36,8 +33,8 @@ class UserSettingsController:
             except (json.JSONDecodeError, FileNotFoundError, KeyError, ValueError) as e:
                 logger.error(f"Error loading settings from {self.user_settings_path}: {e}")
                 self.user_settings = {
-                    'language': self.DEFAULT_LANGUAGE,
-                    'units': self.DEFAULT_UNITS
+                    'language': DEFAULT_LANGUAGE,
+                    'units': DEFAULT_UNITS
                 }
 
     def _save_settings(self):
@@ -54,16 +51,16 @@ class UserSettingsController:
         try:
             return self.user_settings['language']
         except KeyError:
-            logger.warning(f"Invalid language value in settings: {self.user_settings['language']}. Defaulting to {self.DEFAULT_LANGUAGE}.")
-            return self.DEFAULT_LANGUAGE
+            logger.warning(f"Invalid language value in settings: {self.user_settings['language']}. Defaulting to {DEFAULT_LANGUAGE}.")
+            return DEFAULT_LANGUAGE
     
     def get_user_units(self) -> UnitsEnum:
         """ Get user units. Defaults to MM. """
         try:
             return self.user_settings['units']
         except KeyError:
-            logger.warning(f"Invalid units value in settings: {self.user_settings['units']}. Defaulting to {self.DEFAULT_UNITS}.")
-            return self.DEFAULT_UNITS
+            logger.warning(f"Invalid units value in settings: {self.user_settings['units']}. Defaulting to {DEFAULT_UNITS}.")
+            return DEFAULT_UNITS
     
     def set_user_language(self, language: LanguageEnum):
         """ Set user language."""

@@ -9,6 +9,7 @@ from PyQt6.QtGui import QPixmap
 
 from ..models.part_model import Part, PartConstants
 
+from ..translations import part_widget
 from ..logging import logger
 
 class PartWidget(QWidget):
@@ -22,10 +23,13 @@ class PartWidget(QWidget):
 
     MAX_HEIGHT = 350
 
-    def __init__(self, part_id: str, preview_path: str):
+    def __init__(self, part_id: str, preview_path: str, language: int):
         super().__init__()
         self.id = part_id
         self.preview_path = preview_path
+
+        self.texts = part_widget
+        self.language = language
 
         preview_widget = self._get_preview_widget()
         editable_fields_widget = self._get_editable_fields_widget()
@@ -52,25 +56,25 @@ class PartWidget(QWidget):
         layout = QVBoxLayout()
 
         amount_layout = QHBoxLayout()
-        amount_label = QLabel("Amount:")
+        amount_label = QLabel(self.texts['amount_text'][self.language])
         self.amount_input = QLineEdit()
-        self.amount_input.setPlaceholderText("Amount")
+        self.amount_input.setPlaceholderText(self.texts['amount_text'][self.language])
         self.amount_input.textEdited.connect(self.on_amount_edited)
         self.amount_input.setText("1")
         amount_layout.addWidget(amount_label)
         amount_layout.addWidget(self.amount_input)
 
         material_layout = QHBoxLayout()
-        material_label = QLabel("Material:")
+        material_label = QLabel(self.texts['material_text'][self.language])
         self.material_input = QLineEdit()
-        self.material_input.setPlaceholderText("Material")
+        self.material_input.setPlaceholderText(self.texts['material_text'][self.language])
         self.material_input.textEdited.connect(self.on_material_edited)
         self.material_input.setText(PartConstants.DEFAULT_MATERIAL)
         material_layout.addWidget(material_label)
         material_layout.addWidget(self.material_input)
 
         button_layout = QHBoxLayout()
-        delete_button = QPushButton("Delete")
+        delete_button = QPushButton(self.texts['delete_text'][self.language])
         delete_button.pressed.connect(self.on_delete_requested)
         button_layout.addWidget(delete_button)
 

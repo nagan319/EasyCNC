@@ -9,14 +9,19 @@ from ..widgets.part_widget import PartWidget
 
 from ..controllers.part_controller import PartController
 
+from ..translations import part_view
 from ..logging import logger
 
 class PartView(ViewTemplate):
     """
     View for handling imported parts. 
     """
-    def __init__(self, session, part_preview_dir: str):
+    def __init__(self, session, part_preview_dir: str, language: int, units: int):
         super().__init__()
+
+        self.texts = part_view
+        self.language = language
+        self.units = units
 
         self.controller = PartController(session, part_preview_dir)
         self.controller.remove_all_with_previews()
@@ -26,7 +31,9 @@ class PartView(ViewTemplate):
         logger.debug("Successfully initialized PartView.")
 
     def _setup_ui(self):
-        """ Initialize widget ui. """
+        """ 
+        Initialize widget ui.
+        """
         self.scroll_area = QScrollArea()
         self.scroll_area.setWidgetResizable(True)
         self.scroll_widget = QWidget()
@@ -51,19 +58,24 @@ class PartView(ViewTemplate):
 
         self._update_button_amount()
 
-        self.__init_template_gui__("Import Part Files", main_widget)
+        self.__init_template_gui__(self.texts['view_name'][self.language], main_widget)
 
     def import_file(self) -> None:
         """
         Import file from selected filepath and create a new widget if valid.
         """
         file_path, _ = QFileDialog.getOpenFileName(self, "Select File", "", "STL Files (*.stl)")
+        
         if file_path:
             try:
                 part = self.controller.add_from_file(file_path)
                 
                 if part is not None:
-                    new_part_widget = PartWidget(part.id, self.controller._get_preview_image_path(part.id))
+                    new_part_widget = PartWidget(
+                        part.id, 
+                        self.controller._get_preview_image_path(part.id), 
+                        self.language
+                    )
                     new_part_widget.amountEdited.connect(self.on_amount_edited)
                     new_part_widget.materialEdited.connect(self.on_material_edited)
                     new_part_widget.deleteRequested.connect(self.on_delete_requested)
@@ -71,11 +83,21 @@ class PartView(ViewTemplate):
                     self.widget_map[part.id] = new_part_widget  
                     self._update_button_amount()
                     logger.debug(f"Part added successfully from {file_path}")
+
                 else:
-                    QMessageBox.warning(self, "Import Failed", "The selected file could not be imported.")
+                    QMessageBox.warning(
+                        self, 
+                        self.texts['import_fail_title'][self.language], 
+                        self.texts['import_fail_text'][self.language]
+                    )
                     logger.warning(f"Failed to import part from {file_path}")
+
             except Exception as e:
-                QMessageBox.critical(self, "Error", f"An error occurred while importing the file: {str(e)}")
+                QMessageBox.critical(
+                    self, 
+                    self.texts['import_error_title'][self.language], 
+                    f"{self.texts['import_error_text'][self.language]}{str(e)}"
+                )
                 logger.error(f"Error importing file {file_path}: {str(e)}")
 
     def on_material_edited(self, part_id: str, new_val: str) -> None:
@@ -107,7 +129,7 @@ class PartView(ViewTemplate):
     def _update_button_amount(self) -> None:
         """ Update to reflect amount of widgets in db."""
         try:
-            self.import_button.setText(f"Import Parts: {self.controller.get_total_amount()}/{self.controller.MAX_PART_AMOUNT}")
+            self.import_button.setText(f"{self.texts['button_text'][self.language]}{self.controller.get_total_amount()}/{self.controller.MAX_PART_AMOUNT}")
         except Exception as e:
             logger.error(f"Encountered exception while updating amount widget: {e}")            
 

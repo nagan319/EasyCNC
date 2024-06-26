@@ -9,14 +9,18 @@ from ..widgets.router_widget import RouterWidget
 
 from ..controllers.router_controller import RouterController
 
+from ..translations import router_view
 from ..logging import logger
 
 class RouterView(ViewTemplate):
     """
     View for handling CNC routers. 
     """
-    def __init__(self, session, part_preview_dir: str):
+    def __init__(self, session, part_preview_dir: str, language: int):
         super().__init__()
+
+        self.texts = router_view
+        self.language = language
 
         self.controller = RouterController(session, part_preview_dir)
         self.widget_map = {}
@@ -33,7 +37,7 @@ class RouterView(ViewTemplate):
         self.scroll_layout = QVBoxLayout(self.scroll_widget)
         self.scroll_area.setWidget(self.scroll_widget)
 
-        self.import_button = QPushButton("Add Router")
+        self.import_button = QPushButton(self.texts['add_router_text'][self.language])
         self.import_button.pressed.connect(self.add_router)
 
         import_button_wrapper = QWidget()
@@ -49,14 +53,19 @@ class RouterView(ViewTemplate):
         main_layout.addWidget(import_button_wrapper)  
         main_widget.setLayout(main_layout)
 
-        self.__init_template_gui__("Manage Routers", main_widget)
+        self.__init_template_gui__(self.texts['view_name'][self.language], main_widget)
     
     def populate_router_widgets(self):
         """Populate widgets for all routers already in the database."""
         try:
             routers = self.controller.get_all()
             for router in routers:
-                router_widget = RouterWidget(router.id, self.controller._get_preview_image_path(router.id), self.controller)
+                router_widget = RouterWidget(
+                    router.id, 
+                    self.controller._get_preview_image_path(router.id), 
+                    self.controller,
+                    self.language
+                )
                 router_widget.selectionChanged.connect(self.on_selection_changed)
                 router_widget.deleteRequested.connect(self.on_delete_requested)
                 self.scroll_layout.addWidget(router_widget)
@@ -65,7 +74,10 @@ class RouterView(ViewTemplate):
             self._update_button_amount()
             self.on_selection_changed()
         except Exception as e:
-            QMessageBox.critical(self, "Error", f"An error occurred while populating router widgets: {e}")
+            QMessageBox.critical(
+                self, 
+                self.texts['error_title'][self.language], 
+                f"{self.texts['error_populating_text'][self.language]}{e}")
             logger.error(f"Error populating router widgets: {str(e)}")
 
     def add_router(self) -> None:
@@ -75,7 +87,12 @@ class RouterView(ViewTemplate):
         try: 
             router = self.controller.add_new()
             if router is not None:
-                new_router_widget = RouterWidget(router.id, self.controller._get_preview_image_path(router.id), self.controller)
+                new_router_widget = RouterWidget(
+                    router.id, 
+                    self.controller._get_preview_image_path(router.id), 
+                    self.controller,
+                    self.language
+                )
                 new_router_widget.selectionChanged.connect(self.on_selection_changed)
                 new_router_widget.deleteRequested.connect(self.on_delete_requested)
                 self.scroll_layout.addWidget(new_router_widget)
@@ -83,9 +100,17 @@ class RouterView(ViewTemplate):
                 self._update_button_amount()
                 logger.debug(f"New router added successfully.")
             else:
-                QMessageBox.warning(self, "Operation Failed", "A new router could not be added.")
+                QMessageBox.warning(
+                    self, 
+                    self.texts['operation_failed_title'][self.language], 
+                    self.texts['op_failed_adding_text'][self.language]
+                )
         except Exception as e:
-            QMessageBox.critical(self, "Error", f"An error occurred while adding a new router: {e}")
+            QMessageBox.critical(
+                self, 
+                self.texts['error_title'][self.language], 
+                f"{self.texts['error_adding_text'][self.language]}{e}"
+            )
             logger.error(f"Error adding new router: {str(e)}")
 
     def on_selection_changed(self) -> None:
@@ -107,6 +132,6 @@ class RouterView(ViewTemplate):
     def _update_button_amount(self) -> None:
         """ Update to reflect amount of widgets in db."""
         try:
-            self.import_button.setText(f"Add Routers: {self.controller.get_amount()}/{self.controller.MAX_ROUTER_AMOUNT}")
+            self.import_button.setText(f"{self.texts['add_router_text'][self.language]} {self.controller.get_amount()}/{self.controller.MAX_ROUTER_AMOUNT}")
         except Exception as e:
             logger.error(f"Encountered exception while updating amount widget: {e}")

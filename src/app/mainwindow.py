@@ -5,7 +5,9 @@ Date: 2024/06/10
 
 from PyQt6.QtWidgets import QMainWindow, QHBoxLayout, QWidget
 from PyQt6.QtGui import QIcon, QFont, QFontDatabase
-from typing import List
+from typing import Dict
+
+import json
 
 from .views.view_manager import ViewManager 
 from .views.home_view import HomeView
@@ -18,10 +20,12 @@ from .views.help_view import HelpView
 from .widgets.nav_bar import NavBar
 
 from .utils.clear_dir import clear_dir
+from .utils.settings_enum import DEFAULT_LANGUAGE, DEFAULT_UNITS
 
 from .database import init_db, teardown_db, get_session, close_session
 from ..paths import IMAGE_PREVIEW_PATH, PART_PREVIEW_PATH, PLATE_PREVIEW_PATH, ROUTER_PREVIEW_PATH, ICON_PATH, USER_SETTINGS_PATH
 
+from .translations import main_window
 from .logging import logger
 
 APP_TITLE = "EasyCNC"
@@ -40,14 +44,28 @@ class MainWindow(QMainWindow):
 
         self.setup_db()
 
+        self.texts = main_window
+
+        user_settings = self.load_user_settings(USER_SETTINGS_PATH)
+
+        user_language = user_settings['language']
+        user_units = user_settings['units']
+
         views = {
-            "Home": HomeView(),
-            "Import Parts": PartView(self.session, PART_PREVIEW_PATH),
-            "Manage Stock": PlateView(self.session, PLATE_PREVIEW_PATH),
-            "Manage Routers": RouterView(self.session, ROUTER_PREVIEW_PATH),
-            "Generate Layout": OptimizationView(self.session),
-            "Settings": SettingsView(USER_SETTINGS_PATH),
-            "Help": HelpView()
+            self.texts['home_button'][user_language]: \
+                HomeView(user_language),
+            self.texts['part_button'][user_language]: \
+                PartView(self.session, PART_PREVIEW_PATH, user_language, user_units),
+            self.texts['stock_button'][user_language]: \
+                PlateView(self.session, PLATE_PREVIEW_PATH, user_language),
+            self.texts['router_button'][user_language]: \
+                RouterView(self.session, ROUTER_PREVIEW_PATH, user_language),
+            self.texts['layout_button'][user_language]: \
+                OptimizationView(self.session, user_language),
+            self.texts['settings_button'][user_language]: \
+                SettingsView(USER_SETTINGS_PATH, user_language),
+            self.texts['help_button'][user_language]: \
+                HelpView(user_language)
         }
 
         nav_bar = NavBar(views.keys())
@@ -75,6 +93,19 @@ class MainWindow(QMainWindow):
             logger.debug("Database setup complete and session started.")
         except Exception as e:
             logger.error(f"Error initializing database: {e}")
+
+    def load_user_settings(self, filepath: str) -> Dict[str, int]:
+        """ Retrieve user language and units settings. """
+        try:
+            with open(filepath, 'r') as file:
+                logger.debug(f"Successfully loaded user settings. ") 
+                return json.load(file)
+        except Exception as e:
+            logger.error(f"Encountered exception while attempting to configure user settings: {e}")
+            return {
+                'user_language': DEFAULT_LANGUAGE,
+                'user_units': DEFAULT_UNITS
+            }       
 
     def closeEvent(self, event):
         """ Close application at exit. """

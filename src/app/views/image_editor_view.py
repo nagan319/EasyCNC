@@ -34,8 +34,11 @@ class ImageEditorView(QStackedWidget):
     """
     editingFinished = pyqtSignal()
 
-    def __init__(self, session: Session, plate: Plate, min_width: int, min_height: int):
+    def __init__(self, session: Session, plate: Plate, min_width: int, min_height: int, language: int):
         super().__init__()
+
+        self.language = language
+
         self.plate = plate
         self.controller = ImageEditingController(session, IMAGE_PREVIEW_PATH, self.plate)
         self.min_width = min_width
@@ -45,16 +48,16 @@ class ImageEditorView(QStackedWidget):
     def _setup_ui(self):
         self.setCurrentIndex(EditorViews.LOAD.value)
 
-        self.image_load_widget = ImageLoadWidget(self.controller)
+        self.image_load_widget = ImageLoadWidget(self.controller, self.language)
         self.image_load_widget.imageImported.connect(self.on_image_imported)
 
-        self.image_threshold_widget = ImageThresholdWidget(self.controller, self.min_height)
+        self.image_threshold_widget = ImageThresholdWidget(self.controller, self.min_height, self.language)
         self.image_threshold_widget.thresholdingFinalized.connect(self.on_thresholding_finalized)
 
-        self.image_feature_widget = ImageFeatureWidget(self.controller, self.min_height)
+        self.image_feature_widget = ImageFeatureWidget(self.controller, self.min_height, self.language)
         self.image_feature_widget.featuresFinalized.connect(self.on_features_finalized)
 
-        self.image_flat_widget = ImageFlatWidget(self.controller, self.min_height)
+        self.image_flat_widget = ImageFlatWidget(self.controller, self.min_height, self.language)
         self.image_flat_widget.flatFinalized.connect(self.on_flat_finalized)
 
         self.addWidget(self.image_load_widget)

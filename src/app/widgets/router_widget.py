@@ -1,8 +1,3 @@
-"""
-Author: nagan319
-Date: 2024/06/11
-"""
-
 from PyQt6.QtCore import Qt, pyqtSignal
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton, QMessageBox
 from PyQt6.QtGui import QPixmap
@@ -11,46 +6,49 @@ from ..models.router_model import RouterConstants
 from ..controllers.router_controller import RouterController
 from ..utils.input_parser import InputParser
 
+from ..translations import router_widget
 from ..logging import logger
 
 class RouterWidget(QWidget):
     """
     Widget for displaying router information.
     """
-
     selectionChanged = pyqtSignal()
     deleteRequested = pyqtSignal(str)
 
-    MAX_VALUES = {
-        "x": RouterConstants.MAX_ROUTER_DIMENSION,
-        "y": RouterConstants.MAX_ROUTER_DIMENSION,
-        "z": RouterConstants.MAX_ROUTER_DIMENSION,
-        "plate_x": RouterConstants.MAX_PLATE_DIMENSION,
-        "plate_y": RouterConstants.MAX_PLATE_DIMENSION,
-        "plate_z": RouterConstants.MAX_PLATE_DIMENSION,
-        "min_safe_dist_from_edge": RouterConstants.MAX_PLATE_DIMENSION // 2,
-        "drill_bit_diameter": RouterConstants.MAX_DRILL_BIT_DIAMETER,
-        "mill_bit_diameter": RouterConstants.MAX_MILL_BIT_DIAMETER
-    }
-
-    FIELD_DEFINITIONS = {
-        "x": ("Router x dimension:", f"0-{MAX_VALUES['x']}", 'x'),
-        "y": ("Router y dimension:", f"0-{MAX_VALUES['y']}", 'y'),
-        "z": ("Router z dimension:", f"0-{MAX_VALUES['z']}", 'z'),
-        "plate_x": ("Max plate x dimension:", f"0-{MAX_VALUES['plate_x']}", 'plate_x'),
-        "plate_y": ("Max plate y dimension:", f"0-{MAX_VALUES['plate_y']}", 'plate_y'),
-        "plate_z": ("Max plate z dimension:", f"0-{MAX_VALUES['plate_z']}", 'plate_z'),
-        "min_safe_dist_from_edge": ("Minimum safe edge distance:", f"0-{MAX_VALUES['min_safe_dist_from_edge']}", 'min_safe_dist_from_edge'),
-        "drill_bit_diameter": ("Drill bit diameter:", f"0-{MAX_VALUES['drill_bit_diameter']}", 'drill_bit_diameter'),
-        "mill_bit_diameter": ("Mill bit diameter:", f"0-{MAX_VALUES['mill_bit_diameter']}", 'mill_bit_diameter')
-    }
-
-    def __init__(self, router_id: str, preview_path: str, controller: RouterController):
+    def __init__(self, router_id: str, preview_path: str, controller: RouterController, language: int):
         super().__init__()
+        self.texts = router_widget
+        self.language = language
+
         self.id = router_id
         self.preview_path = preview_path
         self.fields = {}
         self.controller = controller  
+
+        self.max_values = {
+            "x": RouterConstants.MAX_ROUTER_DIMENSION,
+            "y": RouterConstants.MAX_ROUTER_DIMENSION,
+            "z": RouterConstants.MAX_ROUTER_DIMENSION,
+            "plate_x": RouterConstants.MAX_PLATE_DIMENSION,
+            "plate_y": RouterConstants.MAX_PLATE_DIMENSION,
+            "plate_z": RouterConstants.MAX_PLATE_DIMENSION,
+            "min_safe_dist_from_edge": RouterConstants.MAX_PLATE_DIMENSION // 2,
+            "drill_bit_diameter": RouterConstants.MAX_DRILL_BIT_DIAMETER,
+            "mill_bit_diameter": RouterConstants.MAX_MILL_BIT_DIAMETER
+        }
+
+        self.field_definitions = {
+            "x": (self.texts["x_text"][self.language], f"0-{self.max_values['x']}", 'x'),
+            "y": (self.texts["y_text"][self.language], f"0-{self.max_values['y']}", 'y'),
+            "z": (self.texts["z_text"][self.language], f"0-{self.max_values['z']}", 'z'),
+            "plate_x": (self.texts["plate_x_text"][self.language], f"0-{self.max_values['plate_x']}", 'plate_x'),
+            "plate_y": (self.texts["plate_y_text"][self.language], f"0-{self.max_values['plate_y']}", 'plate_y'),
+            "plate_z": (self.texts["plate_z_text"][self.language], f"0-{self.max_values['plate_z']}", 'plate_z'),
+            "min_safe_dist_from_edge": (self.texts["min_safe_dist_from_edge_text"][self.language], f"0-{self.max_values['min_safe_dist_from_edge']}", 'min_safe_dist_from_edge'),
+            "drill_bit_diameter": (self.texts["drill_bit_diameter_text"][self.language], f"0-{self.max_values['drill_bit_diameter']}", 'drill_bit_diameter'),
+            "mill_bit_diameter": (self.texts["mill_bit_diameter_text"][self.language], f"0-{self.max_values['mill_bit_diameter']}", 'mill_bit_diameter')
+        }
 
         self.preview_widget = self._get_preview_widget()
         self.editable_fields_widget = self._get_editable_fields_widget()
@@ -94,18 +92,18 @@ class RouterWidget(QWidget):
         name_layout.addWidget(self.name_input)
         layout.addLayout(name_layout)
 
-        for field_name, (label_text, placeholder_text, attribute_name) in self.FIELD_DEFINITIONS.items(): 
+        for field_name, (label_text, placeholder_text, attribute_name) in self.field_definitions.items(): 
             field_layout, input_field = self._create_input_field(label_text, placeholder_text, self.controller.get_attribute(self.id, attribute_name))
             layout.addLayout(field_layout)
             self.fields[field_name] = input_field
 
         button_widget = QWidget()
         button_layout = QHBoxLayout()
-        self.select_button = QPushButton("Select")
+        self.select_button = QPushButton(self.texts["select_text"][self.language])
         self.select_button.pressed.connect(self.on_select_pressed)
-        save_button = QPushButton("Save")
+        save_button = QPushButton(self.texts["save_text"][self.language])
         save_button.pressed.connect(self.on_save_pressed)
-        delete_button = QPushButton("Delete")
+        delete_button = QPushButton(self.texts["delete_text"][self.language])
         delete_button.pressed.connect(self.on_delete_pressed)
         button_layout.addStretch(1)
         button_layout.addWidget(self.select_button, 1)
@@ -128,11 +126,11 @@ class RouterWidget(QWidget):
         if self.controller.get_selected(self.id):
             self.preview_widget.setStyleSheet("QWidget {border: 2px solid #b7de70;}")
             self.select_button.setStyleSheet("QPushButton {background-color: #b7de70;}")
-            self.select_button.setText("Unselect")
+            self.select_button.setText(self.texts["unselect_text"][self.language])
         else:
             self.preview_widget.setStyleSheet("QWidget {border: 0px solid white;}")
             self.select_button.setStyleSheet("QPushButton {background-color: #eeeeee;}")
-            self.select_button.setText("Select")
+            self.select_button.setText(self.texts["select_text"][self.language])
 
     def on_field_edited(self):
         """ Update field value when editing is finished. """
@@ -141,7 +139,7 @@ class RouterWidget(QWidget):
             return
         for field_name, input_field in self.fields.items():
             if sender == input_field:
-                max_value = self.MAX_VALUES.get(field_name, None)
+                max_value = self.max_values.get(field_name, None)
                 if max_value is not None:
                     parsed_value = InputParser.parse_text(sender.text(), 0, max_value)
                     sender.setText(str(parsed_value))
@@ -164,9 +162,9 @@ class RouterWidget(QWidget):
             self.controller.save_preview(self.controller.get_by_id(router_id))
             self.update_preview()
         except ValueError as ve:
-            QMessageBox.critical(self, "Error", f"Invalid input: {ve}")
+            QMessageBox.critical(self, self.texts["error_title"][self.language], f"{self.texts['invalid_input_text'][self.language]} {ve}")
         except Exception as e:
-            QMessageBox.critical(self, "Error", f"An error occured while updating the router: {e}")
+            QMessageBox.critical(self, self.texts["error_title"][self.language], f"{self.texts['error_updating_text'][self.language]} {e}")
 
     def on_select_pressed(self):
         """ User presses select / unselect button. """
@@ -175,7 +173,7 @@ class RouterWidget(QWidget):
             self.controller.edit_selected(self.id, (not curr_status))
             self.selectionChanged.emit()
         except Exception as e:
-            QMessageBox.critical(self, "Error", f"An error occured while selecting/unselecting the router: {e}")           
+            QMessageBox.critical(self, self.texts["error_title"][self.language], f"{self.texts['selection_error_text'][self.language]} {e}")
 
     def on_delete_pressed(self):
         """ User deletes widget. """

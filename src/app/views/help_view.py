@@ -8,14 +8,18 @@ from PyQt6.QtWidgets import QWidget, QVBoxLayout, QScrollArea, QLabel
 from .view_template import ViewTemplate
 from ..logging import logger
 
+from ..translations import help_view
 from ...paths import HELP_TEXT_PATH
 
 class HelpView(ViewTemplate):
     """
     View for displaying help information.
     """
-    def __init__(self):
+    def __init__(self, language: int):
         super().__init__()
+
+        self.texts = help_view
+        self.language = language
 
         self._setup_ui()
         logger.debug("Successfully initialized HelpView.")
@@ -43,7 +47,7 @@ class HelpView(ViewTemplate):
         main_layout.addWidget(self.scroll_area)
         main_widget.setLayout(main_layout)
 
-        self.__init_template_gui__("Help", main_widget)
+        self.__init_template_gui__(self.texts['view_name'][self.language], main_widget)
 
     def set_help_text(self, text: str):
         """ Set the help text content. """

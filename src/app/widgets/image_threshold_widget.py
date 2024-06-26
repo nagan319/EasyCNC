@@ -9,6 +9,8 @@ from PyQt6.QtGui import QPixmap
 
 from ..controllers.image_editing_controller import ImageEditingController
 
+from ..translations import image_threshold_widget
+
 class ImageThresholdWidget(QWidget):
     """
     Widget for applying binary threshold filter to image. 
@@ -19,8 +21,12 @@ class ImageThresholdWidget(QWidget):
     COLOR_MAX = 255
     COLOR_MID = (COLOR_MIN + COLOR_MAX)//2
 
-    def __init__(self, controller: ImageEditingController, min_height: int):
+    def __init__(self, controller: ImageEditingController, min_height: int, language: int):
         super().__init__()
+
+        self.texts = image_threshold_widget
+        self.language = language
+
         self.controller = controller
         self.min_height = min_height
         self.threshold = self.COLOR_MID
@@ -55,7 +61,7 @@ class ImageThresholdWidget(QWidget):
         """ 
         Label to go above threshold slider. 
         """
-        slider_label = QLabel("Adjust Threshold Value")
+        slider_label = QLabel(self.texts['slider_label'][self.language])
         slider_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         return slider_label
 
@@ -79,7 +85,7 @@ class ImageThresholdWidget(QWidget):
         """
         save_button_wrapper = QWidget()
         save_button_wrapper_layout = QHBoxLayout()
-        save_button = QPushButton("Save Binary")
+        save_button = QPushButton(self.texts['save_button'][self.language])
         save_button.pressed.connect(self.on_save_button_pressed)
 
         save_button_wrapper_layout.addStretch(2)

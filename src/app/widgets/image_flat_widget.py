@@ -9,14 +9,20 @@ from PyQt6.QtGui import QPixmap
 
 from ..controllers.image_editing_controller import ImageEditingController
 
+from ..translations import image_flat_widget
+
 class ImageFlatWidget(QWidget):
     """
     Widget for viewing flattened images.
     """
     flatFinalized = pyqtSignal()
 
-    def __init__(self, controller: ImageEditingController, min_height: int):
+    def __init__(self, controller: ImageEditingController, min_height: int, language: int):
         super().__init__()
+
+        self.texts = image_flat_widget
+        self.language = language
+
         self.controller = controller
         self.min_height = min_height
         self._setup_ui()
@@ -48,7 +54,7 @@ class ImageFlatWidget(QWidget):
         """
         save_button_wrapper = QWidget()
         save_button_wrapper_layout = QHBoxLayout()
-        save_button = QPushButton("Save Contours")
+        save_button = QPushButton(self.texts['save_button_text'][self.language])
         save_button.pressed.connect(self.on_save_button_pressed)
 
         save_button_wrapper_layout.addStretch(2)

@@ -10,14 +10,20 @@ from ..controllers.image_editing_controller import ImageEditingController
 
 from ..utils.image_processing.constants import SUPPORTED_IMAGE_FORMATS_STR
 
+from ..translations import image_load_widget
+
 class ImageLoadWidget(QWidget):
     """
     Widget for handling image imports.
     """
     imageImported = pyqtSignal()
 
-    def __init__(self, controller: ImageEditingController):
+    def __init__(self, controller: ImageEditingController, language: int):
         super().__init__()
+
+        self.texts = image_load_widget
+        self.language = language
+
         self.controller = controller
         self._setup_ui()
     
@@ -26,7 +32,7 @@ class ImageLoadWidget(QWidget):
 
         self.button_frame = QWidget()
         self.button_frame_layout = QHBoxLayout()
-        self.import_button = QPushButton("Import Image File")
+        self.import_button = QPushButton(self.texts['import_button_text'][self.language])
         self.import_button.pressed.connect(self.import_image_file)
 
         self.button_frame_layout.addStretch(2)

@@ -9,14 +9,19 @@ from ..utils.image_processing.image_editor_status import ImageEditorStatus
 from ..widgets.plate_widget import PlateWidget
 from ..controllers.plate_controller import PlateController
 from ..utils.input_parser import InputParser
+
+from ..translations import plate_view
 from ..logging import logger
 
 class PlateView(ViewTemplate):
     """
     View for handling plates. 
     """
-    def __init__(self, session, plate_preview_dir: str):
+    def __init__(self, session, plate_preview_dir: str, language: int):
         super().__init__()
+
+        self.texts = plate_view
+        self.language = language
 
         self.controller = PlateController(session, plate_preview_dir)
         self.widget_map = {}
@@ -36,17 +41,17 @@ class PlateView(ViewTemplate):
         self.scroll_area.setWidget(self.scroll_widget)
 
         self.select_thickness_input = QLineEdit()
-        self.select_thickness_input.setPlaceholderText("Thickness")
+        self.select_thickness_input.setPlaceholderText(self.texts['thickness_placeholder'][self.language])
         self.select_thickness_input.setMinimumWidth(120)
 
         self.select_material_input = QLineEdit()
-        self.select_material_input.setPlaceholderText("Material")
+        self.select_material_input.setPlaceholderText(self.texts['material_placeholder'][self.language])
         self.select_material_input.setMinimumWidth(120)
 
-        self.select_button = QPushButton("Select by property:")
+        self.select_button = QPushButton(self.texts['select_property_text'][self.language])
         self.select_button.pressed.connect(self.on_select_by_property)
 
-        self.import_button = QPushButton("Add New Plate")
+        self.import_button = QPushButton(self.texts['add_new_text'][self.language])
         self.import_button.pressed.connect(self.add_plate)
 
         selection_wrapper = QWidget()
@@ -60,14 +65,14 @@ class PlateView(ViewTemplate):
 
         import_button_wrapper = QWidget()
         import_button_wrapper_layout = QHBoxLayout()
-        import_button_wrapper_layout.addStretch(2)
-        import_button_wrapper_layout.addWidget(self.import_button, 1)
-        import_button_wrapper_layout.addStretch(2)
+        import_button_wrapper_layout.addStretch(1)
+        import_button_wrapper_layout.addWidget(self.import_button, 2)
+        import_button_wrapper_layout.addStretch(1)
         import_button_wrapper.setLayout(import_button_wrapper_layout)
 
         bottom_layout = QHBoxLayout()
         bottom_layout.addStretch(1)
-        bottom_layout.addWidget(import_button_wrapper, 1)
+        bottom_layout.addWidget(import_button_wrapper, 2)
         bottom_layout.addStretch(1)
         bottom_layout.addWidget(selection_wrapper, 2)
         bottom_layout.addStretch(1)
@@ -78,14 +83,20 @@ class PlateView(ViewTemplate):
         main_layout.addLayout(bottom_layout)
         main_widget.setLayout(main_layout)
 
-        self.__init_template_gui__("Manage Stock", main_widget)
+        self.__init_template_gui__(self.texts['view_name'][self.language], main_widget)
     
     def populate_plate_widgets(self):
         """ Populate the layout with existing plates from the database. """
         try:
             plates = self.controller.get_all()
             for plate in plates:
-                plate_widget = PlateWidget(plate.id, self.controller._get_preview_image_path(plate.id), self.controller, self.image_editor_status)
+                plate_widget = PlateWidget(
+                    plate.id, 
+                    self.controller._get_preview_image_path(plate.id), 
+                    self.controller, 
+                    self.image_editor_status, 
+                    self.language
+                )
                 plate_widget.deleteRequested.connect(self.on_delete_requested)
                 self.scroll_layout.addWidget(plate_widget)
                 self.widget_map[plate.id] = plate_widget
@@ -93,7 +104,11 @@ class PlateView(ViewTemplate):
             self._update_button_amount()
             self.on_selection_changed()
         except Exception as e:
-            QMessageBox.critical(self, "Error", f"An error occurred while populating plates: {e}")
+            QMessageBox.critical(
+                self, 
+                self.texts['error_title'][self.language], 
+                f"{self.texts['error_populating_text'][self.language]}{e}"
+            )
             logger.error(f"Error populating plates: {str(e)}")
 
     def add_plate(self):
@@ -103,16 +118,30 @@ class PlateView(ViewTemplate):
         try:
             plate = self.controller.add_new()
             if plate is not None:
-                new_plate_widget = PlateWidget(plate.id, self.controller._get_preview_image_path(plate.id), self.controller, self.image_editor_status)
+                new_plate_widget = PlateWidget(
+                    plate.id, 
+                    self.controller._get_preview_image_path(plate.id), 
+                    self.controller, 
+                    self.image_editor_status, 
+                    self.language
+                )
                 new_plate_widget.deleteRequested.connect(self.on_delete_requested)
                 self.scroll_layout.addWidget(new_plate_widget)
                 self.widget_map[plate.id] = new_plate_widget
                 self._update_button_amount()
                 logger.debug(f"Default plate added successfully.")
             else:
-                QMessageBox.warning(self, "Operation Failed", "A new plate could not be added.")
+                QMessageBox.warning(
+                    self, 
+                    self.texts['operation_failed_title'][self.language], 
+                    self.texts['could_not_add_text'][self.language]
+                )
         except Exception as e:
-            QMessageBox.critical(self, "Error", f"An error occurred while adding a new plate: {e}")
+            QMessageBox.critical(
+                self, 
+                self.texts['error_title'][self.language], 
+                f"{self.texts['error_adding_text'][self.language]}{e}"
+            )
             logger.error(f"Error adding new plate: {str(e)}")
 
     def on_selection_changed(self) -> None:
@@ -126,13 +155,25 @@ class PlateView(ViewTemplate):
             thickness = float(InputParser.parse_text(self.select_thickness_input.text()))
             material = self.select_material_input.text()
             if not self.controller.select_by_property(thickness, material):
-                QMessageBox.critical(self, "Error", "Failed to select plates by property.")  
+                QMessageBox.critical(
+                    self, 
+                    self.texts['error_title'][self.language], 
+                    self.texts['failed_to_select_plates_text'][self.language],
+                )  
                 return
             self.on_selection_changed()
         except ValueError:
-            QMessageBox.warning(self, "Invalid Input", "Invalid value for plate thickness input.")
+            QMessageBox.warning(
+                self, 
+                self.texts['invalid_input_title'][self.language], 
+                self.texts['invalid_input_text'][self.language]
+            )
         except AttributeError as e:
-            QMessageBox.critical(self, "Error", f"An error occurred while selecting plates by property: {e}")
+            QMessageBox.critical(
+                self, 
+                self.texts['error_title'][self.language],  
+                f"{self.texts['plate_selection_error_text'][self.language]}{e}"
+            )
             logger.error(f"Error selecting plates: {str(e)}")
 
     def on_delete_requested(self, plate_id: str) -> None:
@@ -149,6 +190,6 @@ class PlateView(ViewTemplate):
     def _update_button_amount(self):
         """ Update the import button text to reflect the number of widgets in the layout. """
         try:
-            self.import_button.setText(f"Add Plates: {self.controller.get_amount()}/{self.controller.MAX_PLATE_AMOUNT}")
+            self.import_button.setText(f"{self.texts['add_new_text'][self.language]}{self.controller.get_amount()}/{self.controller.MAX_PLATE_AMOUNT}")
         except Exception as e:
             logger.error(f"Encountered exception while updating amount widget: {e}")

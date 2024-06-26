@@ -7,6 +7,7 @@ from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel
 from PyQt6.QtGui import QPixmap
 
+from ..translations import home_view
 from ..logging import logger
 
 from ...paths import LOGO_PATH
@@ -16,8 +17,11 @@ class HomeView(QWidget):
     Home widget containing app logo and version information.
     """
 
-    def __init__(self):
+    def __init__(self, language: int):
         super().__init__()
+
+        self.texts = home_view
+        self.language = language
 
         layout = QVBoxLayout()
 
@@ -25,7 +29,7 @@ class HomeView(QWidget):
         logo_label.setPixmap(QPixmap(LOGO_PATH).scaledToWidth(1000))
         logo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        app_description_label = QLabel("Version 0.0.0   Created by nagan319")
+        app_description_label = QLabel(self.texts['app_description_text'][self.language])
 
         layout.addStretch()
         layout.addWidget(logo_label)

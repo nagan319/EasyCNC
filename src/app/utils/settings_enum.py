@@ -20,3 +20,6 @@ class LanguageEnum(enum.Enum):
 class UnitsEnum(enum.Enum):
     MM = 0
     IN = 1
+
+DEFAULT_LANGUAGE = LanguageEnum.ENG_US.value
+DEFAULT_UNITS = UnitsEnum.MM.value

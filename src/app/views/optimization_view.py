@@ -10,14 +10,19 @@ from PyQt6.QtGui import QPixmap
 
 from sqlalchemy.orm import Session
 
+from ..translations import optimization_view
 from ..logging import logger
 
 class OptimizationView(ViewTemplate):
     """
     View for displaying placement optimization. 
     """
-    def __init__(self, session: Session):
+    def __init__(self, session: Session, language: int):
         super().__init__()
+
+        self.texts = optimization_view
+        self.language = language
+
         self.session = session
         self._setup_ui()
         logger.debug("Successfully initialized OptimizationView.")
@@ -31,6 +36,6 @@ class OptimizationView(ViewTemplate):
         main_layout = QVBoxLayout()
         main_widget.setLayout(main_layout)
 
-        self.__init_template_gui__("Generate Layout", main_widget)
+        self.__init_template_gui__(self.texts['view_name'][self.language], main_widget)
 
 
