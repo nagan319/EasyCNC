@@ -239,7 +239,7 @@ class ImageEditingController(GenericController):
             feature_plotter = FeaturePlotter(
                 dst_path=self.feat_path, 
                 size=self.processing_resolution, 
-                features=self.features) # default colors
+                features=self.features) 
             feature_plotter.save_features()
             logger.debug(f"Image features saved successfully to {self.feat_path}")
             return True
@@ -255,6 +255,8 @@ class ImageEditingController(GenericController):
     
     def finalize_features(self) -> bool:
         """ Modifies state to confirm finalization of feature editing."""
+        if not self._valid_features():
+            return False
         if self.state == EditorState.FEATURES_EXTRACTED:
             self.state = EditorState.FEATURES_FINALIZED
             return True

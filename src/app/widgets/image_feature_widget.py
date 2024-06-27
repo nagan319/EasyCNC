@@ -146,5 +146,5 @@ class ImageFeatureWidget(QWidget):
 
     def on_save_button_pressed(self):
         """ Features are finalized. """
-        self.controller.finalize_features()
-        self.featuresFinalized.emit()
+        if self.controller.finalize_features():
+            self.featuresFinalized.emit()

@@ -293,6 +293,7 @@ def test_save_image_features_successful(controller, valid_raw_path):
 
 def test_finalize_features(controller):
     controller.state = EditorState.FEATURES_EXTRACTED
+    controller.features = Features(plate_contour=np.array([15]), corners=[(0, 0), (10, 10), (20, 20), (30, 30)])
     assert controller.finalize_features() == True
     assert controller.state == EditorState.FEATURES_FINALIZED
     assert controller.finalize_features() == False

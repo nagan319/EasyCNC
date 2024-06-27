@@ -1,13 +1,7 @@
-"""
-Author: nagan319
-Date: 2024/06/12
-"""
-
 import re
 import math
 
 class InputParser:
-
     """
     Functional class containing methods for parsing user input.
     """
@@ -18,7 +12,7 @@ class InputParser:
         Parse user input and convert it to a floating point value in millimeters.
 
         Arguments: 
-        - text: original text string. Accepts 'in', 'feet', 'ft', and 'mm' as units.
+        - text: original text string. Accepts 'in', 'feet', 'ft', 'mm', and 'cm' as units.
         - min_value: minimum bound for output.
         - max_value: maximum bound for output.
 
@@ -30,16 +24,22 @@ class InputParser:
         if text.replace('.', '').isdigit():
             value_mm = float(text)  
         else:
-            match = re.match(r'([\d.]+)\s*([a-zA-Z]+)', text)
+            match = re.match(r'([\d./]+)\s*([a-zA-Z]*)', text)
             if not match:
                 return None  
 
-            value, unit = float(match.group(1)), match.group(2).lower()
+            value_str, unit = match.group(1), match.group(2).lower()
+            if '/' in value_str:
+                value = InputParser._parse_fraction(value_str)
+                if value is None:
+                    return None
+            else:
+                value = float(value_str)
 
-            if unit not in unit_conversion:
+            if unit and unit not in unit_conversion:
                 return None  
 
-            value_mm = value * unit_conversion[unit]
+            value_mm = value * unit_conversion.get(unit, 1)  
 
         value_mm = round(value_mm, 5)
 
@@ -47,4 +47,14 @@ class InputParser:
             value_mm = max(min_value, min(value_mm, max_value))
 
         return value_mm
-    
+
+    @staticmethod
+    def _parse_fraction(fraction: str):
+        """ Parses fractional string. Returns None in the case of an invalid input. """
+        try:
+            numerator, denominator = fraction.split('/')
+            if denominator == '0':
+                return None  
+            return float(numerator) / float(denominator)
+        except ValueError:
+            return None  

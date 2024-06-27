@@ -1,8 +1,3 @@
-"""
-Author: nagan319
-Date: 2024/06/12
-"""
-
 import pytest
 from src.app.utils.input_parser import InputParser
 
@@ -33,3 +28,25 @@ def test_parse_text_invalid_input():
 def test_parse_text_mm():
     assert InputParser.parse_text("25 mm") == 25
 
+def test_parse_text_fraction_inches_to_mm():
+    assert InputParser.parse_text("1/2 in") == 12.7
+    assert InputParser.parse_text("3/4 in") == 19.05
+    assert InputParser.parse_text("5/8 in") == 15.875
+
+def test_parse_text_fraction_feet_to_mm():
+    assert InputParser.parse_text("1/2 ft") == 152.4
+    assert InputParser.parse_text("1/4 feet") == 76.2
+    assert InputParser.parse_text("3/8 ft") == 114.3
+
+def test_parse_text_fraction_invalid():
+    assert InputParser.parse_text("1/0 in") is None 
+    assert InputParser.parse_text("1/a in") is None
+
+def test_parse_text_fraction_with_range_within_bounds():
+    assert InputParser.parse_text("1/2 in", 10, 20) == 12.7
+
+def test_parse_text_fraction_with_range_exceeding_upper_bound():
+    assert InputParser.parse_text("1 in", 10, 20) == 20
+
+def test_parse_text_fraction_with_range_below_lower_bound():
+    assert InputParser.parse_text("1/8 in", 5, 20) == 5

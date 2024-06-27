@@ -9,7 +9,7 @@ import pytest
 from pytest import raises
 import tempfile
 from src.app.controllers.user_settings_controller import UserSettingsController
-from src.app.utils.settings_enum import LanguageEnum, UnitsEnum
+from src.app.utils.settings_enum import LanguageEnum, UnitsEnum, DEFAULT_UNITS, DEFAULT_LANGUAGE
 
 """
 Tests for UserSettingsController class.
@@ -75,7 +75,7 @@ def test_get_language(user_settings_path):
 
 def test_get_language_invalid(invalid_user_settings_path):
     controller = UserSettingsController(invalid_user_settings_path)
-    assert controller.get_user_language() == LanguageEnum.ENG_US
+    assert controller.get_user_language() == DEFAULT_LANGUAGE
 
 def test_get_units(user_settings_path):
     controller = UserSettingsController(user_settings_path)
@@ -83,7 +83,7 @@ def test_get_units(user_settings_path):
 
 def test_get_units_invalid(invalid_user_settings_path):
     controller = UserSettingsController(invalid_user_settings_path)
-    assert controller.get_user_units() == UnitsEnum.MM
+    assert controller.get_user_units() == DEFAULT_UNITS
 
 def test_set_language(user_settings_path):
     controller = UserSettingsController(user_settings_path)
