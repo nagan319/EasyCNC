@@ -12,6 +12,7 @@ __pycache__/
 # pytest cache
 .cache/
 pytest_cache/
+.pytest_cache/
 
 # SQLAlchemy migration directory
 migrations/
