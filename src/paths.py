@@ -33,6 +33,6 @@ Resource paths
 
 LOGO_PATH = os.path.join(ROOT_DIR, 'app', 'resources', 'images', 'app logo.PNG')
 ICON_PATH = os.path.join(ROOT_DIR, 'app', 'resources', 'images', 'app icon.PNG')
-FONT_PATH = os.path.join(ROOT_DIR, 'app', 'resources', 'metropolis_light.otf')
+FONT_DIR = os.path.join(ROOT_DIR, 'app', 'resources', 'fonts')
 HELP_TEXT_PATH = os.path.join(ROOT_DIR, 'app', 'resources', 'help_text.txt')
 STYLESHEET_PATH = os.path.join(ROOT_DIR, 'app', 'resources', 'stylesheet.qss')

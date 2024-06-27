@@ -10,8 +10,8 @@ QWidget#navBar {
 }
 
 QPushButton {
-    font-family: 'Metropolis';
-    font-size: 14px;
+    font-family: 'DynamicFont';
+    font-size: 16px;
     text-align: center;
     background-color: #eeeeee;
     color: #000000;
@@ -25,7 +25,7 @@ QPushButton:hover {
 }
 
 QPushButton#menuButton {
-    font-family: 'Metropolis';
+    font-family: 'DynamicFont';
     font-size: 18px;
     text-align: left;
     background-color: #eeeeee;
@@ -41,15 +41,15 @@ QPushButton#menuButton:hover {
 }
 
 QLabel {
-    font-family: 'Metropolis';
-    font-size: 14px;
+    font-family: 'DynamicFont';
+    font-size: 16px;
     color: #333333;
     padding: 10px;
     border-radius: 5px;
 }
 
 QLabel#titleText {
-    font-family: 'Metropolis';
+    font-family: 'DynamicFont';
     font-size: 32px;
     color: #333333;
     padding: 10px;
@@ -57,7 +57,7 @@ QLabel#titleText {
 }
 
 QLineEdit {
-    font-family: 'Metropolis';
+    font-family: 'DynamicFont';
     font-size: 14px;
     text-align: center;
     background-color: #ffffff;
@@ -68,7 +68,7 @@ QLineEdit {
 }
 
 QLineEdit#nameInput {
-    font-family: 'Metropolis';
+    font-family: 'DynamicFont';
     font-size: 18px;
     text-align: center;
     background-color: #ffffff;
@@ -112,7 +112,7 @@ QScrollBar::sub-line:vertical, QScrollBar::sub-line:horizontal {
 }
 
 QComboBox {
-    font-family: 'Metropolis';
+    font-family: 'DynamicFont';
     font-size: 14px;
     text-align: left;
     background-color: #ffffff;
@@ -131,9 +131,8 @@ QComboBox::drop-down {
     border: none;
 }
 
-
 QComboBox QAbstractItemView {
-    font-family: 'Metropolis';
+    font-family: 'DynamicFont';
     font-size: 14px;
     background-color: #ffffff;
     color: #000000;

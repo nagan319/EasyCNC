@@ -36,7 +36,7 @@ class MainWindow(QMainWindow):
     Main window of application.
     """
 
-    def __init__(self):
+    def __init__(self, user_settings: dict):
         super().__init__()
         self.setWindowTitle(APP_TITLE)
         self.setWindowIcon(QIcon(ICON_PATH))
@@ -45,8 +45,6 @@ class MainWindow(QMainWindow):
         self.setup_db()
 
         self.texts = main_window
-
-        user_settings = self.load_user_settings(USER_SETTINGS_PATH)
 
         user_language = user_settings['language']
         user_units = user_settings['units']
@@ -92,20 +90,7 @@ class MainWindow(QMainWindow):
             self.session = get_session()
             logger.debug("Database setup complete and session started.")
         except Exception as e:
-            logger.error(f"Error initializing database: {e}")
-
-    def load_user_settings(self, filepath: str) -> Dict[str, int]:
-        """ Retrieve user language and units settings. """
-        try:
-            with open(filepath, 'r') as file:
-                logger.debug(f"Successfully loaded user settings. ") 
-                return json.load(file)
-        except Exception as e:
-            logger.error(f"Encountered exception while attempting to configure user settings: {e}")
-            return {
-                'user_language': DEFAULT_LANGUAGE,
-                'user_units': DEFAULT_UNITS
-            }       
+            logger.error(f"Error initializing database: {e}")   
 
     def closeEvent(self, event):
         """ Close application at exit. """
