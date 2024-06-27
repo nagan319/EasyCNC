@@ -30,3 +30,8 @@ venv/
 
 # Local development configuration
 config.yaml
+
+# Logs and database
+src/logs/
+src/data/cache/
+src/data/app_data.db
