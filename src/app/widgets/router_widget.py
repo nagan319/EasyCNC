@@ -1,3 +1,8 @@
+"""
+Author: nagan319
+Date: 2024/06/12
+"""
+
 from PyQt6.QtCore import Qt, pyqtSignal
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton, QMessageBox
 from PyQt6.QtGui import QPixmap
@@ -5,9 +10,12 @@ from PyQt6.QtGui import QPixmap
 from ..models.router_model import RouterConstants
 from ..controllers.router_controller import RouterController
 from ..utils.input_parser import InputParser
+from ..utils.settings_enum import CONVERSION_FACTORS
 
 from ..translations import router_widget
 from ..logging import logger
+
+DEC_PLACES = 4
 
 class RouterWidget(QWidget):
     """
@@ -16,10 +24,11 @@ class RouterWidget(QWidget):
     selectionChanged = pyqtSignal()
     deleteRequested = pyqtSignal(str)
 
-    def __init__(self, router_id: str, preview_path: str, controller: RouterController, language: int):
+    def __init__(self, router_id: str, preview_path: str, controller: RouterController, language: int, units: int):
         super().__init__()
         self.texts = router_widget
         self.language = language
+        self.units = units
 
         self.id = router_id
         self.preview_path = preview_path
@@ -27,15 +36,15 @@ class RouterWidget(QWidget):
         self.controller = controller  
 
         self.max_values = {
-            "x": RouterConstants.MAX_ROUTER_DIMENSION,
-            "y": RouterConstants.MAX_ROUTER_DIMENSION,
-            "z": RouterConstants.MAX_ROUTER_DIMENSION,
-            "plate_x": RouterConstants.MAX_PLATE_DIMENSION,
-            "plate_y": RouterConstants.MAX_PLATE_DIMENSION,
-            "plate_z": RouterConstants.MAX_PLATE_DIMENSION,
-            "min_safe_dist_from_edge": RouterConstants.MAX_PLATE_DIMENSION // 2,
-            "drill_bit_diameter": RouterConstants.MAX_DRILL_BIT_DIAMETER,
-            "mill_bit_diameter": RouterConstants.MAX_MILL_BIT_DIAMETER
+            "x": self._convert(RouterConstants.MAX_ROUTER_DIMENSION),
+            "y": self._convert(RouterConstants.MAX_ROUTER_DIMENSION),
+            "z": self._convert(RouterConstants.MAX_ROUTER_DIMENSION),
+            "plate_x": self._convert(RouterConstants.MAX_PLATE_DIMENSION),
+            "plate_y": self._convert(RouterConstants.MAX_PLATE_DIMENSION),
+            "plate_z": self._convert(RouterConstants.MAX_PLATE_DIMENSION),
+            "min_safe_dist_from_edge": self._convert(RouterConstants.MAX_PLATE_DIMENSION / 2),
+            "drill_bit_diameter": self._convert(RouterConstants.MAX_DRILL_BIT_DIAMETER),
+            "mill_bit_diameter": self._convert(RouterConstants.MAX_MILL_BIT_DIAMETER)
         }
 
         self.field_definitions = {
@@ -59,6 +68,10 @@ class RouterWidget(QWidget):
         layout.addWidget(self.editable_fields_widget)
         layout.addStretch(1)
         self.setLayout(layout)
+
+    def _convert(self, value: float) -> float:
+        """Helper function to convert and round values."""
+        return round(value * CONVERSION_FACTORS[self.units], DEC_PLACES)
 
     def _get_preview_widget(self) -> QLabel:
         """ Widget containing preview container. """
@@ -92,8 +105,12 @@ class RouterWidget(QWidget):
         name_layout.addWidget(self.name_input)
         layout.addLayout(name_layout)
 
-        for field_name, (label_text, placeholder_text, attribute_name) in self.field_definitions.items(): 
-            field_layout, input_field = self._create_input_field(label_text, placeholder_text, self.controller.get_attribute(self.id, attribute_name))
+        for field_name, (label_text, placeholder_text, attribute_name) in self.field_definitions.items():
+            field_layout, input_field = self._create_input_field(
+                label_text, 
+                placeholder_text, 
+                str(self._convert(float(self.controller.get_attribute(self.id, attribute_name))))
+            )
             layout.addLayout(field_layout)
             self.fields[field_name] = input_field
 
@@ -150,31 +167,31 @@ class RouterWidget(QWidget):
         try:
             router_id = self.id
             self.controller.edit_name(router_id, self.name_input.text())
-            self.controller.edit_x(router_id, float(self.fields["x"].text()))
-            self.controller.edit_y(router_id, float(self.fields["y"].text()))
-            self.controller.edit_z(router_id, float(self.fields["z"].text()))
-            self.controller.edit_plate_x(router_id, float(self.fields["plate_x"].text()))
-            self.controller.edit_plate_y(router_id, float(self.fields["plate_y"].text()))
-            self.controller.edit_plate_z(router_id, float(self.fields["plate_z"].text()))
-            self.controller.edit_min_safe_dist_from_edge(router_id, float(self.fields["min_safe_dist_from_edge"].text()))
-            self.controller.edit_drill_bit_diameter(router_id, float(self.fields["drill_bit_diameter"].text()))
-            self.controller.edit_mill_bit_diameter(router_id, float(self.fields["mill_bit_diameter"].text()))
+            self.controller.edit_x(router_id, float(self.fields["x"].text()) / CONVERSION_FACTORS[self.units])
+            self.controller.edit_y(router_id, float(self.fields["y"].text()) / CONVERSION_FACTORS[self.units])
+            self.controller.edit_z(router_id, float(self.fields["z"].text()) / CONVERSION_FACTORS[self.units])
+            self.controller.edit_plate_x(router_id, float(self.fields["plate_x"].text()) / CONVERSION_FACTORS[self.units])
+            self.controller.edit_plate_y(router_id, float(self.fields["plate_y"].text()) / CONVERSION_FACTORS[self.units])
+            self.controller.edit_plate_z(router_id, float(self.fields["plate_z"].text()) / CONVERSION_FACTORS[self.units])
+            self.controller.edit_min_safe_dist_from_edge(router_id, float(self.fields["min_safe_dist_from_edge"].text()) / CONVERSION_FACTORS[self.units])
+            self.controller.edit_drill_bit_diameter(router_id, float(self.fields["drill_bit_diameter"].text()) / CONVERSION_FACTORS[self.units])
+            self.controller.edit_mill_bit_diameter(router_id, float(self.fields["mill_bit_diameter"].text()) / CONVERSION_FACTORS[self.units])
             self.controller.save_preview(self.controller.get_by_id(router_id))
             self.update_preview()
         except ValueError as ve:
             QMessageBox.critical(self, self.texts["error_title"][self.language], f"{self.texts['invalid_input_text'][self.language]} {ve}")
         except Exception as e:
             QMessageBox.critical(self, self.texts["error_title"][self.language], f"{self.texts['error_updating_text'][self.language]} {e}")
-
-    def on_select_pressed(self):
-        """ User presses select / unselect button. """
-        try:
-            curr_status = self.controller.get_selected(self.id)
-            self.controller.edit_selected(self.id, (not curr_status))
-            self.selectionChanged.emit()
-        except Exception as e:
-            QMessageBox.critical(self, self.texts["error_title"][self.language], f"{self.texts['selection_error_text'][self.language]} {e}")
+            logger.error(f"Failed to update router: {e}")
 
     def on_delete_pressed(self):
-        """ User deletes widget. """
-        self.deleteRequested.emit(self.id)
+        """ User presses delete button. """
+        result = QMessageBox.warning(self, self.texts["delete_title"][self.language], self.texts["delete_prompt_text"][self.language], QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No, QMessageBox.StandardButton.No)
+        if result == QMessageBox.StandardButton.Yes:
+            self.deleteRequested.emit(self.id)
+
+    def on_select_pressed(self):
+        """ User presses select/unselect button. """
+        self.controller.toggle_selected(self.id)
+        self.update_selection_status()
+        self.selectionChanged.emit()

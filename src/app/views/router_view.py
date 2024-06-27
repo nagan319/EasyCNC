@@ -9,6 +9,8 @@ from ..widgets.router_widget import RouterWidget
 
 from ..controllers.router_controller import RouterController
 
+from ..utils.settings_enum import CONVERSION_FACTORS
+
 from ..translations import router_view
 from ..logging import logger
 
@@ -16,13 +18,14 @@ class RouterView(ViewTemplate):
     """
     View for handling CNC routers. 
     """
-    def __init__(self, session, part_preview_dir: str, language: int):
+    def __init__(self, session, part_preview_dir: str, language: int, units: int):
         super().__init__()
 
         self.texts = router_view
         self.language = language
+        self.units = units
 
-        self.controller = RouterController(session, part_preview_dir)
+        self.controller = RouterController(session, part_preview_dir, CONVERSION_FACTORS[self.units])
         self.widget_map = {}
 
         self._setup_ui()
@@ -64,7 +67,8 @@ class RouterView(ViewTemplate):
                     router.id, 
                     self.controller._get_preview_image_path(router.id), 
                     self.controller,
-                    self.language
+                    self.language,
+                    self.units
                 )
                 router_widget.selectionChanged.connect(self.on_selection_changed)
                 router_widget.deleteRequested.connect(self.on_delete_requested)
@@ -91,7 +95,8 @@ class RouterView(ViewTemplate):
                     router.id, 
                     self.controller._get_preview_image_path(router.id), 
                     self.controller,
-                    self.language
+                    self.language,
+                    self.units
                 )
                 new_router_widget.selectionChanged.connect(self.on_selection_changed)
                 new_router_widget.deleteRequested.connect(self.on_delete_requested)

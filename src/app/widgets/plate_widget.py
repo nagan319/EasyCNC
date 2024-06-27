@@ -7,15 +7,17 @@ from PyQt6.QtCore import Qt, pyqtSignal
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton, QMessageBox
 from PyQt6.QtGui import QPixmap
 
-from ..models.plate_model import Plate, PlateConstants
+from ..models.plate_model import PlateConstants
 from ..controllers.plate_controller import PlateController
 from ..utils.input_parser import InputParser
+from ..utils.settings_enum import CONVERSION_FACTORS
 
-from ..utils.image_processing.image_editor_status import ImageEditorStatus
 from ..views.image_editor_window import ImageEditorWindow
-
+from ..utils.image_processing.image_editor_status import ImageEditorStatus
 from ..translations import plate_widget
 from ..logging import logger
+
+DEC_PLACES = 4
 
 class PlateWidget(QWidget):
     """
@@ -26,16 +28,18 @@ class PlateWidget(QWidget):
 
     MAX_HEIGHT = 350
 
-    def __init__(self, plate_id: str, preview_path: str, controller: PlateController, image_editor_status: ImageEditorStatus, language: int):
+    def __init__(self, plate_id: str, preview_path: str, controller: PlateController, image_editor_status: ImageEditorStatus, language: int, units: int):
         super().__init__()
 
         self.texts = plate_widget
         self.language = language
+        self.units = units
 
         self.id = plate_id
         self.preview_path = preview_path
         self.fields = {}
         self.controller = controller
+        self.image_editor_status = image_editor_status
 
         self.max_values = {
             "x": PlateConstants.MAX_X,
@@ -44,13 +48,11 @@ class PlateWidget(QWidget):
         }
 
         self.field_definitions = {
-            "x": (self.texts['plate_x_dim'][self.language], f"0-{self.max_values['x']}", 'x'),
-            "y": (self.texts['plate_y_dim'][self.language], f"0-{self.max_values['y']}", 'y'),
-            "z": (self.texts['plate_z_dim'][self.language], f"0-{self.max_values['z']}", 'z'),
+            "x": (self.texts['plate_x_dim'][self.language], f"0-{self._convert(self.max_values['x'])}", 'x'),
+            "y": (self.texts['plate_y_dim'][self.language], f"0-{self._convert(self.max_values['y'])}", 'y'),
+            "z": (self.texts['plate_z_dim'][self.language], f"0-{self._convert(self.max_values['z'])}", 'z'),
             "material": (self.texts['plate_material'][self.language], "", 'material'),
         }
-
-        self.image_editor_status = image_editor_status
 
         self.preview_widget = self._get_preview_widget()
         self.editable_fields_widget = self._get_editable_fields_widget()
@@ -62,6 +64,10 @@ class PlateWidget(QWidget):
         layout.addStretch(1)
         self.setLayout(layout)
         self.setMaximumHeight(self.MAX_HEIGHT)
+
+    def _convert(self, value: float) -> float:
+        """Helper function to convert and round values."""
+        return round(value * CONVERSION_FACTORS[self.units], DEC_PLACES)
 
     def _get_preview_widget(self) -> QLabel:
         """ Widget containing preview container. """
@@ -89,8 +95,14 @@ class PlateWidget(QWidget):
         layout = QVBoxLayout()
 
         for field_name, (label_text, placeholder_text, attribute_name) in self.field_definitions.items():
-            value = self.controller.get_attribute(self.id, attribute_name)
-            field_layout, input_field = self._create_input_field(label_text, placeholder_text, value)
+            value = self.controller.get_attribute(self.id, attribute_name) \
+                if field_name == 'material' else \
+                str(self._convert(float(self.controller.get_attribute(self.id, attribute_name))))
+            field_layout, input_field = self._create_input_field(
+                label_text,
+                placeholder_text,
+                value
+            )
             layout.addLayout(field_layout)
             self.fields[field_name] = input_field
 
@@ -147,32 +159,31 @@ class PlateWidget(QWidget):
         """ User presses save button. """
         try:
             plate_id = self.id
-            self.controller.edit_x(plate_id, float(self.fields["x"].text()))
-            self.controller.edit_y(plate_id, float(self.fields["y"].text()))
-            self.controller.edit_z(plate_id, float(self.fields["z"].text()))
+            self.controller.edit_x(plate_id, float(self.fields["x"].text()) / CONVERSION_FACTORS[self.units])
+            self.controller.edit_y(plate_id, float(self.fields["y"].text()) / CONVERSION_FACTORS[self.units])
+            self.controller.edit_z(plate_id, float(self.fields["z"].text()) / CONVERSION_FACTORS[self.units])
             self.controller.edit_material(plate_id, self.fields["material"].text())
             self.controller.save_preview(self.controller.get_by_id(plate_id))
             self.update_preview()
         except ValueError as ve:
             QMessageBox.critical(
-                self, 
+                self,
                 self.texts['error_title'][self.language],
                 f"{self.texts['invalid_input_text'][self.language]}{ve}"
             )
         except Exception as e:
             QMessageBox.critical(
-                self, 
-                self.texts['error_title'][self.language], 
+                self,
+                self.texts['error_title'][self.language],
                 f"{self.texts['error_updating_text'][self.language]}{e}"
             )
 
     def on_image_imported(self):
         """User chooses to import image."""
         plate = self.controller.get_by_id(self.id)
-        controller = self.controller
         if self.image_editor_status.initialized:
             QMessageBox.warning(
-                self, 
+                self,
                 self.texts['warning_title'][self.language],
                 self.texts['img_editor_initialized_text'][self.language]
             )
@@ -194,8 +205,8 @@ class PlateWidget(QWidget):
             self.update_selection_status()
         except Exception as e:
             QMessageBox.critical(
-                self, 
-                self.texts['error_title'][self.language], 
+                self,
+                self.texts['error_title'][self.language],
                 f"{self.texts['selection_error_text'][self.language]}{e}"
             )
 

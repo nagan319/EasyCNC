@@ -23,3 +23,8 @@ class UnitsEnum(enum.Enum):
 
 DEFAULT_LANGUAGE = LanguageEnum.ENG_US.value
 DEFAULT_UNITS = UnitsEnum.MM.value
+
+CONVERSION_FACTORS = {
+    UnitsEnum.MM.value: 1.0,
+    UnitsEnum.IN.value: 0.03937007874
+}

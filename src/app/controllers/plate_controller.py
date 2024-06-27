@@ -27,7 +27,10 @@ class PlateController(GenericController):
     """
     MAX_PLATE_AMOUNT: int = 50
 
-    def __init__(self, session: Session, preview_image_directory: str):
+    def __init__(self, session: Session, preview_image_directory: str, conversion_factor: float = 1.0):
+        if conversion_factor <= 0:
+            raise ValueError(f"Attempted to initialize RouterController with invalid conversion factor: {conversion_factor}")
+        self.conversion_factor = conversion_factor
         super().__init__(session, Plate, preview_image_directory)
         for plate in self._get_all_items():
             self.save_preview(plate)
@@ -169,7 +172,7 @@ class PlateController(GenericController):
     '''
     def save_preview(self, plate: Plate, figsize: Tuple[int, int] = (4, 4), dpi: int = 80):
         """
-        Saves a preview image for a plate using matplotlib. 
+        Saves a preview image for a plate using matplotlib.
 
         Arguments:
         - plate: Plate ORM instance.
@@ -179,22 +182,22 @@ class PlateController(GenericController):
         try:
             image_path = self._get_preview_image_path(plate.id)
             image_contours = deserialize_array_list(plate.contours)
-            plate_xy = (plate.x, plate.y)
+            plate_xy = (plate.x * self.conversion_factor, plate.y * self.conversion_factor)
             plate_rect_x, plate_rect_y = _generate_rectangle_coordinates(*plate_xy)
         except AttributeError as e:
             logger.debug(f"Encountered error while attempting to create preview image for plate with id {plate.id}: {e}")
             return
 
         plt.figure(figsize=figsize)
-        
+
         plt.plot(plate_rect_x, plate_rect_y, color=PlottingConstants.PLOT_LINE_COLOR)
 
         if image_contours:
             for contour in image_contours:
-                x_coords = [point[0][0] for point in contour] 
-                y_coords = [point[0][1] for point in contour] 
+                x_coords = [point[0][0] * self.conversion_factor for point in contour]
+                y_coords = [point[0][1] * self.conversion_factor for point in contour]
                 plt.plot(x_coords, y_coords, color=PlottingConstants.PLOT_LINE_COLOR, linewidth=1)
-                
+
         plt.grid(True)
         plt.gca().set_facecolor(PlottingConstants.PLOT_BG_COLOR)
         plt.gca().set_aspect('equal')

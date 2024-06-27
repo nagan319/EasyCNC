@@ -28,7 +28,10 @@ class RouterController(GenericController):
     """
     MAX_ROUTER_AMOUNT: int = 10
 
-    def __init__(self, session: Session, preview_image_directory: str):
+    def __init__(self, session: Session, preview_image_directory: str, conversion_factor: float = 1.0):
+        if conversion_factor <= 0:
+            raise ValueError(f"Attempted to initialize RouterController with invalid conversion factor: {conversion_factor}")
+        self.conversion_factor = conversion_factor
         super().__init__(session, Router, preview_image_directory)
         for router in self._get_all_items():
             self.save_preview(router)
@@ -221,9 +224,9 @@ class RouterController(GenericController):
         """
         try:
             image_path = self._get_preview_image_path(router.id)
-            router_xy = (router.x, router.y)
-            plate_xy = (router.plate_x, router.plate_y)
-            safe_distance = router.min_safe_dist_from_edge
+            router_xy = (router.x * self.conversion_factor, router.y * self.conversion_factor)
+            plate_xy = (router.plate_x * self.conversion_factor, router.plate_y * self.conversion_factor)
+            safe_distance = router.min_safe_dist_from_edge * self.conversion_factor
         except AttributeError:
             return
 
@@ -245,7 +248,7 @@ class RouterController(GenericController):
 
         plt.grid(True)
         plt.gca().set_facecolor(PlottingConstants.PLOT_BG_COLOR)
-        plt.gca().set_aspect('equal') 
+        plt.gca().set_aspect('equal')
         plt.grid(False)
         plt.tick_params(axis='x', colors=PlottingConstants.PLOT_TEXT_COLOR)
         plt.tick_params(axis='y', colors=PlottingConstants.PLOT_TEXT_COLOR)

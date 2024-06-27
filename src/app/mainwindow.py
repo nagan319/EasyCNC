@@ -55,9 +55,9 @@ class MainWindow(QMainWindow):
             self.texts['part_button'][user_language]: \
                 PartView(self.session, PART_PREVIEW_PATH, user_language, user_units),
             self.texts['stock_button'][user_language]: \
-                PlateView(self.session, PLATE_PREVIEW_PATH, user_language),
+                PlateView(self.session, PLATE_PREVIEW_PATH, user_language, user_units),
             self.texts['router_button'][user_language]: \
-                RouterView(self.session, ROUTER_PREVIEW_PATH, user_language),
+                RouterView(self.session, ROUTER_PREVIEW_PATH, user_language, user_units),
             self.texts['layout_button'][user_language]: \
                 OptimizationView(self.session, user_language),
             self.texts['settings_button'][user_language]: \

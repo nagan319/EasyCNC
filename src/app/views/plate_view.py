@@ -5,10 +5,13 @@ Date: 2024/06/11
 
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QScrollArea, QMessageBox, QLineEdit
 from .view_template import ViewTemplate
-from ..utils.image_processing.image_editor_status import ImageEditorStatus
 from ..widgets.plate_widget import PlateWidget
-from ..controllers.plate_controller import PlateController
+
+from ..utils.image_processing.image_editor_status import ImageEditorStatus
 from ..utils.input_parser import InputParser
+from ..utils.settings_enum import CONVERSION_FACTORS
+
+from ..controllers.plate_controller import PlateController
 
 from ..translations import plate_view
 from ..logging import logger
@@ -17,13 +20,14 @@ class PlateView(ViewTemplate):
     """
     View for handling plates. 
     """
-    def __init__(self, session, plate_preview_dir: str, language: int):
+    def __init__(self, session, plate_preview_dir: str, language: int, units: int):
         super().__init__()
 
         self.texts = plate_view
         self.language = language
+        self.units = units
 
-        self.controller = PlateController(session, plate_preview_dir)
+        self.controller = PlateController(session, plate_preview_dir, CONVERSION_FACTORS[self.units])
         self.widget_map = {}
 
         self.image_editor_status = ImageEditorStatus()
@@ -95,7 +99,8 @@ class PlateView(ViewTemplate):
                     self.controller._get_preview_image_path(plate.id), 
                     self.controller, 
                     self.image_editor_status, 
-                    self.language
+                    self.language,
+                    self.units
                 )
                 plate_widget.deleteRequested.connect(self.on_delete_requested)
                 self.scroll_layout.addWidget(plate_widget)
@@ -123,7 +128,8 @@ class PlateView(ViewTemplate):
                     self.controller._get_preview_image_path(plate.id), 
                     self.controller, 
                     self.image_editor_status, 
-                    self.language
+                    self.language,
+                    self.units
                 )
                 new_plate_widget.deleteRequested.connect(self.on_delete_requested)
                 self.scroll_layout.addWidget(new_plate_widget)
@@ -152,7 +158,7 @@ class PlateView(ViewTemplate):
     def on_select_by_property(self):
         """ Selection based on material and thickness. """
         try:
-            thickness = float(InputParser.parse_text(self.select_thickness_input.text()))
+            thickness = float(InputParser.parse_text(self.select_thickness_input.text())) / CONVERSION_FACTORS[self.units]
             material = self.select_material_input.text()
             if not self.controller.select_by_property(thickness, material):
                 QMessageBox.critical(
