@@ -19,6 +19,8 @@ Supported Languages:
 - Russian 🇷🇺
 - Japanese 🇯🇵
 
+An older, prototype version of the app can be found here: https://github.com/nagan319/NEXACut-Pro
+
 # Table of Contents
 
 - Installation
@@ -155,15 +157,15 @@ Once features are detected, the image is 'flattened' and resized to appropriate 
 
 # FAQ
 
-- Why is this whole thing made from scratch / no django etc.?
+- Why is this whole thing made from scratch / no django etc.?  
     I wanted to create a full app from scratch without relying on any external frameworks, and did not want to deal with the hassle of cloud hosting. 
 
-- Why must parts be imported in STL and not a more conventional CAD format?
+- Why must parts be imported in STL and not a more conventional CAD format?  
     STL files are much easier to parse and flatten than formats such as .sldprt, are universally readable by most CAD software, and can be processed using existing Python libraries.
 
-- Why is HEIC unsupported for image imports?
+- Why is HEIC unsupported for image imports?  
     As of writing, HEIC is not supported by the OpenCV library.
 
-- Where can I contact if I have suggestions/complaints about the app?
-    My email: sashanaganov@gmail.com
+- Where can I contact if I have suggestions/complaints about the app?  
+    My email: sashanaganov@gmail.com  
     If you want to add some custom functionality to the app or improve it, feel free to fork it and do whatever you want, I would love to see it.
