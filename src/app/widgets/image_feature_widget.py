@@ -122,8 +122,8 @@ class ImageFeatureWidget(QWidget):
 
     def on_mouse_clicked(self, pos: tuple):
         """ User clicks on interactive preview. X needs to be adjusted slightly. """
-        scale_factor = self.preview_widget.height() / self.controller.processing_resolution.h
-        scaled_pos = (int(pos[0] / scale_factor)+20, int(pos[1] / scale_factor)+20) 
+        scale_factor = self.preview_widget.height() / self.controller.processing_resolution.h * 1.02
+        scaled_pos = (int(pos[0] / scale_factor), int(pos[1] / scale_factor)) 
         if self.mode == Mode.ADD_MISSING_CORNERS:
             self.controller.add_corner(scaled_pos)
         elif not self.controller.check_feature_selected(scaled_pos):
