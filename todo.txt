@@ -1,34 +1,16 @@
+annoying bug fixes:
+- automatic save when editing is finished
+
 - finish optimization controller
-- add settings view
-    - units/language options
-    - add foreign fonts
+    - test init method
+    - save new plate contours automatically
+    - try stb_rect_pack for now
+    - output preview
 - try different db implementations, figure out server hosting
 - refactor redundant controllers etc, remove repetitive functions
+    update serialization logic in plate controller, or take out if its not necessary
 
-- create proper readme
-structure:
-
-shields
-app logo
-explanation
-table of contents
-installation 
-    - local db
-    - set up db on server
-app structure
-    - diagram showing app mvc
-    - explanation
-    - diagram showing conversion process
-    - explanation
-    - diagram showing nfp algorithm/reference
-    - explanation
-FAQ
-    - some questions
-Screenshots/video
-    - a few app screenshots
-    - video showing sample use
-
-current required refactoring:
-- deal with flipped preview image
-- make router/plate/part view widgets more modular
-- they essentially have the same structure, it can be moved to the general preview widget class
+necessary considerations in readme:
+- db hosting
+- actually install on separate system w/o required libs etc.
+- layout generation (implement feature)
