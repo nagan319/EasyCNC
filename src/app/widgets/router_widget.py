@@ -186,12 +186,14 @@ class RouterWidget(QWidget):
 
     def on_delete_pressed(self):
         """ User presses delete button. """
-        result = QMessageBox.warning(self, self.texts["delete_title"][self.language], self.texts["delete_prompt_text"][self.language], QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No, QMessageBox.StandardButton.No)
-        if result == QMessageBox.StandardButton.Yes:
-            self.deleteRequested.emit(self.id)
+        self.deleteRequested.emit(self.id)
 
     def on_select_pressed(self):
-        """ User presses select/unselect button. """
-        self.controller.toggle_selected(self.id)
-        self.update_selection_status()
-        self.selectionChanged.emit()
+        """ User presses select / unselect button. """
+        try:
+            curr_status = self.controller.get_selected(self.id)
+            self.controller.edit_selected(self.id, (not curr_status))
+            self.selectionChanged.emit()
+        except Exception as e:
+            QMessageBox.critical(self, self.texts["error_title"][self.language], f"{self.texts['selection_error_text'][self.language]} {e}")
+            
