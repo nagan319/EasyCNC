@@ -31,14 +31,13 @@ An older, prototype version of the app can be found here: https://github.com/nag
 
 # Installation
 
-1. Make sure that you have Python version 3.10.4 or higher installed on your system.
+1. Make sure that you have Python and Git installed.
 
-2. Download ZIP file containing GitHub source code and extract all files to a directory of your choice. Cloning the repository also works. 
-
-3. Run the following commands to execute the program:
+2. Run the following commands to execute the program:
 
 ``` 
-cd <TARGET_DIR>\easycnc-main
+git clone https://github.com/nagan319/EasyCNC.git
+cd EasyCNC
 pip install -r requirements.txt
 python run.py
 ```
@@ -137,7 +136,7 @@ There are additional directories for storing app data and logs, as well as a sep
 
 ## CAD File Conversion
 
-![cad conversion](https://github.com/nagan319/NEXACut-Pro/assets/147287567/2986d8b4-7201-49c4-ae9f-c8305ca8250e)
+<img src="github images/cad conversion.PNG" alt="CAD Conversion" width="500"/>  
 
 The conversion process for CAD files follows a straightforward approach. Initially, it receives an STL file consisting of a list of facets with their respective points. The process identifies the axis with the fewest unique coordinates, assuming the CAD files are flat and parallel to a coordinate axis. It then 'flattens' the file by filtering out facets lying directly on the target plane, discarding unnecessary geometric data. Outside edges are then filtered out based on the fact that they, by definition, only belong to one facet. 
 
@@ -145,7 +144,7 @@ I have chosen STL as the desired input format since it is significantly easier t
 
 ## Plate Image Conversion
 
-![plate_conversion](https://github.com/nagan319/NEXACut-Pro/assets/147287567/01402912-f3c6-4d32-857d-f4a2ca78a3b4)
+<img src="github images/plate conversion.PNG" alt="Plate Conversion" width="500"/>  
 
 The image conversion process consists of four key stages, achieved via the OpenCV image processing library in Python. Initially, the raw image undergoes resizing and binary conversion via thresholding. Then, additional filtering is applied to reduce noise and refine the binary representation. 
 
