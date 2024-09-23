@@ -86,6 +86,7 @@ def test_get_smooth_contour(stl_parser_valid):
     outer_edges = STLParser.get_outer_edges(flattened_mesh, flat_axis)
     contours = STLParser.get_contours(outer_edges)
     outermost_contour = STLParser.get_outermost_contour(contours)
+    print(contours)
     assert isinstance(STLParser.get_smooth_contour(outermost_contour), np.ndarray)
 
 def test_save_preview_image(stl_parser_valid, temp_dir): 

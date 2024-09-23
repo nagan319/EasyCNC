@@ -154,6 +154,16 @@ Once features are detected, the image is 'flattened' and resized to appropriate 
 
 ## Placement Optimization
 
+The placement optimization algorithm used in the software is a rectangular packing algorithm which effectively splits the bin (available area) into free and occupied rectangles. For each part, selected in descending order by bounding box area, the placement is determined by priotitizing rectangles by the y and x coordinates of their top-left corner. 
+
+<img src="github images/packing efficiency.PNG" alt="Packing Efficiency" width="500"/>  
+
+<i>Packing efficiency tested using a sample of 128 arrangements of rectangles with uniformly random dimensions ranging from 0-25 units, with the total area of each sample adding up to the total area of the bin</i>
+
+<img src="github images/max 82.72.PNG" alt="Plate Conversion" width="500"/>  
+
+<i>Maximum achieved packing efficiency in random sample (82.72%) </i>
+
 # FAQ
 
 - Why is this whole thing made from scratch / no django etc.?  

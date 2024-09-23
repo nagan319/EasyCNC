@@ -5,3 +5,4 @@ opencv-python==4.9.0.80
 pyqt6==6.7.0
 pytest==8.2.1
 sqlalchemy==2.0.30
+shapely==2.0.6

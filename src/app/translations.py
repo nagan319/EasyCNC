@@ -698,7 +698,15 @@ optimization_view = {
         LanguageEnum.CN_SIMP.value: "生成布局",
         LanguageEnum.RUS.value: "Создать макет",
         LanguageEnum.JP.value: "レイアウト生成"
-    }
+    },
+    'error_title': {
+        LanguageEnum.ENG_UK.value: "Error",
+        LanguageEnum.ENG_US.value: "Error",
+        LanguageEnum.CN_TRAD.value: "錯誤",
+        LanguageEnum.CN_SIMP.value: "错误",
+        LanguageEnum.RUS.value: "Ошибка",
+        LanguageEnum.JP.value: "エラー"
+    },
 }
 
 settings_view = {
