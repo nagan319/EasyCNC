@@ -1,16 +1,13 @@
 annoying bug fixes:
 - automatic save when editing is finished
+- cannot convert string to float (unit conversion better exception check)
 
-- finish optimization controller
-    - test init method
-    - save new plate contours automatically
-    - try stb_rect_pack for now
-    - output preview
-- try different db implementations, figure out server hosting
-- refactor redundant controllers etc, remove repetitive functions
-    update serialization logic in plate controller, or take out if its not necessary
-
-necessary considerations in readme:
-- db hosting
-- actually install on separate system w/o required libs etc.
-- layout generation (implement feature)
+todo:
+- fix errors in test_bin
+- add tolerance margin for plates
+- convert plate contours to area2d objects and modify algorithm to work with pre-used plates
+- delete layout preview upon app exit
+- make json text more readable
+- add translation for optimization button etc.
+- rewrite layout filepaths
+- write proper help text

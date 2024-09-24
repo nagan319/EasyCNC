@@ -3,6 +3,8 @@ Author: nagan319
 Date: 2024/09/05
 """
 
+import numpy as np
+
 from shapely.geometry import Polygon
 from shapely.affinity import rotate, translate
 
@@ -23,7 +25,7 @@ class BoundsEnum(enum.Enum):
 
 class Area2D:
     """ Class to store irregular 2D shape and compute related operations. """
-    def __init__(self, shape=None, points=None):
+    def __init__(self, id: str=None, shape=None, points=None):
         """ Initialize Area2D object with optional shape or points parameter. """
         if points is not None:
             if not all(isinstance(point, tuple) and len(point) == 2 for point in points):
@@ -47,6 +49,7 @@ class Area2D:
         else:
             self.shape = Polygon()
 
+        self.id = id
         self.area = self.shape.area
         self.rotation = 0.0
 
@@ -67,6 +70,12 @@ class Area2D:
     def _update_area(self) -> None:
         """ Update area parameter using area of shapely polygon. """
         self.area = self.shape.area
+
+    def __repr__(self) -> str:
+        """ Return a string representation of the Area2D object. """
+        id_info = f"ID: {self.id}, " if self.id else ""
+        bounding_box = self.get_bb()
+        return f"\n{id_info}Bounding Box: (min_x: {bounding_box.min_x}, min_y: {bounding_box.min_y}, width: {bounding_box.width}, height: {bounding_box.height})"
 
     """ Accessor methods """
 
@@ -90,6 +99,13 @@ class Area2D:
         max_x = bounds[BoundsEnum.MAXX.value]
         max_y = bounds[BoundsEnum.MAXY.value]
         return Rectangle2D(min_x, min_y, max_x - min_x, max_y - min_y)
+
+    def get_position(self) -> Tuple[float, float]:
+        """ Get absolute position of piece in bin. """
+        bounds = self.shape.bounds
+        min_x = bounds[BoundsEnum.MINX.value]
+        min_y = bounds[BoundsEnum.MINY.value]
+        return (min_x, min_y)
 
     """ Modifying shape """
 

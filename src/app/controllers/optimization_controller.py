@@ -13,14 +13,16 @@ from sqlalchemy.orm import Session
 from ..models.router_model import Router
 from ..models.plate_model import Plate
 from ..models.part_model import Part
-from ..models.utils import deserialize_array_list
+from ..models.utils import deserialize_array, deserialize_array_list
 
 from ..utils.packing.bin import Bin
 from ..utils.packing.utils.area2d import Area2D
 from ..utils.packing.utils.dimension2d import Dimension2D
-from ..utils.packing.plot import plot_bin_final
+from ..utils.packing.packing_algo import execute_packing_algorithm
 
 from ..logging import logger
+
+from ...paths import LAYOUT_PREVIEW_PATH, LAYOUT_FILENAME
 
 class OptimizationController:
     """
@@ -84,21 +86,34 @@ class OptimizationController:
         if list(plate_materials.keys())[0] != list(part_materials.keys())[0]:
             raise ValueError("Imported part and plate materials do not match.")    
 
-        self.routers = selected_routers 
-        self.parts = imported_parts
-        self.plates = selected_plates 
+        self.routers_orm = selected_routers 
+        self.parts_orm = imported_parts
+        self.plates_orm = selected_plates 
 
-        self.part_contours = [deserialize_array_list(part.contours) for part in self.parts]
-        self.plate_contours = [deserialize_array_list(plate.contours) for plate in self.plates]
+        router_sizes = [(router.plate_x, router.plate_y) for router in self.routers_orm]
+        max_plate_x = min(router_sizes, key=lambda size: size[0])[0]
+        max_plate_y = min(router_sizes, key=lambda size: size[1])[1]
 
-        for router in self.routers:
-            print(f"Router {router.id} dimensions: ({router.x}, {router.y})")
-        
-        for contours in self.part_contours:
-            print(f"{contours}")
+        plates = []
 
-        for contours in self.plate_contours:
-            print(f"{contours}")
+        for plate in self.plates_orm:
+            if plate.x <= max_plate_x and plate.y <= max_plate_y:
+                if plate.contours is not None:
+                    contour_list = [contour.reshape(-1, 2).tolist() for contour in deserialize_array_list(plate.contours)]
+                plates.append((plate.id, (plate.x, plate.y)))
+
+        parts = []
+
+        for part in self.parts_orm:
+            id = part.id
+            amount = part.amount
+            contour = deserialize_array(part.contours).tolist()
+            for i, point in enumerate(contour):
+                contour[i] = (point[0], point[1])
+            for i in range(amount):
+                parts.append((f"{id}-{i+1}", contour))
+
+        self.placements = execute_packing_algorithm(plates, parts, os.path.join(LAYOUT_PREVIEW_PATH, LAYOUT_FILENAME))
 
     def _get_selected_routers(self) -> List[Router]:
         """ Get all selected routers. """

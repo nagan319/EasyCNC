@@ -1,10 +1,11 @@
-"""
-Author: nagan319
-Date: 2024/06/13
-"""
+import os
+import json
 
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QHBoxLayout, QPushButton, QMessageBox
+from PyQt6.QtWidgets import (
+    QWidget, QVBoxLayout, QLabel, QHBoxLayout, 
+    QPushButton, QMessageBox, QScrollArea, QTextEdit
+)
 from .view_template import ViewTemplate
 from PyQt6.QtGui import QPixmap
 
@@ -15,7 +16,7 @@ from src.app.controllers.optimization_controller import OptimizationController
 from ..translations import optimization_view
 from ..logging import logger
 
-from ...paths import LAYOUT_PREVIEW_PATH
+from ...paths import LAYOUT_PREVIEW_PATH, LAYOUT_FILENAME
 
 class OptimizationView(ViewTemplate):
     """
@@ -51,7 +52,26 @@ class OptimizationView(ViewTemplate):
         generate_button_wrapper_layout.addStretch(1)
         generate_button_wrapper.setLayout(generate_button_wrapper_layout)
 
+        self.scroll_area = QScrollArea()
+        self.scroll_area.setWidgetResizable(True) 
+
+        self.scroll_content = QWidget()
+        self.scroll_layout = QVBoxLayout(self.scroll_content)
+
+        self.preview_widget = QLabel()
+        self.preview_widget.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.text_widget = QLabel()
+        self.text_widget.setWordWrap(True)
+        self.text_widget.setAlignment(Qt.AlignmentFlag.AlignLeft)
+
+        self.scroll_layout.addWidget(self.preview_widget)
+        self.scroll_layout.addWidget(self.text_widget, 1)
+
+        self.scroll_area.setWidget(self.scroll_content)
+
         main_layout.addWidget(generate_button_wrapper)
+        main_layout.addWidget(self.scroll_area, 1) 
 
         main_widget.setLayout(main_layout)
 
@@ -61,10 +81,14 @@ class OptimizationView(ViewTemplate):
         """ Generate optimized part placement layout. """
         try:
             self.controller.optimize()
+            pixmap = QPixmap(os.path.join(LAYOUT_PREVIEW_PATH, LAYOUT_FILENAME))
+            self.preview_widget.setPixmap(pixmap)
+            formatted_text = json.dumps(self.controller.placements, indent=4)
+            self.text_widget.setText(formatted_text)
         except Exception as e:
             QMessageBox.critical(
                 self, 
                 self.texts['error_title'][self.language], 
-                f"{e}" # modify
+                f"An error occurred while generating the layout: {e}"  # Modify to be more user-friendly
             )
             logger.error(f"Error generating layout: {str(e)}")

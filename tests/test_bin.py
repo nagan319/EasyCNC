@@ -2,13 +2,18 @@ from src.app.utils.packing.bin import Bin
 from src.app.utils.packing.utils.area2d import Area2D
 from src.app.utils.packing.utils.rectangle2d import Rectangle2D
 from src.app.utils.packing.utils.dimension2d import Dimension2D
-from src.app.utils.packing.plot import plot_bin
+from src.app.utils.packing.utils.plot_for_testing import plot_bin
 
+import os
 import pytest
 
 @pytest.fixture
+def test_preview_directory():
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'packing algo preview')
+
+@pytest.fixture
 def default_bin():
-    return Bin(Dimension2D(100, 100))
+    return Bin('id', Dimension2D(100, 100))
 
 @pytest.fixture
 def placed_pieces():
@@ -40,19 +45,19 @@ def test_get_area(default_bin, placed_pieces):
 
 """ Tests for update_rectangles """
 
-def test_update_rectangles_all_four():
+def test_update_rectangles_all_four(test_preview_directory):
     bin_dimensions = Dimension2D(width=100, height=100)
     piece = Area2D(shape=Rectangle2D(10, 10, 80, 80))
     bin = Bin(bin_dimensions)
     Bin.update_rectangles(piece, bin.free_rectangles)
-    # plot_bin(bin, 'plots/bin_update_rectangles_all_four_sides.png')
+    plot_bin(bin, os.path.join(test_preview_directory, 'bin_update_rectangles_all_four_sides.png'))
 
-def test_update_rectangles_top_corner():
+def test_update_rectangles_top_corner(test_preview_directory):
     bin_dimensions = Dimension2D(width=100, height=100)
     piece = Area2D(shape=Rectangle2D(0, 0, 50, 50))
     bin = Bin(bin_dimensions)
     Bin.update_rectangles(piece, bin.free_rectangles)
-    # plot_bin(bin, 'plots/bin_update_rectangles_top_corner.png')
+    plot_bin(bin, os.path.join(test_preview_directory, 'bin_update_rectangles_top_corner.png'))
 
 """ Tests for get_best_placement """
 
@@ -65,7 +70,7 @@ def test_get_best_placement_case_1():
         Rectangle2D(0, 5, 10, 10),
     ]
     res = Bin.get_best_placement(piece, free_rectangles, Area2D(), Dimension2D(15, 15))
-    assert res == 3  # Based on the provided example
+    assert res == 3  
 
 def test_get_best_placement_case_2():
     piece = Area2D(Rectangle2D(0, 0, 5, 5))
@@ -128,56 +133,72 @@ def test_get_best_placement_case_edge():
     assert res == 0  # The piece fits perfectly in the first rectangle (index 0)
 
 """ Tests for pack """
-def test_pack_basic():
-    bin = Bin(Dimension2D(100, 100))
+def test_pack_basic(test_preview_directory):
+    bin = Bin('id', Dimension2D(100, 100))
     pieces = [
-        Area2D(Rectangle2D(0, 0, 10, 10)),
-        Area2D(Rectangle2D(0, 0, 80, 80)),
-        Area2D(Rectangle2D(0, 0, 20, 20))
+        Area2D(id='piece_1', shape=Rectangle2D(0, 0, 10, 10)),
+        Area2D(id='piece_2', shape=Rectangle2D(0, 0, 80, 80)),
+        Area2D(id='piece_3', shape=Rectangle2D(0, 0, 20, 20))
     ]
     bin.pack(pieces)
-    # plot_bin(bin, 'plots/packed_basic.png')
+    plot_bin(bin, os.path.join(test_preview_directory, 'packed_basic.png'))
 
-def test_pack_no_pieces():
-    bin = Bin(Dimension2D(100, 100))
+def test_pack_no_pieces(test_preview_directory):
+    bin = Bin('id', Dimension2D(100, 100))
     pieces = []
     bin.pack(pieces)
-    # plot_bin(bin, 'plots/packed_no_pieces.png')
+    plot_bin(bin, os.path.join(test_preview_directory, 'packed_no_pieces.png'))
 
-def test_pack_one_large_piece():
-    bin = Bin(Dimension2D(100, 100))
-    pieces = [Area2D(Rectangle2D(0, 0, 100, 100))]
+def test_pack_one_large_piece(test_preview_directory):
+    bin = Bin('id', Dimension2D(100, 100))
+    pieces = [Area2D(id='piece_1', shape=Rectangle2D(0, 0, 100, 100))]
     bin.pack(pieces)
-    # plot_bin(bin, 'plots/packed_one_large_piece.png')
+    plot_bin(bin, os.path.join(test_preview_directory, 'packed_one_large_piece.png'))
 
-def test_pack_large_piece():
-    bin = Bin(Dimension2D(100, 100))
-    pieces = [Area2D(Rectangle2D(0, 0, 120, 120))]
+def test_pack_large_piece(test_preview_directory):
+    bin = Bin('id', Dimension2D(100, 100))
+    pieces = [Area2D(id='piece_1', shape=Rectangle2D(0, 0, 120, 120))]
     bin.pack(pieces)
-    # plot_bin(bin, 'plots/packed_large_piece.png')
+    plot_bin(bin, os.path.join(test_preview_directory, 'packed_large_piece.png'))
 
-def test_pack_identical_pieces():
-    bin = Bin(Dimension2D(100, 100))
-    pieces = [Area2D(Rectangle2D(0, 0, 10, 10)), Area2D(Rectangle2D(0, 0, 10, 10)), Area2D(Rectangle2D(0, 0, 10, 10)), Area2D(Rectangle2D(0, 0, 10, 10)), Area2D(Rectangle2D(0, 0, 10, 10)), Area2D(Rectangle2D(0, 0, 10, 10)), Area2D(Rectangle2D(0, 0, 10, 10)), Area2D(Rectangle2D(0, 0, 10, 10)), Area2D(Rectangle2D(0, 0, 10, 10)), Area2D(Rectangle2D(0, 0, 10, 10))] 
+def test_pack_identical_pieces(test_preview_directory):
+    bin = Bin('id', Dimension2D(100, 100))
+    pieces = [Area2D(id=f'piece_{i}', shape=Rectangle2D(0, 0, 10, 10)) for i in range(10)]
     bin.pack(pieces)
-    # plot_bin(bin, 'plots/packed_identical_pieces.png')
+    plot_bin(bin, os.path.join(test_preview_directory, 'packed_identical_pieces.png'))
 
-def test_pack_irregular_pieces():
-    bin = Bin(Dimension2D(150, 150))
+def test_pack_irregular_pieces(test_preview_directory):
+    bin = Bin('id', Dimension2D(150, 150))
     pieces = [
-        Area2D(Rectangle2D(0, 0, 50, 50)),
-        Area2D(Rectangle2D(0, 0, 70, 30)),
-        Area2D(Rectangle2D(0, 0, 20, 60)),
-        Area2D(Rectangle2D(0, 0, 40, 40))
+        Area2D(id='1', shape=Rectangle2D(0, 0, 50, 50)),
+        Area2D(id='2', shape=Rectangle2D(0, 0, 70, 30)),
+        Area2D(id='3', shape=Rectangle2D(0, 0, 20, 60)),
+        Area2D(id='4', shape=Rectangle2D(0, 0, 40, 40))
     ]
     bin.pack(pieces)
-    # plot_bin(bin, 'plots/packed_irregular_pieces.png')
+    plot_bin(bin, os.path.join(test_preview_directory, 'packed_irregular_pieces.png'))
 
-def test_pack_perfect_fit():
-    bin = Bin(Dimension2D(200, 200))
+def test_pack_perfect_fit(test_preview_directory):
+    bin = Bin('id', Dimension2D(200, 200))
     pieces = [
-        Area2D(Rectangle2D(0, 0, 100, 100)),
-        Area2D(Rectangle2D(100, 0, 100, 100))
+        Area2D(id='piece_1', shape=Rectangle2D(0, 0, 100, 100)),
+        Area2D(id='piece_2', shape=Rectangle2D(100, 0, 100, 100))
     ]
     bin.pack(pieces)
-    # plot_bin(bin, 'plots/packed_perfect_fit.png')
+    plot_bin(bin, os.path.join(test_preview_directory, 'packed_perfect_fit.png'))
+
+def test_pack_random_pieces(test_preview_directory):
+    bin = Bin('id', Dimension2D(300, 200))
+    pieces = []
+    for i in range(150):
+        piece_id = f"piece_{i}"
+        pieces.append(_return_random_sized_piece(50, 50, piece_id))
+    bin.pack(pieces)
+    plot_bin(bin, os.path.join(test_preview_directory, 'random_packing.png'))
+    
+import random
+
+def _return_random_sized_piece(max_width: float, max_height: float, piece_id: str) -> Area2D:
+    width = random.uniform(0, max_width)
+    height = random.uniform(0, max_height)
+    return Area2D(id=piece_id, shape=Rectangle2D(0, 0, width, height))

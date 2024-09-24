@@ -13,7 +13,8 @@ from .utils.vector2d import Vector2D
 
 class Bin:
     """ Bin class to handle packing algorithm. """
-    def __init__(self, dimension: Dimension2D):
+    def __init__(self, id: str, dimension: Dimension2D):
+        self.id = id
         self.dimension = Dimension2D(dimension.width, dimension.height)
         self.n_placed: int = 0
         self.placed_pieces: List[Area2D] = []
@@ -21,6 +22,8 @@ class Bin:
             Rectangle2D(0, 0, self.dimension.width, self.dimension.height)
         ]
     
+    """ Accessor methods """
+
     def get_placed_pieces(self) -> List[Area2D]:
         """ Get list of all placed pieces. """
         return self.placed_pieces
@@ -43,6 +46,19 @@ class Bin:
             area -= piece.get_area()
         return area
 
+    """ Pre-packing placement (existing parts) """
+
+    def add_immovable_part(self, piece: Area2D, x: float, y: float):
+        """ Adds pre-placed part at indicated coordinate. """
+        if x + piece.get_bb().width > self.dimension.width or y + piece.get_bb().height > self.dimension.height or x < 0 or y < 0:
+            raise ValueError(f"Attempted to place part of size ({piece.get_bb().width}, {piece.get_bb().height}) in invalid position ({x}, {y}) given a bin size of ({self.dimension.width}, {self.dimension.height})")
+        piece.move(Vector2D(x, y))
+        Bin.update_rectangles(piece, self.free_rectangles)
+        self.placed_pieces.append(piece)
+        self.n_placed += 1
+
+    """ Packing algorithm """
+
     def pack(self, to_place: List[Area2D]) -> List[Area2D]:
         """ Main packing strategy. Returns list of unplaced pieces. """
         sorted_pieces = sorted(to_place, key=lambda p: p.get_area(), reverse=True)
@@ -54,7 +70,7 @@ class Bin:
 
         for piece in sorted_pieces:
             best_placement_idx = Bin.get_best_placement(piece, self.free_rectangles, occupied_area, self.dimension)
-            
+
             if best_placement_idx != -1:
                 best_placement_rectangle = self.free_rectangles[best_placement_idx]
                 piece.move(Vector2D(best_placement_rectangle.min_x, best_placement_rectangle.min_y))
@@ -76,9 +92,9 @@ class Bin:
         piece_bb = piece.get_bb()
         indexed_rectangles = [(i, r) for i, r in enumerate(free_rectangles)]
         sorted_indexed_rectangles = sorted(indexed_rectangles, key=lambda item: (item[1].min_x, item[1].min_y))
-        
+
         for original_idx, rectangle in sorted_indexed_rectangles:
-            placed_piece = Area2D(Rectangle2D(rectangle.min_x, rectangle.min_y, piece_bb.width, piece_bb.height))
+            placed_piece = Area2D(shape=Rectangle2D(rectangle.min_x, rectangle.min_y, piece_bb.width, piece_bb.height))
             if placed_piece.get_bb().fits_inside(rectangle) and not placed_piece.intersection(occupied_area):
                 return original_idx 
 
@@ -121,3 +137,11 @@ class Bin:
                         to_add.append(Rectangle2D(*rect_params))
         
         free_rectangles.extend(to_add)
+
+    def __repr__(self) -> str:
+        """Return a string representation of the Bin object."""
+        placed_piece_ids = [piece.id for piece in self.placed_pieces]
+        return (f"\nBin ID: {self.id}, "
+                f"Dimensions: {self.dimension.width}x{self.dimension.height}, "
+                f"Placed Pieces: {placed_piece_ids}")
+    

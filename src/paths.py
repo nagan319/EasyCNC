@@ -47,6 +47,8 @@ LAYOUT_PREVIEW_PATH = os.path.join(CACHE_DIR, 'layouts')
 if not os.path.exists(LAYOUT_PREVIEW_PATH):
     os.makedirs(LAYOUT_PREVIEW_PATH)
 
+LAYOUT_FILENAME = 'layout.png'
+
 USER_SETTINGS_PATH = os.path.join(DATA_DIR, 'user_settings.json')
 
 """
