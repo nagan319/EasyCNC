@@ -201,6 +201,7 @@ class PlateController(GenericController):
         plt.grid(True)
         plt.gca().set_facecolor(PlottingConstants.PLOT_BG_COLOR)
         plt.gca().set_aspect('equal')
+        plt.gca().invert_yaxis()
         plt.grid(False)
         plt.tick_params(axis='x', colors=PlottingConstants.PLOT_TEXT_COLOR)
         plt.tick_params(axis='y', colors=PlottingConstants.PLOT_TEXT_COLOR)

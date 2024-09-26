@@ -23,7 +23,7 @@ from .utils.clear_dir import clear_dir
 from .utils.settings_enum import DEFAULT_LANGUAGE, DEFAULT_UNITS
 
 from .database import init_db, teardown_db, get_session, close_session
-from ..paths import IMAGE_PREVIEW_PATH, PART_PREVIEW_PATH, PLATE_PREVIEW_PATH, ROUTER_PREVIEW_PATH, ICON_PATH, USER_SETTINGS_PATH
+from ..paths import PART_PREVIEW_DIR, PLATE_PREVIEW_DIR, ROUTER_PREVIEW_DIR, ICON_PATH, USER_SETTINGS_PATH, TEMP_DIRS
 
 from .translations import main_window
 from .logging import logger
@@ -53,11 +53,11 @@ class MainWindow(QMainWindow):
             self.texts['home_button'][user_language]: \
                 HomeView(user_language),
             self.texts['part_button'][user_language]: \
-                PartView(self.session, PART_PREVIEW_PATH, user_language, user_units),
+                PartView(self.session, PART_PREVIEW_DIR, user_language, user_units),
             self.texts['stock_button'][user_language]: \
-                PlateView(self.session, PLATE_PREVIEW_PATH, user_language, user_units),
+                PlateView(self.session, PLATE_PREVIEW_DIR, user_language, user_units),
             self.texts['router_button'][user_language]: \
-                RouterView(self.session, ROUTER_PREVIEW_PATH, user_language, user_units),
+                RouterView(self.session, ROUTER_PREVIEW_DIR, user_language, user_units),
             self.texts['layout_button'][user_language]: \
                 OptimizationView(self.session, user_language),
             self.texts['settings_button'][user_language]: \
@@ -100,7 +100,7 @@ class MainWindow(QMainWindow):
                 logger.debug("Database session closed.")
             teardown_db()
             logger.debug("Database connection disposed.")
-            for directory in [IMAGE_PREVIEW_PATH, PART_PREVIEW_PATH, PLATE_PREVIEW_PATH, ROUTER_PREVIEW_PATH]:
+            for directory in TEMP_DIRS:
                 clear_dir(directory)
         except Exception as e:
             logger.error(f"Error closing database: {e}")

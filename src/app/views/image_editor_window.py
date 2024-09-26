@@ -9,7 +9,7 @@ from PyQt6.QtGui import QIcon
 
 from sqlalchemy.orm import Session
 
-from ...paths import IMAGE_PREVIEW_PATH, ICON_PATH
+from ...paths import IMAGE_PREVIEW_DIR, ICON_PATH
 
 from src.app.models.plate_model import Plate
 from .image_editor_view import ImageEditorView

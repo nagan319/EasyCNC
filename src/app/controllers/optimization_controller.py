@@ -22,23 +22,22 @@ from ..utils.packing.packing_algo import execute_packing_algorithm
 
 from ..logging import logger
 
-from ...paths import LAYOUT_PREVIEW_PATH, LAYOUT_FILENAME
-
 class OptimizationController:
     """
     Controller for managing layout optimization. 
     ### Parameters:
     - session: working session.
-    - optimization_preview_directory: directory for storing generated preview images.
+    - preview_path: preview image filename
     """
     MIN_QUANTIZED_VALUE: float = .01 
 
-    def __init__(self, session: Session, optimization_preview_directory: str):
-        if not os.path.exists(optimization_preview_directory):
-            logger.error(f"Indicated optimization preview directory path does not exist: {optimization_preview_directory}")
-            raise FileNotFoundError(f"Directory not found: {optimization_preview_directory}")
+    def __init__(self, session: Session, preview_path: str):
+        if not os.path.exists(os.path.dirname(preview_path)):
+            logger.error(f"Indicated optimization preview directory path does not exist: {preview_path}")
+            raise FileNotFoundError(f"Directory not found: {preview_path}")
 
         self.session = session
+        self.preview_path = preview_path
 
     def optimize(self):
         """ Call optimization algorithm and generate layout using selected plates, parts, and routers. """
@@ -98,9 +97,13 @@ class OptimizationController:
 
         for plate in self.plates_orm:
             if plate.x <= max_plate_x and plate.y <= max_plate_y:
+                contour_list = []
                 if plate.contours is not None:
                     contour_list = [contour.reshape(-1, 2).tolist() for contour in deserialize_array_list(plate.contours)]
-                plates.append((plate.id, (plate.x, plate.y)))
+                    for contour in contour_list:
+                        for i, point in enumerate(contour):
+                            contour[i] = (point[0], point[1])
+                plates.append((plate.id, (plate.x, plate.y), contour_list))
 
         parts = []
 
@@ -113,7 +116,7 @@ class OptimizationController:
             for i in range(amount):
                 parts.append((f"{id}-{i+1}", contour))
 
-        self.placements = execute_packing_algorithm(plates, parts, os.path.join(LAYOUT_PREVIEW_PATH, LAYOUT_FILENAME))
+        self.placements = execute_packing_algorithm(plates, parts, self.preview_path)
 
     def _get_selected_routers(self) -> List[Router]:
         """ Get all selected routers. """

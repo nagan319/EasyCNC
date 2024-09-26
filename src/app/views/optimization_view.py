@@ -16,7 +16,7 @@ from src.app.controllers.optimization_controller import OptimizationController
 from ..translations import optimization_view
 from ..logging import logger
 
-from ...paths import LAYOUT_PREVIEW_PATH, LAYOUT_FILENAME
+from ...paths import LAYOUT_PREVIEW_PATH
 
 class OptimizationView(ViewTemplate):
     """
@@ -81,7 +81,7 @@ class OptimizationView(ViewTemplate):
         """ Generate optimized part placement layout. """
         try:
             self.controller.optimize()
-            pixmap = QPixmap(os.path.join(LAYOUT_PREVIEW_PATH, LAYOUT_FILENAME))
+            pixmap = QPixmap(LAYOUT_PREVIEW_PATH)
             self.preview_widget.setPixmap(pixmap)
             formatted_text = json.dumps(self.controller.placements, indent=4)
             self.text_widget.setText(formatted_text)
@@ -89,6 +89,6 @@ class OptimizationView(ViewTemplate):
             QMessageBox.critical(
                 self, 
                 self.texts['error_title'][self.language], 
-                f"An error occurred while generating the layout: {e}"  # Modify to be more user-friendly
+                self.texts['layout_error_text'][self.language]+f" {e}"
             )
             logger.error(f"Error generating layout: {str(e)}")

@@ -18,7 +18,7 @@ from ..widgets.image_threshold_widget import ImageThresholdWidget
 from ..widgets.image_feature_widget import ImageFeatureWidget
 from ..widgets.image_flat_widget import ImageFlatWidget
 
-from ...paths import IMAGE_PREVIEW_PATH
+from ...paths import IMAGE_PREVIEW_DIR
 
 from ..logging import logger
 
@@ -40,7 +40,7 @@ class ImageEditorView(QStackedWidget):
         self.language = language
 
         self.plate = plate
-        self.controller = ImageEditingController(session, IMAGE_PREVIEW_PATH, self.plate)
+        self.controller = ImageEditingController(session, IMAGE_PREVIEW_DIR, self.plate)
         self.min_width = min_width
         self.min_height = min_height
         self._setup_ui()

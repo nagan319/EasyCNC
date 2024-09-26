@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
 def execute_packing_algorithm(
-    input_bins: List[Tuple[str, Tuple[float, float]]], 
+    input_bins: List[Tuple[str, Tuple[float, float], List[Tuple[float, float]]]], 
     input_pieces: List[Tuple[str, List[Tuple[float, float]]]],
     preview_filename: str
 ) -> Dict[str, Union[None, Tuple[str, Tuple[float, float]]]]:
@@ -22,7 +22,7 @@ def execute_packing_algorithm(
     Packs pieces into bins and returns their placements.
 
     Parameters:
-        input_bins: List of tuples containing (bin_id, dimensions).
+        input_bins: List of tuples containing (bin_id, dimensions, contours).
         input_pieces: List of tuples containing (piece_id, contours).
         preview_filename: File to save preview
 
@@ -38,7 +38,7 @@ def execute_packing_algorithm(
         raise ValueError(f"Preview file must be a png, not {preview_filename}.")
 
     for bin in input_bins:
-        id, dimensions = bin
+        id, dimensions, contours = bin
         if not isinstance(id, str):
             raise ValueError(f"Bin ID {id} is not a string.")
         if not isinstance(dimensions, tuple) or len(dimensions) != 2:
@@ -64,9 +64,17 @@ def execute_packing_algorithm(
     res: Dict[str, Union[None, Tuple[str, Tuple[float, float]]]] = {}
 
     for bin in input_bins:
-        bin_id, dimensions = bin
+        bin_id, dimensions, contours = bin
         width, height = dimensions
-        bins.append(Bin(bin_id, Dimension2D(width, height)))
+        bin_obj = Bin(bin_id, Dimension2D(width, height))
+        for i, contour in enumerate(contours):
+            part = Area2D(
+                bin_id+f'ctr{i}', 
+                points=contour, 
+                shift_to_origin=False
+            )
+            bin_obj.add_immovable_part(part)
+        bins.append(bin_obj)
     
     for piece in input_pieces:
         piece_id, outer_contour = piece

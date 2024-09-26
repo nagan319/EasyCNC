@@ -25,21 +25,22 @@ class BoundsEnum(enum.Enum):
 
 class Area2D:
     """ Class to store irregular 2D shape and compute related operations. """
-    def __init__(self, id: str=None, shape=None, points=None):
+    def __init__(self, id: str=None, shape=None, points=None, shift_to_origin=True):
         """ Initialize Area2D object with optional shape or points parameter. """
         if points is not None:
             if not all(isinstance(point, tuple) and len(point) == 2 for point in points):
                 raise ValueError("Points must be a list of tuples with two elements each.")
             
-            min_x = float('inf')
-            min_y = float('inf')
+            if shift_to_origin:
+                min_x = float('inf')
+                min_y = float('inf')
 
-            for point in points:
-                x, y = point[0], point[1]
-                min_x, min_y = min(min_x, x), min(min_y, y)
-            
-            for i, point in enumerate(points):
-                points[i] = (point[0] - min_x, point[1] - min_y)
+                for point in points:
+                    x, y = point[0], point[1]
+                    min_x, min_y = min(min_x, x), min(min_y, y)
+                
+                for i, point in enumerate(points):
+                    points[i] = (point[0] - min_x, point[1] - min_y)
 
             self.shape = Polygon(points)
         elif isinstance(shape, Area2D):
@@ -148,8 +149,8 @@ class Area2D:
 
     def is_inside_rect(self, container: Rectangle2D) -> bool:
         """ Check if shape is inside rectangle. Returns True if corners/edges match. """
-        container_shape = Area2D._create_poly_from_rect(container)
-        return self.shape.within(container_shape.shape)
+        container_poly = Area2D._create_poly_from_rect(container)
+        return self.shape.within(container_poly)
 
     def intersection(self, other: 'Area2D') -> bool:
         """ Check if intersection exists with other shape. """

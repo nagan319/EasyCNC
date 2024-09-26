@@ -48,14 +48,14 @@ def test_get_area(default_bin, placed_pieces):
 def test_update_rectangles_all_four(test_preview_directory):
     bin_dimensions = Dimension2D(width=100, height=100)
     piece = Area2D(shape=Rectangle2D(10, 10, 80, 80))
-    bin = Bin(bin_dimensions)
+    bin = Bin('id', bin_dimensions)
     Bin.update_rectangles(piece, bin.free_rectangles)
     plot_bin(bin, os.path.join(test_preview_directory, 'bin_update_rectangles_all_four_sides.png'))
 
 def test_update_rectangles_top_corner(test_preview_directory):
     bin_dimensions = Dimension2D(width=100, height=100)
     piece = Area2D(shape=Rectangle2D(0, 0, 50, 50))
-    bin = Bin(bin_dimensions)
+    bin = Bin('id', bin_dimensions)
     Bin.update_rectangles(piece, bin.free_rectangles)
     plot_bin(bin, os.path.join(test_preview_directory, 'bin_update_rectangles_top_corner.png'))
 

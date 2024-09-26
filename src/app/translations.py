@@ -707,6 +707,14 @@ optimization_view = {
         LanguageEnum.RUS.value: "Ошибка",
         LanguageEnum.JP.value: "エラー"
     },
+    'layout_error_text': {
+        LanguageEnum.ENG_UK.value: "An error occurred while generating layouts: ",
+        LanguageEnum.ENG_US.value: "An error occurred while generating layouts: ",
+        LanguageEnum.CN_TRAD.value: "生成佈局時發生錯誤：",  
+        LanguageEnum.CN_SIMP.value: "生成布局时发生错误：",  
+        LanguageEnum.RUS.value: "Произошла ошибка при генерации макетов: ",  
+        LanguageEnum.JP.value: "レイアウトを生成中にエラーが発生しました："
+    },
 }
 
 settings_view = {
