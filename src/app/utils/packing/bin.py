@@ -65,7 +65,7 @@ class Bin:
 
         occupied_area = Area2D()
         for piece in self.placed_pieces:
-            occupied_area.add(piece)     
+            occupied_area.add(Area2D(shape=piece.get_bb()))     
 
         for piece in sorted_pieces:
             best_placement_idx = Bin.get_best_placement(piece, self.free_rectangles, occupied_area, self.dimension)

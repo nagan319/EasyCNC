@@ -90,6 +90,10 @@ class OptimizationController:
         self.parts_orm = imported_parts
         self.plates_orm = selected_plates 
 
+        mill_bit_diameter = max([router.mill_bit_diameter for router in self.routers_orm])
+        drill_bit_diameter = max([router.drill_bit_diameter for router in self.routers_orm])
+        max_bit_diameter = max(drill_bit_diameter, mill_bit_diameter)
+
         router_sizes = [(router.plate_x, router.plate_y) for router in self.routers_orm]
         max_plate_x = min(router_sizes, key=lambda size: size[0])[0]
         max_plate_y = min(router_sizes, key=lambda size: size[1])[1]
@@ -120,7 +124,13 @@ class OptimizationController:
             for i in range(amount):
                 parts.append((f"{id}-{i+1}", contour))
 
-        self.placements = execute_packing_algorithm(plates, parts, self.preview_path, self.conversion_factor)
+        self.placements = execute_packing_algorithm(
+            plates, 
+            parts, 
+            max_bit_diameter, 
+            self.preview_path, 
+            self.conversion_factor
+        )
 
     def _get_selected_routers(self) -> List[Router]:
         """ Get all selected routers. """

@@ -25,8 +25,14 @@ class BoundsEnum(enum.Enum):
 
 class Area2D:
     """ Class to store irregular 2D shape and compute related operations. """
-    def __init__(self, id: str=None, shape=None, points=None, shift_to_origin=True):
+    def __init__(self, id: str=None, shape=None, points=None, edge_margin: float=0, shift_to_origin: bool=True):
         """ Initialize Area2D object with optional shape or points parameter. """
+
+        if edge_margin < 0:
+            raise ValueError("Edge tolerance of Area2D object must be positive. ")
+        
+        self.edge_margin = edge_margin
+
         if points is not None:
             if not all(isinstance(point, tuple) and len(point) == 2 for point in points):
                 raise ValueError("Points must be a list of tuples with two elements each.")
@@ -40,7 +46,7 @@ class Area2D:
                     min_x, min_y = min(min_x, x), min(min_y, y)
                 
                 for i, point in enumerate(points):
-                    points[i] = (point[0] - min_x, point[1] - min_y)
+                    points[i] = (point[0] - min_x + self.edge_margin, point[1] - min_y + self.edge_margin)
 
             self.shape = Polygon(points)
         elif isinstance(shape, Area2D):
@@ -53,6 +59,8 @@ class Area2D:
         self.id = id
         self.area = self.shape.area
         self.rotation = 0.0
+
+
 
     """ Util methods """
 
@@ -90,7 +98,7 @@ class Area2D:
 
     def get_free_area(self) -> float:
         """ Free area left inside bounding box. """
-        return self.shape.envelope.area - self.shape.area
+        return self.get_bb().area - self.shape.area
 
     def get_bb(self) -> Rectangle2D:
         """ Get bounding box of shape. Returns Rectangle2D object. """
@@ -99,14 +107,17 @@ class Area2D:
         min_y = bounds[BoundsEnum.MINY.value]
         max_x = bounds[BoundsEnum.MAXX.value]
         max_y = bounds[BoundsEnum.MAXY.value]
-        return Rectangle2D(min_x, min_y, max_x - min_x, max_y - min_y)
+        return Rectangle2D(
+            min_x - self.edge_margin, 
+            min_y - self.edge_margin, 
+            max_x - min_x + 2 * self.edge_margin, 
+            max_y - min_y + 2 * self.edge_margin
+        )
 
     def get_position(self) -> Tuple[float, float]:
         """ Get absolute position of piece in bin. """
-        bounds = self.shape.bounds
-        min_x = bounds[BoundsEnum.MINX.value]
-        min_y = bounds[BoundsEnum.MINY.value]
-        return (min_x, min_y)
+        bounds = self.get_bb()
+        return (bounds.min_x, bounds.min_y)
 
     """ Modifying shape """
 
@@ -145,14 +156,13 @@ class Area2D:
 
     def is_inside_area(self, container: 'Area2D') -> bool:
         """ Check if shape is inside Area2D. Returns True if corners/edges match. """
-        return self.shape.within(container.shape)
-
+        return self.get_bb().fits_inside(container.get_bb())
+    
     def is_inside_rect(self, container: Rectangle2D) -> bool:
         """ Check if shape is inside rectangle. Returns True if corners/edges match. """
-        container_poly = Area2D._create_poly_from_rect(container)
-        return self.shape.within(container_poly)
+        return self.get_bb().fits_inside(container)
 
     def intersection(self, other: 'Area2D') -> bool:
         """ Check if intersection exists with other shape. """
-        inters = self.shape.intersection(other.shape)
+        inters = Area2D(shape=self.get_bb()).shape.intersection(other.shape)
         return not inters.is_empty

@@ -1,12 +1,11 @@
 annoying bug fixes:
 - automatic save when editing is finished
-- cannot convert string to float (unit conversion better exception check)
 
 todo:
 - add tolerance margin for plate edges
     refactor bin class to apply better - think through thoroughly
-- add tolerance margin for drill/mill bits
 - save updated contours to plate upon completion
+    - shift the points of each piece by the displacement indicated in the 'res' parameter and save it to the plate
 
 - make json text more readable
 - write proper help text

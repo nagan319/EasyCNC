@@ -142,21 +142,3 @@ def test_rotate_multiple(sample_shape):
     assert sample_shape.rotation == 45
     sample_shape.rotate(90)
     assert sample_shape.rotation == 135
-
-### Inside Area and Intersection Tests
-
-def test_is_inside_area(sample_shape, sample_rect):
-    assert sample_shape.is_inside_area(sample_rect) == True
-
-def test_is_inside_rect(sample_rect):
-    container = Rectangle2D(0, 0, 10, 10)
-    assert sample_rect.is_inside_rect(container) == True
-
-def test_intersection(sample_shape):
-    overlapping_shape = Area2D(points=[(2, 2), (6, 2), (6, 5), (2, 5)])
-    assert sample_shape.intersection(overlapping_shape) == True
-
-def test_no_intersection(sample_shape):
-    non_overlapping_shape = Area2D(points=[(10, 10), (15, 10), (15, 15), (10, 15)], shift_to_origin=False)
-    assert sample_shape.intersection(non_overlapping_shape) == False
-

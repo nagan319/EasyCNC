@@ -16,6 +16,7 @@ import matplotlib.patches as patches
 def execute_packing_algorithm(
     input_bins: List[Tuple[str, Tuple[float, float], List[Tuple[float, float]]]], 
     input_pieces: List[Tuple[str, List[Tuple[float, float]]]],
+    bit_diameter: float,
     preview_filename: str,
     conversion_factor: float = 1.0
 ) -> Dict[str, Union[None, Tuple[str, Tuple[float, float]]]]:
@@ -32,7 +33,7 @@ def execute_packing_algorithm(
         - key: piece_id
         - value: None if not placed, or (bin_id, coordinates) if placed.
     """
-    
+
     if not os.path.exists(os.path.dirname(preview_filename)):
         raise FileNotFoundError(f"Directory for indicated preview filepath {preview_filename} does not exist.")
     if not preview_filename.lower().endswith('.png'):
@@ -72,14 +73,21 @@ def execute_packing_algorithm(
             part = Area2D(
                 bin_id+f'ctr{i}', 
                 points=contour, 
-                shift_to_origin=False
+                shift_to_origin=False,
+                edge_margin=bit_diameter
             )
             bin_obj.add_immovable_part(part)
         bins.append(bin_obj)
     
     for piece in input_pieces:
         piece_id, outer_contour = piece
-        pieces.append(Area2D(id=piece_id, points=outer_contour))
+        pieces.append(
+            Area2D(
+                id=piece_id, 
+                points=outer_contour, 
+                edge_margin=bit_diameter
+            )
+        )
 
     bins = sorted(bins, key=lambda b: b.get_empty_area())
     pieces = sorted(pieces, key=lambda p: p.get_bb().area, reverse=True)
