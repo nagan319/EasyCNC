@@ -59,7 +59,7 @@ class MainWindow(QMainWindow):
             self.texts['router_button'][user_language]: \
                 RouterView(self.session, ROUTER_PREVIEW_DIR, user_language, user_units),
             self.texts['layout_button'][user_language]: \
-                OptimizationView(self.session, user_language),
+                OptimizationView(self.session, user_language, user_units),
             self.texts['settings_button'][user_language]: \
                 SettingsView(USER_SETTINGS_PATH, user_language),
             self.texts['help_button'][user_language]: \

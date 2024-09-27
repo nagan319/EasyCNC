@@ -19,34 +19,38 @@ class InputParser:
         Returns:
         - Floating point value in millimeters.
         """
-        unit_conversion = {'in': 25.4, 'feet': 304.8, 'ft': 304.8, 'mm': 1, 'cm': 10}
+        try:
+            unit_conversion = {'in': 25.4, 'feet': 304.8, 'ft': 304.8, 'mm': 1, 'cm': 10}
 
-        if text.replace('.', '').isdigit():
-            value_mm = float(text)  
-        else:
-            match = re.match(r'([\d./]+)\s*([a-zA-Z]*)', text)
-            if not match:
-                return None  
-
-            value_str, unit = match.group(1), match.group(2).lower()
-            if '/' in value_str:
-                value = InputParser._parse_fraction(value_str)
-                if value is None:
-                    return None
+            if text.replace('.', '').isdigit():
+                value_mm = float(text)  
             else:
-                value = float(value_str)
+                match = re.match(r'([\d./]+)\s*([a-zA-Z]*)', text)
+                if not match:
+                    return None  
 
-            if unit and unit not in unit_conversion:
-                return None  
+                value_str, unit = match.group(1), match.group(2).lower()
+                if '/' in value_str:
+                    value = InputParser._parse_fraction(value_str)
+                    if value is None:
+                        return None
+                else:
+                    value = float(value_str)
 
-            value_mm = value * unit_conversion.get(unit, 1)  
+                if unit and unit not in unit_conversion:
+                    return None  
 
-        value_mm = round(value_mm, 5)
+                value_mm = value * unit_conversion.get(unit, 1)  
 
-        if min_value is not None and max_value is not None:    
-            value_mm = max(min_value, min(value_mm, max_value))
+            value_mm = round(value_mm, 5)
 
-        return value_mm
+            if min_value is not None and max_value is not None:    
+                value_mm = max(min_value, min(value_mm, max_value))
+
+            return value_mm
+        
+        except Exception as e:
+            return text
 
     @staticmethod
     def _parse_fraction(fraction: str):
@@ -58,3 +62,4 @@ class InputParser:
             return float(numerator) / float(denominator)
         except ValueError:
             return None  
+        

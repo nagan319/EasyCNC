@@ -3,11 +3,11 @@ annoying bug fixes:
 - cannot convert string to float (unit conversion better exception check)
 
 todo:
-- fix errors in test_bin
-- add tolerance margin for plates
-- convert plate contours to area2d objects and modify algorithm to work with pre-used plates DONE
-- fix router size constraint check
+- add tolerance margin for plate edges
+    refactor bin class to apply better - think through thoroughly
+- add tolerance margin for drill/mill bits
+- save updated contours to plate upon completion
 
 - make json text more readable
 - write proper help text
-- fix readme stats images
+- fix readme stats images, add updated functionality

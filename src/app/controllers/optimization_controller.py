@@ -31,13 +31,14 @@ class OptimizationController:
     """
     MIN_QUANTIZED_VALUE: float = .01 
 
-    def __init__(self, session: Session, preview_path: str):
+    def __init__(self, session: Session, preview_path: str, conversion_factor: float = 1.0):
         if not os.path.exists(os.path.dirname(preview_path)):
             logger.error(f"Indicated optimization preview directory path does not exist: {preview_path}")
             raise FileNotFoundError(f"Directory not found: {preview_path}")
 
         self.session = session
         self.preview_path = preview_path
+        self.conversion_factor = conversion_factor
 
     def optimize(self):
         """ Call optimization algorithm and generate layout using selected plates, parts, and routers. """
@@ -105,6 +106,9 @@ class OptimizationController:
                             contour[i] = (point[0], point[1])
                 plates.append((plate.id, (plate.x, plate.y), contour_list))
 
+        if len(plates) == 0:
+            raise ValueError("Selected plates exceed maximum size of selected router.")
+
         parts = []
 
         for part in self.parts_orm:
@@ -116,7 +120,7 @@ class OptimizationController:
             for i in range(amount):
                 parts.append((f"{id}-{i+1}", contour))
 
-        self.placements = execute_packing_algorithm(plates, parts, self.preview_path)
+        self.placements = execute_packing_algorithm(plates, parts, self.preview_path, self.conversion_factor)
 
     def _get_selected_routers(self) -> List[Router]:
         """ Get all selected routers. """

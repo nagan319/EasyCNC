@@ -16,7 +16,8 @@ import matplotlib.patches as patches
 def execute_packing_algorithm(
     input_bins: List[Tuple[str, Tuple[float, float], List[Tuple[float, float]]]], 
     input_pieces: List[Tuple[str, List[Tuple[float, float]]]],
-    preview_filename: str
+    preview_filename: str,
+    conversion_factor: float = 1.0
 ) -> Dict[str, Union[None, Tuple[str, Tuple[float, float]]]]:
     """
     Packs pieces into bins and returns their placements.
@@ -94,18 +95,19 @@ def execute_packing_algorithm(
         if bin.n_placed > 0:
             used_bins.append(bin)
             for piece in bin.placed_pieces:
-                res[piece.id] = (bin.id, piece.get_position())
+                x, y = piece.get_position()
+                res[piece.id] = (bin.id, (x * conversion_factor, y * conversion_factor))
 
     for piece in pieces:
         if piece.id not in res:
             res[piece.id] = None
     
     if len(used_bins) > 0:
-       plot_part_placements(used_bins, preview_filename)
+       plot_part_placements(used_bins, preview_filename, conversion_factor=conversion_factor)
 
     return res
 
-def plot_part_placements(bins: list, filename: str, scale_factor: float = 1, width: float = 18, dpi: int = 120):
+def plot_part_placements(bins: list, filename: str, scale_factor: float = 1, width: float = 18, dpi: int = 120, conversion_factor: float = 1.0, bin_height: float = 3.75):
     """
     Plot contours of placed pieces inside multiple bins arranged vertically.
 
@@ -113,25 +115,32 @@ def plot_part_placements(bins: list, filename: str, scale_factor: float = 1, wid
     - bins: A list of Bin instances.
     - filename: The file path where the plot will be saved.
     - scale_factor: Factor to scale the plot (not used in this version).
-    - width: Fixed width of the plots.
+    - width: Fixed width of the plots (in inches or other units after conversion).
     - dpi: Dots per inch for the saved image.
+    - conversion_factor: Factor to scale bin and piece dimensions (e.g., convert from millimeters to inches, or scale by other units).
+    - bin_height: Fixed height of each bin plot (default 3.75 units).
     """
-    num_bins = len(bins)
-    height = 3.75 * num_bins  
-    fig, axs = plt.subplots(num_bins, 1, figsize=(width, height))
 
-    if num_bins == 1:
+    fig_width = width
+    fig_height_per_bin = bin_height
+    total_fig_height = fig_height_per_bin * len(bins)
+
+    fig, axs = plt.subplots(len(bins), 1, figsize=(fig_width, total_fig_height), dpi=dpi)
+
+    if len(bins) == 1:
         axs = [axs]
 
     for i, bin in enumerate(bins):
         ax = axs[i]
         ax.set_facecolor('white')
 
-        bin_rect = Rectangle2D(0, 0, bin.dimension.width, bin.dimension.height)
+        bin_width = bin.dimension.width * conversion_factor
+        bin_height = bin.dimension.height * conversion_factor
+
         bin_patch = patches.Rectangle(
-            (bin_rect.min_x, bin_rect.min_y),
-            bin_rect.width,
-            bin_rect.height,
+            (0, 0), 
+            bin_width,
+            bin_height,
             edgecolor='black',
             facecolor='none',
             linewidth=2,
@@ -141,9 +150,8 @@ def plot_part_placements(bins: list, filename: str, scale_factor: float = 1, wid
 
         for piece in bin.get_placed_pieces():
             piece_shape = piece.shape
-
             shape_patch = patches.Polygon(
-                list(piece_shape.exterior.coords),
+                [(x * conversion_factor, y * conversion_factor) for x, y in piece_shape.exterior.coords],
                 edgecolor='black',
                 facecolor='none',
                 linewidth=2,
@@ -153,9 +161,9 @@ def plot_part_placements(bins: list, filename: str, scale_factor: float = 1, wid
 
             piece_bb = piece.get_bb()
             bbox_patch = patches.Rectangle(
-                (piece_bb.min_x, piece_bb.min_y),
-                piece_bb.width,
-                piece_bb.height,
+                (piece_bb.min_x * conversion_factor, piece_bb.min_y * conversion_factor),
+                piece_bb.width * conversion_factor,
+                piece_bb.height * conversion_factor,
                 edgecolor='blue',
                 facecolor='none',
                 linewidth=1,
@@ -163,8 +171,8 @@ def plot_part_placements(bins: list, filename: str, scale_factor: float = 1, wid
             )
             ax.add_patch(bbox_patch)
 
-        ax.set_xlim(0, bin.dimension.width)
-        ax.set_ylim(0, bin.dimension.height)
+        ax.set_xlim(0, bin_width)
+        ax.set_ylim(0, bin_height)
         ax.set_aspect('equal')
 
         ax.invert_yaxis()
@@ -172,12 +180,12 @@ def plot_part_placements(bins: list, filename: str, scale_factor: float = 1, wid
         ax.grid(False)
         ax.tick_params(axis='x', colors='black')
         ax.tick_params(axis='y', colors='black')
-
         for spine in ax.spines.values():
             spine.set_color('black')
 
-        ax.set_title(f"{bin.id}", fontsize=10)
+        ax.set_title(f"Bin {bin.id}", fontsize=10)
 
     plt.tight_layout()
     plt.savefig(filename, bbox_inches='tight', facecolor='white', dpi=dpi)
     plt.close()
+

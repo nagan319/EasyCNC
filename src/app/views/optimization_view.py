@@ -16,19 +16,22 @@ from src.app.controllers.optimization_controller import OptimizationController
 from ..translations import optimization_view
 from ..logging import logger
 
+from ..utils.settings_enum import CONVERSION_FACTORS
+
 from ...paths import LAYOUT_PREVIEW_PATH
 
 class OptimizationView(ViewTemplate):
     """
     View for displaying placement optimization. 
     """
-    def __init__(self, session: Session, language: int):
+    def __init__(self, session: Session, language: int, units: int):
         super().__init__()
 
         self.texts = optimization_view
         self.language = language
+        self.units = units
 
-        self.controller = OptimizationController(session, LAYOUT_PREVIEW_PATH)
+        self.controller = OptimizationController(session, LAYOUT_PREVIEW_PATH, CONVERSION_FACTORS[self.units])
 
         self.session = session
         self._setup_ui()
@@ -42,7 +45,7 @@ class OptimizationView(ViewTemplate):
         main_widget = QWidget()
         main_layout = QVBoxLayout()
 
-        self.generate_button = QPushButton("Generate Optimal Layout")
+        self.generate_button = QPushButton(self.texts['generate_button_text'][self.language])
         self.generate_button.pressed.connect(self.generate_layout)
 
         generate_button_wrapper = QWidget()

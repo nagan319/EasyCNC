@@ -52,7 +52,6 @@ class Bin:
         """ Adds pre-placed part at indicated coordinate. """
         if piece.get_bb().width > self.dimension.width or piece.get_bb().height > self.dimension.height:
             raise ValueError(f"Attempted to place part of size ({piece.get_bb().width}, {piece.get_bb().height}) given a bin size of ({self.dimension.width}, {self.dimension.height})")
-        print(f"{piece.get_bb().min_x}, {piece.get_bb().min_y}")
         Bin.update_rectangles(piece, self.free_rectangles)
         self.placed_pieces.append(piece)
         self.n_placed += 1
@@ -66,7 +65,7 @@ class Bin:
 
         occupied_area = Area2D()
         for piece in self.placed_pieces:
-            occupied_area.add(piece)        
+            occupied_area.add(piece)     
 
         for piece in sorted_pieces:
             best_placement_idx = Bin.get_best_placement(piece, self.free_rectangles, occupied_area, self.dimension)

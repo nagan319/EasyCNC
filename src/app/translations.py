@@ -699,6 +699,14 @@ optimization_view = {
         LanguageEnum.RUS.value: "Создать макет",
         LanguageEnum.JP.value: "レイアウト生成"
     },
+    'generate_button_text': {
+        LanguageEnum.ENG_UK.value: "Generate Optimal Layout",
+        LanguageEnum.ENG_US.value: "Generate Optimal Layout",
+        LanguageEnum.CN_TRAD.value: "生成最佳佈局",
+        LanguageEnum.CN_SIMP.value: "生成最佳布局",
+        LanguageEnum.RUS.value: "Сгенерировать оптимальную компоновку",
+        LanguageEnum.JP.value: "最適なレイアウトを生成"
+    },
     'error_title': {
         LanguageEnum.ENG_UK.value: "Error",
         LanguageEnum.ENG_US.value: "Error",
