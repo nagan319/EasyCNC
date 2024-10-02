@@ -7,13 +7,14 @@ import os
 import enum
 from collections import defaultdict
 from typing import Union, Tuple, List
+import numpy as np
 
 from sqlalchemy.orm import Session
 
 from ..models.router_model import Router
 from ..models.plate_model import Plate
 from ..models.part_model import Part
-from ..models.utils import deserialize_array, deserialize_array_list
+from ..models.utils import deserialize_array, deserialize_array_list, serialize_array, serialize_array_list
 
 from ..utils.packing.bin import Bin
 from ..utils.packing.utils.area2d import Area2D
@@ -30,6 +31,7 @@ class OptimizationController:
     - preview_path: preview image filename
     """
     MIN_QUANTIZED_VALUE: float = .01 
+    ID_AMOUNT_DELIMITER = "__"
 
     def __init__(self, session: Session, preview_path: str, conversion_factor: float = 1.0):
         if not os.path.exists(os.path.dirname(preview_path)):
@@ -39,6 +41,9 @@ class OptimizationController:
         self.session = session
         self.preview_path = preview_path
         self.conversion_factor = conversion_factor
+
+        self.routers_orm, self.parts_orm, self.plates_orm = None, None, None
+        self.placements = None
 
     def optimize(self):
         """ Call optimization algorithm and generate layout using selected plates, parts, and routers. """
@@ -94,6 +99,8 @@ class OptimizationController:
         drill_bit_diameter = max([router.drill_bit_diameter for router in self.routers_orm])
         max_bit_diameter = max(drill_bit_diameter, mill_bit_diameter)
 
+        edge_distance = max([router.min_safe_dist_from_edge for router in self.routers_orm])
+
         router_sizes = [(router.plate_x, router.plate_y) for router in self.routers_orm]
         max_plate_x = min(router_sizes, key=lambda size: size[0])[0]
         max_plate_y = min(router_sizes, key=lambda size: size[1])[1]
@@ -102,12 +109,7 @@ class OptimizationController:
 
         for plate in self.plates_orm:
             if plate.x <= max_plate_x and plate.y <= max_plate_y:
-                contour_list = []
-                if plate.contours is not None:
-                    contour_list = [contour.reshape(-1, 2).tolist() for contour in deserialize_array_list(plate.contours)]
-                    for contour in contour_list:
-                        for i, point in enumerate(contour):
-                            contour[i] = (point[0], point[1])
+                contour_list = OptimizationController._get_formatted_plate_ctrs(plate)
                 plates.append((plate.id, (plate.x, plate.y), contour_list))
 
         if len(plates) == 0:
@@ -116,21 +118,98 @@ class OptimizationController:
         parts = []
 
         for part in self.parts_orm:
-            id = part.id
+            part_id = part.id
             amount = part.amount
-            contour = deserialize_array(part.contours).tolist()
-            for i, point in enumerate(contour):
-                contour[i] = (point[0], point[1])
+            contour = OptimizationController._get_formatted_part_ctr(part)
             for i in range(amount):
-                parts.append((f"{id}-{i+1}", contour))
+                parts.append((OptimizationController._get_part_id_with_amt(part_id, i), contour))
 
         self.placements = execute_packing_algorithm(
             plates, 
             parts, 
             max_bit_diameter, 
+            edge_distance,
             self.preview_path, 
             self.conversion_factor
         )
+
+    def save_layout(self) -> Tuple[set, set]:
+        """ Save generated layout to database. Returns tuple of used pieces and used bins. """
+        if self.placements is None:
+            return
+
+        used_pieces = set()
+        used_bins = set()
+
+        for piece_id, placement in self.placements.items():
+            piece_id = OptimizationController._strip_amt_part_id(piece_id)
+            used_pieces.add(piece_id)
+
+            bin_id, coordinates = placement
+            delta_x, delta_y = coordinates
+
+            used_bins.add(bin_id)
+
+            used_part = self.session.query(Part).filter(Part.id == piece_id).all()[0]
+            used_part_contour = OptimizationController._get_formatted_part_ctr(used_part)
+
+            used_plate = self.session.query(Plate).filter(Plate.id == bin_id).all()[0]
+            used_plate_contours = OptimizationController._get_formatted_plate_ctrs(used_plate)
+
+            for point in used_part_contour:
+                point = (int(point[0] + delta_x), int(point[1] + delta_y))
+
+            used_plate_contours.append(used_part_contour)
+            
+            setattr(
+                used_plate, 
+                'contours', 
+                OptimizationController._get_reverted_plate_ctrs(used_plate_contours)
+            )
+            self.session.commit()
+        
+        return (used_pieces, used_bins)
+
+    """ Part ID handling """
+
+    @staticmethod
+    def _get_part_id_with_amt(part_id: str, particular_part_idx: int) -> str:
+        """ Get part id in the case of multiple imported parts. """
+        return part_id + OptimizationController.ID_AMOUNT_DELIMITER + str(particular_part_idx)
+
+    @staticmethod
+    def _strip_amt_part_id(id_w_amount: str) -> str:
+        """ Split amount from part ID """
+        return id_w_amount.split(OptimizationController.ID_AMOUNT_DELIMITER)[0]
+
+    """ Contour retrieval and formatting """ 
+
+    @staticmethod
+    def _get_formatted_plate_ctrs(plate: Plate) -> List[List[Tuple[float, float]]]:
+        """ Get properly formatted contour list for given plate """ 
+        formatted_contours =  [contour.reshape(-1, 2).tolist() for contour in deserialize_array_list(plate.contours)] if plate.contours is not None else []
+        for contour in formatted_contours:
+            for i, point in enumerate(contour):
+                contour[i] = (point[0], point[1])
+        return formatted_contours
+    
+    @staticmethod
+    def _get_reverted_plate_ctrs(contours: List[List[Tuple[float, float]]]) -> str:
+        """ Get plate contours reverted back to serialized string format. Returns in format [np.array([[[x, y]], [[x, y]], [[x, y]], ...]), ...] serialized as a string. """
+        contour_list = []
+        for contour in contours:
+            contour_list.append(np.array([[[point[0], point[1]]] for point in contour]))
+        return serialize_array_list(contour_list)
+
+    @staticmethod
+    def _get_formatted_part_ctr(part: Part) -> List[Tuple[float, float]]:
+        """ Get properly formatted contours for given part """
+        contour = deserialize_array(part.contours).tolist()
+        for i, point in enumerate(contour):
+            contour[i] = (point[0], point[1])
+        return contour
+
+    """ Database queries """
 
     def _get_selected_routers(self) -> List[Router]:
         """ Get all selected routers. """
@@ -154,6 +233,8 @@ class OptimizationController:
         except Exception as e:
             logger.error(f"Encountered exception while attempting to get selected plates: {e}")
             return None
+
+    """ Other util methods """
 
     @staticmethod
     def _quantize_val(value: float) -> float:

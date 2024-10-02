@@ -1,12 +1,12 @@
 annoying bug fixes:
+- take a look at unit conversion
 - automatic save when editing is finished
 
 todo:
 - add tolerance margin for plate edges
-    refactor bin class to apply better - think through thoroughly
-- save updated contours to plate upon completion
-    - shift the points of each piece by the displacement indicated in the 'res' parameter and save it to the plate
+    revised strategy: add immovable pieces around edges, remove using special ids
 
-- make json text more readable
+- fix properly saving contours to db
+
 - write proper help text
 - fix readme stats images, add updated functionality

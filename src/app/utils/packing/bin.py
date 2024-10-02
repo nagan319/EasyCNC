@@ -11,6 +11,14 @@ from .utils.dimension2d import Dimension2D
 from .utils.rectangle2d import Rectangle2D
 from .utils.vector2d import Vector2D 
 
+'''
+implementation for bin edges:   
+    create bin with edge distance parameter == min_dist_from_edge - drill/mill bit diameter
+    reduce bin dimension by 2 * edge distance on each axis
+    adjust part placements by necessary delta, output
+        how is position returned? 
+'''
+
 class Bin:
     """ Bin class to handle packing algorithm. """
     def __init__(self, id: str, dimension: Dimension2D):

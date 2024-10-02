@@ -60,8 +60,6 @@ class Area2D:
         self.area = self.shape.area
         self.rotation = 0.0
 
-
-
     """ Util methods """
 
     @staticmethod
@@ -166,3 +164,4 @@ class Area2D:
         """ Check if intersection exists with other shape. """
         inters = Area2D(shape=self.get_bb()).shape.intersection(other.shape)
         return not inters.is_empty
+    

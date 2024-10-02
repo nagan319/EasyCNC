@@ -707,6 +707,14 @@ optimization_view = {
         LanguageEnum.RUS.value: "Сгенерировать оптимальную компоновку",
         LanguageEnum.JP.value: "最適なレイアウトを生成"
     },
+    'save_button_text': {
+        LanguageEnum.ENG_UK.value: "Save Layout",
+        LanguageEnum.ENG_US.value: "Save Layout",
+        LanguageEnum.CN_TRAD.value: "保存佈局",
+        LanguageEnum.CN_SIMP.value: "保存布局",
+        LanguageEnum.RUS.value: "Сохранить компоновку",
+        LanguageEnum.JP.value: "レイアウトを生成する"
+    },
     'error_title': {
         LanguageEnum.ENG_UK.value: "Error",
         LanguageEnum.ENG_US.value: "Error",
@@ -722,6 +730,14 @@ optimization_view = {
         LanguageEnum.CN_SIMP.value: "生成布局时发生错误：",  
         LanguageEnum.RUS.value: "Произошла ошибка при генерации макетов: ",  
         LanguageEnum.JP.value: "レイアウトを生成中にエラーが発生しました："
+    },
+    'layout_save_error_text': {
+        LanguageEnum.ENG_UK.value: "An error occurred while saving the layout: ",
+        LanguageEnum.ENG_US.value: "An error occurred while saving the layout: ",
+        LanguageEnum.CN_TRAD.value: "保存佈局時發生錯誤：",  
+        LanguageEnum.CN_SIMP.value: "保存布局时发生错误：",  
+        LanguageEnum.RUS.value: "Произошла ошибка при сохранении макета: ",  
+        LanguageEnum.JP.value: "レイアウトの保存中にエラーが発生しました："
     },
 }
 

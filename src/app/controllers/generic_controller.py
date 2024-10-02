@@ -13,8 +13,6 @@ from ..logging import logger
 
 T = TypeVar('T')
 
-# add remove all items and previews method
-
 class GenericController:
     """
     Generic controller containing basic CRUD logic. Used as superclass in controllers linked to SQL DB.

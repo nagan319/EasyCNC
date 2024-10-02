@@ -17,6 +17,7 @@ def execute_packing_algorithm(
     input_bins: List[Tuple[str, Tuple[float, float], List[Tuple[float, float]]]], 
     input_pieces: List[Tuple[str, List[Tuple[float, float]]]],
     bit_diameter: float,
+    min_edge_distance: float,
     preview_filename: str,
     conversion_factor: float = 1.0
 ) -> Dict[str, Union[None, Tuple[str, Tuple[float, float]]]]:
@@ -27,6 +28,8 @@ def execute_packing_algorithm(
         input_bins: List of tuples containing (bin_id, dimensions, contours).
         input_pieces: List of tuples containing (piece_id, contours).
         preview_filename: File to save preview
+        bit_diameter: max of drill and mill bit diameter (tolerance on side of each piece)
+        edge_tolerance: minimum distance from edge of plate
 
     Returns:
         A dictionary where:
@@ -76,7 +79,7 @@ def execute_packing_algorithm(
                 shift_to_origin=False,
                 edge_margin=bit_diameter
             )
-            bin_obj.add_immovable_part(part)
+            bin_obj.add_immovable_part(part) 
         bins.append(bin_obj)
     
     for piece in input_pieces:
@@ -104,7 +107,10 @@ def execute_packing_algorithm(
             used_bins.append(bin)
             for piece in bin.placed_pieces:
                 x, y = piece.get_position()
-                res[piece.id] = (bin.id, (x * conversion_factor, y * conversion_factor))
+                res[piece.id] = (
+                    bin.id, 
+                    (x, y)
+                )
 
     for piece in pieces:
         if piece.id not in res:
@@ -156,6 +162,8 @@ def plot_part_placements(bins: list, filename: str, scale_factor: float = 1, wid
         )
         ax.add_patch(bin_patch)
 
+        text_plot_offset = 4
+
         for piece in bin.get_placed_pieces():
             piece_shape = piece.shape
             shape_patch = patches.Polygon(
@@ -178,6 +186,40 @@ def plot_part_placements(bins: list, filename: str, scale_factor: float = 1, wid
                 linestyle='--'
             )
             ax.add_patch(bbox_patch)
+
+            label_x = (piece_bb.min_x + text_plot_offset) * conversion_factor
+            label_y = (piece_bb.min_y + text_plot_offset) * conversion_factor
+
+            display_text = 'ctr'+piece.id.split('ctr')[1] if 'ctr' in piece.id else piece.id[:4] + '...' + piece.id[-4:]
+
+            ax.text(
+                label_x, label_y,
+                display_text, 
+                verticalalignment='top', horizontalalignment='left',
+                fontsize=8, color='white', bbox=dict(facecolor='blue', edgecolor='none', alpha=1)
+            )
+
+        for idx, free_rect in enumerate(bin.free_rectangles):
+            rect_patch = patches.Rectangle(
+                (free_rect.min_x * conversion_factor, free_rect.min_y * conversion_factor),
+                free_rect.width * conversion_factor,
+                free_rect.height * conversion_factor,
+                edgecolor='green',  
+                facecolor='none',
+                linewidth=1,
+                linestyle=':'
+            )
+            ax.add_patch(rect_patch)
+
+            label_x = (free_rect.min_x + text_plot_offset) * conversion_factor 
+            label_y = (free_rect.min_y + text_plot_offset) * conversion_factor 
+
+            ax.text(
+                label_x, label_y,
+                f'{idx}', 
+                verticalalignment='top', horizontalalignment='left',
+                fontsize=8, color='white', bbox=dict(facecolor='green', edgecolor='none', alpha=1)
+            )
 
         ax.set_xlim(0, bin_width)
         ax.set_ylim(0, bin_height)

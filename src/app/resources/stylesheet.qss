@@ -141,3 +141,37 @@ QComboBox QAbstractItemView {
     border: 1px solid #000000;
     border-radius: 0px;
 }
+
+QTableWidget QScrollBar:vertical {
+    width: 0px; 
+    background: white; 
+}
+
+QTableWidget QScrollBar::handle:vertical {
+    background: #cccccc; 
+    min-height: 20px; 
+    border-radius: 5px; 
+}
+
+QTableWidget QScrollBar::add-line:vertical,
+QTableWidget QScrollBar::sub-line:vertical {
+    background: none; 
+}
+
+QTableWidget QScrollBar:horizontal {
+    border: none; 
+    background: white; 
+    height: 10px; 
+    margin: 0 22px 0 22px; 
+}
+
+QTableWidget QScrollBar::handle:horizontal {
+    background: #cccccc; 
+    min-width: 20px; 
+    border-radius: 5px; 
+}
+
+QTableWidget QScrollBar::add-line:horizontal,
+QTableWidget QScrollBar::sub-line:horizontal {
+    background: none; 
+}
