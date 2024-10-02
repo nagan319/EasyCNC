@@ -71,7 +71,7 @@ def execute_packing_algorithm(
     for bin in input_bins:
         bin_id, dimensions, contours = bin
         width, height = dimensions
-        bin_obj = Bin(bin_id, Dimension2D(width, height))
+        bin_obj = Bin(bin_id, Dimension2D(width, height), min_edge_distance)
         for i, contour in enumerate(contours):
             part = Area2D(
                 bin_id+f'ctr{i}', 
@@ -165,6 +165,10 @@ def plot_part_placements(bins: list, filename: str, scale_factor: float = 1, wid
         text_plot_offset = 4
 
         for piece in bin.get_placed_pieces():
+            
+            if 'edge' in piece.id:
+                continue
+
             piece_shape = piece.shape
             shape_patch = patches.Polygon(
                 [(x * conversion_factor, y * conversion_factor) for x, y in piece_shape.exterior.coords],

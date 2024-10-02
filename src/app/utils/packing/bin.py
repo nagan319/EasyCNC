@@ -21,7 +21,7 @@ implementation for bin edges:
 
 class Bin:
     """ Bin class to handle packing algorithm. """
-    def __init__(self, id: str, dimension: Dimension2D):
+    def __init__(self, id: str, dimension: Dimension2D, edge_distance: float = 0):
         self.id = id
         self.dimension = Dimension2D(dimension.width, dimension.height)
         self.n_placed: int = 0
@@ -29,6 +29,9 @@ class Bin:
         self.free_rectangles: List[Rectangle2D] = [
             Rectangle2D(0, 0, self.dimension.width, self.dimension.height)
         ]
+        self.edge_distance = edge_distance
+        if self.edge_distance > 0:
+            self.add_edge_margins()
     
     """ Accessor methods """
 
@@ -55,6 +58,37 @@ class Bin:
         return area
 
     """ Pre-packing placement (existing parts) """
+
+    def add_edge_margins(self):
+        """ Add edge margins in the case of a required 'safe edge distance' """
+        rectangles = [
+            Rectangle2D(
+                0,
+                0,
+                self.dimension.width, 
+                self.edge_distance,
+            ),
+            Rectangle2D(
+                0,
+                self.dimension.height - self.edge_distance, 
+                self.dimension.width,
+                self.edge_distance
+            ),
+            Rectangle2D(
+                0, 
+                self.edge_distance,
+                self.edge_distance,
+                self.dimension.height - (2 * self.edge_distance)
+            ),
+            Rectangle2D(
+                self.dimension.width - self.edge_distance,
+                self.edge_distance,
+                self.edge_distance,
+                self.dimension.height - (2 * self.edge_distance)               
+            )
+        ]
+        for i, rect in enumerate(rectangles):
+            self.add_immovable_part(Area2D(id=f'edge{i}', shape=rect, shift_to_origin=False))
 
     def add_immovable_part(self, piece: Area2D):
         """ Adds pre-placed part at indicated coordinate. """

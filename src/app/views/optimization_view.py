@@ -106,19 +106,20 @@ class OptimizationView(ViewTemplate):
 
             placements_data = self.controller.placements
 
+            filtered_placements = {piece_id: placement_info for piece_id, placement_info in placements_data.items() if 'edge' not in piece_id and 'ctr' not in piece_id}
+
             self.table_widget.clearContents()
-            self.table_widget.setRowCount(len(placements_data))
-            self.table_widget.setColumnCount(3)  
-            self.table_widget.setRowCount(len(placements_data.keys()))
+            self.table_widget.setRowCount(len(filtered_placements))
+            self.table_widget.setColumnCount(3)
             self.table_widget.setHorizontalHeaderLabels(['Piece ID', 'Bin ID', 'Coordinates'])
 
-            self.table_widget.setColumnWidth(0, 300)  
-            self.table_widget.setColumnWidth(1, 300)  
-            self.table_widget.setColumnWidth(2, 280)  
-            
+            self.table_widget.setColumnWidth(0, 300)
+            self.table_widget.setColumnWidth(1, 300)
+            self.table_widget.setColumnWidth(2, 280)
+
             self.table_widget.setStyleSheet("border: 1px solid #cccccc;")
 
-            for row_idx, (piece_id, placement_info) in enumerate(placements_data.items()):
+            for row_idx, (piece_id, placement_info) in enumerate(filtered_placements.items()):
                 if placement_info is None:
                     bin_id = 'Not Placed'
                     coordinates_text = '-'
@@ -129,13 +130,13 @@ class OptimizationView(ViewTemplate):
                     else:
                         coordinates_text = '-'
 
-                self.table_widget.setItem(row_idx, 0, QTableWidgetItem(piece_id))    
-                self.table_widget.setItem(row_idx, 1, QTableWidgetItem(bin_id)) 
+                self.table_widget.setItem(row_idx, 0, QTableWidgetItem(piece_id))
+                self.table_widget.setItem(row_idx, 1, QTableWidgetItem(bin_id))
                 self.table_widget.setItem(row_idx, 2, QTableWidgetItem(coordinates_text))
-            
-            row_height = 30  
-            self.table_widget.setFixedHeight(row_height * len(placements_data.keys()))  
-            self.table_widget.verticalScrollBar().setEnabled(False)  
+
+            row_height = 30
+            self.table_widget.setFixedHeight(row_height * len(filtered_placements) + 50)
+            self.table_widget.verticalScrollBar().setEnabled(False)
 
         except Exception as e:
             QMessageBox.critical(
@@ -144,6 +145,7 @@ class OptimizationView(ViewTemplate):
                 self.texts['layout_error_text'][self.language] + f" {e}"
             )
             logger.error(f"Error generating layout: {str(e)}")
+
 
     def save_layout(self):
         """ Save added parts to plates in database """

@@ -3,10 +3,9 @@ annoying bug fixes:
 - automatic save when editing is finished
 
 todo:
-- add tolerance margin for plate edges
-    revised strategy: add immovable pieces around edges, remove using special ids
 
-- fix properly saving contours to db
+- make sure packing algo works correctly with plate edges
+- fix properly saving contours to db / do not include duplicate parts and edges
 
 - write proper help text
 - fix readme stats images, add updated functionality
