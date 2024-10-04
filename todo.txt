@@ -1,9 +1,4 @@
-annoying bug fixes:
+bug fixes:
 - take a look at unit conversion
-- automatic save when editing is finished
-
-todo:
-- fix properly saving contours to db / do not include duplicate parts and edges
-
-- write proper help text
+- min edge distance not saving
 - fix readme stats images, add updated functionality

@@ -1,5 +1,6 @@
 import os
 import json
+import traceback
 
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import (
@@ -31,6 +32,9 @@ class OptimizationView(ViewTemplate):
         self.units = units
 
         self.controller = OptimizationController(session, LAYOUT_PREVIEW_PATH, CONVERSION_FACTORS[self.units])
+
+        self.generated_layout = False
+        self.saved_layout = False
 
         self.session = session
         self._setup_ui()
@@ -98,6 +102,9 @@ class OptimizationView(ViewTemplate):
 
     def generate_layout(self):
         """Generate optimized part placement layout and update the table."""
+        if self.saved_layout == True:
+            return
+
         try:
             self.controller.optimize()
 
@@ -126,7 +133,7 @@ class OptimizationView(ViewTemplate):
                 else:
                     bin_id, coordinates = placement_info
                     if coordinates:
-                        coordinates_text = f"({coordinates[0]:.2f}, {coordinates[1]:.2f})"
+                        coordinates_text = f"({(coordinates[0]*CONVERSION_FACTORS[self.units]):.2f}, {(coordinates[1]*CONVERSION_FACTORS[self.units]):.2f})"
                     else:
                         coordinates_text = '-'
 
@@ -137,6 +144,8 @@ class OptimizationView(ViewTemplate):
             row_height = 30
             self.table_widget.setFixedHeight(row_height * len(filtered_placements) + 50)
             self.table_widget.verticalScrollBar().setEnabled(False)
+
+            self.generated_layout = True
 
         except Exception as e:
             QMessageBox.critical(
@@ -149,12 +158,31 @@ class OptimizationView(ViewTemplate):
 
     def save_layout(self):
         """ Save added parts to plates in database """
+        if not self.generated_layout:
+            return
+
         try:
             self.controller.save_layout()
+
+            self.table_widget.clearContents()
+            self.table_widget.setColumnCount(0)
+            self.table_widget.setRowCount(0) 
+            self.preview_widget.clear() 
+            self.table_widget.setStyleSheet("border: none;") 
+            self.table_widget.verticalScrollBar().setEnabled(False) 
+
+            self.saved_layout = True
+
+            QMessageBox.information(
+                self,
+                self.texts['success'][self.language],
+                self.texts['saved_successfully'][self.language]
+            )
+
         except Exception as e:
             QMessageBox.critical(
                 self, 
                 self.texts['error_title'][self.language], 
-                self.texts['layout_save_error_text'][self.language]+f" {e}"
+                self.texts['layout_save_error_text'][self.language]+f" {traceback.format_exc()}"
             )
             logger.error(f"Error saving layout: {str(e)}")     

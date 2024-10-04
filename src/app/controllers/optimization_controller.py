@@ -23,6 +23,8 @@ from ..utils.packing.packing_algo import execute_packing_algorithm
 
 from ..logging import logger
 
+import matplotlib.pyplot as plt
+
 class OptimizationController:
     """
     Controller for managing layout optimization. 
@@ -142,7 +144,10 @@ class OptimizationController:
         used_bins = set()
 
         for piece_id, placement in self.placements.items():
-            piece_id = OptimizationController._strip_amt_part_id(piece_id)
+            if 'edge' in piece_id or 'ctr' in piece_id:
+                continue
+
+            stripped_id = OptimizationController._strip_amt_part_id(piece_id)
             used_pieces.add(piece_id)
 
             bin_id, coordinates = placement
@@ -150,17 +155,19 @@ class OptimizationController:
 
             used_bins.add(bin_id)
 
-            used_part = self.session.query(Part).filter(Part.id == piece_id).all()[0]
+            used_part = self.session.query(Part).filter(Part.id == stripped_id).all()[0]
             used_part_contour = OptimizationController._get_formatted_part_ctr(used_part)
 
             used_plate = self.session.query(Plate).filter(Plate.id == bin_id).all()[0]
             used_plate_contours = OptimizationController._get_formatted_plate_ctrs(used_plate)
 
-            for point in used_part_contour:
-                point = (int(point[0] + delta_x), int(point[1] + delta_y))
+            shifted_contour = []
 
-            used_plate_contours.append(used_part_contour)
-            
+            for point in used_part_contour:
+                shifted_contour.append((int(point[0] + delta_x), int(point[1] + delta_y)))
+
+            used_plate_contours.append(shifted_contour)
+
             setattr(
                 used_plate, 
                 'contours', 

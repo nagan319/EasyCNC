@@ -103,7 +103,7 @@ def execute_packing_algorithm(
         
         pieces = bin.pack(pieces)
 
-        if bin.n_placed > 0:
+        if bin.n_placed > 0 and any(not 'edge' in piece.id and not 'ctr' in piece.id for piece in bin.placed_pieces):
             used_bins.append(bin)
             for piece in bin.placed_pieces:
                 x, y = piece.get_position()
@@ -165,7 +165,7 @@ def plot_part_placements(bins: list, filename: str, scale_factor: float = 1, wid
         text_plot_offset = 4
 
         for piece in bin.get_placed_pieces():
-            
+
             if 'edge' in piece.id:
                 continue
 

@@ -739,6 +739,22 @@ optimization_view = {
         LanguageEnum.RUS.value: "Произошла ошибка при сохранении макета: ",  
         LanguageEnum.JP.value: "レイアウトの保存中にエラーが発生しました："
     },
+    'success': {
+        LanguageEnum.ENG_UK.value: "Save Successful",
+        LanguageEnum.ENG_US.value: "Save Successful",
+        LanguageEnum.CN_TRAD.value: "保存成功",  
+        LanguageEnum.CN_SIMP.value: "保存成功",  
+        LanguageEnum.RUS.value: "Успешно Сохранено",  
+        LanguageEnum.JP.value: "保存は成功しました"       
+    },
+    'saved_successfully': {
+        LanguageEnum.ENG_UK.value: "Optimized layout saved successfully.",
+        LanguageEnum.ENG_US.value: "Optimized layout saved successfully.",
+        LanguageEnum.CN_TRAD.value: "已成功保存优化佈局。",
+        LanguageEnum.CN_SIMP.value: "已成功保存优化布局。",
+        LanguageEnum.RUS.value: "Оптимизированное расположение успешно сохранено.",
+        LanguageEnum.JP.value: "最適化されたレイアウトが正常に保存されました。"
+    }
 }
 
 settings_view = {
