@@ -3,8 +3,6 @@ annoying bug fixes:
 - automatic save when editing is finished
 
 todo:
-
-- make sure packing algo works correctly with plate edges
 - fix properly saving contours to db / do not include duplicate parts and edges
 
 - write proper help text

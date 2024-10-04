@@ -2,7 +2,7 @@ from src.app.utils.packing.bin import Bin
 from src.app.utils.packing.utils.area2d import Area2D
 from src.app.utils.packing.utils.rectangle2d import Rectangle2D
 from src.app.utils.packing.utils.dimension2d import Dimension2D
-from src.app.utils.packing.utils.plot_for_testing import plot_bin
+from src.app.utils.packing.utils.plot_for_testing import plot_bin, plot_area
 
 import os
 import pytest
@@ -202,3 +202,9 @@ def _return_random_sized_piece(max_width: float, max_height: float, piece_id: st
     width = random.uniform(0, max_width)
     height = random.uniform(0, max_height)
     return Area2D(id=piece_id, shape=Rectangle2D(0, 0, width, height))
+
+def test_pack_with_edges(test_preview_directory):
+    bin = Bin('id', Dimension2D(300, 200), edge_distance=5)
+    bin.pack([Area2D(id='id', points=[(0, 0), (100, 0), (100, 100), (0, 100)])])
+    plot_bin(bin, os.path.join(test_preview_directory, 'pack_with_edges.png'))
+

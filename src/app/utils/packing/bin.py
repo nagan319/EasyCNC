@@ -87,8 +87,18 @@ class Bin:
                 self.dimension.height - (2 * self.edge_distance)               
             )
         ]
+
         for i, rect in enumerate(rectangles):
-            self.add_immovable_part(Area2D(id=f'edge{i}', shape=rect, shift_to_origin=False))
+            self.placed_pieces.append(Area2D(id=f'edge{i}', shape=rect, shift_to_origin=False))
+            self.n_placed += 1
+        self.free_rectangles = [
+            Rectangle2D(
+                self.edge_distance, 
+                self.edge_distance, 
+                self.dimension.width - 2 * self.edge_distance, 
+                self.dimension.height - 2 * self.edge_distance
+            )
+        ]
 
     def add_immovable_part(self, piece: Area2D):
         """ Adds pre-placed part at indicated coordinate. """
@@ -105,12 +115,8 @@ class Bin:
         sorted_pieces = sorted(to_place, key=lambda p: p.get_area(), reverse=True)
         remaining_pieces = []
 
-        occupied_area = Area2D()
-        for piece in self.placed_pieces:
-            occupied_area.add(Area2D(shape=piece.get_bb()))     
-
         for piece in sorted_pieces:
-            best_placement_idx = Bin.get_best_placement(piece, self.free_rectangles, occupied_area, self.dimension)
+            best_placement_idx = Bin.get_best_placement(piece, self.free_rectangles, self.placed_pieces, self.dimension)
 
             if best_placement_idx != -1:
                 best_placement_rectangle = self.free_rectangles[best_placement_idx]
@@ -126,7 +132,7 @@ class Bin:
         return remaining_pieces
 
     @staticmethod
-    def get_best_placement(piece: Area2D, free_rectangles: List[Rectangle2D], occupied_area: Area2D, bin_dimensions: Dimension2D) -> int:
+    def get_best_placement(piece: Area2D, free_rectangles: List[Rectangle2D], other_pieces: List[Area2D], bin_dimensions: Dimension2D) -> int:
         """ Iterates through top-left corners of free rectangles, progressing across x and y coordinates.
             Returns the index of the first available position for placement in the original list or -1 if no valid placement is found.
         """
@@ -136,8 +142,13 @@ class Bin:
 
         for original_idx, rectangle in sorted_indexed_rectangles:
             placed_piece = Area2D(shape=Rectangle2D(rectangle.min_x, rectangle.min_y, piece_bb.width, piece_bb.height))
-            if placed_piece.get_bb().fits_inside(rectangle) and not placed_piece.intersection(occupied_area):
-                return original_idx 
+            if placed_piece.get_bb().fits_inside(rectangle):
+                intersection = False
+                for i, piece in enumerate(other_pieces):
+                    if placed_piece.intersection(piece, plot=True, filename=str(i)):
+                        intersection = True
+                if not intersection:
+                    return original_idx 
 
         return -1 
     

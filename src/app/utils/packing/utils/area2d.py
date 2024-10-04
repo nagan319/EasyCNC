@@ -4,8 +4,9 @@ Date: 2024/09/05
 """
 
 import numpy as np
+import matplotlib.pyplot as plt
 
-from shapely.geometry import Polygon
+from shapely.geometry import Polygon, LineString, MultiLineString
 from shapely.affinity import rotate, translate
 
 from .rectangle2d import Rectangle2D
@@ -160,8 +161,8 @@ class Area2D:
         """ Check if shape is inside rectangle. Returns True if corners/edges match. """
         return self.get_bb().fits_inside(container)
 
-    def intersection(self, other: 'Area2D') -> bool:
-        """ Check if intersection exists with other shape. """
-        inters = Area2D(shape=self.get_bb()).shape.intersection(other.shape)
-        return not inters.is_empty
+    def intersection(self, other: 'Area2D', plot=False, filename=None) -> bool:
+        """ Check if intersection exists with other shape and optionally plot the result. """
+        inters = self.shape.intersection(other.shape)
+        return not inters.is_empty and inters.area > 0
     
