@@ -158,19 +158,11 @@ class OptimizationView(ViewTemplate):
 
     def save_layout(self):
         """ Save added parts to plates in database """
-        if not self.generated_layout:
+        if not self.generated_layout or self.saved_layout:
             return
 
         try:
             self.controller.save_layout()
-
-            self.table_widget.clearContents()
-            self.table_widget.setColumnCount(0)
-            self.table_widget.setRowCount(0) 
-            self.preview_widget.clear() 
-            self.table_widget.setStyleSheet("border: none;") 
-            self.table_widget.verticalScrollBar().setEnabled(False) 
-
             self.saved_layout = True
 
             QMessageBox.information(

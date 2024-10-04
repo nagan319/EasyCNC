@@ -748,12 +748,12 @@ optimization_view = {
         LanguageEnum.JP.value: "保存は成功しました"       
     },
     'saved_successfully': {
-        LanguageEnum.ENG_UK.value: "Optimized layout saved successfully.",
-        LanguageEnum.ENG_US.value: "Optimized layout saved successfully.",
-        LanguageEnum.CN_TRAD.value: "已成功保存优化佈局。",
-        LanguageEnum.CN_SIMP.value: "已成功保存优化布局。",
-        LanguageEnum.RUS.value: "Оптимизированное расположение успешно сохранено.",
-        LanguageEnum.JP.value: "最適化されたレイアウトが正常に保存されました。"
+        LanguageEnum.ENG_UK.value: "Optimized layout saved successfully. Please restart the app if you would like to generate additional layouts.",
+        LanguageEnum.ENG_US.value: "Optimized layout saved successfully. Please restart the app if you would like to generate additional layouts.",
+        LanguageEnum.CN_TRAD.value: "已成功保存优化佈局。如果您想生成更多佈局，请重新启动应用程序。",
+        LanguageEnum.CN_SIMP.value: "已成功保存优化布局。如果您想生成更多布局，请重新启动应用程序。",
+        LanguageEnum.RUS.value: "Оптимизированное расположение успешно сохранено. Пожалуйста, перезапустите приложение, если хотите создать дополнительные макеты.",
+        LanguageEnum.JP.value: "最適化されたレイアウトが正常に保存されました。追加のレイアウトを生成する場合は、アプリを再起動してください。"
     }
 }
 
