@@ -50,8 +50,6 @@ You should now see the following title screen:
 
 The app is ready to run locally out of the box. By default, it is configured to create a SQLite3 database titled app_data.db in the src\data directory. 
 
-## Database Hosting
-
 # How to Use
 
 Using the app is fairly straightforward.
@@ -163,6 +161,16 @@ The placement optimization algorithm used in the software is a rectangular packi
 <img src="github images/max 82.72.png" alt="Plate Conversion" width="500"/>  
 
 <i>Maximum achieved packing efficiency in random sample (82.72%) </i>
+
+## Layout Generation
+
+Once an optimal placement is generated, the layout, along with optimal placements for all newly placed pieces, is shown. In addition to placed pieces, any remaining free rectangles are also displayed, with consideration given for the tolerance required for mill/drill bit diameters as well as potentially unusable plate edges. The table shown under the generated layout shows all placed parts, the bin within which they were placed, and their coordinates from the top corner. 
+
+<img src="github images/plate contours.PNG" alt="Contours and Free Rects" width="300"/>
+
+<img src="github images/newly placed pieces.PNG" alt="Newly Placed Pieces" width="300"/>
+
+<img src="github images/layout table.PNG" alt="Part Layout Table" width="600"/>
 
 # FAQ
 

@@ -6,6 +6,7 @@ from .utils.area2d import Area2D
 from typing import List, Tuple, Dict, Union
 
 import os
+import traceback
 
 import matplotlib
 matplotlib.use('Agg')  
@@ -96,6 +97,7 @@ def execute_packing_algorithm(
     pieces = sorted(pieces, key=lambda p: p.get_bb().area, reverse=True)
 
     used_bins = []
+    free_bins = [] # bins that have been selected, but lack sufficient room for placement
 
     for bin in bins:
         if not pieces:  
@@ -111,22 +113,25 @@ def execute_packing_algorithm(
                     bin.id, 
                     (x, y)
                 )
+        else:
+            free_bins.append(bin) 
 
     for piece in pieces:
         if piece.id not in res:
             res[piece.id] = None
     
     if len(used_bins) > 0:
-       plot_part_placements(used_bins, preview_filename, conversion_factor=conversion_factor)
+       plot_part_placements(used_bins, free_bins, preview_filename, conversion_factor=conversion_factor)
 
     return res
 
-def plot_part_placements(bins: list, filename: str, scale_factor: float = 1, width: float = 18, dpi: int = 120, conversion_factor: float = 1.0, bin_height: float = 3.75):
+def plot_part_placements(used_bins: list, free_bins: list, filename: str, scale_factor: float = 1, width: float = 18, dpi: int = 120, conversion_factor: float = 1.0, bin_height: float = 3.75):
     """
     Plot contours of placed pieces inside multiple bins arranged vertically.
 
     Parameters:
-    - bins: A list of Bin instances.
+    - used_bins: A list of used Bin instances.
+    - free_bins: A list of unused Bin instances.
     - filename: The file path where the plot will be saved.
     - scale_factor: Factor to scale the plot (not used in this version).
     - width: Fixed width of the plots (in inches or other units after conversion).
@@ -135,111 +140,121 @@ def plot_part_placements(bins: list, filename: str, scale_factor: float = 1, wid
     - bin_height: Fixed height of each bin plot (default 3.75 units).
     """
 
-    fig_width = width
-    fig_height_per_bin = bin_height
-    total_fig_height = fig_height_per_bin * len(bins)
+    try:
 
-    fig, axs = plt.subplots(len(bins), 1, figsize=(fig_width, total_fig_height), dpi=dpi)
+        fig_width = width
+        fig_height_per_bin = bin_height
+        total_fig_height = fig_height_per_bin * (len(used_bins) + len(free_bins))
 
-    if len(bins) == 1:
-        axs = [axs]
+        fig, axs = plt.subplots(len(used_bins) + len(free_bins), 1, figsize=(fig_width, total_fig_height), dpi=dpi)
 
-    for i, bin in enumerate(bins):
-        ax = axs[i]
-        ax.set_facecolor('white')
+        if len(used_bins) + len(free_bins) == 1:
+            axs = [axs]
 
-        bin_width = bin.dimension.width * conversion_factor
-        bin_height = bin.dimension.height * conversion_factor
+        for i, bin in enumerate(used_bins + free_bins):
+            ax = axs[i]
+            ax.set_facecolor('white')
 
-        bin_patch = patches.Rectangle(
-            (0, 0), 
-            bin_width,
-            bin_height,
-            edgecolor='black',
-            facecolor='none',
-            linewidth=2,
-            linestyle='-'
-        )
-        ax.add_patch(bin_patch)
+            bin_width = bin.dimension.width * conversion_factor
+            bin_height = bin.dimension.height * conversion_factor
 
-        text_plot_offset = 4
-
-        for piece in bin.get_placed_pieces():
-
-            if 'edge' in piece.id:
-                continue
-
-            piece_shape = piece.shape
-            shape_patch = patches.Polygon(
-                [(x * conversion_factor, y * conversion_factor) for x, y in piece_shape.exterior.coords],
+            bin_patch = patches.Rectangle(
+                (0, 0), 
+                bin_width,
+                bin_height,
                 edgecolor='black',
                 facecolor='none',
                 linewidth=2,
                 linestyle='-'
             )
-            ax.add_patch(shape_patch)
+            ax.add_patch(bin_patch)
 
-            piece_bb = piece.get_bb()
-            bbox_patch = patches.Rectangle(
-                (piece_bb.min_x * conversion_factor, piece_bb.min_y * conversion_factor),
-                piece_bb.width * conversion_factor,
-                piece_bb.height * conversion_factor,
-                edgecolor='blue',
-                facecolor='none',
-                linewidth=1,
-                linestyle='--'
-            )
-            ax.add_patch(bbox_patch)
+            text_plot_offset = 4
 
-            label_x = (piece_bb.min_x + text_plot_offset) * conversion_factor
-            label_y = (piece_bb.min_y + text_plot_offset) * conversion_factor
+            for piece in bin.get_placed_pieces():
 
-            display_text = 'ctr'+piece.id.split('ctr')[1] if 'ctr' in piece.id else piece.id[:4] + '...' + piece.id[-4:]
+                if 'edge' in piece.id:
+                    continue
 
-            ax.text(
-                label_x, label_y,
-                display_text, 
-                verticalalignment='top', horizontalalignment='left',
-                fontsize=8, color='white', bbox=dict(facecolor='blue', edgecolor='none', alpha=1)
-            )
+                piece_shape = piece.shape
+                shape_patch = patches.Polygon(
+                    [(x * conversion_factor, y * conversion_factor) for x, y in piece_shape.exterior.coords],
+                    edgecolor='black',
+                    facecolor='none',
+                    linewidth=2,
+                    linestyle='-'
+                )
+                ax.add_patch(shape_patch)
 
-        for idx, free_rect in enumerate(bin.free_rectangles):
-            rect_patch = patches.Rectangle(
-                (free_rect.min_x * conversion_factor, free_rect.min_y * conversion_factor),
-                free_rect.width * conversion_factor,
-                free_rect.height * conversion_factor,
-                edgecolor='green',  
-                facecolor='none',
-                linewidth=1,
-                linestyle=':'
-            )
-            ax.add_patch(rect_patch)
+                piece_bb = piece.get_bb()
+                bbox_patch = patches.Rectangle(
+                    (piece_bb.min_x * conversion_factor, piece_bb.min_y * conversion_factor),
+                    piece_bb.width * conversion_factor,
+                    piece_bb.height * conversion_factor,
+                    edgecolor='blue',
+                    facecolor='none',
+                    linewidth=1,
+                    linestyle='--'
+                )
+                ax.add_patch(bbox_patch)
 
-            label_x = (free_rect.min_x + text_plot_offset) * conversion_factor 
-            label_y = (free_rect.min_y + text_plot_offset) * conversion_factor 
+                label_x = (piece_bb.min_x + text_plot_offset) * conversion_factor
+                label_y = (piece_bb.min_y + text_plot_offset) * conversion_factor
 
-            ax.text(
-                label_x, label_y,
-                f'{idx}', 
-                verticalalignment='top', horizontalalignment='left',
-                fontsize=8, color='white', bbox=dict(facecolor='green', edgecolor='none', alpha=1)
-            )
+                if 'ctr' in piece.id:
+                    display_text = 'ctr'+piece.id.split('ctr')[1]
+                elif 'edge' in piece.id:
+                    display_text = piece.id
+                else:
+                    display_text = piece.id[:4] + '...' + piece.id[-4:]
 
-        ax.set_xlim(0, bin_width)
-        ax.set_ylim(0, bin_height)
-        ax.set_aspect('equal')
+                ax.text(
+                    label_x, label_y,
+                    display_text, 
+                    verticalalignment='top', horizontalalignment='left',
+                    fontsize=8, color='white', bbox=dict(facecolor='blue', edgecolor='none', alpha=1)
+                )
 
-        ax.invert_yaxis()
+            for idx, free_rect in enumerate(bin.free_rectangles):
+                rect_patch = patches.Rectangle(
+                    (free_rect.min_x * conversion_factor, free_rect.min_y * conversion_factor),
+                    free_rect.width * conversion_factor,
+                    free_rect.height * conversion_factor,
+                    edgecolor='green',  
+                    facecolor='none',
+                    linewidth=1,
+                    linestyle=':'
+                )
+                ax.add_patch(rect_patch)
 
-        ax.grid(False)
-        ax.tick_params(axis='x', colors='black')
-        ax.tick_params(axis='y', colors='black')
-        for spine in ax.spines.values():
-            spine.set_color('black')
+                label_x = (free_rect.min_x + text_plot_offset) * conversion_factor 
+                label_y = (free_rect.min_y + text_plot_offset) * conversion_factor 
 
-        ax.set_title(f"Bin {bin.id}", fontsize=10)
+                ax.text(
+                    label_x, label_y,
+                    f'{idx}', 
+                    verticalalignment='top', horizontalalignment='left',
+                    fontsize=8, color='white', bbox=dict(facecolor='green', edgecolor='none', alpha=1)
+                )
 
-    plt.tight_layout()
-    plt.savefig(filename, bbox_inches='tight', facecolor='white', dpi=dpi)
-    plt.close()
+            ax.set_xlim(0, bin_width)
+            ax.set_ylim(0, bin_height)
+            ax.set_aspect('equal')
+
+            ax.invert_yaxis()
+
+            ax.grid(False)
+            ax.tick_params(axis='x', colors='black')
+            ax.tick_params(axis='y', colors='black')
+            for spine in ax.spines.values():
+                spine.set_color('black')
+
+            ax.set_title(f"Bin {bin.id}", fontsize=10)
+
+        plt.tight_layout()
+        plt.savefig(filename, bbox_inches='tight', facecolor='white', dpi=dpi)
+        plt.close()
+
+    except Exception as e:
+        traceback.print_exc()
 
