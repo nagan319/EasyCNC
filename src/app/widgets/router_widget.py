@@ -158,7 +158,7 @@ class RouterWidget(QWidget):
             if sender == input_field:
                 max_value = self.max_values.get(field_name, None)
                 if max_value is not None:
-                    parsed_value = InputParser.parse_text(sender.text(), 0, max_value)
+                    parsed_value = InputParser.parse_text(sender.text(), 0, max_value, CONVERSION_FACTORS[self.units])
                     sender.setText(str(parsed_value))
                 break
 

@@ -1,4 +1,2 @@
 bug fixes:
-- take a look at unit conversion
-- min edge distance not saving
 - fix readme stats images, add updated functionality
